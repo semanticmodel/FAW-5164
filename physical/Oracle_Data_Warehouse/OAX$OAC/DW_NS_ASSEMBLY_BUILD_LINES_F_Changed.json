@@ -1,6 +1,6 @@
 {
   "physicalTable" : {
-    "name" : "DW_NS_ASSEMBLY_BUILD_LINES_F",
+    "name" : "DW_NS_ASSEMBLY_BUILD_LINES_F_Changed",
     "sourceType" : "TABLE",
     "physicalColumns" : [ {
       "name" : "ACCOUNT",
@@ -268,6 +268,7 @@
       "length" : 38,
       "nullable" : true
     } ],
+    "additionalKeys" : [ [ "ACCOUNT" ] ],
     "caching" : {
       "enable" : true,
       "expiryTime" : 0

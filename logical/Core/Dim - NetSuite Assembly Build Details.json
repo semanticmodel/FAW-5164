@@ -29,7 +29,7 @@
           "logicalTableSource" : "Fact_DW_NS_ASSEMBLY_BUILD_LINES_F",
           "physicalExpression" : {
             "expressionTemplate" : "%1",
-            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_ASSEMBLY_BUILD_LINES_F.TRANSACTION" ]
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_ASSEMBLY_BUILD_LINES_F_Changed.TRANSACTION" ]
           }
         } ]
       },
@@ -243,7 +243,7 @@
           "logicalTableSource" : "Fact_DW_NS_ASSEMBLY_BUILD_LINES_F",
           "physicalExpression" : {
             "expressionTemplate" : "%1",
-            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_ASSEMBLY_BUILD_LINES_F.ID" ]
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_ASSEMBLY_BUILD_LINES_F_Changed.ID" ]
           }
         } ]
       },
@@ -258,7 +258,7 @@
           "logicalTableSource" : "Fact_DW_NS_ASSEMBLY_BUILD_LINES_F",
           "physicalExpression" : {
             "expressionTemplate" : "%1",
-            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_ASSEMBLY_BUILD_LINES_F.LINELASTMODIFIEDDATE" ]
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_ASSEMBLY_BUILD_LINES_F_Changed.LINELASTMODIFIEDDATE" ]
           }
         } ]
       },
@@ -273,7 +273,7 @@
           "logicalTableSource" : "Fact_DW_NS_ASSEMBLY_BUILD_LINES_F",
           "physicalExpression" : {
             "expressionTemplate" : "%1",
-            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_ASSEMBLY_BUILD_LINES_F.ISINVENTORYAFFECTING" ]
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_ASSEMBLY_BUILD_LINES_F_Changed.ISINVENTORYAFFECTING" ]
           }
         } ]
       },
@@ -288,7 +288,7 @@
           "logicalTableSource" : "Fact_DW_NS_ASSEMBLY_BUILD_LINES_F",
           "physicalExpression" : {
             "expressionTemplate" : "%1",
-            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_ASSEMBLY_BUILD_LINES_F.TRANSACTIONLINETYPE" ]
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_ASSEMBLY_BUILD_LINES_F_Changed.TRANSACTIONLINETYPE" ]
           }
         } ]
       },
@@ -303,7 +303,7 @@
           "logicalTableSource" : "Fact_DW_NS_ASSEMBLY_BUILD_LINES_F",
           "physicalExpression" : {
             "expressionTemplate" : "%1",
-            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_ASSEMBLY_BUILD_LINES_F.MAINLINE" ]
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_ASSEMBLY_BUILD_LINES_F_Changed.MAINLINE" ]
           }
         } ]
       },
@@ -318,7 +318,7 @@
           "logicalTableSource" : "Fact_DW_NS_ASSEMBLY_BUILD_LINES_F",
           "physicalExpression" : {
             "expressionTemplate" : "%1",
-            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_ASSEMBLY_BUILD_LINES_F.MEMO" ]
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_ASSEMBLY_BUILD_LINES_F_Changed.MEMO" ]
           }
         } ]
       },
@@ -338,9 +338,9 @@
       "name" : "Fact_DW_NS_ASSEMBLY_BUILD_LINES_F",
       "disable" : false,
       "tableMapping" : {
-        "tables" : [ "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_ASSEMBLY_BUILD_LINES_F", "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_ASSEMBLY_BUILD_F" ],
+        "tables" : [ "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_ASSEMBLY_BUILD_LINES_F_Changed", "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_ASSEMBLY_BUILD_F" ],
         "logicalTableSourceJoins" : [ {
-          "leftTable" : "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_ASSEMBLY_BUILD_LINES_F",
+          "leftTable" : "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_ASSEMBLY_BUILD_LINES_F_Changed",
           "rightTable" : "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_ASSEMBLY_BUILD_F",
           "joinType" : "INNER",
           "disable" : false

@@ -196,7 +196,7 @@
           "logicalTableSource" : "Fact_DW_NS_ASSEMBLY_BUILD_LINES_F",
           "physicalExpression" : {
             "expressionTemplate" : "%1",
-            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_ASSEMBLY_BUILD_LINES_F.TRANSACTION" ]
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_ASSEMBLY_BUILD_LINES_F_Changed.TRANSACTION" ]
           }
         } ]
       },
@@ -215,7 +215,7 @@
           "logicalTableSource" : "Fact_DW_NS_ASSEMBLY_BUILD_LINES_F",
           "physicalExpression" : {
             "expressionTemplate" : "%1",
-            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_ASSEMBLY_BUILD_LINES_F.QUANTITY" ]
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_ASSEMBLY_BUILD_LINES_F_Changed.QUANTITY" ]
           }
         } ]
       },
@@ -244,7 +244,7 @@
           "logicalTableSource" : "Fact_DW_NS_ASSEMBLY_BUILD_LINES_F",
           "physicalExpression" : {
             "expressionTemplate" : "%1",
-            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_ASSEMBLY_BUILD_LINES_F.FOREIGNAMOUNT" ]
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_ASSEMBLY_BUILD_LINES_F_Changed.FOREIGNAMOUNT" ]
           }
         } ]
       },
@@ -263,7 +263,7 @@
           "logicalTableSource" : "Fact_DW_NS_ASSEMBLY_BUILD_LINES_F",
           "physicalExpression" : {
             "expressionTemplate" : "%1",
-            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_ASSEMBLY_BUILD_LINES_F.CREDIT" ]
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_ASSEMBLY_BUILD_LINES_F_Changed.CREDIT" ]
           }
         } ]
       },
@@ -282,7 +282,7 @@
           "logicalTableSource" : "Fact_DW_NS_ASSEMBLY_BUILD_LINES_F",
           "physicalExpression" : {
             "expressionTemplate" : "%1",
-            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_ASSEMBLY_BUILD_LINES_F.CREDITFOREIGNAMOUNT" ]
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_ASSEMBLY_BUILD_LINES_F_Changed.CREDITFOREIGNAMOUNT" ]
           }
         } ]
       },
@@ -301,7 +301,7 @@
           "logicalTableSource" : "Fact_DW_NS_ASSEMBLY_BUILD_LINES_F",
           "physicalExpression" : {
             "expressionTemplate" : "%1",
-            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_ASSEMBLY_BUILD_LINES_F.DEBIT" ]
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_ASSEMBLY_BUILD_LINES_F_Changed.DEBIT" ]
           }
         } ]
       },
@@ -320,7 +320,7 @@
           "logicalTableSource" : "Fact_DW_NS_ASSEMBLY_BUILD_LINES_F",
           "physicalExpression" : {
             "expressionTemplate" : "%1",
-            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_ASSEMBLY_BUILD_LINES_F.DEBITFOREIGNAMOUNT" ]
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_ASSEMBLY_BUILD_LINES_F_Changed.DEBITFOREIGNAMOUNT" ]
           }
         } ]
       },
@@ -339,7 +339,7 @@
           "logicalTableSource" : "Fact_DW_NS_ASSEMBLY_BUILD_LINES_F",
           "physicalExpression" : {
             "expressionTemplate" : "%1",
-            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_ASSEMBLY_BUILD_LINES_F.NETAMOUNT" ]
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_ASSEMBLY_BUILD_LINES_F_Changed.NETAMOUNT" ]
           }
         } ]
       },
@@ -358,7 +358,7 @@
           "logicalTableSource" : "Fact_DW_NS_ASSEMBLY_BUILD_LINES_F",
           "physicalExpression" : {
             "expressionTemplate" : "%1",
-            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_ASSEMBLY_BUILD_LINES_F.RATE" ]
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_ASSEMBLY_BUILD_LINES_F_Changed.RATE" ]
           }
         } ]
       },
@@ -387,7 +387,7 @@
           "logicalTableSource" : "Fact_DW_NS_ASSEMBLY_BUILD_LINES_F",
           "physicalExpression" : {
             "expressionTemplate" : "%1",
-            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_ASSEMBLY_BUILD_LINES_F.BASE_AMOUNT" ]
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_ASSEMBLY_BUILD_LINES_F_Changed.BASE_AMOUNT" ]
           }
         } ]
       },
@@ -406,7 +406,7 @@
           "logicalTableSource" : "Fact_DW_NS_ASSEMBLY_BUILD_LINES_F",
           "physicalExpression" : {
             "expressionTemplate" : "%1",
-            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_ASSEMBLY_BUILD_LINES_F.BASE_CREDITAMOUNT" ]
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_ASSEMBLY_BUILD_LINES_F_Changed.BASE_CREDITAMOUNT" ]
           }
         } ]
       },
@@ -425,7 +425,7 @@
           "logicalTableSource" : "Fact_DW_NS_ASSEMBLY_BUILD_LINES_F",
           "physicalExpression" : {
             "expressionTemplate" : "%1",
-            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_ASSEMBLY_BUILD_LINES_F.BASE_DEBITAMOUNT" ]
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_ASSEMBLY_BUILD_LINES_F_Changed.BASE_DEBITAMOUNT" ]
           }
         } ]
       },
@@ -444,7 +444,7 @@
           "logicalTableSource" : "Fact_DW_NS_ASSEMBLY_BUILD_LINES_F",
           "physicalExpression" : {
             "expressionTemplate" : "%1",
-            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_ASSEMBLY_BUILD_LINES_F.BASE_NETAMOUNT" ]
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_ASSEMBLY_BUILD_LINES_F_Changed.BASE_NETAMOUNT" ]
           }
         } ]
       },
@@ -473,7 +473,7 @@
           "logicalTableSource" : "Fact_DW_NS_ASSEMBLY_BUILD_LINES_F",
           "physicalExpression" : {
             "expressionTemplate" : " CASE  WHEN %1 = 'CURRENT' THEN  IFNULL(%2, 1) * %3 WHEN %1 = 'AVERAGE' THEN  IFNULL(%4, 1) * %3 WHEN %1 = 'HISTORICAL' THEN  IFNULL(%5, 1) * %3 WHEN %1 = 'PERACCOUNT' THEN  CASE  WHEN %6 = 'CURRENT' THEN  IFNULL(%2, 1) * %3 WHEN %6 = 'AVERAGE' THEN  IFNULL(%4, 1) * %3 WHEN %6 = 'HISTORICAL' THEN  IFNULL(%5, 1) * %3 END  END ",
-            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_EXCHANGERATETYPE_G.CODE", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.CURRENTRATE", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_ASSEMBLY_BUILD_LINES_F.BASE_AMOUNT", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.AVERAGERATE", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.HISTORICALRATE", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_ACCOUNT_D.GENERALRATE" ]
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_EXCHANGERATETYPE_G.CODE", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.CURRENTRATE", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_ASSEMBLY_BUILD_LINES_F_Changed.BASE_AMOUNT", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.AVERAGERATE", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.HISTORICALRATE", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_ACCOUNT_D.GENERALRATE" ]
           }
         } ]
       },
@@ -492,7 +492,7 @@
           "logicalTableSource" : "Fact_DW_NS_ASSEMBLY_BUILD_LINES_F",
           "physicalExpression" : {
             "expressionTemplate" : " CASE  WHEN %1 = 'CURRENT' THEN  IFNULL(%2, 1) * %3 WHEN %1 = 'AVERAGE' THEN  IFNULL(%4, 1) * %3 WHEN %1 = 'HISTORICAL' THEN  IFNULL(%5, 1) * %3 WHEN %1 = 'PERACCOUNT' THEN  CASE  WHEN %6 = 'CURRENT' THEN  IFNULL(%2, 1) * %3 WHEN %6 = 'AVERAGE' THEN  IFNULL(%4, 1) * %3 WHEN %6 = 'HISTORICAL' THEN  IFNULL(%5, 1) * %3 END  END ",
-            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_EXCHANGERATETYPE_G.CODE", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.CURRENTRATE", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_ASSEMBLY_BUILD_LINES_F.BASE_CREDITAMOUNT", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.AVERAGERATE", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.HISTORICALRATE", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_ACCOUNT_D.GENERALRATE" ]
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_EXCHANGERATETYPE_G.CODE", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.CURRENTRATE", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_ASSEMBLY_BUILD_LINES_F_Changed.BASE_CREDITAMOUNT", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.AVERAGERATE", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.HISTORICALRATE", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_ACCOUNT_D.GENERALRATE" ]
           }
         } ]
       },
@@ -511,7 +511,7 @@
           "logicalTableSource" : "Fact_DW_NS_ASSEMBLY_BUILD_LINES_F",
           "physicalExpression" : {
             "expressionTemplate" : " CASE  WHEN %1 = 'CURRENT' THEN  IFNULL(%2, 1) * %3 WHEN %1 = 'AVERAGE' THEN  IFNULL(%4, 1) * %3 WHEN %1 = 'HISTORICAL' THEN  IFNULL(%5, 1) * %3 WHEN %1 = 'PERACCOUNT' THEN  CASE  WHEN %6 = 'CURRENT' THEN  IFNULL(%2, 1) * %3 WHEN %6 = 'AVERAGE' THEN  IFNULL(%4, 1) * %3 WHEN %6 = 'HISTORICAL' THEN  IFNULL(%5, 1) * %3 END  END ",
-            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_EXCHANGERATETYPE_G.CODE", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.CURRENTRATE", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_ASSEMBLY_BUILD_LINES_F.BASE_DEBITAMOUNT", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.AVERAGERATE", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.HISTORICALRATE", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_ACCOUNT_D.GENERALRATE" ]
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_EXCHANGERATETYPE_G.CODE", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.CURRENTRATE", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_ASSEMBLY_BUILD_LINES_F_Changed.BASE_DEBITAMOUNT", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.AVERAGERATE", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.HISTORICALRATE", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_ACCOUNT_D.GENERALRATE" ]
           }
         } ]
       },
@@ -530,7 +530,7 @@
           "logicalTableSource" : "Fact_DW_NS_ASSEMBLY_BUILD_LINES_F",
           "physicalExpression" : {
             "expressionTemplate" : " CASE  WHEN %1 = 'CURRENT' THEN  IFNULL(%2, 1) * %3 WHEN %1 = 'AVERAGE' THEN  IFNULL(%4, 1) * %3 WHEN %1 = 'HISTORICAL' THEN  IFNULL(%5, 1) * %3 WHEN %1 = 'PERACCOUNT' THEN  CASE  WHEN %6 = 'CURRENT' THEN  IFNULL(%2, 1) * %3 WHEN %6 = 'AVERAGE' THEN  IFNULL(%4, 1) * %3 WHEN %6 = 'HISTORICAL' THEN  IFNULL(%5, 1) * %3 END  END ",
-            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_EXCHANGERATETYPE_G.CODE", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.CURRENTRATE", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_ASSEMBLY_BUILD_LINES_F.BASE_NETAMOUNT", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.AVERAGERATE", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.HISTORICALRATE", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_ACCOUNT_D.GENERALRATE" ]
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_EXCHANGERATETYPE_G.CODE", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.CURRENTRATE", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_ASSEMBLY_BUILD_LINES_F_Changed.BASE_NETAMOUNT", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.AVERAGERATE", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.HISTORICALRATE", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_ACCOUNT_D.GENERALRATE" ]
           }
         } ]
       },
@@ -559,7 +559,7 @@
           "logicalTableSource" : "Fact_DW_NS_ASSEMBLY_BUILD_LINES_F",
           "physicalExpression" : {
             "expressionTemplate" : "%1",
-            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_ASSEMBLY_BUILD_LINES_F.ACCOUNTINGBOOK_CREDIT" ]
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_ASSEMBLY_BUILD_LINES_F_Changed.ACCOUNTINGBOOK_CREDIT" ]
           }
         } ]
       },
@@ -578,7 +578,7 @@
           "logicalTableSource" : "Fact_DW_NS_ASSEMBLY_BUILD_LINES_F",
           "physicalExpression" : {
             "expressionTemplate" : "%1",
-            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_ASSEMBLY_BUILD_LINES_F.ACCOUNTINGBOOK_DEBIT" ]
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_ASSEMBLY_BUILD_LINES_F_Changed.ACCOUNTINGBOOK_DEBIT" ]
           }
         } ]
       },
@@ -613,20 +613,20 @@
       "name" : "Fact_DW_NS_ASSEMBLY_BUILD_LINES_F",
       "disable" : false,
       "tableMapping" : {
-        "tables" : [ "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_ACCOUNT_D", "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_EXCHANGERATETYPE_G", "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G", "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_ASSEMBLY_BUILD_LINES_F" ],
+        "tables" : [ "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_ACCOUNT_D", "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_EXCHANGERATETYPE_G", "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G", "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_ASSEMBLY_BUILD_LINES_F_Changed" ],
         "logicalTableSourceJoins" : [ {
           "leftTable" : "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_ACCOUNT_D",
-          "rightTable" : "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_ASSEMBLY_BUILD_LINES_F",
+          "rightTable" : "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_ASSEMBLY_BUILD_LINES_F_Changed",
           "joinType" : "INNER",
           "disable" : false
         }, {
           "leftTable" : "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_EXCHANGERATETYPE_G",
-          "rightTable" : "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_ASSEMBLY_BUILD_LINES_F",
+          "rightTable" : "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_ASSEMBLY_BUILD_LINES_F_Changed",
           "joinType" : "INNER",
           "disable" : false
         }, {
           "leftTable" : "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G",
-          "rightTable" : "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_ASSEMBLY_BUILD_LINES_F",
+          "rightTable" : "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_ASSEMBLY_BUILD_LINES_F_Changed",
           "joinType" : "RIGHT_OUTER",
           "disable" : false
         } ]

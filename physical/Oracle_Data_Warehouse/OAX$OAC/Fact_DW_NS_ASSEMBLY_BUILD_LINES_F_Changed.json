@@ -1,0 +1,296 @@
+{
+  "physicalTable" : {
+    "name" : "Fact_DW_NS_ASSEMBLY_BUILD_LINES_F_Changed",
+    "sourceTable" : "physicalTable:Oracle_Data_Warehouse.OAX$OAC.DW_NS_ASSEMBLY_BUILD_LINES_F_Changed",
+    "additionalKeys" : [ [ "ID", "TRANSACTION" ] ],
+    "caching" : {
+      "enable" : true,
+      "expiryTime" : 0
+    },
+    "overrideSourceCacheSetting" : false,
+    "joins" : [ {
+      "rightTable" : "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_DAY_D_GregorianCalendar",
+      "useJoinExpression" : false,
+      "joinConditions" : [ {
+        "leftColumn" : "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_ASSEMBLY_BUILD_LINES_F_Changed.TRANDATE",
+        "rightColumn" : "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_DAY_D_GregorianCalendar.CALENDAR_DATE"
+      } ],
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ONE"
+    }, {
+      "rightTable" : "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_ACCCTBOOKCURRENCY_D",
+      "useJoinExpression" : false,
+      "joinConditions" : [ {
+        "leftColumn" : "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_ASSEMBLY_BUILD_LINES_F_Changed.ACCOUNTINGBOOK_CURRENCY",
+        "rightColumn" : "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_ACCCTBOOKCURRENCY_D.ID"
+      } ],
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ONE"
+    }, {
+      "rightTable" : "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_ACCOUNTINGBOOK_D",
+      "useJoinExpression" : false,
+      "joinConditions" : [ {
+        "leftColumn" : "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_ASSEMBLY_BUILD_LINES_F_Changed.ACCOUNTINGBOOK",
+        "rightColumn" : "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_ACCOUNTINGBOOK_D.ID"
+      } ],
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ONE"
+    }, {
+      "rightTable" : "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_ACCOUNTINGPERIOD_D",
+      "useJoinExpression" : false,
+      "joinConditions" : [ {
+        "leftColumn" : "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_ASSEMBLY_BUILD_LINES_F_Changed.POSTINGPERIOD",
+        "rightColumn" : "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_ACCOUNTINGPERIOD_D.ID"
+      } ],
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ONE"
+    }, {
+      "rightTable" : "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_ACCOUNT_D",
+      "useJoinExpression" : false,
+      "joinConditions" : [ {
+        "leftColumn" : "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_ASSEMBLY_BUILD_LINES_F_Changed.ACCOUNT",
+        "rightColumn" : "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_ACCOUNT_D.ID"
+      } ],
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ONE"
+    }, {
+      "rightTable" : "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_ASSEMBLYBUILDSTATUS_D",
+      "useJoinExpression" : false,
+      "joinConditions" : [ {
+        "leftColumn" : "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_ASSEMBLY_BUILD_LINES_F_Changed.STATUS",
+        "rightColumn" : "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_ASSEMBLYBUILDSTATUS_D.CODE"
+      }, {
+        "leftColumn" : "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_ASSEMBLY_BUILD_LINES_F_Changed.TYPE",
+        "rightColumn" : "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_ASSEMBLYBUILDSTATUS_D.KEY"
+      } ],
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ONE"
+    }, {
+      "rightTable" : "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_ASSEMBLY_BUILD_F",
+      "useJoinExpression" : false,
+      "joinConditions" : [ {
+        "leftColumn" : "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_ASSEMBLY_BUILD_LINES_F_Changed.TRANSACTION",
+        "rightColumn" : "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_ASSEMBLY_BUILD_F.ID"
+      } ],
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ONE"
+    }, {
+      "rightTable" : "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_BASECURRENCY_D",
+      "useJoinExpression" : false,
+      "joinConditions" : [ {
+        "leftColumn" : "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_ASSEMBLY_BUILD_LINES_F_Changed.BASE_CURRENCY",
+        "rightColumn" : "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_BASECURRENCY_D.ID"
+      } ],
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ONE"
+    }, {
+      "rightTable" : "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_BOMREVISION_D",
+      "useJoinExpression" : false,
+      "joinConditions" : [ {
+        "leftColumn" : "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_ASSEMBLY_BUILD_LINES_F_Changed.BILLOFMATERIALSREVISION",
+        "rightColumn" : "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_BOMREVISION_D.ID"
+      } ],
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ONE"
+    }, {
+      "rightTable" : "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_BOM_D",
+      "useJoinExpression" : false,
+      "joinConditions" : [ {
+        "leftColumn" : "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_ASSEMBLY_BUILD_LINES_F_Changed.BILLOFMATERIALS",
+        "rightColumn" : "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_BOM_D.ID"
+      } ],
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ONE"
+    }, {
+      "rightTable" : "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CLASSIFICATION_D",
+      "useJoinExpression" : false,
+      "joinConditions" : [ {
+        "leftColumn" : "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_ASSEMBLY_BUILD_LINES_F_Changed.CLASS",
+        "rightColumn" : "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CLASSIFICATION_D.ID"
+      } ],
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ONE"
+    }, {
+      "rightTable" : "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CREATEDBY_D",
+      "useJoinExpression" : false,
+      "joinConditions" : [ {
+        "leftColumn" : "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_ASSEMBLY_BUILD_LINES_F_Changed.CREATEDBY",
+        "rightColumn" : "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CREATEDBY_D.ID"
+      } ],
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ONE"
+    }, {
+      "rightTable" : "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_DATE_D",
+      "useJoinExpression" : false,
+      "joinConditions" : [ {
+        "leftColumn" : "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_ASSEMBLY_BUILD_LINES_F_Changed.TRANDATE",
+        "rightColumn" : "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_DATE_D.FULLDATE"
+      } ],
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ONE"
+    }, {
+      "rightTable" : "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_DEPARTMENT_D",
+      "useJoinExpression" : false,
+      "joinConditions" : [ {
+        "leftColumn" : "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_ASSEMBLY_BUILD_LINES_F_Changed.DEPARTMENT",
+        "rightColumn" : "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_DEPARTMENT_D.ID"
+      } ],
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ONE"
+    }, {
+      "rightTable" : "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_ENTITY_D",
+      "useJoinExpression" : false,
+      "joinConditions" : [ {
+        "leftColumn" : "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_ASSEMBLY_BUILD_LINES_F_Changed.ENTITY",
+        "rightColumn" : "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_ENTITY_D.ID"
+      } ],
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ONE"
+    }, {
+      "rightTable" : "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_EXPENSEACCOUNT_D",
+      "useJoinExpression" : false,
+      "joinConditions" : [ {
+        "leftColumn" : "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_ASSEMBLY_BUILD_LINES_F_Changed.EXPENSEACCOUNT",
+        "rightColumn" : "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_EXPENSEACCOUNT_D.ID"
+      } ],
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ONE"
+    }, {
+      "rightTable" : "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_FISCALCALPERIOD_DH",
+      "useJoinExpression" : false,
+      "joinConditions" : [ {
+        "leftColumn" : "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_ASSEMBLY_BUILD_LINES_F_Changed.POSTINGPERIOD",
+        "rightColumn" : "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_FISCALCALPERIOD_DH.BASE_ACCOUNTINGPERIOD"
+      }, {
+        "leftColumn" : "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_ASSEMBLY_BUILD_LINES_F_Changed.TRANDATE",
+        "rightColumn" : "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_FISCALCALPERIOD_DH.FULLDATE"
+      } ],
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ONE"
+    }, {
+      "rightTable" : "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_INVENTORYLOCATION_D",
+      "useJoinExpression" : false,
+      "joinConditions" : [ {
+        "leftColumn" : "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_ASSEMBLY_BUILD_LINES_F_Changed.INVENTORYLOCATION",
+        "rightColumn" : "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_INVENTORYLOCATION_D.ID"
+      } ],
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ONE"
+    }, {
+      "rightTable" : "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_INVENTORYREPORTINGLOCATION_D",
+      "useJoinExpression" : false,
+      "joinConditions" : [ {
+        "leftColumn" : "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_ASSEMBLY_BUILD_LINES_F_Changed.INVENTORYREPORTINGLOCATION",
+        "rightColumn" : "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_INVENTORYREPORTINGLOCATION_D.ID"
+      } ],
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ONE"
+    }, {
+      "rightTable" : "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_INVENTORYSUBSIDIARY_D",
+      "useJoinExpression" : false,
+      "joinConditions" : [ {
+        "leftColumn" : "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_ASSEMBLY_BUILD_LINES_F_Changed.INVENTORYSUBSIDIARY",
+        "rightColumn" : "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_INVENTORYSUBSIDIARY_D.ID"
+      } ],
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ONE"
+    }, {
+      "rightTable" : "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_INVTCOMMIT_D",
+      "useJoinExpression" : false,
+      "joinConditions" : [ {
+        "leftColumn" : "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_ASSEMBLY_BUILD_LINES_F_Changed.COMMITINVENTORY",
+        "rightColumn" : "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_INVTCOMMIT_D.KEY"
+      } ],
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ONE"
+    }, {
+      "rightTable" : "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_ITEM_D",
+      "useJoinExpression" : false,
+      "joinConditions" : [ {
+        "leftColumn" : "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_ASSEMBLY_BUILD_LINES_F_Changed.ITEM",
+        "rightColumn" : "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_ITEM_D.ID"
+      } ],
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ONE"
+    }, {
+      "rightTable" : "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_LOCATION_D",
+      "useJoinExpression" : false,
+      "joinConditions" : [ {
+        "leftColumn" : "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_ASSEMBLY_BUILD_LINES_F_Changed.LOCATION",
+        "rightColumn" : "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_LOCATION_D.ID"
+      } ],
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ONE"
+    }, {
+      "rightTable" : "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_MODIFIEDBY_D",
+      "useJoinExpression" : false,
+      "joinConditions" : [ {
+        "leftColumn" : "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_ASSEMBLY_BUILD_LINES_F_Changed.LASTMODIFIEDBY",
+        "rightColumn" : "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_MODIFIEDBY_D.ID"
+      } ],
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ONE"
+    }, {
+      "rightTable" : "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_OUTSOURCINGCHARGE_D",
+      "useJoinExpression" : false,
+      "joinConditions" : [ {
+        "leftColumn" : "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_ASSEMBLY_BUILD_LINES_F_Changed.OUTSOURCINGCHARGE",
+        "rightColumn" : "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_OUTSOURCINGCHARGE_D.ID"
+      } ],
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ONE"
+    }, {
+      "rightTable" : "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_SUBSIDIARY_D",
+      "useJoinExpression" : false,
+      "joinConditions" : [ {
+        "leftColumn" : "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_ASSEMBLY_BUILD_LINES_F_Changed.SUBSIDIARY",
+        "rightColumn" : "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_SUBSIDIARY_D.ID"
+      } ],
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ONE"
+    }, {
+      "rightTable" : "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_TRANSACTIONCURRENCY_D",
+      "useJoinExpression" : false,
+      "joinConditions" : [ {
+        "leftColumn" : "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_ASSEMBLY_BUILD_LINES_F_Changed.CURRENCY",
+        "rightColumn" : "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_TRANSACTIONCURRENCY_D.ID"
+      } ],
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ONE"
+    }, {
+      "rightTable" : "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_WORK_ORDER_F_Link",
+      "useJoinExpression" : false,
+      "joinConditions" : [ {
+        "leftColumn" : "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_ASSEMBLY_BUILD_LINES_F_Changed.CREATEDFROM",
+        "rightColumn" : "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_WORK_ORDER_F_Link.ID"
+      } ],
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ONE"
+    }, {
+      "rightTable" : "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_ANALYTICSCURRENCY_D",
+      "useJoinExpression" : true,
+      "joinExpression" : {
+        "expressionTemplate" : "1 = 1"
+      },
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ONE"
+    }, {
+      "rightTable" : "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G",
+      "useJoinExpression" : true,
+      "joinExpression" : {
+        "expressionTemplate" : "%1 = %2 AND %3 = %4 AND %5 =  VALUEOF(NQ_SESSION.%6) AND %7 = %8",
+        "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_ASSEMBLY_BUILD_LINES_F_Changed.SUBSIDIARY", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.FROMSUBSIDIARY", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_ASSEMBLY_BUILD_LINES_F_Changed.POSTINGPERIOD", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.POSTINGPERIOD", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.TOSUBSIDIARY", "variable:NetSuite - Reporting Subsidiary.NETSUITE_REPORTING_SUBSIDIARY", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.ACCOUNTINGBOOK", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_ASSEMBLY_BUILD_LINES_F_Changed.ACCOUNTINGBOOK" ]
+      },
+      "joinType" : "INNER",
+      "cardinality" : "ONE_TO_ONE"
+    }, {
+      "rightTable" : "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_EXCHANGERATETYPE_G",
+      "useJoinExpression" : true,
+      "joinExpression" : {
+        "expressionTemplate" : "1 = 1"
+      },
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ONE"
+    } ]
+  }
+}

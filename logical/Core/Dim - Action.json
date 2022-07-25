@@ -1,7 +1,7 @@
 {
   "logicalTable" : {
     "name" : "Dim - Action",
-    "description" : "This is a Test",
+    "description" : "This is a Test another Change",
     "type" : "DIMENSION",
     "primaryKey" : [ "Action Identifier" ],
     "logicalColumns" : [ {

@@ -1,0 +1,67 @@
+{
+  "presentationTable" : {
+    "name" : "Job Offer - Basic Information",
+    "description" : "Basic details of job offer like id, name, expiration date, etc",
+    "tags" : [ "Project:Fusion Analytics Warehouse - Talent Acquisition", "Project:Oracle Analytics for Fusion Human Capital Management" ],
+    "presentationColumns" : [ {
+      "name" : "Job Offer Identifier",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Talent Acquisition", "Project:Oracle Analytics for Fusion Human Capital Management" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Dim - Job Offer.Job Offer Identifier",
+      "localization" : {
+        "localizationKey" : "Job Offer Identifier",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_HCM_-_Talent_Acquisition_Job_Offer_Job_Offer_Identifier)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_HCM_-_Talent_Acquisition_Job_Offer_-_Basic_Information_Job_Offer_Identifier)"
+      }
+    }, {
+      "name" : "Job Offer Name",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Talent Acquisition", "Project:Oracle Analytics for Fusion Human Capital Management" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Dim - Job Offer.Job Offer Name",
+      "localization" : {
+        "localizationKey" : "Job Offer Name",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_HCM_-_Talent_Acquisition_Job_Offer_Job_Offer_Name)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_HCM_-_Talent_Acquisition_Job_Offer_-_Basic_Information_Job_Offer_Name)"
+      }
+    }, {
+      "name" : "Job Offer Accepted On Behalf Indicator",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Talent Acquisition", "Project:Oracle Analytics for Fusion Human Capital Management" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Dim - Job Offer.Job Offer Accepted On Behalf Indicator",
+      "localization" : {
+        "localizationKey" : "Job Offer Accepted On Behalf Indicator",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_HCM_-_Talent_Acquisition_Job_Offer_Job_Offer_Accepted_On_Behalf_Indicator)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_HCM_-_Talent_Acquisition_Job_Offer_-_Basic_Information_Job_Offer_Accepted_On_Behalf_Indicator)"
+      }
+    }, {
+      "name" : "Job Offer Accepted On Behalf Date",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Talent Acquisition", "Project:Oracle Analytics for Fusion Human Capital Management" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Dim - Job Offer.Job Offer Accepted On Behalf Date",
+      "localization" : {
+        "localizationKey" : "Job Offer Accepted On Behalf Date",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_HCM_-_Talent_Acquisition_Job_Offer_Job_Offer_Accepted_On_Behalf_Date)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_HCM_-_Talent_Acquisition_Job_Offer_-_Basic_Information_Job_Offer_Accepted_On_Behalf_Date)"
+      }
+    }, {
+      "name" : "Job Offer Accepted On Behalf By",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Talent Acquisition", "Project:Oracle Analytics for Fusion Human Capital Management" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Dim - Job Offer.Job Offer Accepted On Behalf By",
+      "localization" : {
+        "localizationKey" : "Job Offer Accepted On Behalf By",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_HCM_-_Talent_Acquisition_Job_Offer_Job_Offer_Accepted_On_Behalf_By)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_HCM_-_Talent_Acquisition_Job_Offer_-_Basic_Information_Job_Offer_Accepted_On_Behalf_By)"
+      }
+    }, {
+      "name" : "Job Offer Expiration Date",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Talent Acquisition", "Project:Oracle Analytics for Fusion Human Capital Management" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Dim - Job Offer.Job Offer Expiration Date",
+      "localization" : {
+        "localizationKey" : "Job Offer Expiration Date",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_HCM_-_Talent_Acquisition_Job_Offer_Job_Offer_Expiration_Date)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_HCM_-_Talent_Acquisition_Job_Offer_-_Basic_Information_Job_Offer_Expiration_Date)"
+      }
+    } ],
+    "localization" : {
+      "localizationKey" : "Job Offer - Basic Information",
+      "nameVariable" : "VALUEOF(NQ_SESSION.CN_HCM_-_Talent_Acquisition_Job_Offer_-_Basic_Information)",
+      "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_HCM_-_Talent_Acquisition_Job_Offer_-_Basic_Information)"
+    }
+  }
+}

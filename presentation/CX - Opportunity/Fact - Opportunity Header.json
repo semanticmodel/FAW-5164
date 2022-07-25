@@ -1,0 +1,238 @@
+{
+  "presentationTable" : {
+    "name" : "Fact - Opportunity Header",
+    "tags" : [ "Project:Fusion Analytics Warehouse - Sales Pipeline" ],
+    "alternateNames" : [ "Fact - CX - Opportunity Header" ],
+    "presentationColumns" : [ {
+      "name" : "# of Opportunities",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Sales Pipeline" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Fact - CX - Opportunity Header.# of Opportunities",
+      "localization" : {
+        "localizationKey" : "# of Opportunities",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_CX_-_Opportunity_Fact_-_Opportunity_Header_#_of_Opportunities)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_CX_-_Opportunity_Fact_-_Opportunity_Header_#_of_Opportunities)"
+      }
+    }, {
+      "name" : "# of Open Opportunities",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Sales Pipeline" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Fact - CX - Opportunity Header.# of Open Opportunities",
+      "localization" : {
+        "localizationKey" : "# of Open Opportunities",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_CX_-_Opportunity_Fact_-_Opportunity_Header_#_of_Open_Opportunities)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_CX_-_Opportunity_Fact_-_Opportunity_Header_#_of_Open_Opportunities)"
+      }
+    }, {
+      "name" : "# of Won Opportunities",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Sales Pipeline" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Fact - CX - Opportunity Header.# of Won Opportunities",
+      "localization" : {
+        "localizationKey" : "# of Won Opportunities",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_CX_-_Opportunity_Fact_-_Opportunity_Header_#_of_Won_Opportunities)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_CX_-_Opportunity_Fact_-_Opportunity_Header_#_of_Won_Opportunities)"
+      }
+    }, {
+      "name" : "# of Lost Opportunities",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Sales Pipeline" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Fact - CX - Opportunity Header.# of Lost Opportunities",
+      "localization" : {
+        "localizationKey" : "# of Lost Opportunities",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_CX_-_Opportunity_Fact_-_Opportunity_Header_#_of_Lost_Opportunities)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_CX_-_Opportunity_Fact_-_Opportunity_Header_#_of_Lost_Opportunities)"
+      }
+    }, {
+      "name" : "# of No Sale Opportunities",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Sales Pipeline" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Fact - CX - Opportunity Header.# of No Sale Opportunities",
+      "localization" : {
+        "localizationKey" : "# of No Sale Opportunities",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_CX_-_Opportunity_Fact_-_Opportunity_Header_#_of_No_Sale_Opportunities)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_CX_-_Opportunity_Fact_-_Opportunity_Header_#_of_No_Sale_Opportunities)"
+      }
+    }, {
+      "name" : "# of Competitive Opportunities",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Sales Pipeline" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Fact - CX - Opportunity Header.# of Competitive Opportunities",
+      "localization" : {
+        "localizationKey" : "# of Competitive Opportunities",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_CX_-_Opportunity_Fact_-_Opportunity_Header_#_of_Competitive_Opportunities)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_CX_-_Opportunity_Fact_-_Opportunity_Header_#_of_Competitive_Opportunities)"
+      }
+    }, {
+      "name" : "# of Competitive Won Opportunities",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Sales Pipeline" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Fact - CX - Opportunity Header.# of Competitive Won Opportunities",
+      "localization" : {
+        "localizationKey" : "# of Competitive Won Opportunities",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_CX_-_Opportunity_Fact_-_Opportunity_Header_#_of_Competitive_Won_Opportunities)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_CX_-_Opportunity_Fact_-_Opportunity_Header_#_of_Competitive_Won_Opportunities)"
+      }
+    }, {
+      "name" : "# of Competitive Lost Opportunities",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Sales Pipeline" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Fact - CX - Opportunity Header.# of Competitive Lost Opportunities",
+      "localization" : {
+        "localizationKey" : "# of Competitive Lost Opportunities",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_CX_-_Opportunity_Fact_-_Opportunity_Header_#_of_Competitive_Lost_Opportunities)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_CX_-_Opportunity_Fact_-_Opportunity_Header_#_of_Competitive_Lost_Opportunities)"
+      }
+    }, {
+      "name" : "# of Competitive Open Opportunities",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Sales Pipeline" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Fact - CX - Opportunity Header.# of Competitive Open Opportunities",
+      "localization" : {
+        "localizationKey" : "# of Competitive Open Opportunities",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_CX_-_Opportunity_Fact_-_Opportunity_Header_#_of_Competitive_Open_Opportunities)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_CX_-_Opportunity_Fact_-_Opportunity_Header_#_of_Competitive_Open_Opportunities)"
+      }
+    }, {
+      "name" : "# of Competitive No Sale Opportunities",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Sales Pipeline" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Fact - CX - Opportunity Header.# of Competitive No Sale Opportunities",
+      "localization" : {
+        "localizationKey" : "# of Competitive No Sale Opportunities",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_CX_-_Opportunity_Fact_-_Opportunity_Header_#_of_Competitive_No_Sale_Opportunities)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_CX_-_Opportunity_Fact_-_Opportunity_Header_#_of_Competitive_No_Sale_Opportunities)"
+      }
+    }, {
+      "name" : "# of Accounts with Won Opportunities",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Sales Pipeline" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Fact - CX - Opportunity Header.# of Accounts with Won Opportunities",
+      "localization" : {
+        "localizationKey" : "# of Accounts with Won Opportunities",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_CX_-_Opportunity_Fact_-_Opportunity_Header_#_of_Accounts_with_Won_Opportunities)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_CX_-_Opportunity_Fact_-_Opportunity_Header_#_of_Accounts_with_Won_Opportunities)"
+      }
+    }, {
+      "name" : "# of Expired Opportunities",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Sales Pipeline" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Fact - CX - Opportunity Header.# of Expired Opportunities",
+      "localization" : {
+        "localizationKey" : "# of Expired Opportunities",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_CX_-_Opportunity_Fact_-_Opportunity_Header_#_of_Expired_Opportunities)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_CX_-_Opportunity_Fact_-_Opportunity_Header_#_of_Expired_Opportunities)"
+      }
+    }, {
+      "name" : "Average # of Days to Close",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Sales Pipeline" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Fact - CX - Opportunity Header.Average # of Days to Close",
+      "localization" : {
+        "localizationKey" : "Average # of Days to Close",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_CX_-_Opportunity_Fact_-_Opportunity_Header_Average_#_of_Days_to_Close)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_CX_-_Opportunity_Fact_-_Opportunity_Header_Average_#_of_Days_to_Close)"
+      }
+    }, {
+      "name" : "Average # of Days to Open",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Sales Pipeline" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Fact - CX - Opportunity Header.Average # of Days to Open",
+      "localization" : {
+        "localizationKey" : "Average # of Days to Open",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_CX_-_Opportunity_Fact_-_Opportunity_Header_Average_#_of_Days_to_Open)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_CX_-_Opportunity_Fact_-_Opportunity_Header_Average_#_of_Days_to_Open)"
+      }
+    }, {
+      "name" : "Average Opportunity Win Probability",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Sales Pipeline" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Fact - CX - Opportunity Header.Average Opportunity Win Probability",
+      "localization" : {
+        "localizationKey" : "Average Opportunity Win Probability",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_CX_-_Opportunity_Fact_-_Opportunity_Header_Average_Opportunity_Win_Probability)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_CX_-_Opportunity_Fact_-_Opportunity_Header_Average_Opportunity_Win_Probability)"
+      }
+    }, {
+      "name" : "Average Age of Closed Opportunities",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Sales Pipeline" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Fact - CX - Opportunity Header.Average Age of Closed Opportunities",
+      "localization" : {
+        "localizationKey" : "Average Age of Closed Opportunities",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_CX_-_Opportunity_Fact_-_Opportunity_Header_Average_Age_of_Closed_Opportunities)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_CX_-_Opportunity_Fact_-_Opportunity_Header_Average_Age_of_Closed_Opportunities)"
+      }
+    }, {
+      "name" : "Average Age of Won Opportunities",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Sales Pipeline" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Fact - CX - Opportunity Header.Average Age of Won Opportunities",
+      "localization" : {
+        "localizationKey" : "Average Age of Won Opportunities",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_CX_-_Opportunity_Fact_-_Opportunity_Header_Average_Age_of_Won_Opportunities)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_CX_-_Opportunity_Fact_-_Opportunity_Header_Average_Age_of_Won_Opportunities)"
+      }
+    }, {
+      "name" : "Average Age of Lost Opportunities",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Sales Pipeline" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Fact - CX - Opportunity Header.Average Age of Lost Opportunities",
+      "localization" : {
+        "localizationKey" : "Average Age of Lost Opportunities",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_CX_-_Opportunity_Fact_-_Opportunity_Header_Average_Age_of_Lost_Opportunities)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_CX_-_Opportunity_Fact_-_Opportunity_Header_Average_Age_of_Lost_Opportunities)"
+      }
+    }, {
+      "name" : "Average Age of No Sale Opportunities",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Sales Pipeline" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Fact - CX - Opportunity Header.Average Age of No Sale Opportunities",
+      "localization" : {
+        "localizationKey" : "Average Age of No Sale Opportunities",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_CX_-_Opportunity_Fact_-_Opportunity_Header_Average_Age_of_No_Sale_Opportunities)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_CX_-_Opportunity_Fact_-_Opportunity_Header_Average_Age_of_No_Sale_Opportunities)"
+      }
+    }, {
+      "name" : "Win Rate",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Sales Pipeline" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Fact - CX - Opportunity Header.Win Rate",
+      "localization" : {
+        "localizationKey" : "Win Rate",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_CX_-_Opportunity_Fact_-_Opportunity_Header_Win_Rate)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_CX_-_Opportunity_Fact_-_Opportunity_Header_Win_Rate)"
+      }
+    }, {
+      "name" : "Loss Rate",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Sales Pipeline" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Fact - CX - Opportunity Header.Loss Rate",
+      "localization" : {
+        "localizationKey" : "Loss Rate",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_CX_-_Opportunity_Fact_-_Opportunity_Header_Loss_Rate)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_CX_-_Opportunity_Fact_-_Opportunity_Header_Loss_Rate)"
+      }
+    }, {
+      "name" : "Conversion Rate",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Sales Pipeline" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Fact - CX - Opportunity Header.Conversion Rate",
+      "localization" : {
+        "localizationKey" : "Conversion Rate",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_CX_-_Opportunity_Fact_-_Opportunity_Header_Conversion_Rate)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_CX_-_Opportunity_Fact_-_Opportunity_Header_Conversion_Rate)"
+      }
+    }, {
+      "name" : "Competitor Win Rate",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Sales Pipeline" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Fact - CX - Opportunity Header.Competitor Win Rate",
+      "localization" : {
+        "localizationKey" : "Competitor Win Rate",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_CX_-_Opportunity_Fact_-_Opportunity_Header_Competitor_Win_Rate)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_CX_-_Opportunity_Fact_-_Opportunity_Header_Competitor_Win_Rate)"
+      }
+    }, {
+      "name" : "Competitive Loss Rate",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Sales Pipeline" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Fact - CX - Opportunity Header.Competitive Loss Rate",
+      "localization" : {
+        "localizationKey" : "Competitive Loss Rate",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_CX_-_Opportunity_Fact_-_Opportunity_Header_Competitive_Loss_Rate)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_CX_-_Opportunity_Fact_-_Opportunity_Header_Competitive_Loss_Rate)"
+      }
+    }, {
+      "name" : "Competitor Conversion Rate",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Sales Pipeline" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Fact - CX - Opportunity Header.Competitor Conversion Rate",
+      "localization" : {
+        "localizationKey" : "Competitor Conversion Rate",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_CX_-_Opportunity_Fact_-_Opportunity_Header_Competitor_Conversion_Rate)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_CX_-_Opportunity_Fact_-_Opportunity_Header_Competitor_Conversion_Rate)"
+      }
+    } ],
+    "localization" : {
+      "localizationKey" : "Fact - Opportunity Header",
+      "nameVariable" : "VALUEOF(NQ_SESSION.CN_CX_-_Opportunity_Fact_-_Opportunity_Header)",
+      "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_CX_-_Opportunity_Fact_-_Opportunity_Header)"
+    }
+  }
+}

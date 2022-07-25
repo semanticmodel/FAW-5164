@@ -1,0 +1,60 @@
+{
+  "logicalTable" : {
+    "name" : "Z - Container for Unexposed Common Physical Objects",
+    "tags" : [ "Project:Fusion Analytics Warehouse - Absence Management", "Project:Fusion Analytics Warehouse - Accounts Payable", "Project:Fusion Analytics Warehouse - Accounts Receivable", "Project:Fusion Analytics Warehouse - Expense Management", "Project:Fusion Analytics Warehouse - General Ledger", "Project:Fusion Analytics Warehouse - Goals and Career Development", "Project:Fusion Analytics Warehouse - Performance Management and Check-ins", "Project:Fusion Analytics Warehouse - Procurement Management", "Project:Fusion Analytics Warehouse - Purchase Agreements", "Project:Fusion Analytics Warehouse - Purchase Orders", "Project:Fusion Analytics Warehouse - Purchase Receipts", "Project:Fusion Analytics Warehouse - Reconciliation", "Project:Fusion Analytics Warehouse - Salary Basis", "Project:Fusion Analytics Warehouse - Sales Pipeline", "Project:Fusion Analytics Warehouse - Sales Pipeline Snapshot", "Project:Fusion Analytics Warehouse - Talent Acquisition", "Project:Fusion Analytics Warehouse - Talent Profile Management", "Project:Fusion Analytics Warehouse - Workforce Compensation", "Project:Fusion Analytics Warehouse - Workforce Management", "Project:NetSuite Analytics Warehouse - NetSuite Inventory", "Project:NetSuite Analytics Warehouse - NetSuite Purchases", "Project:NetSuite Analytics Warehouse - NetSuite Sales", "Project:Oracle Analytics for Fusion Common", "Project:Oracle Analytics for Fusion Financials", "Project:Oracle Analytics for Fusion Human Capital Management" ],
+    "type" : "FACT",
+    "logicalColumns" : [ {
+      "name" : "UPDATE_TS",
+      "dataType" : "TIMESTAMP",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "S_NQ_EPT",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:BIS_CACHE_MANAGEMENT.OAX$INFRA.S_NQ_EPT.UPDATE_TS" ]
+          }
+        } ]
+      }
+    }, {
+      "name" : "DummyText",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "MLS_RPD_MSG_VL",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.MLS_RPD_MSG_VL.LANGUAGE_CODE" ]
+          }
+        } ]
+      }
+    } ],
+    "logicalTableSources" : [ {
+      "name" : "S_NQ_EPT",
+      "disable" : false,
+      "tableMapping" : {
+        "tables" : [ "physicalTable:BIS_CACHE_MANAGEMENT.OAX$INFRA.S_NQ_EPT" ]
+      },
+      "combineWithOtherFragments" : false,
+      "enableFragmentSelection" : false,
+      "distinctValues" : false
+    }, {
+      "name" : "MLS_RPD_MSG_VL",
+      "disable" : false,
+      "tableMapping" : {
+        "tables" : [ "physicalTable:Oracle_Data_Warehouse.OAX$OAC.MLS_RPD_MSG_VL" ]
+      },
+      "combineWithOtherFragments" : false,
+      "enableFragmentSelection" : false,
+      "distinctValues" : false
+    } ],
+    "joins" : [ {
+      "rightTable" : "logicalTable:Core.Dim - Date Fiscal Calendar",
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ONE"
+    } ]
+  }
+}

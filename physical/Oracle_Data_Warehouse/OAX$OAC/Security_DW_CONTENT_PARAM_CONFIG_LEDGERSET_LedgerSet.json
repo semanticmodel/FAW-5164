@@ -1,0 +1,16 @@
+{
+  "physicalTable": {
+    "name": "Security_DW_CONTENT_PARAM_CONFIG_LEDGERSET_LedgerSet",
+    "sourceTable": "physicalTable:Oracle_Data_Warehouse.OAX$OAC.DW_CONTENT_PARAM_CONFIG_LEDGERSET",
+    "caching": {
+      "enable": true,
+      "expiryTime": 1,
+      "expiryUnit": "DAYS"
+    },
+    "additionalKeys": [
+      [
+        "LEDGER_SET_ID"
+      ]
+    ]
+  }
+}

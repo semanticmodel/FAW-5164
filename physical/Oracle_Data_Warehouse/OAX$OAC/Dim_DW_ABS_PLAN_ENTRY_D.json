@@ -1,0 +1,22 @@
+{
+  "physicalTable": {
+    "name": "Dim_DW_ABS_PLAN_ENTRY_D",
+    "sourceTable": "physicalTable:Oracle_Data_Warehouse.OAX$OAC.DW_ABS_PLAN_ENTRY_D",
+    "caching": {
+      "enable": true
+    },
+    "additionalKeys": [
+      [
+        "ABS_PLAN_ENTRY_ID"
+      ],
+      [
+        "ABSENCE_PLAN_ID"
+      ],
+      [
+        "ABSENCE_ENTRY_ID",
+        "ENTERPRISE_ID",
+        "ASSIGNMENT_ID"
+      ]
+    ]
+  }
+}

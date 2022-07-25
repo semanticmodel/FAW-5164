@@ -1,0 +1,419 @@
+{
+  "logicalTable" : {
+    "name" : "Dim - Usage Tracking Statistics - Logical Details",
+    "type" : "DIMENSION",
+    "primaryKey" : [ "Report Identifier" ],
+    "logicalColumns" : [ {
+      "name" : "Report Identifier",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "Fact_DW_USAGE_LOGICAL",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX_INFRA.Fact_DW_USAGE_LOGICAL.ID" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Detail"
+    }, {
+      "name" : "Object Type",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "Fact_DW_USAGE_LOGICAL",
+          "physicalExpression" : {
+            "expressionTemplate" : " CASE  WHEN %1 IN ('Report', 'Value Prompt', 'Soap', 'Raw SQL') THEN 'Analytics Report' WHEN %1 = 'Visual Analyzer' AND %2 LIKE '\\%viewID\\%path\\%' THEN 'Data Visualization Project' WHEN %2 LIKE '\\%canvas!1\\%' THEN 'Appshell' ELSE 'Others' END ",
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX_INFRA.Fact_DW_USAGE_LOGICAL.QUERY_SRC_CD", "physicalColumn:Oracle_Data_Warehouse.OAX_INFRA.Fact_DW_USAGE_LOGICAL.SAW_SRC_PATH" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Detail"
+    }, {
+      "name" : "Custom Indicator",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "Fact_DW_USAGE_LOGICAL",
+          "physicalExpression" : {
+            "expressionTemplate" : " CASE  WHEN %1 LIKE '/shared/Oracle/\\%' THEN 'No' ELSE 'Yes' END ",
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX_INFRA.Fact_DW_USAGE_LOGICAL.SAW_SRC_PATH" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Detail"
+    }, {
+      "name" : "Adhoc Indicator",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "Fact_DW_USAGE_LOGICAL",
+          "physicalExpression" : {
+            "expressionTemplate" : " CASE  WHEN %1 IS NULL  THEN 'Yes' ELSE 'No' END ",
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX_INFRA.Fact_DW_USAGE_LOGICAL.SAW_SRC_PATH" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Detail"
+    }, {
+      "name" : "Report Path",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "Fact_DW_USAGE_LOGICAL",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX_INFRA.Fact_DW_USAGE_LOGICAL.SAW_SRC_PATH" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Detail"
+    }, {
+      "name" : "Logical SQL",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "Fact_DW_USAGE_LOGICAL",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX_INFRA.Fact_DW_USAGE_LOGICAL.QUERY_TEXT" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Detail"
+    }, {
+      "name" : "Full Logical SQL",
+      "dataType" : "LONGVARCHAR",
+      "sortBy" : "Report Identifier",
+      "descriptorColumn" : "Report Identifier",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "Fact_DW_USAGE_LOGICAL",
+          "physicalExpression" : {
+            "expressionTemplate" : " LOOKUP( SPARSE %1, %2, %2)",
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX_INFRA.Lookup_DW_USAGE_LOGICAL.QUERY_BLOB", "physicalColumn:Oracle_Data_Warehouse.OAX_INFRA.Fact_DW_USAGE_LOGICAL.ID" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Detail"
+    }, {
+      "name" : "Subject Area Name",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "Fact_DW_USAGE_LOGICAL",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX_INFRA.Fact_DW_USAGE_LOGICAL.PRESENTATION_NAME" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Detail"
+    }, {
+      "name" : "Report Execution Identifier",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "Fact_DW_USAGE_LOGICAL",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX_INFRA.Fact_DW_USAGE_LOGICAL.ECID" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Detail"
+    }, {
+      "name" : "Report Executed By User Name",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "Fact_DW_USAGE_LOGICAL",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX_INFRA.Fact_DW_USAGE_LOGICAL.USER_NAME" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Detail"
+    }, {
+      "name" : "Report Executed By Session Identifier",
+      "dataType" : "DOUBLE",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "Fact_DW_USAGE_LOGICAL",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX_INFRA.Fact_DW_USAGE_LOGICAL.SESSION_ID" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Detail"
+    }, {
+      "name" : "Success Indicator",
+      "dataType" : "DOUBLE",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "Fact_DW_USAGE_LOGICAL",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX_INFRA.Fact_DW_USAGE_LOGICAL.SUCCESS_FLG" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Detail"
+    }, {
+      "name" : "Success Indicator Description",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "Fact_DW_USAGE_LOGICAL",
+          "physicalExpression" : {
+            "expressionTemplate" : " CASE  WHEN %1 = 0 THEN 'The query completed successfully with no errors.' WHEN %1 = 1 THEN 'The query timed out.' WHEN %1 = 2 THEN 'The query failed because row limits were exceeded.' WHEN %1 = 3 THEN 'The query failed due to some other reason.' ELSE 'Unspecified' END ",
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX_INFRA.Fact_DW_USAGE_LOGICAL.SUCCESS_FLG" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Detail"
+    }, {
+      "name" : "Report Error Text",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "Fact_DW_USAGE_LOGICAL",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX_INFRA.Fact_DW_USAGE_LOGICAL.ERROR_TEXT" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Detail"
+    }, {
+      "name" : "Report Start Timestamp",
+      "dataType" : "DATETIME",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "Fact_DW_USAGE_LOGICAL",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX_INFRA.Fact_DW_USAGE_LOGICAL.START_TS" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Detail"
+    }, {
+      "name" : "Report Start Date",
+      "dataType" : "DATETIME",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "Fact_DW_USAGE_LOGICAL",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX_INFRA.Fact_DW_USAGE_LOGICAL.START_DT" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Detail"
+    }, {
+      "name" : "Report Start Hour Minute",
+      "dataType" : "CHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "Fact_DW_USAGE_LOGICAL",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX_INFRA.Fact_DW_USAGE_LOGICAL.START_HOUR_MIN" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Detail"
+    }, {
+      "name" : "Cache Indicator",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "Fact_DW_USAGE_LOGICAL",
+          "physicalExpression" : {
+            "expressionTemplate" : " CASE  WHEN %1 = 'N' THEN 'No' WHEN %1 = 'Y' THEN 'Yes' ELSE 'Unspecified' END ",
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX_INFRA.Fact_DW_USAGE_LOGICAL.CACHE_IND_FLG" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Detail"
+    }, {
+      "name" : "Past Month Execution Indicator",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "Fact_DW_USAGE_LOGICAL",
+          "physicalExpression" : {
+            "expressionTemplate" : " CASE  WHEN  TIMESTAMPDIFF( SQL_TSI_MONTH , %1,  CURRENT_DATE ) = 0 THEN 'No' ELSE 'Yes' END ",
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX_INFRA.Fact_DW_USAGE_LOGICAL.START_TS" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Detail"
+    }, {
+      "name" : "Past Quarter Execution Indicator",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "Fact_DW_USAGE_LOGICAL",
+          "physicalExpression" : {
+            "expressionTemplate" : " CASE  WHEN  EXTRACT( MONTH  FROM %1) =  EXTRACT( MONTH  FROM  TIMESTAMPADD( SQL_TSI_MONTH , 0,  CURRENT_DATE )) THEN 'No' WHEN  EXTRACT( MONTH  FROM %1) =  EXTRACT( MONTH  FROM  TIMESTAMPADD( SQL_TSI_MONTH , -(1),  CURRENT_DATE )) THEN 'No' WHEN  EXTRACT( MONTH  FROM %1) =  EXTRACT( MONTH  FROM  TIMESTAMPADD( SQL_TSI_MONTH , -(2),  CURRENT_DATE )) THEN 'No' ELSE 'Yes' END ",
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX_INFRA.Fact_DW_USAGE_LOGICAL.START_TS" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Detail"
+    }, {
+      "name" : "Past Year Execution Indicator",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "Fact_DW_USAGE_LOGICAL",
+          "physicalExpression" : {
+            "expressionTemplate" : " CASE  WHEN  TIMESTAMPDIFF( SQL_TSI_YEAR , %1,  CURRENT_DATE ) = 0 THEN 'No' ELSE 'Yes' END ",
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX_INFRA.Fact_DW_USAGE_LOGICAL.START_TS" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Detail"
+    }, {
+      "name" : "Report End Timestamp",
+      "dataType" : "DATETIME",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "Fact_DW_USAGE_LOGICAL",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX_INFRA.Fact_DW_USAGE_LOGICAL.END_TS" ]
+          }
+        } ]
+      }
+    }, {
+      "name" : "Report End Date",
+      "dataType" : "DATETIME",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "Fact_DW_USAGE_LOGICAL",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX_INFRA.Fact_DW_USAGE_LOGICAL.END_DT" ]
+          }
+        } ]
+      }
+    }, {
+      "name" : "Report End Hour Minute",
+      "dataType" : "CHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "Fact_DW_USAGE_LOGICAL",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX_INFRA.Fact_DW_USAGE_LOGICAL.END_HOUR_MIN" ]
+          }
+        } ]
+      }
+    }, {
+      "name" : "Report Source Code",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "Fact_DW_USAGE_LOGICAL",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX_INFRA.Fact_DW_USAGE_LOGICAL.QUERY_SRC_CD" ]
+          }
+        } ]
+      }
+    } ],
+    "logicalTableSources" : [ {
+      "name" : "Fact_DW_USAGE_LOGICAL",
+      "disable" : false,
+      "tableMapping" : {
+        "tables" : [ "physicalTable:Oracle_Data_Warehouse.OAX_INFRA.Fact_DW_USAGE_LOGICAL" ]
+      },
+      "dataGranularity" : [ "logicalLevel:Core.Dim - Usage Tracking Statistics - Logical Details.Detail" ],
+      "combineWithOtherFragments" : false,
+      "enableFragmentSelection" : false,
+      "dataFilter" : {
+        "expressionTemplate" : "%1 <> 'Internal - Reporting Calendar Dynamic Time Filters'",
+        "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX_INFRA.Fact_DW_USAGE_LOGICAL.PRESENTATION_NAME" ]
+      },
+      "distinctValues" : false
+    } ],
+    "hierarchyType" : "LEVEL_BASED",
+    "levelBasedHierarchy" : {
+      "defaultRootLevel" : "Total",
+      "ragged" : false,
+      "skipped" : false,
+      "logicalLevels" : [ {
+        "name" : "Total",
+        "numberOfElements" : 1,
+        "grandTotalLevel" : true,
+        "disableAggregateToHigherLevel" : false
+      }, {
+        "name" : "Detail",
+        "numberOfElements" : 10,
+        "grandTotalLevel" : false,
+        "disableAggregateToHigherLevel" : false,
+        "primaryKey" : [ "Report Identifier" ],
+        "displayKey" : "Report Identifier"
+      } ],
+      "logicalHierarchies" : [ {
+        "name" : "Usage Tracking Statistics - Logical Details",
+        "levels" : [ "Total", "Detail" ]
+      } ]
+    }
+  }
+}

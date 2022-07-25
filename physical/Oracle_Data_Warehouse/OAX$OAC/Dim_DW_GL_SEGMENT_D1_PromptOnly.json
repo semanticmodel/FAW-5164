@@ -1,0 +1,45 @@
+{
+  "physicalTable": {
+    "name": "Dim_DW_GL_SEGMENT_D1_PromptOnly",
+    "sourceTable": "physicalTable:Oracle_Data_Warehouse.OAX$OAC.DW_GL_SEGMENT_D",
+    "caching": {
+      "enable": true
+    },
+    "joins": [      {
+        "rightTable": "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_GL_SEGMENT_DH1_PromptOnly",
+        "joinConditions": [          {
+            "leftColumn": "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_GL_SEGMENT_D1_PromptOnly.GL_SEGMENT_CODE",
+            "rightColumn": "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_GL_SEGMENT_DH1_PromptOnly.GL_SEGMENT"
+          },
+          {
+            "leftColumn": "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_GL_SEGMENT_D1_PromptOnly.GL_SEGMENT_VALUESET_CODE",
+            "rightColumn": "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_GL_SEGMENT_DH1_PromptOnly.HIERARCHY_VALUESET_CODE"
+          }
+        ]
+      },
+      {
+        "useJoinExpression": true,
+        "rightTable": "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Security_DW_CONTENT_PARAM_CONFIG_COA_VALUESET_GL_SEGMENT_DH1",
+        "joinExpression": {
+          "expressionTemplate": "%1 = %2 AND %3 IN ('Dim - GL Segment1', '~NOVALUE~')",
+          "expressionObjects": [
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_GL_SEGMENT_D1_PromptOnly.GL_SEGMENT_VALUESET_CODE",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Security_DW_CONTENT_PARAM_CONFIG_COA_VALUESET_GL_SEGMENT_DH1.VALUESET_CODE",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Security_DW_CONTENT_PARAM_CONFIG_COA_VALUESET_GL_SEGMENT_DH1.BI_OBJECT_NAME"
+          ]
+        },
+        "cardinality": "MANY_TO_ONE",
+        "joinType": "INNER"
+      }
+    ],
+    "additionalKeys": [
+      [
+        "GL_SEGMENT_CODE",
+        "GL_SEGMENT_VALUESET_CODE"
+      ],
+      [
+        "GL_SEGMENT_CODE"
+      ]
+    ]
+  }
+}

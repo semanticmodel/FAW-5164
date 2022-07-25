@@ -1,0 +1,24 @@
+{
+  "initBlock" : {
+    "name" : "Fiscal Calendar - Prior Fiscal Quarter",
+    "description" : "Defaults to the prior fiscal period of the calendar chosen in the configuration",
+    "tags" : [ "Project:Fusion Analytics Warehouse - Absence Management", "Project:Fusion Analytics Warehouse - Accounts Payable", "Project:Fusion Analytics Warehouse - Accounts Receivable", "Project:Fusion Analytics Warehouse - Expense Management", "Project:Fusion Analytics Warehouse - GL Budgets Analysis", "Project:Fusion Analytics Warehouse - General Ledger", "Project:Fusion Analytics Warehouse - Goals and Career Development", "Project:Fusion Analytics Warehouse - Inventory", "Project:Fusion Analytics Warehouse - Performance Management and Check-ins", "Project:Fusion Analytics Warehouse - Procurement Management", "Project:Fusion Analytics Warehouse - Purchase Agreements", "Project:Fusion Analytics Warehouse - Purchase Orders", "Project:Fusion Analytics Warehouse - Purchase Receipts", "Project:Fusion Analytics Warehouse - Reconciliation", "Project:Fusion Analytics Warehouse - Salary Basis", "Project:Fusion Analytics Warehouse - Talent Acquisition", "Project:Fusion Analytics Warehouse - Talent Profile Management", "Project:Fusion Analytics Warehouse - Workforce Compensation", "Project:Fusion Analytics Warehouse - Workforce Management", "Project:Oracle Analytics for Fusion Common", "Project:Oracle Analytics for Fusion Financials", "Project:Oracle Analytics for Fusion Human Capital Management" ],
+    "type" : "SESSION",
+    "connectionPool" : "connectionPool:Oracle_Data_Warehouse.Oracle_Data_Warehouse_Repository_Initblocks_Connection_Pool",
+    "selectStatements" : [ {
+      "databaseType" : "DEFAULT",
+      "query" : "SELECT DISTINCT B.FISCAL_QUARTER FROM \r\n(SELECT FISCAL_PERIOD_SET_NAME,FISCAL_PERIOD_TYPE,CURRENT_FISCAL_QUARTER_CODE,(FISCAL_QUARTER_CODE)AS FISCAL_QUARTER,(COUNT(1) OVER (PARTITION BY FISCAL_PERIOD_SET_NAME,FISCAL_PERIOD_TYPE\r\nORDER BY FISCAL_PERIOD_SET_NAME,FISCAL_PERIOD_TYPE,FISCAL_YEAR_NUMBER,FISCAL_QUARTER_NUMBER)) AS RUN_COUNT FROM DW_FISCAL_QUARTER_D) A,\r\n(SELECT FISCAL_PERIOD_SET_NAME,FISCAL_PERIOD_TYPE,CURRENT_FISCAL_QUARTER_CODE,(FISCAL_QUARTER_CODE)AS FISCAL_QUARTER,(COUNT(1) OVER (PARTITION BY FISCAL_PERIOD_SET_NAME,FISCAL_PERIOD_TYPE\r\nORDER BY FISCAL_PERIOD_SET_NAME,FISCAL_PERIOD_TYPE,FISCAL_YEAR_NUMBER,FISCAL_QUARTER_NUMBER)) AS RUN_COUNT FROM DW_FISCAL_QUARTER_D) B\r\nWHERE A.FISCAL_PERIOD_SET_NAME=B.FISCAL_PERIOD_SET_NAME\r\nAND A.FISCAL_PERIOD_TYPE=B.FISCAL_PERIOD_TYPE\r\nAND A.CURRENT_FISCAL_QUARTER_CODE='Current'\r\nAND A.FISCAL_PERIOD_SET_NAME='VALUEOF(NQ_SESSION.FISCAL_CALENDAR)'\r\nAND B.RUN_COUNT = A.RUN_COUNT-1"
+    } ],
+    "variables" : [ {
+      "name" : "PRIOR_FISCAL_QUARTER",
+      "value" : "'2000Q4'",
+      "enableUsersToSetValue" : false,
+      "securitySensitive" : false
+    } ],
+    "dependencies" : [ "Fiscal Calendar - Fiscal Reporting Calendar" ],
+    "disable" : false,
+    "queryReturnsVariableNamesAndValues" : false,
+    "allowDeferredExecution" : true,
+    "cacheQueryResult" : true
+  }
+}

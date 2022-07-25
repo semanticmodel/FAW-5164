@@ -1,0 +1,23 @@
+{
+  "physicalTable": {
+    "name": "Dim_DW_LEDGER_D_PromptOnly",
+    "sourceTable": "physicalTable:Oracle_Data_Warehouse.OAX$OAC.DW_LEDGER_D",
+    "caching": {
+      "enable": true
+    },
+    "joins": [      {
+        "rightTable": "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Security_DW_CONTENT_PARAM_CONFIG_LEDGER_Ledger",
+        "joinConditions": [          {
+            "leftColumn": "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_LEDGER_D_PromptOnly.LEDGER_ID",
+            "rightColumn": "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Security_DW_CONTENT_PARAM_CONFIG_LEDGER_Ledger.LEDGER_ID"
+          }
+        ]
+      }
+    ],
+    "additionalKeys": [
+      [
+        "LEDGER_ID"
+      ]
+    ]
+  }
+}

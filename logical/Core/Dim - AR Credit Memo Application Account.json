@@ -1,0 +1,128 @@
+{
+  "logicalTable" : {
+    "name" : "Dim - AR Credit Memo Application Account",
+    "type" : "DIMENSION",
+    "primaryKey" : [ "Credit Memo Application Code Combination Key" ],
+    "logicalColumns" : [ {
+      "name" : "Credit Memo Application Code Combination Key",
+      "dataType" : "DOUBLE",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "Dim_DW_GL_CODE_COMBINATION_D_AR_CreditMemoApplicationAccount_PromptOnly",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_GL_CODE_COMBINATION_D_AR_CreditMemoApplicationAccount_PromptOnly.CODE_COMBINATION_ID" ]
+          }
+        }, {
+          "logicalTableSource" : "Dim_DW_GL_CODE_COMBINATION_D_AR_CreditMemoApplicationAccount",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_GL_CODE_COMBINATION_D_AR_CreditMemoApplicationAccount.CODE_COMBINATION_ID" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Detail"
+    }, {
+      "name" : "Credit Memo Application Account Combination",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "Dim_DW_GL_CODE_COMBINATION_D_AR_CreditMemoApplicationAccount_PromptOnly",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_GL_CODE_COMBINATION_D_AR_CreditMemoApplicationAccount_PromptOnly.CONCAT_SEGMENTS" ]
+          }
+        }, {
+          "logicalTableSource" : "Dim_DW_GL_CODE_COMBINATION_D_AR_CreditMemoApplicationAccount",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_GL_CODE_COMBINATION_D_AR_CreditMemoApplicationAccount.CONCAT_SEGMENTS" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Detail"
+    }, {
+      "name" : "Security Config Code - COA",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "Dim_DW_GL_CODE_COMBINATION_D_AR_CreditMemoApplicationAccount_PromptOnly",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Security_DW_CONTENT_PARAM_CONFIG_COA_AR_CreditMemoApplicationAccount.PARAMETER_CODE" ]
+          }
+        }, {
+          "logicalTableSource" : "Dim_DW_GL_CODE_COMBINATION_D_AR_CreditMemoApplicationAccount",
+          "physicalExpression" : {
+            "expressionTemplate" : "'CHART_OF_ACCOUNTS_ID'"
+          }
+        } ]
+      }
+    } ],
+    "logicalTableSources" : [ {
+      "name" : "Dim_DW_GL_CODE_COMBINATION_D_AR_CreditMemoApplicationAccount_PromptOnly",
+      "disable" : false,
+      "tableMapping" : {
+        "tables" : [ "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_GL_CODE_COMBINATION_D_AR_CreditMemoApplicationAccount_PromptOnly", "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Security_DW_CONTENT_PARAM_CONFIG_COA_AR_CreditMemoApplicationAccount" ],
+        "logicalTableSourceJoins" : [ {
+          "leftTable" : "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_GL_CODE_COMBINATION_D_AR_CreditMemoApplicationAccount_PromptOnly",
+          "rightTable" : "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Security_DW_CONTENT_PARAM_CONFIG_COA_AR_CreditMemoApplicationAccount",
+          "joinType" : "INNER",
+          "disable" : false
+        } ]
+      },
+      "dataGranularity" : [ "logicalLevel:Core.Dim - AR Credit Memo Application Account.Detail" ],
+      "combineWithOtherFragments" : false,
+      "enableFragmentSelection" : false,
+      "distinctValues" : false
+    }, {
+      "name" : "Dim_DW_GL_CODE_COMBINATION_D_AR_CreditMemoApplicationAccount",
+      "disable" : false,
+      "tableMapping" : {
+        "tables" : [ "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_GL_CODE_COMBINATION_D_AR_CreditMemoApplicationAccount" ]
+      },
+      "dataGranularity" : [ "logicalLevel:Core.Dim - AR Credit Memo Application Account.Detail" ],
+      "combineWithOtherFragments" : false,
+      "enableFragmentSelection" : false,
+      "distinctValues" : false
+    } ],
+    "hierarchyType" : "LEVEL_BASED",
+    "levelBasedHierarchy" : {
+      "defaultRootLevel" : "Total",
+      "ragged" : false,
+      "skipped" : false,
+      "logicalLevels" : [ {
+        "name" : "Total",
+        "numberOfElements" : 1,
+        "grandTotalLevel" : true,
+        "disableAggregateToHigherLevel" : false
+      }, {
+        "name" : "Detail",
+        "numberOfElements" : 1,
+        "grandTotalLevel" : false,
+        "disableAggregateToHigherLevel" : false,
+        "primaryKey" : [ "Credit Memo Application Code Combination Key" ],
+        "displayKey" : "Credit Memo Application Code Combination Key"
+      } ],
+      "logicalHierarchies" : [ {
+        "name" : "AR Credit Memo Application Account",
+        "levels" : [ "Total", "Detail" ]
+      } ]
+    },
+    "dataFilters" : [ {
+      "accessor" : "role:OA4F_CONTENT_REPORTING_CONFIG",
+      "functionalGroup" : "REPORT_CONFIG",
+      "status" : "ENABLED",
+      "filter" : {
+        "expressionTemplate" : "%1 = 'CHART_OF_ACCOUNTS_ID'",
+        "expressionObjects" : [ "logicalColumn:Core.Dim - AR Credit Memo Application Account.Security Config Code - COA" ]
+      }
+    } ]
+  }
+}

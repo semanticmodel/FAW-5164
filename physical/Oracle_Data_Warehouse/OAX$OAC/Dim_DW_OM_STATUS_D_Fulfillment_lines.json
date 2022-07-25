@@ -1,0 +1,17 @@
+{
+  "physicalTable": {
+    "name": "Dim_DW_OM_STATUS_D_Fulfillment_lines",
+    "sourceTable": "physicalTable:Oracle_Data_Warehouse.OAX$OAC.DW_OM_STATUS_D",
+    "caching": {
+      "enable": true
+    },
+    "additionalKeys": [
+      [
+        "STATUS_ID"
+      ],
+      [
+        "STATUS_CODE"
+      ]
+    ]
+  }
+}

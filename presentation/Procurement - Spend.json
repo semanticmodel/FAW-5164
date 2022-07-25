@@ -1,0 +1,433 @@
+{
+  "subjectArea" : {
+    "name" : "Procurement - Spend",
+    "description" : "This is a detailed subject area that provides the ability to report on total spend of an organization across suppliers, products, item categories, business units, cost centers, buying locations, supplier locations and associated hierarchy.",
+    "tags" : [ "Project:Fusion Analytics Warehouse - Procurement Management" ],
+    "sourceBusinessModel" : "businessModel:Core",
+    "implicitFactColumn" : "logicalColumn:Core.Fact - PRC - Spend.Invoice Amount",
+    "hideIfTrue" : {
+      "expressionTemplate" : " VALUEOF(NQ_SESSION.\"%1\") = 'HIDE'",
+      "expressionObjects" : [ "variable:undeclaredVariables.AM_Procurement_-_Spend" ]
+    },
+    "tableOrder" : [ {
+      "name" : "presentationTable:Procurement - Spend.Time"
+    }, {
+      "name" : "presentationTable:Procurement - Spend.Legal Entity"
+    }, {
+      "name" : "presentationTable:Procurement - Spend.Ledger Set"
+    }, {
+      "name" : "presentationTable:Procurement - Spend.Ledger"
+    }, {
+      "name" : "presentationTable:Procurement - Spend.GL Account"
+    }, {
+      "name" : "presentationTable:Procurement - Spend.GL Segments",
+      "children" : [ {
+        "name" : "presentationTable:Procurement - Spend.Cost Center"
+      }, {
+        "name" : "presentationTable:Procurement - Spend.Cost Center Hierarchy"
+      }, {
+        "name" : "presentationTable:Procurement - Spend.Balancing Segment"
+      }, {
+        "name" : "presentationTable:Procurement - Spend.Balancing Segment Hierarchy"
+      }, {
+        "name" : "presentationTable:Procurement - Spend.Natural Account"
+      }, {
+        "name" : "presentationTable:Procurement - Spend.Natural Account Hierarchy"
+      }, {
+        "name" : "presentationTable:Procurement - Spend.GL Segment1"
+      }, {
+        "name" : "presentationTable:Procurement - Spend.GL Segment1 Hierarchy"
+      }, {
+        "name" : "presentationTable:Procurement - Spend.GL Segment2"
+      }, {
+        "name" : "presentationTable:Procurement - Spend.GL Segment2 Hierarchy"
+      }, {
+        "name" : "presentationTable:Procurement - Spend.GL Segment3"
+      }, {
+        "name" : "presentationTable:Procurement - Spend.GL Segment3 Hierarchy"
+      }, {
+        "name" : "presentationTable:Procurement - Spend.GL Segment4"
+      }, {
+        "name" : "presentationTable:Procurement - Spend.GL Segment4 Hierarchy"
+      }, {
+        "name" : "presentationTable:Procurement - Spend.GL Segment5"
+      }, {
+        "name" : "presentationTable:Procurement - Spend.GL Segment5 Hierarchy"
+      }, {
+        "name" : "presentationTable:Procurement - Spend.GL Segment6"
+      }, {
+        "name" : "presentationTable:Procurement - Spend.GL Segment6 Hierarchy"
+      }, {
+        "name" : "presentationTable:Procurement - Spend.GL Segment7"
+      }, {
+        "name" : "presentationTable:Procurement - Spend.GL Segment7 Hierarchy"
+      }, {
+        "name" : "presentationTable:Procurement - Spend.GL Segment8"
+      }, {
+        "name" : "presentationTable:Procurement - Spend.GL Segment8 Hierarchy"
+      }, {
+        "name" : "presentationTable:Procurement - Spend.GL Segment9"
+      }, {
+        "name" : "presentationTable:Procurement - Spend.GL Segment9 Hierarchy"
+      }, {
+        "name" : "presentationTable:Procurement - Spend.GL Segment10"
+      }, {
+        "name" : "presentationTable:Procurement - Spend.GL Segment10 Hierarchy"
+      } ]
+    }, {
+      "name" : "presentationTable:Procurement - Spend.Business Unit"
+    }, {
+      "name" : "presentationTable:Procurement - Spend.Payables Invoicing Business Unit"
+    }, {
+      "name" : "presentationTable:Procurement - Spend.Procurement Business Unit"
+    }, {
+      "name" : "presentationTable:Procurement - Spend.Requisition Business Unit"
+    }, {
+      "name" : "presentationTable:Procurement - Spend.Agreement Procurement Business Unit"
+    }, {
+      "name" : "presentationTable:Procurement - Spend.Supplier"
+    }, {
+      "name" : "presentationTable:Procurement - Spend.Supplier Site"
+    }, {
+      "name" : "presentationTable:Procurement - Spend.Inventory Organization"
+    }, {
+      "name" : "presentationTable:Procurement - Spend.Ship To Location"
+    }, {
+      "name" : "presentationTable:Procurement - Spend.Buyer"
+    }, {
+      "name" : "presentationTable:Procurement - Spend.Purchase Item"
+    }, {
+      "name" : "presentationTable:Procurement - Spend.Inventory Item"
+    }, {
+      "name" : "presentationTable:Procurement - Spend.Unit of Measure"
+    }, {
+      "name" : "presentationTable:Procurement - Spend.Procurement Category Hierarchy"
+    }, {
+      "name" : "presentationTable:Procurement - Spend.Invoice References"
+    }, {
+      "name" : "presentationTable:Procurement - Spend.Invoice Details",
+      "children" : [ {
+        "name" : "presentationTable:Procurement - Spend.Document Details"
+      }, {
+        "name" : "presentationTable:Procurement - Spend.Invoice Creation Date"
+      } ]
+    }, {
+      "name" : "presentationTable:Procurement - Spend.Invoice Line Details"
+    }, {
+      "name" : "presentationTable:Procurement - Spend.Invoice Distribution Details",
+      "children" : [ {
+        "name" : "presentationTable:Procurement - Spend.Distribution Details"
+      }, {
+        "name" : "presentationTable:Procurement - Spend.Distribution Accounting Date"
+      }, {
+        "name" : "presentationTable:Procurement - Spend.Receipt Details"
+      }, {
+        "name" : "presentationTable:Procurement - Spend.Distribution Created By"
+      }, {
+        "name" : "presentationTable:Procurement - Spend.Accounting Details"
+      } ]
+    }, {
+      "name" : "presentationTable:Procurement - Spend.Created By"
+    }, {
+      "name" : "presentationTable:Procurement - Spend.Purchase Details",
+      "children" : [ {
+        "name" : "presentationTable:Procurement - Spend.Purchase Documents"
+      }, {
+        "name" : "presentationTable:Procurement - Spend.Purchase Order Details"
+      }, {
+        "name" : "presentationTable:Procurement - Spend.Requisition Details"
+      } ]
+    }, {
+      "name" : "presentationTable:Procurement - Spend.SLA Distribution Details"
+    }, {
+      "name" : "presentationTable:Procurement - Spend.Descriptive Flexfield (DFF)",
+      "children" : [ {
+        "name" : "presentationTable:Procurement - Spend.DFF - Suppliers"
+      }, {
+        "name" : "presentationTable:Procurement - Spend.DFF - Supplier Sites"
+      }, {
+        "name" : "presentationTable:Procurement - Spend.DFF - Invoice Headers Regional Information"
+      }, {
+        "name" : "presentationTable:Procurement - Spend.DFF - Invoice Lines"
+      }, {
+        "name" : "presentationTable:Procurement - Spend.DFF - Invoice Headers"
+      }, {
+        "name" : "presentationTable:Procurement - Spend.DFF - Invoice Distributions"
+      } ]
+    }, {
+      "name" : "presentationTable:Procurement - Spend.Currency"
+    }, {
+      "name" : "presentationTable:Procurement - Spend.Facts - Analytics Currency"
+    }, {
+      "name" : "presentationTable:Procurement - Spend.Facts - Ledger Currency"
+    }, {
+      "name" : "presentationTable:Procurement - Spend.Facts - Document Currency"
+    }, {
+      "name" : "presentationTable:Procurement - Spend.Facts - Invoices"
+    } ],
+    "permissions" : [ {
+      "accessor" : "role:DEFAULT",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:NAW_FINANCIALS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:NAW_INVENTORY_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:NAW_MANUFACTURING_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:NAW_PAYABLES_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:NAW_PURCHASING_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:NAW_SALES_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_COMMON_DATA_ADMIN_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_CONTENT_REPORTING_CONFIG",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_CX_OPTY_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_CX_OPTY_PROG_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_CX_OPTY_SNP_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_CX_REVN_LINE_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_CX_REVN_LINE_SNP_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_CX_SALES_ACCNT_DATA",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_CX_SALES_OPTY_CUSTOM_DATA",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_CX_SALES_OPTY_DATA",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_FIN_AP_AGING_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_FIN_AP_BUSINESS_UNIT_DATA",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_FIN_AP_EXPENSES_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_FIN_AP_HOLDS_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_FIN_AP_INVOICES_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_FIN_AP_LIABILITIES_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_FIN_AP_PAYMENTS_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_FIN_AP_PAYMENT_BUSINESS_UNIT_DATA",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_FIN_AR_ADJUSTMENTS_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_FIN_AR_AGING_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_FIN_AR_APPLICATIONS_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_FIN_AR_BUSINESS_UNIT_DATA",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_FIN_AR_CREDITMEMO_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_FIN_AR_RECEIPT_BUSINESS_UNIT_DATA",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_FIN_AR_REVENUE_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_FIN_AR_TRANSACTIONS_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_FIN_EXM_EMPLOYEE_EXPENSE_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_FIN_GL_ACCESS_SET_DATA",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_FIN_GL_ACCOUNT_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_FIN_GL_BALANCE_SHEET_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_FIN_GL_BUDGETS_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_FIN_GL_DETAIL_TRANSACTIONS_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_FIN_GL_PROFITABILITY_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_FIN_RECON_AP_APPS_DATA",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_FIN_RECON_AR_APPS_DATA",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_FIN_RECON_GL_APPS_DATA",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_FIN_RECON_OTHER_JOURNALS_DATA",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_HCM_ABSENCE_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_HCM_ABSENCE_DIV_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_HCM_BUSINESS_UNIT_DATA",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_HCM_COMPENSATION_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_HCM_COMPENSATION_DIV_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_HCM_COMPENSATION_WORKSHEET_MANAGER_DATA",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_HCM_COUNTRY_DATA",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_HCM_DEPARTMENT_DATA",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_HCM_GAINS_LOSS_TRANSACTION_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_HCM_GAINS_LOSS_TRANSACTION_DIV_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_HCM_GOALS_ANALYSIS_DIV_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_HCM_GOALS_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_HCM_LEGAL_EMPLOYER_DATA",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_HCM_LINE_MANAGER_DATA",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_HCM_PERFORMANCE_ANALYSIS_DIV_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_HCM_PERFORMANCE_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_HCM_PROFILE_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_HCM_PROFILE_DIV_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_HCM_REC_ALL_APP_DATA",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_HCM_REC_ALL_REQ_DATA",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_HCM_REC_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_HCM_REC_NON_RESTRICTED_APP_DATA",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_HCM_REC_REQ_DATA",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_HCM_SALARY_BASIS_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_HCM_SALARY_BASIS_DIV_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_HCM_VIEW_ALL_DATA",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_HCM_WORKFORCE_CORE_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_HCM_WORKFORCE_CORE_DIV_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_PROC_BUSINESS_UNIT_DATA",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_PROC_PURCHASE_AGREEMENT_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_PROC_PURCHASE_ORDER_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_PROC_PURCHASE_RECEIPTS_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_PROC_REQ_BUSINESS_UNIT_DATA",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_PROC_SPEND_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_SCM_INV_BUSINESS_UNIT_DATA",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_SCM_INV_INVENTORY_BALANCES_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_SCM_INV_INVENTORY_ORG_DATA",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_SCM_INV_INVENTORY_TRANSACTIONS_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_SCM_OM_BUSINESS_UNIT_DATA",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_SCM_OM_HOLDS_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_SCM_OM_SALES_ORDER_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:ServiceAdmin",
+      "access" : "READ"
+    } ],
+    "localization" : {
+      "localizationKey" : "Procurement - Spend",
+      "nameVariable" : "VALUEOF(NQ_SESSION.CN_Procurement_-_Spend)",
+      "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_Procurement_-_Spend)"
+    }
+  }
+}

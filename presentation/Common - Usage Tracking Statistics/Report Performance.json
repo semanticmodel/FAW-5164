@@ -1,0 +1,39 @@
+{
+  "presentationTable" : {
+    "name" : "Report Performance",
+    "tags" : [ "Project:Oracle Analytics for Fusion Common" ],
+    "presentationColumns" : [ {
+      "name" : "Total Rows Returned by Database",
+      "tags" : [ "Project:Oracle Analytics for Fusion Common" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Fact - Usage Tracking Statistics.Total Rows Returned by Database",
+      "localization" : {
+        "localizationKey" : "Total Rows Returned by Database",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_Common_-_Usage_Tracking_Statistics_Report_Performance_Total_Rows_Returned_by_Database)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_Common_-_Usage_Tracking_Statistics_Report_Performance_Total_Rows_Returned_by_Database)"
+      }
+    }, {
+      "name" : "Cumulative Time Spent with Database (seconds)",
+      "tags" : [ "Project:Oracle Analytics for Fusion Common" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Fact - Usage Tracking Statistics.Cumulative Time Spent with Database (seconds)",
+      "localization" : {
+        "localizationKey" : "Cumulative Time Spent with Database (seconds)",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_Common_-_Usage_Tracking_Statistics_Report_Performance_Cumulative_Time_Spent_with_Database_(seconds))",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_Common_-_Usage_Tracking_Statistics_Report_Performance_Cumulative_Time_Spent_with_Database_(seconds))"
+      }
+    }, {
+      "name" : "Compilation Time (seconds)",
+      "tags" : [ "Project:Oracle Analytics for Fusion Common" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Fact - Usage Tracking Statistics.Compilation Time (seconds)",
+      "localization" : {
+        "localizationKey" : "Compilation Time (seconds)",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_Common_-_Usage_Tracking_Statistics_Report_Performance_Compilation_Time_(seconds))",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_Common_-_Usage_Tracking_Statistics_Report_Performance_Compilation_Time_(seconds))"
+      }
+    } ],
+    "localization" : {
+      "localizationKey" : "Report Performance",
+      "nameVariable" : "VALUEOF(NQ_SESSION.CN_Common_-_Usage_Tracking_Statistics_Report_Performance)",
+      "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_Common_-_Usage_Tracking_Statistics_Report_Performance)"
+    }
+  }
+}

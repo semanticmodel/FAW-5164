@@ -1,0 +1,52 @@
+{
+  "presentationTable" : {
+    "name" : "Ship To Location",
+    "tags" : [ "Project:Fusion Analytics Warehouse - Procurement Management" ],
+    "presentationColumns" : [ {
+      "name" : "Ship To Location",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Procurement Management" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Dim - PRC - Ship To Location.Worker Ship To Location",
+      "alternateNames" : [ "Worker Ship To Location" ],
+      "localization" : {
+        "localizationKey" : "Ship To Location",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_Procurement_-_Spend_Ship_To_Location_Ship_To_Location)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_Procurement_-_Spend_Ship_To_Location_Ship_To_Location)"
+      }
+    }, {
+      "name" : "Location City",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Procurement Management" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Dim - PRC - Ship To Location.Worker Location City",
+      "alternateNames" : [ "Worker Location City" ],
+      "localization" : {
+        "localizationKey" : "Location City",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_Procurement_-_Spend_Ship_To_Location_Location_City)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_Procurement_-_Spend_Ship_To_Location_Location_City)"
+      }
+    }, {
+      "name" : "Location Country",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Procurement Management" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Dim - PRC - Ship To Location.Worker Location Country",
+      "alternateNames" : [ "Worker Location Country" ],
+      "localization" : {
+        "localizationKey" : "Location Country",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_Procurement_-_Spend_Ship_To_Location_Location_Country)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_Procurement_-_Spend_Ship_To_Location_Location_Country)"
+      }
+    }, {
+      "name" : "Location State",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Procurement Management" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Dim - PRC - Ship To Location.Worker Location State",
+      "alternateNames" : [ "Worker Location State" ],
+      "localization" : {
+        "localizationKey" : "Location State",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_Procurement_-_Spend_Ship_To_Location_Location_State)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_Procurement_-_Spend_Ship_To_Location_Location_State)"
+      }
+    } ],
+    "localization" : {
+      "localizationKey" : "Ship To Location",
+      "nameVariable" : "VALUEOF(NQ_SESSION.CN_Procurement_-_Spend_Ship_To_Location)",
+      "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_Procurement_-_Spend_Ship_To_Location)"
+    }
+  }
+}

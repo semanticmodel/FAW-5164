@@ -1,0 +1,23 @@
+{
+  "initBlock" : {
+    "name" : "Logged In HCM Person ID",
+    "tags" : [ "Project:Fusion Analytics Warehouse - Absence Management", "Project:Fusion Analytics Warehouse - Expense Management", "Project:Fusion Analytics Warehouse - GL Budgets Analysis", "Project:Fusion Analytics Warehouse - Goals and Career Development", "Project:Fusion Analytics Warehouse - Inventory", "Project:Fusion Analytics Warehouse - Performance Management and Check-ins", "Project:Fusion Analytics Warehouse - Salary Basis", "Project:Fusion Analytics Warehouse - Talent Acquisition", "Project:Fusion Analytics Warehouse - Talent Profile Management", "Project:Fusion Analytics Warehouse - Workforce Compensation" ],
+    "type" : "SESSION",
+    "connectionPool" : "connectionPool:Oracle_Data_Warehouse.Oracle_Data_Warehouse_Repository_Initblocks_Connection_Pool",
+    "selectStatements" : [ {
+      "databaseType" : "DEFAULT",
+      "query" : "SELECT PERSON_ID FROM DW_USER_PERSON_D WHERE USERNAME=':USER'"
+    } ],
+    "variables" : [ {
+      "name" : "HCM_PERSON_ID",
+      "description" : "Returns Person id for the logged in user. Used in the Line Manager Security",
+      "value" : "-(1)",
+      "enableUsersToSetValue" : true,
+      "securitySensitive" : false
+    } ],
+    "disable" : false,
+    "queryReturnsVariableNamesAndValues" : false,
+    "allowDeferredExecution" : true,
+    "cacheQueryResult" : true
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "presentationTable" : {
+    "name" : "Report Usage",
+    "tags" : [ "Project:Oracle Analytics for Fusion Common" ],
+    "presentationColumns" : [ {
+      "name" : "Number of Saved Reports Executed",
+      "tags" : [ "Project:Oracle Analytics for Fusion Common" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Fact - Usage Tracking Statistics.Number of Saved Reports Executed",
+      "localization" : {
+        "localizationKey" : "Number of Saved Reports Executed",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_Common_-_Usage_Tracking_Statistics_Report_Usage_Number_of_Reports)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_Common_-_Usage_Tracking_Statistics_Report_Usage_Number_of_Reports)"
+      }
+    }, {
+      "name" : "Number of Unique Reports",
+      "tags" : [ "Project:Oracle Analytics for Fusion Common" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Fact - Usage Tracking Statistics.Number of Unique Reports",
+      "localization" : {
+        "localizationKey" : "Number of Unique Reports",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_Common_-_Usage_Tracking_Statistics_Report_Usage_Number_of_Unique_Reports)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_Common_-_Usage_Tracking_Statistics_Report_Usage_Number_of_Unique_Reports)"
+      }
+    }, {
+      "name" : "Number of Subject Areas",
+      "tags" : [ "Project:Oracle Analytics for Fusion Common" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Fact - Usage Tracking Statistics.Number of Subject Areas",
+      "localization" : {
+        "localizationKey" : "Number of Subject Areas",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_Common_-_Usage_Tracking_Statistics_Report_Usage_Number_of_Subject_Areas)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_Common_-_Usage_Tracking_Statistics_Report_Usage_Number_of_Subject_Areas)"
+      }
+    }, {
+      "name" : "Number of Cache Hits",
+      "tags" : [ "Project:Oracle Analytics for Fusion Common" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Fact - Usage Tracking Statistics.Number of Cache Hits",
+      "localization" : {
+        "localizationKey" : "Number of Cache Hits",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_Common_-_Usage_Tracking_Statistics_Report_Usage_Number_of_Cache_Hits)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_Common_-_Usage_Tracking_Statistics_Report_Usage_Number_of_Cache_Hits)"
+      }
+    }, {
+      "name" : "Number of Cache Inserted",
+      "tags" : [ "Project:Oracle Analytics for Fusion Common" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Fact - Usage Tracking Statistics.Number of Cache Inserted",
+      "localization" : {
+        "localizationKey" : "Number of Cache Inserted",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_Common_-_Usage_Tracking_Statistics_Report_Usage_Number_of_Cache_Inserted)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_Common_-_Usage_Tracking_Statistics_Report_Usage_Number_of_Cache_Inserted)"
+      }
+    } ],
+    "localization" : {
+      "localizationKey" : "Report Usage",
+      "nameVariable" : "VALUEOF(NQ_SESSION.CN_Common_-_Usage_Tracking_Statistics_Report_Usage)",
+      "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_Common_-_Usage_Tracking_Statistics_Report_Usage)"
+    }
+  }
+}

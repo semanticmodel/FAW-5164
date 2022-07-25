@@ -1,0 +1,77 @@
+{
+  "logicalTable" : {
+    "name" : "Dim - AP Distribution Validation Status",
+    "type" : "DIMENSION",
+    "primaryKey" : [ "Distribution Validation Status Code" ],
+    "logicalColumns" : [ {
+      "name" : "Distribution Validation Status Code",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "Dim_DW_CODE_VALUES_LKP_TL_AP_Dist_Validation_Status",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_CODE_VALUES_LKP_TL_AP_Dist_Validation_Status.CODE" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Detail"
+    }, {
+      "name" : "Distribution Validation Status",
+      "dataType" : "VARCHAR",
+      "descriptorColumn" : "Distribution Validation Status Code",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "Dim_DW_CODE_VALUES_LKP_TL_AP_Dist_Validation_Status",
+          "physicalExpression" : {
+            "expressionTemplate" : " LOOKUP( SPARSE %1, %2, %2, 'AP_INVOICE_VALIDATION_STATUS_CODE',  VALUEOF(NQ_SESSION.%3))",
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_CODE_VALUES_LKP_TL_AP_Dist_Validation_Status.NAME", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_CODE_VALUES_LKP_TL_AP_Dist_Validation_Status.CODE", "variable:INIT_USER_LANGUAGE_CODE.USER_LANGUAGE_CODE" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Detail"
+    } ],
+    "logicalTableSources" : [ {
+      "name" : "Dim_DW_CODE_VALUES_LKP_TL_AP_Dist_Validation_Status",
+      "disable" : false,
+      "tableMapping" : {
+        "tables" : [ "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_CODE_VALUES_LKP_TL_AP_Dist_Validation_Status" ]
+      },
+      "dataGranularity" : [ "logicalLevel:Core.Dim - AP Distribution Validation Status.Detail" ],
+      "combineWithOtherFragments" : false,
+      "enableFragmentSelection" : false,
+      "dataFilter" : {
+        "expressionTemplate" : "%1 = 'AP_INVOICE_VALIDATION_STATUS_CODE' AND %2 =  VALUEOF(NQ_SESSION.%3)",
+        "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_CODE_VALUES_LKP_TL_AP_Dist_Validation_Status.CODE_TYPE", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_CODE_VALUES_LKP_TL_AP_Dist_Validation_Status.LANGUAGE", "variable:INIT_USER_LANGUAGE_CODE.USER_LANGUAGE_CODE" ]
+      },
+      "distinctValues" : false
+    } ],
+    "hierarchyType" : "LEVEL_BASED",
+    "levelBasedHierarchy" : {
+      "defaultRootLevel" : "Total",
+      "ragged" : false,
+      "skipped" : false,
+      "logicalLevels" : [ {
+        "name" : "Total",
+        "numberOfElements" : 1,
+        "grandTotalLevel" : true,
+        "disableAggregateToHigherLevel" : false
+      }, {
+        "name" : "Detail",
+        "numberOfElements" : 1,
+        "grandTotalLevel" : false,
+        "disableAggregateToHigherLevel" : false,
+        "primaryKey" : [ "Distribution Validation Status Code" ],
+        "displayKey" : "Distribution Validation Status Code"
+      } ],
+      "logicalHierarchies" : [ {
+        "name" : "AP Distribution Validation Status",
+        "levels" : [ "Total", "Detail" ]
+      } ]
+    }
+  }
+}

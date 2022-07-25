@@ -1,0 +1,24 @@
+{
+  "initBlock" : {
+    "name" : "System - Multi-Column Lookup",
+    "description" : "Enable multi-column lookups to improve performance.",
+    "tags" : [ "Project:Fusion Analytics Warehouse - Absence Management", "Project:Fusion Analytics Warehouse - Accounts Payable", "Project:Fusion Analytics Warehouse - Accounts Receivable", "Project:Fusion Analytics Warehouse - Expense Management", "Project:Fusion Analytics Warehouse - General Ledger", "Project:Fusion Analytics Warehouse - Goals and Career Development", "Project:Fusion Analytics Warehouse - Inventory", "Project:Fusion Analytics Warehouse - Performance Management and Check-ins", "Project:Fusion Analytics Warehouse - Salary Basis", "Project:Fusion Analytics Warehouse - Talent Acquisition", "Project:Fusion Analytics Warehouse - Talent Profile Management", "Project:Fusion Analytics Warehouse - Workforce Compensation", "Project:Fusion Analytics Warehouse - Workforce Management", "Project:Oracle Analytics for Fusion Common", "Project:Oracle Analytics for Fusion Human Capital Management" ],
+    "type" : "SESSION",
+    "connectionPool" : "connectionPool:Oracle_Data_Warehouse.Oracle_Data_Warehouse_Repository_Initblocks_Connection_Pool",
+    "selectStatements" : [ {
+      "databaseType" : "DEFAULT",
+      "query" : "SELECT 1 FROM dual"
+    } ],
+    "variables" : [ {
+      "name" : "OBIS_ENABLE_MULTICOLUMN_IN_LOOKUP_SUBQUERY",
+      "description" : "Enable multi column lookups to improve performance.",
+      "value" : "1",
+      "enableUsersToSetValue" : false,
+      "securitySensitive" : false
+    } ],
+    "disable" : false,
+    "queryReturnsVariableNamesAndValues" : false,
+    "allowDeferredExecution" : true,
+    "cacheQueryResult" : true
+  }
+}

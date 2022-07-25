@@ -1,0 +1,49 @@
+{
+  "physicalTable": {
+    "name": "Dim_DW_CODE_VALUES_LKP_TL_AP_Dist_Validation_Status",
+    "sourceTable": "physicalTable:Oracle_Data_Warehouse.OAX$OAC.DW_CODE_VALUES_LKP_TL",
+    "caching": {
+      "enable": true
+    },
+    "joins": [      {
+        "useJoinExpression": true,
+        "rightTable": "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_AP_SLA_EXPENSE_DIST_CF",
+        "joinExpression": {
+          "expressionTemplate": "%1 = %2 AND %3 = 'AP_INVOICE_VALIDATION_STATUS_CODE' AND %4 =  VALUEOF(NQ_SESSION.%5)",
+          "expressionObjects": [
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_CODE_VALUES_LKP_TL_AP_Dist_Validation_Status.CODE",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_AP_SLA_EXPENSE_DIST_CF.INV_DIST_VALIDATION_STATUS",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_CODE_VALUES_LKP_TL_AP_Dist_Validation_Status.CODE_TYPE",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_CODE_VALUES_LKP_TL_AP_Dist_Validation_Status.LANGUAGE",
+            "variable:INIT_USER_LANGUAGE_CODE.USER_LANGUAGE_CODE"
+          ]
+        },
+        "cardinality": "ONE_TO_ONE",
+        "joinType": "INNER"
+      },
+      {
+        "useJoinExpression": true,
+        "rightTable": "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_INVOICE_SPEND_CF",
+        "joinExpression": {
+          "expressionTemplate": "%1 = %2 AND %3 = 'AP_INVOICE_VALIDATION_STATUS_CODE' AND %4 =  VALUEOF(NQ_SESSION.%5)",
+          "expressionObjects": [
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_CODE_VALUES_LKP_TL_AP_Dist_Validation_Status.CODE",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_INVOICE_SPEND_CF.DISTRIBUTION_VALIDATION_STATUS",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_CODE_VALUES_LKP_TL_AP_Dist_Validation_Status.CODE_TYPE",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_CODE_VALUES_LKP_TL_AP_Dist_Validation_Status.LANGUAGE",
+            "variable:INIT_USER_LANGUAGE_CODE.USER_LANGUAGE_CODE"
+          ]
+        },
+        "cardinality": "ONE_TO_ONE",
+        "joinType": "INNER"
+      }
+    ],
+    "additionalKeys": [
+      [
+        "CODE",
+        "CODE_TYPE",
+        "LANGUAGE"
+      ]
+    ]
+  }
+}

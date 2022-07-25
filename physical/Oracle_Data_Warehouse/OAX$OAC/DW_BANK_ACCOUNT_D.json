@@ -1,0 +1,36 @@
+{
+  "physicalTable" : {
+    "name" : "DW_BANK_ACCOUNT_D",
+    "sourceType" : "TABLE",
+    "physicalColumns" : [ {
+      "name" : "BANK_ACCOUNT_NAME",
+      "dataType" : "VARCHAR",
+      "length" : 512,
+      "nullable" : true
+    }, {
+      "name" : "BANK_ACCOUNT_ID",
+      "dataType" : "DOUBLE",
+      "length" : 38,
+      "nullable" : false
+    }, {
+      "name" : "BANK_ACCOUNT_NUM",
+      "dataType" : "VARCHAR",
+      "length" : 32,
+      "nullable" : true
+    }, {
+      "name" : "BANK_BRANCH_NAME",
+      "dataType" : "VARCHAR",
+      "length" : 512,
+      "nullable" : true
+    }, {
+      "name" : "BANK_NAME",
+      "dataType" : "VARCHAR",
+      "length" : 512,
+      "nullable" : true
+    } ],
+    "caching" : {
+      "enable" : true,
+      "expiryTime" : 0
+    }
+  }
+}

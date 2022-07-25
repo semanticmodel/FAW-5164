@@ -1,0 +1,39 @@
+{
+  "presentationTable" : {
+    "name" : "Sold To Legal Entity",
+    "tags" : [ "Project:Fusion Analytics Warehouse - Purchase Orders" ],
+    "presentationColumns" : [ {
+      "name" : "Legal Entity Name",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Purchase Orders" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Dim - Legal Entity.Legal Entity Name",
+      "localization" : {
+        "localizationKey" : "Legal Entity Name",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_Procurement_-_Purchase_Orders_Sold_To_Legal_Entity_Legal_Entity_Name)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_Procurement_-_Purchase_Orders_Sold_To_Legal_Entity_Legal_Entity_Name)"
+      }
+    }, {
+      "name" : "Legal Entity Number",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Purchase Orders" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Dim - Legal Entity.Legal Entity Number",
+      "localization" : {
+        "localizationKey" : "Legal Entity Number",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_Procurement_-_Purchase_Orders_Sold_To_Legal_Entity_Legal_Entity_Number)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_Procurement_-_Purchase_Orders_Sold_To_Legal_Entity_Legal_Entity_Number)"
+      }
+    }, {
+      "name" : "Legal Entity Country",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Purchase Orders" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Dim - Legal Entity.Legal Entity Country",
+      "localization" : {
+        "localizationKey" : "Legal Entity Country",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_Procurement_-_Purchase_Orders_Sold_To_Legal_Entity_Legal_Entity_Country)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_Procurement_-_Purchase_Orders_Sold_To_Legal_Entity_Legal_Entity_Country)"
+      }
+    } ],
+    "localization" : {
+      "localizationKey" : "Sold To Legal Entity",
+      "nameVariable" : "VALUEOF(NQ_SESSION.CN_Procurement_-_Purchase_Orders_Sold_To_Legal_Entity)",
+      "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_Procurement_-_Purchase_Orders_Sold_To_Legal_Entity)"
+    }
+  }
+}

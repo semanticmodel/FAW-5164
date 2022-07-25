@@ -1,0 +1,66 @@
+{
+  "presentationTable" : {
+    "name" : "Report Execution",
+    "tags" : [ "Project:Oracle Analytics for Fusion Common" ],
+    "presentationColumns" : [ {
+      "name" : "Number of Reports Executed",
+      "tags" : [ "Project:Oracle Analytics for Fusion Common" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Fact - Usage Tracking Statistics.Number of Reports Executed",
+      "localization" : {
+        "localizationKey" : "Number of Reports Executed",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_Common_-_Usage_Tracking_Statistics_Report_Execution_Number_of_Reports_Executed)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_Common_-_Usage_Tracking_Statistics_Report_Execution_Number_of_Reports_Executed)"
+      }
+    }, {
+      "name" : "Number of Execution Failures",
+      "tags" : [ "Project:Oracle Analytics for Fusion Common" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Fact - Usage Tracking Statistics.Number of Execution Failures",
+      "localization" : {
+        "localizationKey" : "Number of Execution Failures",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_Common_-_Usage_Tracking_Statistics_Report_Execution_Number_of_Execution_Failures)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_Common_-_Usage_Tracking_Statistics_Report_Execution_Number_of_Execution_Failures)"
+      }
+    }, {
+      "name" : "Number of Unique Errors",
+      "tags" : [ "Project:Oracle Analytics for Fusion Common" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Fact - Usage Tracking Statistics.Number of Unique Errors",
+      "localization" : {
+        "localizationKey" : "Number of Unique Errors",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_Common_-_Usage_Tracking_Statistics_Report_Execution_Number_of_Unique_Errors)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_Common_-_Usage_Tracking_Statistics_Report_Execution_Number_of_Unique_Errors)"
+      }
+    }, {
+      "name" : "Number of Database Queries",
+      "tags" : [ "Project:Oracle Analytics for Fusion Common" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Fact - Usage Tracking Statistics.Number of Database Queries",
+      "localization" : {
+        "localizationKey" : "Number of Database Queries",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_Common_-_Usage_Tracking_Statistics_Report_Execution_Number_of_Database_Queries)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_Common_-_Usage_Tracking_Statistics_Report_Execution_Number_of_Database_Queries)"
+      }
+    }, {
+      "name" : "Number of Rows Returned",
+      "tags" : [ "Project:Oracle Analytics for Fusion Common" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Fact - Usage Tracking Statistics.Number of Rows Returned",
+      "localization" : {
+        "localizationKey" : "Number of Rows Returned",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_Common_-_Usage_Tracking_Statistics_Report_Execution_Number_of_Rows_Returned)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_Common_-_Usage_Tracking_Statistics_Report_Execution_Number_of_Rows_Returned)"
+      }
+    }, {
+      "name" : "Total Report Execution Time (seconds)",
+      "tags" : [ "Project:Oracle Analytics for Fusion Common" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Fact - Usage Tracking Statistics.Total Report Execution Time (seconds)",
+      "localization" : {
+        "localizationKey" : "Total Report Execution Time (seconds)",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_Common_-_Usage_Tracking_Statistics_Report_Execution_Total_Report_Execution_Time_(seconds))",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_Common_-_Usage_Tracking_Statistics_Report_Execution_Total_Report_Execution_Time_(seconds))"
+      }
+    } ],
+    "localization" : {
+      "localizationKey" : "Report Execution",
+      "nameVariable" : "VALUEOF(NQ_SESSION.CN_Common_-_Usage_Tracking_Statistics_Report_Execution)",
+      "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_Common_-_Usage_Tracking_Statistics_Report_Execution)"
+    }
+  }
+}

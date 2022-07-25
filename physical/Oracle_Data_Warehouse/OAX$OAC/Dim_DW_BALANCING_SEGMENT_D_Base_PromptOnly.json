@@ -1,0 +1,33 @@
+{
+  "physicalTable": {
+    "name": "Dim_DW_BALANCING_SEGMENT_D_Base_PromptOnly",
+    "sourceTable": "physicalTable:Oracle_Data_Warehouse.OAX$OAC.DW_BALANCING_SEGMENT_D",
+    "caching": {
+      "enable": true
+    },
+    "joins": [      {
+        "useJoinExpression": true,
+        "rightTable": "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Security_DW_CONTENT_PARAM_CONFIG_COA_VALUESET_BalancingSegment",
+        "joinExpression": {
+          "expressionTemplate": "%1 = %2 AND %3 IN ('Dim - Balancing Segment', '~NOVALUE~')",
+          "expressionObjects": [
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Security_DW_CONTENT_PARAM_CONFIG_COA_VALUESET_BalancingSegment.VALUESET_CODE",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_BALANCING_SEGMENT_D_Base_PromptOnly.GL_BLNC_SGMNT_VALUESET_CODE",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Security_DW_CONTENT_PARAM_CONFIG_COA_VALUESET_BalancingSegment.BI_OBJECT_NAME"
+          ]
+        },
+        "cardinality": "MANY_TO_ONE",
+        "joinType": "INNER"
+      }
+    ],
+    "additionalKeys": [
+      [
+        "GL_BALANCING_SEGMENT",
+        "GL_BLNC_SGMNT_VALUESET_CODE"
+      ],
+      [
+        "GL_BALANCING_SEGMENT"
+      ]
+    ]
+  }
+}

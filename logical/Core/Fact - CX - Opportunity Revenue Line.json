@@ -1,0 +1,1341 @@
+{
+  "logicalTable" : {
+    "name" : "Fact - CX - Opportunity Revenue Line",
+    "tags" : [ "Project:Fusion Analytics Warehouse - Sales Pipeline" ],
+    "type" : "FACT",
+    "logicalColumns" : [ {
+      "name" : "# of Raw Opportunity Revenue Lines",
+      "dataType" : "DOUBLE",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "Fact_DW_CXS_OPPORTUNITY_REVENUE_CF",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_CXS_OPPORTUNITY_REVENUE_CF.REVENUE_ID" ]
+          }
+        } ]
+      },
+      "aggregation" : {
+        "rule" : "COUNT",
+        "dataIsDense" : false
+      }
+    }, {
+      "name" : "Raw Opportunity Line Revenue in Document Currency",
+      "dataType" : "DOUBLE",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "Fact_DW_CXS_OPPORTUNITY_REVENUE_CF",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_CXS_OPPORTUNITY_REVENUE_CF.REVENUE_AMOUNT" ]
+          }
+        } ]
+      },
+      "aggregation" : {
+        "rule" : "SUM",
+        "dataIsDense" : false
+      }
+    }, {
+      "name" : "Raw Opportunity Line Revenue in Analytics Currency",
+      "dataType" : "DOUBLE",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "Fact_DW_CXS_OPPORTUNITY_REVENUE_CF",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_CXS_OPPORTUNITY_REVENUE_CF.GLOBAL_REVENUE_AMOUNT" ]
+          }
+        } ]
+      },
+      "aggregation" : {
+        "rule" : "SUM",
+        "dataIsDense" : false
+      }
+    }, {
+      "name" : "Raw Opportunity Line Revenue in CX Currency",
+      "dataType" : "DOUBLE",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "Fact_DW_CXS_OPPORTUNITY_REVENUE_CF",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_CXS_OPPORTUNITY_REVENUE_CF.CRM_REVENUE_AMOUNT" ]
+          }
+        } ]
+      },
+      "aggregation" : {
+        "rule" : "SUM",
+        "dataIsDense" : false
+      }
+    }, {
+      "name" : "Expected Opportunity Line Revenue in Document Currency",
+      "dataType" : "DOUBLE",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "Fact_DW_CXS_OPPORTUNITY_REVENUE_CF",
+          "physicalExpression" : {
+            "expressionTemplate" : " CASE  WHEN %1 = 'QUOTA' AND %2 = 'N' AND  IFNULL(%3, 'NONE') <> 'PARENTSPLIT' AND  IFNULL(%4, 'NONRECUR') <> 'PARENTRECUR' THEN %5 ELSE 0 END ",
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_CXS_OPPORTUNITY_REVENUE_CF.SALES_CREDIT_TYPE_CODE", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_CXS_OPPORTUNITY_REVENUE_CF.PRIMARY_FLAG", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_CXS_OPPORTUNITY_REVENUE_CF.SPLIT_TYPE_CODE", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_CXS_OPPORTUNITY_REVENUE_CF.RECURRING_TYPE_CODE", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_CXS_OPPORTUNITY_REVENUE_CF.EXPECTED_AMOUNT" ]
+          }
+        } ]
+      },
+      "aggregation" : {
+        "rule" : "SUM",
+        "dataIsDense" : false
+      }
+    }, {
+      "name" : "Expected Opportunity Line Revenue in Analytics Currency",
+      "dataType" : "DOUBLE",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "Fact_DW_CXS_OPPORTUNITY_REVENUE_CF",
+          "physicalExpression" : {
+            "expressionTemplate" : " CASE  WHEN %1 = 'QUOTA' AND %2 = 'N' AND  IFNULL(%3, 'NONE') <> 'PARENTSPLIT' AND  IFNULL(%4, 'NONRECUR') <> 'PARENTRECUR' THEN %5 ELSE 0 END ",
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_CXS_OPPORTUNITY_REVENUE_CF.SALES_CREDIT_TYPE_CODE", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_CXS_OPPORTUNITY_REVENUE_CF.PRIMARY_FLAG", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_CXS_OPPORTUNITY_REVENUE_CF.SPLIT_TYPE_CODE", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_CXS_OPPORTUNITY_REVENUE_CF.RECURRING_TYPE_CODE", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_CXS_OPPORTUNITY_REVENUE_CF.GLOBAL_EXPECTED_AMOUNT" ]
+          }
+        } ]
+      },
+      "aggregation" : {
+        "rule" : "SUM",
+        "dataIsDense" : false
+      }
+    }, {
+      "name" : "Expected Opportunity Line Revenue in CX Currency",
+      "dataType" : "DOUBLE",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "Fact_DW_CXS_OPPORTUNITY_REVENUE_CF",
+          "physicalExpression" : {
+            "expressionTemplate" : " CASE  WHEN %1 = 'QUOTA' AND %2 = 'N' AND  IFNULL(%3, 'NONE') <> 'PARENTSPLIT' AND  IFNULL(%4, 'NONRECUR') <> 'PARENTRECUR' THEN %5 ELSE 0 END ",
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_CXS_OPPORTUNITY_REVENUE_CF.SALES_CREDIT_TYPE_CODE", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_CXS_OPPORTUNITY_REVENUE_CF.PRIMARY_FLAG", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_CXS_OPPORTUNITY_REVENUE_CF.SPLIT_TYPE_CODE", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_CXS_OPPORTUNITY_REVENUE_CF.RECURRING_TYPE_CODE", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_CXS_OPPORTUNITY_REVENUE_CF.CRM_CURRENCY_EXPECTED_AMOUNT" ]
+          }
+        } ]
+      },
+      "aggregation" : {
+        "rule" : "SUM",
+        "dataIsDense" : false
+      }
+    }, {
+      "name" : "Opportunity Line Recurring Revenue in Document Currency",
+      "dataType" : "DOUBLE",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "Fact_DW_CXS_OPPORTUNITY_REVENUE_CF",
+          "physicalExpression" : {
+            "expressionTemplate" : " CASE  WHEN %1 = 'QUOTA' AND %2 = 'N' AND  IFNULL(%3, 'NONRECUR') = 'PARENTRECUR' AND  IFNULL(%4, 'NONE') <> 'DETAILCHILDSPLIT' THEN %5 ELSE 0 END ",
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_CXS_OPPORTUNITY_REVENUE_CF.SALES_CREDIT_TYPE_CODE", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_CXS_OPPORTUNITY_REVENUE_CF.PRIMARY_FLAG", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_CXS_OPPORTUNITY_REVENUE_CF.RECURRING_TYPE_CODE", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_CXS_OPPORTUNITY_REVENUE_CF.SPLIT_TYPE_CODE", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_CXS_OPPORTUNITY_REVENUE_CF.RECURRING_REVENUE_AMOUNT" ]
+          }
+        } ]
+      },
+      "aggregation" : {
+        "rule" : "SUM",
+        "dataIsDense" : false
+      }
+    }, {
+      "name" : "Opportunity Line Recurring Revenue in Analytics Currency",
+      "dataType" : "DOUBLE",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "Fact_DW_CXS_OPPORTUNITY_REVENUE_CF",
+          "physicalExpression" : {
+            "expressionTemplate" : " CASE  WHEN %1 = 'QUOTA' AND %2 = 'N' AND  IFNULL(%3, 'NONRECUR') = 'PARENTRECUR' AND  IFNULL(%4, 'NONE') <> 'DETAILCHILDSPLIT' THEN %5 ELSE 0 END ",
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_CXS_OPPORTUNITY_REVENUE_CF.SALES_CREDIT_TYPE_CODE", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_CXS_OPPORTUNITY_REVENUE_CF.PRIMARY_FLAG", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_CXS_OPPORTUNITY_REVENUE_CF.RECURRING_TYPE_CODE", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_CXS_OPPORTUNITY_REVENUE_CF.SPLIT_TYPE_CODE", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_CXS_OPPORTUNITY_REVENUE_CF.GLOBAL_RECURRING_REVENUE_AMOUNT" ]
+          }
+        } ]
+      },
+      "aggregation" : {
+        "rule" : "SUM",
+        "dataIsDense" : false
+      }
+    }, {
+      "name" : "Opportunity Line Recurring Revenue in CX Currency",
+      "dataType" : "DOUBLE",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "Fact_DW_CXS_OPPORTUNITY_REVENUE_CF",
+          "physicalExpression" : {
+            "expressionTemplate" : " CASE  WHEN %1 = 'QUOTA' AND %2 = 'N' AND  IFNULL(%3, 'NONRECUR') = 'PARENTRECUR' AND  IFNULL(%4, 'NONE') <> 'DETAILCHILDSPLIT' THEN %5 ELSE 0 END ",
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_CXS_OPPORTUNITY_REVENUE_CF.SALES_CREDIT_TYPE_CODE", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_CXS_OPPORTUNITY_REVENUE_CF.PRIMARY_FLAG", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_CXS_OPPORTUNITY_REVENUE_CF.RECURRING_TYPE_CODE", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_CXS_OPPORTUNITY_REVENUE_CF.SPLIT_TYPE_CODE", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_CXS_OPPORTUNITY_REVENUE_CF.CRM_CURRENCY_RECURRING_REVENUE_AMOUNT" ]
+          }
+        } ]
+      },
+      "aggregation" : {
+        "rule" : "SUM",
+        "dataIsDense" : false
+      }
+    }, {
+      "name" : "Opportunity Line Split Revenue in Document Currency",
+      "dataType" : "DOUBLE",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "Fact_DW_CXS_OPPORTUNITY_REVENUE_CF",
+          "physicalExpression" : {
+            "expressionTemplate" : " CASE  WHEN %1 = 'QUOTA' AND %2 = 'N' AND  IFNULL(%3, 'NONSPLIT') = 'PARENTSPLIT' AND  IFNULL(%4, 'NONRECUR') <> 'CHILDRECUR' THEN %5 ELSE 0 END ",
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_CXS_OPPORTUNITY_REVENUE_CF.SALES_CREDIT_TYPE_CODE", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_CXS_OPPORTUNITY_REVENUE_CF.PRIMARY_FLAG", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_CXS_OPPORTUNITY_REVENUE_CF.SPLIT_TYPE_CODE", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_CXS_OPPORTUNITY_REVENUE_CF.RECURRING_TYPE_CODE", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_CXS_OPPORTUNITY_REVENUE_CF.REVENUE_AMOUNT" ]
+          }
+        } ]
+      },
+      "aggregation" : {
+        "rule" : "SUM",
+        "dataIsDense" : false
+      }
+    }, {
+      "name" : "Opportunity Line Split Revenue in Analytics Currency",
+      "dataType" : "DOUBLE",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "Fact_DW_CXS_OPPORTUNITY_REVENUE_CF",
+          "physicalExpression" : {
+            "expressionTemplate" : " CASE  WHEN %1 = 'QUOTA' AND %2 = 'N' AND  IFNULL(%3, 'NONSPLIT') = 'PARENTSPLIT' AND  IFNULL(%4, 'NONRECUR') <> 'CHILDRECUR' THEN %5 ELSE 0 END ",
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_CXS_OPPORTUNITY_REVENUE_CF.SALES_CREDIT_TYPE_CODE", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_CXS_OPPORTUNITY_REVENUE_CF.PRIMARY_FLAG", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_CXS_OPPORTUNITY_REVENUE_CF.SPLIT_TYPE_CODE", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_CXS_OPPORTUNITY_REVENUE_CF.RECURRING_TYPE_CODE", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_CXS_OPPORTUNITY_REVENUE_CF.GLOBAL_REVENUE_AMOUNT" ]
+          }
+        } ]
+      },
+      "aggregation" : {
+        "rule" : "SUM",
+        "dataIsDense" : false
+      }
+    }, {
+      "name" : "Opportunity Line Split Revenue in CX Currency",
+      "dataType" : "DOUBLE",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "Fact_DW_CXS_OPPORTUNITY_REVENUE_CF",
+          "physicalExpression" : {
+            "expressionTemplate" : " CASE  WHEN %1 = 'QUOTA' AND %2 = 'N' AND  IFNULL(%3, 'NONSPLIT') = 'PARENTSPLIT' AND  IFNULL(%4, 'NONRECUR') <> 'CHILDRECUR' THEN %5 ELSE 0 END ",
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_CXS_OPPORTUNITY_REVENUE_CF.SALES_CREDIT_TYPE_CODE", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_CXS_OPPORTUNITY_REVENUE_CF.PRIMARY_FLAG", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_CXS_OPPORTUNITY_REVENUE_CF.SPLIT_TYPE_CODE", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_CXS_OPPORTUNITY_REVENUE_CF.RECURRING_TYPE_CODE", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_CXS_OPPORTUNITY_REVENUE_CF.CRM_REVENUE_AMOUNT" ]
+          }
+        } ]
+      },
+      "aggregation" : {
+        "rule" : "SUM",
+        "dataIsDense" : false
+      }
+    }, {
+      "name" : "-------- Filters --------",
+      "dataType" : "INT",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "LOGICAL_COLUMNS",
+        "logicalExpression" : {
+          "expressionTemplate" : "1"
+        }
+      }
+    }, {
+      "name" : "Included indicator",
+      "dataType" : "INT",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "Fact_DW_CXS_OPPORTUNITY_REVENUE_CF",
+          "physicalExpression" : {
+            "expressionTemplate" : " CASE  WHEN %1 = 'QUOTA' AND %2 = 'N' AND  IFNULL(%3, 'NONE') <> 'PARENTSPLIT' AND  IFNULL(%4, 'NONRECUR') <> 'PARENTRECUR' THEN 1 ELSE 0 END ",
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_CXS_OPPORTUNITY_REVENUE_CF.SALES_CREDIT_TYPE_CODE", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_CXS_OPPORTUNITY_REVENUE_CF.PRIMARY_FLAG", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_CXS_OPPORTUNITY_REVENUE_CF.SPLIT_TYPE_CODE", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_CXS_OPPORTUNITY_REVENUE_CF.RECURRING_TYPE_CODE" ]
+          }
+        } ]
+      }
+    }, {
+      "name" : "Primary Competitor Identifier",
+      "dataType" : "DOUBLE",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "Fact_DW_CXS_OPPORTUNITY_REVENUE_CF",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_CXS_OPPORTUNITY_REVENUE_CF.PRIMARY_COMPETITOR_PARTY_ID" ]
+          }
+        } ]
+      }
+    }, {
+      "name" : "Revenue Status Category Code",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "Fact_DW_CXS_OPPORTUNITY_REVENUE_CF",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_CXS_OPPORTUNITY_REVENUE_CF.REVENUE_STATUS_CATEGORY" ]
+          }
+        } ]
+      }
+    }, {
+      "name" : "Expected Close Date",
+      "dataType" : "DATETIME",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "Fact_DW_CXS_OPPORTUNITY_REVENUE_CF",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_CXS_OPPORTUNITY_REVENUE_CF.EXPECTED_CLOSE_DATE" ]
+          }
+        } ]
+      }
+    }, {
+      "name" : "-------- Derived --------",
+      "dataType" : "INT",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "LOGICAL_COLUMNS",
+        "logicalExpression" : {
+          "expressionTemplate" : "1"
+        }
+      }
+    }, {
+      "name" : "# of Opportunity Revenue Lines",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "LOGICAL_COLUMNS",
+        "logicalExpression" : {
+          "expressionTemplate" : " FILTER(%1 USING %2 = 1)",
+          "expressionObjects" : [ "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.# of Raw Opportunity Revenue Lines", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Included indicator" ]
+        }
+      }
+    }, {
+      "name" : "# of Open Opportunity Revenue Lines",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "LOGICAL_COLUMNS",
+        "logicalExpression" : {
+          "expressionTemplate" : " FILTER(%1 USING %2 = 1 AND %3 = 'OPEN')",
+          "expressionObjects" : [ "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.# of Raw Opportunity Revenue Lines", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Included indicator", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Revenue Status Category Code" ]
+        }
+      }
+    }, {
+      "name" : "# of Won Opportunity Revenue Lines",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "LOGICAL_COLUMNS",
+        "logicalExpression" : {
+          "expressionTemplate" : " FILTER(%1 USING %2 = 1 AND %3 = 'WON')",
+          "expressionObjects" : [ "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.# of Raw Opportunity Revenue Lines", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Included indicator", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Revenue Status Category Code" ]
+        }
+      }
+    }, {
+      "name" : "# of Lost Opportunity Revenue Lines",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "LOGICAL_COLUMNS",
+        "logicalExpression" : {
+          "expressionTemplate" : " FILTER(%1 USING %2 = 1 AND %3 = 'LOST')",
+          "expressionObjects" : [ "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.# of Raw Opportunity Revenue Lines", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Included indicator", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Revenue Status Category Code" ]
+        }
+      }
+    }, {
+      "name" : "# of No Sale Opportunity Revenue Lines",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "LOGICAL_COLUMNS",
+        "logicalExpression" : {
+          "expressionTemplate" : " FILTER(%1 USING %2 = 1 AND %3 = 'NO_SALE')",
+          "expressionObjects" : [ "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.# of Raw Opportunity Revenue Lines", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Included indicator", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Revenue Status Category Code" ]
+        }
+      }
+    }, {
+      "name" : "# of Competitive Opportunity Revenue Lines",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "LOGICAL_COLUMNS",
+        "logicalExpression" : {
+          "expressionTemplate" : " FILTER(%1 USING %2 = 1 AND %3 <> -(99999))",
+          "expressionObjects" : [ "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.# of Raw Opportunity Revenue Lines", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Included indicator", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Primary Competitor Identifier" ]
+        }
+      }
+    }, {
+      "name" : "# of Open Competitive Opportunity Revenue Lines",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "LOGICAL_COLUMNS",
+        "logicalExpression" : {
+          "expressionTemplate" : " FILTER(%1 USING %2 = 1 AND %3 <> -(99999) AND %4 = 'OPEN')",
+          "expressionObjects" : [ "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.# of Raw Opportunity Revenue Lines", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Included indicator", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Primary Competitor Identifier", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Revenue Status Category Code" ]
+        }
+      }
+    }, {
+      "name" : "# of Won Competitive Opportunity Revenue Lines",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "LOGICAL_COLUMNS",
+        "logicalExpression" : {
+          "expressionTemplate" : " FILTER(%1 USING %2 = 1 AND %3 <> -(99999) AND %4 = 'WON')",
+          "expressionObjects" : [ "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.# of Raw Opportunity Revenue Lines", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Included indicator", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Primary Competitor Identifier", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Revenue Status Category Code" ]
+        }
+      }
+    }, {
+      "name" : "# of Lost Competitive Opportunity Revenue Lines",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "LOGICAL_COLUMNS",
+        "logicalExpression" : {
+          "expressionTemplate" : " FILTER(%1 USING %2 = 1 AND %3 <> -(99999) AND %4 = 'LOST')",
+          "expressionObjects" : [ "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.# of Raw Opportunity Revenue Lines", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Included indicator", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Primary Competitor Identifier", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Revenue Status Category Code" ]
+        }
+      }
+    }, {
+      "name" : "# of No Sale Competitive Opportunity Revenue Lines",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "LOGICAL_COLUMNS",
+        "logicalExpression" : {
+          "expressionTemplate" : " FILTER(%1 USING %2 = 1 AND %3 <> -(99999) AND %4 = 'NO_SALE')",
+          "expressionObjects" : [ "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.# of Raw Opportunity Revenue Lines", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Included indicator", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Primary Competitor Identifier", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Revenue Status Category Code" ]
+        }
+      }
+    }, {
+      "name" : "# of Expired Opportunity Revenue Lines",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "LOGICAL_COLUMNS",
+        "logicalExpression" : {
+          "expressionTemplate" : " FILTER(%1 USING %2 = 1 AND %3 = 'OPEN' AND  CURRENT_DATE  > %4)",
+          "expressionObjects" : [ "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.# of Raw Opportunity Revenue Lines", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Included indicator", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Revenue Status Category Code", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Expected Close Date" ]
+        }
+      }
+    }, {
+      "name" : "Opportunity Line Revenue in Document Currency",
+      "dataType" : "DOUBLE",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "LOGICAL_COLUMNS",
+        "logicalExpression" : {
+          "expressionTemplate" : " FILTER(%1 USING %2 = 1)",
+          "expressionObjects" : [ "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Raw Opportunity Line Revenue in Document Currency", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Included indicator" ]
+        }
+      }
+    }, {
+      "name" : "Opportunity Line Revenue in Analytics Currency",
+      "dataType" : "DOUBLE",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "LOGICAL_COLUMNS",
+        "logicalExpression" : {
+          "expressionTemplate" : " FILTER(%1 USING %2 = 1)",
+          "expressionObjects" : [ "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Raw Opportunity Line Revenue in Analytics Currency", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Included indicator" ]
+        }
+      }
+    }, {
+      "name" : "Opportunity Line Revenue in CX Currency",
+      "dataType" : "DOUBLE",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "LOGICAL_COLUMNS",
+        "logicalExpression" : {
+          "expressionTemplate" : " FILTER(%1 USING %2 = 1)",
+          "expressionObjects" : [ "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Raw Opportunity Line Revenue in CX Currency", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Included indicator" ]
+        }
+      }
+    }, {
+      "name" : "Open Opportunity Line Revenue in Document Currency",
+      "dataType" : "DOUBLE",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "LOGICAL_COLUMNS",
+        "logicalExpression" : {
+          "expressionTemplate" : " FILTER(%1 USING %2 = 1 AND %3 = 'OPEN')",
+          "expressionObjects" : [ "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Raw Opportunity Line Revenue in Document Currency", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Included indicator", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Revenue Status Category Code" ]
+        }
+      }
+    }, {
+      "name" : "Open Opportunity Line Revenue in Analytics Currency",
+      "dataType" : "DOUBLE",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "LOGICAL_COLUMNS",
+        "logicalExpression" : {
+          "expressionTemplate" : " FILTER(%1 USING %2 = 1 AND %3 = 'OPEN')",
+          "expressionObjects" : [ "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Raw Opportunity Line Revenue in Analytics Currency", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Included indicator", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Revenue Status Category Code" ]
+        }
+      }
+    }, {
+      "name" : "Open Opportunity Line Revenue in CX Currency",
+      "dataType" : "DOUBLE",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "LOGICAL_COLUMNS",
+        "logicalExpression" : {
+          "expressionTemplate" : " FILTER(%1 USING %2 = 1 AND %3 = 'OPEN')",
+          "expressionObjects" : [ "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Raw Opportunity Line Revenue in CX Currency", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Included indicator", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Revenue Status Category Code" ]
+        }
+      }
+    }, {
+      "name" : "Won Opportunity Line Revenue in Document Currency",
+      "dataType" : "DOUBLE",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "LOGICAL_COLUMNS",
+        "logicalExpression" : {
+          "expressionTemplate" : " FILTER(%1 USING %2 = 1 AND %3 = 'WON')",
+          "expressionObjects" : [ "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Raw Opportunity Line Revenue in Document Currency", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Included indicator", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Revenue Status Category Code" ]
+        }
+      }
+    }, {
+      "name" : "Won Opportunity Line Revenue in Analytics Currency",
+      "dataType" : "DOUBLE",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "LOGICAL_COLUMNS",
+        "logicalExpression" : {
+          "expressionTemplate" : " FILTER(%1 USING %2 = 1 AND %3 = 'WON')",
+          "expressionObjects" : [ "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Raw Opportunity Line Revenue in Analytics Currency", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Included indicator", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Revenue Status Category Code" ]
+        }
+      }
+    }, {
+      "name" : "Won Opportunity Line Revenue in CX Currency",
+      "dataType" : "DOUBLE",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "LOGICAL_COLUMNS",
+        "logicalExpression" : {
+          "expressionTemplate" : " FILTER(%1 USING %2 = 1 AND %3 = 'WON')",
+          "expressionObjects" : [ "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Raw Opportunity Line Revenue in CX Currency", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Included indicator", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Revenue Status Category Code" ]
+        }
+      }
+    }, {
+      "name" : "Lost Opportunity Line Revenue in Document Currency",
+      "dataType" : "DOUBLE",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "LOGICAL_COLUMNS",
+        "logicalExpression" : {
+          "expressionTemplate" : " FILTER(%1 USING %2 = 1 AND %3 = 'LOST')",
+          "expressionObjects" : [ "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Raw Opportunity Line Revenue in Document Currency", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Included indicator", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Revenue Status Category Code" ]
+        }
+      }
+    }, {
+      "name" : "Lost Opportunity Line Revenue in Analytics Currency",
+      "dataType" : "DOUBLE",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "LOGICAL_COLUMNS",
+        "logicalExpression" : {
+          "expressionTemplate" : " FILTER(%1 USING %2 = 1 AND %3 = 'LOST')",
+          "expressionObjects" : [ "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Raw Opportunity Line Revenue in Analytics Currency", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Included indicator", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Revenue Status Category Code" ]
+        }
+      }
+    }, {
+      "name" : "Lost Opportunity Line Revenue in CX Currency",
+      "dataType" : "DOUBLE",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "LOGICAL_COLUMNS",
+        "logicalExpression" : {
+          "expressionTemplate" : " FILTER(%1 USING %2 = 1 AND %3 = 'LOST')",
+          "expressionObjects" : [ "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Raw Opportunity Line Revenue in CX Currency", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Included indicator", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Revenue Status Category Code" ]
+        }
+      }
+    }, {
+      "name" : "No Sale Opportunity Line Revenue in Document Currency",
+      "dataType" : "DOUBLE",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "LOGICAL_COLUMNS",
+        "logicalExpression" : {
+          "expressionTemplate" : " FILTER(%1 USING %2 = 1 AND %3 = 'NO_SALE')",
+          "expressionObjects" : [ "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Raw Opportunity Line Revenue in Document Currency", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Included indicator", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Revenue Status Category Code" ]
+        }
+      }
+    }, {
+      "name" : "No Sale Opportunity Line Revenue in Analytics Currency",
+      "dataType" : "DOUBLE",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "LOGICAL_COLUMNS",
+        "logicalExpression" : {
+          "expressionTemplate" : " FILTER(%1 USING %2 = 1 AND %3 = 'NO_SALE')",
+          "expressionObjects" : [ "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Raw Opportunity Line Revenue in Analytics Currency", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Included indicator", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Revenue Status Category Code" ]
+        }
+      }
+    }, {
+      "name" : "No Sale Opportunity Line Revenue in CX Currency",
+      "dataType" : "DOUBLE",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "LOGICAL_COLUMNS",
+        "logicalExpression" : {
+          "expressionTemplate" : " FILTER(%1 USING %2 = 1 AND %3 = 'NO_SALE')",
+          "expressionObjects" : [ "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Raw Opportunity Line Revenue in CX Currency", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Included indicator", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Revenue Status Category Code" ]
+        }
+      }
+    }, {
+      "name" : "Competitive Opportunity Line Revenue in Document Currency",
+      "dataType" : "DOUBLE",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "LOGICAL_COLUMNS",
+        "logicalExpression" : {
+          "expressionTemplate" : " FILTER(%1 USING %2 = 1 AND %3 <> -(99999))",
+          "expressionObjects" : [ "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Raw Opportunity Line Revenue in Document Currency", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Included indicator", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Primary Competitor Identifier" ]
+        }
+      }
+    }, {
+      "name" : "Competitive Opportunity Line Revenue in Analytics Currency",
+      "dataType" : "DOUBLE",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "LOGICAL_COLUMNS",
+        "logicalExpression" : {
+          "expressionTemplate" : " FILTER(%1 USING %2 = 1 AND %3 <> -(99999))",
+          "expressionObjects" : [ "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Raw Opportunity Line Revenue in Analytics Currency", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Included indicator", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Primary Competitor Identifier" ]
+        }
+      }
+    }, {
+      "name" : "Competitive Opportunity Line Revenue in CX Currency",
+      "dataType" : "DOUBLE",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "LOGICAL_COLUMNS",
+        "logicalExpression" : {
+          "expressionTemplate" : " FILTER(%1 USING %2 = 1 AND %3 <> -(99999))",
+          "expressionObjects" : [ "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Raw Opportunity Line Revenue in CX Currency", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Included indicator", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Primary Competitor Identifier" ]
+        }
+      }
+    }, {
+      "name" : "Open Competitive Opportunity Line Revenue in Document Currency",
+      "dataType" : "DOUBLE",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "LOGICAL_COLUMNS",
+        "logicalExpression" : {
+          "expressionTemplate" : " FILTER(%1 USING %2 = 1 AND %3 <> -(99999) AND %4 = 'OPEN')",
+          "expressionObjects" : [ "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Raw Opportunity Line Revenue in Document Currency", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Included indicator", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Primary Competitor Identifier", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Revenue Status Category Code" ]
+        }
+      }
+    }, {
+      "name" : "Open Competitive Opportunity Line Revenue in Analytics Currency",
+      "dataType" : "DOUBLE",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "LOGICAL_COLUMNS",
+        "logicalExpression" : {
+          "expressionTemplate" : " FILTER(%1 USING %2 = 1 AND %3 <> -(99999) AND %4 = 'OPEN')",
+          "expressionObjects" : [ "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Raw Opportunity Line Revenue in Analytics Currency", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Included indicator", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Primary Competitor Identifier", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Revenue Status Category Code" ]
+        }
+      }
+    }, {
+      "name" : "Open Competitive Opportunity Line Revenue in CX Currency",
+      "dataType" : "DOUBLE",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "LOGICAL_COLUMNS",
+        "logicalExpression" : {
+          "expressionTemplate" : " FILTER(%1 USING %2 = 1 AND %3 <> -(99999) AND %4 = 'OPEN')",
+          "expressionObjects" : [ "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Raw Opportunity Line Revenue in CX Currency", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Included indicator", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Primary Competitor Identifier", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Revenue Status Category Code" ]
+        }
+      }
+    }, {
+      "name" : "Won Competitive Opportunity Line Revenue in Document Currency",
+      "dataType" : "DOUBLE",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "LOGICAL_COLUMNS",
+        "logicalExpression" : {
+          "expressionTemplate" : " FILTER(%1 USING %2 = 1 AND %3 <> -(99999) AND %4 = 'WON')",
+          "expressionObjects" : [ "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Raw Opportunity Line Revenue in Document Currency", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Included indicator", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Primary Competitor Identifier", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Revenue Status Category Code" ]
+        }
+      }
+    }, {
+      "name" : "Won Competitive Opportunity Line Revenue in Analytics Currency",
+      "dataType" : "DOUBLE",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "LOGICAL_COLUMNS",
+        "logicalExpression" : {
+          "expressionTemplate" : " FILTER(%1 USING %2 = 1 AND %3 <> -(99999) AND %4 = 'WON')",
+          "expressionObjects" : [ "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Raw Opportunity Line Revenue in Analytics Currency", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Included indicator", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Primary Competitor Identifier", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Revenue Status Category Code" ]
+        }
+      }
+    }, {
+      "name" : "Won Competitive Opportunity Line Revenue in CX Currency",
+      "dataType" : "DOUBLE",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "LOGICAL_COLUMNS",
+        "logicalExpression" : {
+          "expressionTemplate" : " FILTER(%1 USING %2 = 1 AND %3 <> -(99999) AND %4 = 'WON')",
+          "expressionObjects" : [ "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Raw Opportunity Line Revenue in CX Currency", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Included indicator", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Primary Competitor Identifier", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Revenue Status Category Code" ]
+        }
+      }
+    }, {
+      "name" : "Lost Competitive Opportunity Line Revenue in Document Currency",
+      "dataType" : "DOUBLE",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "LOGICAL_COLUMNS",
+        "logicalExpression" : {
+          "expressionTemplate" : " FILTER(%1 USING %2 = 1 AND %3 <> -(99999) AND %4 = 'LOST')",
+          "expressionObjects" : [ "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Raw Opportunity Line Revenue in Document Currency", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Included indicator", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Primary Competitor Identifier", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Revenue Status Category Code" ]
+        }
+      }
+    }, {
+      "name" : "Lost Competitive Opportunity Line Revenue in Analytics Currency",
+      "dataType" : "DOUBLE",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "LOGICAL_COLUMNS",
+        "logicalExpression" : {
+          "expressionTemplate" : " FILTER(%1 USING %2 = 1 AND %3 <> -(99999) AND %4 = 'LOST')",
+          "expressionObjects" : [ "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Raw Opportunity Line Revenue in Analytics Currency", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Included indicator", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Primary Competitor Identifier", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Revenue Status Category Code" ]
+        }
+      }
+    }, {
+      "name" : "Lost Competitive Opportunity Line Revenue in CX Currency",
+      "dataType" : "DOUBLE",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "LOGICAL_COLUMNS",
+        "logicalExpression" : {
+          "expressionTemplate" : " FILTER(%1 USING %2 = 1 AND %3 <> -(99999) AND %4 = 'LOST')",
+          "expressionObjects" : [ "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Raw Opportunity Line Revenue in CX Currency", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Included indicator", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Primary Competitor Identifier", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Revenue Status Category Code" ]
+        }
+      }
+    }, {
+      "name" : "No Sale Competitive Opportunity Line Revenue in Document Currency",
+      "dataType" : "DOUBLE",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "LOGICAL_COLUMNS",
+        "logicalExpression" : {
+          "expressionTemplate" : " FILTER(%1 USING %2 = 1 AND %3 <> -(99999) AND %4 = 'NO_SALE')",
+          "expressionObjects" : [ "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Raw Opportunity Line Revenue in Document Currency", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Included indicator", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Primary Competitor Identifier", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Revenue Status Category Code" ]
+        }
+      }
+    }, {
+      "name" : "No Sale Competitive Opportunity Line Revenue in Analytics Currency",
+      "dataType" : "DOUBLE",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "LOGICAL_COLUMNS",
+        "logicalExpression" : {
+          "expressionTemplate" : " FILTER(%1 USING %2 = 1 AND %3 <> -(99999) AND %4 = 'NO_SALE')",
+          "expressionObjects" : [ "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Raw Opportunity Line Revenue in Analytics Currency", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Included indicator", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Primary Competitor Identifier", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Revenue Status Category Code" ]
+        }
+      }
+    }, {
+      "name" : "No Sale Competitive Opportunity Line Revenue in CX Currency",
+      "dataType" : "DOUBLE",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "LOGICAL_COLUMNS",
+        "logicalExpression" : {
+          "expressionTemplate" : " FILTER(%1 USING %2 = 1 AND %3 <> -(99999) AND %4 = 'NO_SALE')",
+          "expressionObjects" : [ "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Raw Opportunity Line Revenue in CX Currency", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Included indicator", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Primary Competitor Identifier", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Revenue Status Category Code" ]
+        }
+      }
+    }, {
+      "name" : "Expired Opportunity Line Revenue in Document Currency",
+      "dataType" : "DOUBLE",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "LOGICAL_COLUMNS",
+        "logicalExpression" : {
+          "expressionTemplate" : " FILTER(%1 USING %2 = 1 AND %3 = 'OPEN' AND  CURRENT_DATE  > %4)",
+          "expressionObjects" : [ "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Raw Opportunity Line Revenue in Document Currency", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Included indicator", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Revenue Status Category Code", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Expected Close Date" ]
+        }
+      }
+    }, {
+      "name" : "Expired Opportunity Line Revenue in Analytics Currency",
+      "dataType" : "DOUBLE",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "LOGICAL_COLUMNS",
+        "logicalExpression" : {
+          "expressionTemplate" : " FILTER(%1 USING %2 = 1 AND %3 = 'OPEN' AND  CURRENT_DATE  > %4)",
+          "expressionObjects" : [ "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Raw Opportunity Line Revenue in Analytics Currency", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Included indicator", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Revenue Status Category Code", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Expected Close Date" ]
+        }
+      }
+    }, {
+      "name" : "Expired Opportunity Line Revenue in CX Currency",
+      "dataType" : "DOUBLE",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "LOGICAL_COLUMNS",
+        "logicalExpression" : {
+          "expressionTemplate" : " FILTER(%1 USING %2 = 1 AND %3 = 'OPEN' AND  CURRENT_DATE  > %4)",
+          "expressionObjects" : [ "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Raw Opportunity Line Revenue in CX Currency", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Included indicator", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Revenue Status Category Code", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Expected Close Date" ]
+        }
+      }
+    }, {
+      "name" : "Revenue Line Conversion Rate",
+      "dataType" : "DOUBLE",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "LOGICAL_COLUMNS",
+        "logicalExpression" : {
+          "expressionTemplate" : " CASE  WHEN %1 = 0 THEN  NULL  ELSE 100.0d * %2 / %1 END ",
+          "expressionObjects" : [ "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.# of Opportunity Revenue Lines", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.# of Won Opportunity Revenue Lines" ]
+        }
+      }
+    }, {
+      "name" : "Revenue Line Won Rate",
+      "dataType" : "DOUBLE",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "LOGICAL_COLUMNS",
+        "logicalExpression" : {
+          "expressionTemplate" : " CASE  WHEN %1 = 0 THEN  NULL  ELSE 100.0d * %2 / %1 END ",
+          "expressionObjects" : [ "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.# of Won/Lost Opportunity Revenue Lines", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.# of Won Opportunity Revenue Lines" ]
+        }
+      }
+    }, {
+      "name" : "Revenue Line Loss Rate",
+      "dataType" : "DOUBLE",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "LOGICAL_COLUMNS",
+        "logicalExpression" : {
+          "expressionTemplate" : " CASE  WHEN %1 = 0 THEN  NULL  ELSE 100.0d * %2 / %1 END ",
+          "expressionObjects" : [ "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.# of Won/Lost Opportunity Revenue Lines", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.# of Lost Opportunity Revenue Lines" ]
+        }
+      }
+    }, {
+      "name" : "Revenue Line Competitive Conversion Rate",
+      "dataType" : "DOUBLE",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "LOGICAL_COLUMNS",
+        "logicalExpression" : {
+          "expressionTemplate" : " CASE  WHEN %1 = 0 THEN  NULL  ELSE 100.0d * %2 / %1 END ",
+          "expressionObjects" : [ "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.# of Competitive Opportunity Revenue Lines", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.# of Won Competitive Opportunity Revenue Lines" ]
+        }
+      }
+    }, {
+      "name" : "Revenue Line Competitive Won Rate",
+      "dataType" : "DOUBLE",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "LOGICAL_COLUMNS",
+        "logicalExpression" : {
+          "expressionTemplate" : " CASE  WHEN %1 = 0 THEN  NULL  ELSE 100.0d * %2 / %1 END ",
+          "expressionObjects" : [ "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.# of Won/Lost Competitive Opportunity Revenue Lines", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.# of Won Competitive Opportunity Revenue Lines" ]
+        }
+      }
+    }, {
+      "name" : "Revenue Line Competitive Loss Rate",
+      "dataType" : "DOUBLE",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "LOGICAL_COLUMNS",
+        "logicalExpression" : {
+          "expressionTemplate" : " CASE  WHEN %1 = 0 THEN  NULL  ELSE 100.0d * %2 / %1 END ",
+          "expressionObjects" : [ "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.# of Won/Lost Competitive Opportunity Revenue Lines", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.# of Lost Competitive Opportunity Revenue Lines" ]
+        }
+      }
+    }, {
+      "name" : "Average Won Opportunity Line Revenue in Document Currency",
+      "dataType" : "DOUBLE",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "LOGICAL_COLUMNS",
+        "logicalExpression" : {
+          "expressionTemplate" : " CASE  WHEN %1 = 0 THEN  NULL  ELSE %2 / %1 END ",
+          "expressionObjects" : [ "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.# of Won Opportunity Revenue Lines", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Won Opportunity Line Revenue in Document Currency" ]
+        }
+      }
+    }, {
+      "name" : "Average Won Opportunity Line Revenue in Analytics Currency",
+      "dataType" : "DOUBLE",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "LOGICAL_COLUMNS",
+        "logicalExpression" : {
+          "expressionTemplate" : " CASE  WHEN %1 = 0 THEN  NULL  ELSE %2 / %1 END ",
+          "expressionObjects" : [ "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.# of Won Opportunity Revenue Lines", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Won Opportunity Line Revenue in Analytics Currency" ]
+        }
+      }
+    }, {
+      "name" : "Average Won Opportunity Line Revenue in CX Currency",
+      "dataType" : "DOUBLE",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "LOGICAL_COLUMNS",
+        "logicalExpression" : {
+          "expressionTemplate" : " CASE  WHEN %1 = 0 THEN  NULL  ELSE %2 / %1 END ",
+          "expressionObjects" : [ "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.# of Won Opportunity Revenue Lines", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Won Opportunity Line Revenue in CX Currency" ]
+        }
+      }
+    }, {
+      "name" : "Average Age of Won Opportunity Revenue Lines",
+      "dataType" : "DOUBLE",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "LOGICAL_COLUMNS",
+        "logicalExpression" : {
+          "expressionTemplate" : " CASE  WHEN %1 > 0 THEN 1.0d * %2 / %1 END ",
+          "expressionObjects" : [ "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.# of Won Opportunity Revenue Lines", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Total Age of Won Opportunity Revenue Lines" ]
+        }
+      }
+    }, {
+      "name" : "Average Age of Lost Opportunity Revenue Lines",
+      "dataType" : "DOUBLE",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "LOGICAL_COLUMNS",
+        "logicalExpression" : {
+          "expressionTemplate" : " CASE  WHEN %1 > 0 THEN 1.0d * %2 / %1 END ",
+          "expressionObjects" : [ "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.# of Lost Opportunity Revenue Lines", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Total Age of Lost Opportunity Revenue Lines" ]
+        }
+      }
+    }, {
+      "name" : "Average Age of No Sale Opportunity Revenue Lines",
+      "dataType" : "DOUBLE",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "LOGICAL_COLUMNS",
+        "logicalExpression" : {
+          "expressionTemplate" : " CASE  WHEN %1 > 0 THEN 1.0d * %2 / %1 END ",
+          "expressionObjects" : [ "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.# of No Sale Opportunity Revenue Lines", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Total Age of No Sale Opportunity Revenue Lines" ]
+        }
+      }
+    }, {
+      "name" : "Average Age of Opportunity Revenue Lines",
+      "dataType" : "DOUBLE",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "LOGICAL_COLUMNS",
+        "logicalExpression" : {
+          "expressionTemplate" : " CASE  WHEN %1 > 0 THEN 1.0d * %2 / %1 END ",
+          "expressionObjects" : [ "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.# of Won/Lost/No Sale Opportunity Revenue Lines", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Total Age of Won/Lost/No Sale Opportunity Revenue Lines" ]
+        }
+      }
+    }, {
+      "name" : "Average # of Days Open",
+      "dataType" : "DOUBLE",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "LOGICAL_COLUMNS",
+        "logicalExpression" : {
+          "expressionTemplate" : " CASE  WHEN %1 > 0 THEN 1.0d * %2 / %1 END ",
+          "expressionObjects" : [ "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.# of Open Opportunity Revenue Lines", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Total # of Days Open" ]
+        }
+      }
+    }, {
+      "name" : "-------- Internal --------",
+      "dataType" : "INT",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "LOGICAL_COLUMNS",
+        "logicalExpression" : {
+          "expressionTemplate" : "1"
+        }
+      }
+    }, {
+      "name" : "Total Age of Won Opportunity Revenue Lines",
+      "dataType" : "INT",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "Fact_DW_CXS_OPPORTUNITY_REVENUE_CF",
+          "physicalExpression" : {
+            "expressionTemplate" : " CASE  WHEN %1 = 'WON' AND %2 = 'QUOTA' AND %3 = 'N' AND  IFNULL(%4, 'NONE') <> 'DETAILCHILDSPLIT' AND  IFNULL(%5, 'NONRECUR') <> 'PARENTRECUR' THEN  TIMESTAMPDIFF( SQL_TSI_DAY , %6, %7) ELSE 0 END ",
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_CXS_OPPORTUNITY_REVENUE_CF.REVENUE_STATUS_CATEGORY", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_CXS_OPPORTUNITY_REVENUE_CF.SALES_CREDIT_TYPE_CODE", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_CXS_OPPORTUNITY_REVENUE_CF.PRIMARY_FLAG", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_CXS_OPPORTUNITY_REVENUE_CF.SPLIT_TYPE_CODE", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_CXS_OPPORTUNITY_REVENUE_CF.RECURRING_TYPE_CODE", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_CXS_OPPORTUNITY_REVENUE_CF.REVENUE_CREATION_DATE", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_CXS_OPPORTUNITY_REVENUE_CF.ACTUAL_CLOSE_DATE" ]
+          }
+        } ]
+      },
+      "aggregation" : {
+        "rule" : "SUM",
+        "dataIsDense" : false
+      }
+    }, {
+      "name" : "Total Age of Lost Opportunity Revenue Lines",
+      "dataType" : "INT",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "Fact_DW_CXS_OPPORTUNITY_REVENUE_CF",
+          "physicalExpression" : {
+            "expressionTemplate" : " CASE  WHEN %1 = 'LOST' AND %2 = 'QUOTA' AND %3 = 'N' AND  IFNULL(%4, 'NONE') <> 'DETAILCHILDSPLIT' AND  IFNULL(%5, 'NONRECUR') <> 'PARENTRECUR' THEN  TIMESTAMPDIFF( SQL_TSI_DAY , %6, %7) ELSE 0 END ",
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_CXS_OPPORTUNITY_REVENUE_CF.REVENUE_STATUS_CATEGORY", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_CXS_OPPORTUNITY_REVENUE_CF.SALES_CREDIT_TYPE_CODE", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_CXS_OPPORTUNITY_REVENUE_CF.PRIMARY_FLAG", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_CXS_OPPORTUNITY_REVENUE_CF.SPLIT_TYPE_CODE", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_CXS_OPPORTUNITY_REVENUE_CF.RECURRING_TYPE_CODE", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_CXS_OPPORTUNITY_REVENUE_CF.REVENUE_CREATION_DATE", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_CXS_OPPORTUNITY_REVENUE_CF.ACTUAL_CLOSE_DATE" ]
+          }
+        } ]
+      },
+      "aggregation" : {
+        "rule" : "SUM",
+        "dataIsDense" : false
+      }
+    }, {
+      "name" : "Total Age of No Sale Opportunity Revenue Lines",
+      "dataType" : "INT",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "Fact_DW_CXS_OPPORTUNITY_REVENUE_CF",
+          "physicalExpression" : {
+            "expressionTemplate" : " CASE  WHEN %1 = 'NO_SALE' AND %2 = 'QUOTA' AND %3 = 'N' AND  IFNULL(%4, 'NONE') <> 'DETAILCHILDSPLIT' AND  IFNULL(%5, 'NONRECUR') <> 'PARENTRECUR' THEN  TIMESTAMPDIFF( SQL_TSI_DAY , %6, %7) ELSE 0 END ",
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_CXS_OPPORTUNITY_REVENUE_CF.REVENUE_STATUS_CATEGORY", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_CXS_OPPORTUNITY_REVENUE_CF.SALES_CREDIT_TYPE_CODE", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_CXS_OPPORTUNITY_REVENUE_CF.PRIMARY_FLAG", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_CXS_OPPORTUNITY_REVENUE_CF.SPLIT_TYPE_CODE", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_CXS_OPPORTUNITY_REVENUE_CF.RECURRING_TYPE_CODE", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_CXS_OPPORTUNITY_REVENUE_CF.REVENUE_CREATION_DATE", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_CXS_OPPORTUNITY_REVENUE_CF.ACTUAL_CLOSE_DATE" ]
+          }
+        } ]
+      },
+      "aggregation" : {
+        "rule" : "SUM",
+        "dataIsDense" : false
+      }
+    }, {
+      "name" : "Total Age of Won/Lost/No Sale Opportunity Revenue Lines",
+      "dataType" : "INT",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "Fact_DW_CXS_OPPORTUNITY_REVENUE_CF",
+          "physicalExpression" : {
+            "expressionTemplate" : " CASE  WHEN %1 IN ('WON', 'LOST', 'NO_SALE') AND %2 = 'QUOTA' AND %3 = 'N' AND  IFNULL(%4, 'NONE') <> 'DETAILCHILDSPLIT' AND  IFNULL(%5, 'NONRECUR') <> 'PARENTRECUR' THEN  TIMESTAMPDIFF( SQL_TSI_DAY , %6, %7) ELSE 0 END ",
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_CXS_OPPORTUNITY_REVENUE_CF.REVENUE_STATUS_CATEGORY", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_CXS_OPPORTUNITY_REVENUE_CF.SALES_CREDIT_TYPE_CODE", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_CXS_OPPORTUNITY_REVENUE_CF.PRIMARY_FLAG", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_CXS_OPPORTUNITY_REVENUE_CF.SPLIT_TYPE_CODE", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_CXS_OPPORTUNITY_REVENUE_CF.RECURRING_TYPE_CODE", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_CXS_OPPORTUNITY_REVENUE_CF.REVENUE_CREATION_DATE", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_CXS_OPPORTUNITY_REVENUE_CF.ACTUAL_CLOSE_DATE" ]
+          }
+        } ]
+      },
+      "aggregation" : {
+        "rule" : "SUM",
+        "dataIsDense" : false
+      }
+    }, {
+      "name" : "Total # of Days Open",
+      "dataType" : "INT",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "Fact_DW_CXS_OPPORTUNITY_REVENUE_CF",
+          "physicalExpression" : {
+            "expressionTemplate" : " CASE  WHEN %1 = 'OPEN' AND %2 = 'QUOTA' AND %3 = 'N' AND  IFNULL(%4, 'NONE') <> 'DETAILCHILDSPLIT' AND  IFNULL(%5, 'NONRECUR') <> 'PARENTRECUR' THEN  TIMESTAMPDIFF( SQL_TSI_DAY , %6,  CURRENT_DATE ) ELSE 0 END ",
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_CXS_OPPORTUNITY_REVENUE_CF.REVENUE_STATUS_CATEGORY", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_CXS_OPPORTUNITY_REVENUE_CF.SALES_CREDIT_TYPE_CODE", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_CXS_OPPORTUNITY_REVENUE_CF.PRIMARY_FLAG", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_CXS_OPPORTUNITY_REVENUE_CF.SPLIT_TYPE_CODE", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_CXS_OPPORTUNITY_REVENUE_CF.RECURRING_TYPE_CODE", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_CXS_OPPORTUNITY_REVENUE_CF.REVENUE_CREATION_DATE" ]
+          }
+        } ]
+      },
+      "aggregation" : {
+        "rule" : "SUM",
+        "dataIsDense" : false
+      }
+    }, {
+      "name" : "Dummy Opportunity Id",
+      "dataType" : "DOUBLE",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "Fact_DW_CXS_OPPORTUNITY_REVENUE_CF",
+          "physicalExpression" : {
+            "expressionTemplate" : " IFNULL(%1, %2)",
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_CXS_OPPORTUNITY_CF_Revn.OPPORTUNITY_ID", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_CXS_OPPORTUNITY_CF.OPPORTUNITY_ID" ]
+          }
+        } ]
+      }
+    }, {
+      "name" : "-------- Internal Derived --------",
+      "dataType" : "INT",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "LOGICAL_COLUMNS",
+        "logicalExpression" : {
+          "expressionTemplate" : "1"
+        }
+      }
+    }, {
+      "name" : "# of Won/Lost Opportunity Revenue Lines",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "LOGICAL_COLUMNS",
+        "logicalExpression" : {
+          "expressionTemplate" : " FILTER(%1 USING %2 = 1 AND %3 IN ('WON', 'LOST'))",
+          "expressionObjects" : [ "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.# of Raw Opportunity Revenue Lines", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Included indicator", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Revenue Status Category Code" ]
+        }
+      }
+    }, {
+      "name" : "# of Won/Lost/No Sale Opportunity Revenue Lines",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "LOGICAL_COLUMNS",
+        "logicalExpression" : {
+          "expressionTemplate" : " FILTER(%1 USING %2 = 1 AND %3 IN ('WON', 'LOST', 'NO_SALE'))",
+          "expressionObjects" : [ "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.# of Raw Opportunity Revenue Lines", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Included indicator", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Revenue Status Category Code" ]
+        }
+      }
+    }, {
+      "name" : "# of Won/Lost Competitive Opportunity Revenue Lines",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "LOGICAL_COLUMNS",
+        "logicalExpression" : {
+          "expressionTemplate" : " FILTER(%1 USING %2 = 1 AND %3 <> -(99999) AND %4 IN ('WON', 'LOST'))",
+          "expressionObjects" : [ "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.# of Raw Opportunity Revenue Lines", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Included indicator", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Primary Competitor Identifier", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Revenue Status Category Code" ]
+        }
+      }
+    }, {
+      "name" : "# of Won/Lost/No Sale Competitive Opportunity Revenue Lines",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "LOGICAL_COLUMNS",
+        "logicalExpression" : {
+          "expressionTemplate" : " FILTER(%1 USING %2 = 1 AND %3 <> -(99999) AND %4 IN ('WON', 'LOST', 'NO_SALE'))",
+          "expressionObjects" : [ "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.# of Raw Opportunity Revenue Lines", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Included indicator", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Primary Competitor Identifier", "logicalColumn:Core.Fact - CX - Opportunity Revenue Line.Revenue Status Category Code" ]
+        }
+      }
+    } ],
+    "logicalTableSources" : [ {
+      "name" : "Fact_DW_CXS_OPPORTUNITY_REVENUE_CF",
+      "disable" : false,
+      "tableMapping" : {
+        "tables" : [ "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_CXS_OPPORTUNITY_CF", "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_CXS_OPPORTUNITY_REVENUE_CF", "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_CXS_OPPORTUNITY_CF_Revn" ],
+        "logicalTableSourceJoins" : [ {
+          "leftTable" : "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_CXS_OPPORTUNITY_CF",
+          "rightTable" : "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_CXS_OPPORTUNITY_REVENUE_CF",
+          "joinType" : "INNER",
+          "disable" : false
+        }, {
+          "leftTable" : "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_CXS_OPPORTUNITY_REVENUE_CF",
+          "rightTable" : "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_CXS_OPPORTUNITY_CF_Revn",
+          "joinType" : "INNER",
+          "disable" : false
+        } ]
+      },
+      "dataGranularity" : [ "logicalLevel:Core.Dim - CX - Opportunity Deal Horizon.Detail", "logicalLevel:Core.Dim - CX - Resource - Credit Receiver.Detail", "logicalLevel:Core.Dim - CX - Opportunity Decision.Detail", "logicalLevel:Core.Dim - CX - Opportunity Risk Level.Detail", "logicalLevel:Core.Dim - CX - Date - Opportunity Revenue Line Actual Close Date Gregorian Calendar.Day", "logicalLevel:Core.Dim - CX - Territory.Detail", "logicalLevel:Core.Dim - CX - Product.Detail", "logicalLevel:Core.Dim - CX - Opportunity Status.Detail", "logicalLevel:Core.Dim - CX - Sales Account.Detail", "logicalLevel:Core.Dim - CX - Primary Partner.Detail", "logicalLevel:Core.Dim - CX - Opportunity Line of Business.Detail", "logicalLevel:Core.Dim - CX - Security - Opportunity.Detail", "logicalLevel:Core.Dim - CX - Security - Custom.Detail", "logicalLevel:Core.Dim - CX - Resource - Territory Owner.Detail", "logicalLevel:Core.Dim - CX - Security - Account.Detail", "logicalLevel:Core.Dim - CX - Opportunity.Detail", "logicalLevel:Core.Dim - CX - Resource - Opportunity Owner.Detail", "logicalLevel:Core.Dim - Business Unit.Detail", "logicalLevel:Core.Dim - CX - Opportunity Status Category.Detail", "logicalLevel:Core.Dim - CX - Date - Opportunity Revenue Line Expected Close Date Enterprise Calendar.Detail", "logicalLevel:Core.Dim - CX - Date - Opportunity Revenue Line Expected Close Date Gregorian Calendar.Day", "logicalLevel:Core.Dim - Currency.Detail", "logicalLevel:Core.Dim - CX - Date - Opportunity Revenue Line Actual Close Date Enterprise Calendar.Detail", "logicalLevel:Core.Dim - CX - Revenue Category.Detail", "logicalLevel:Core.Dim - CX - Revenue Recurring Frequency.Detail", "logicalLevel:Core.Dim - CX - Revenue Recurring Type.Detail", "logicalLevel:Core.Dim - CX - Sales Stage.Detail", "logicalLevel:Core.Dim - CX - Resource - Sales Account Owner.Detail", "logicalLevel:Core.Dim - CX - Revenue Type.Detail", "logicalLevel:Core.Dim - CX - Primary Competitor.Detail", "logicalLevel:Core.Dim - CX - Revenue Line Type.Detail", "logicalLevel:Core.Dim - CX - Revenue Status Category.Detail", "logicalLevel:Core.Dim - Customer Sold To.Detail", "logicalLevel:Core.Dim - CX - Revenue Status.Detail", "logicalLevel:Core.Dim - CX - Revenue Close Reason.Detail", "logicalLevel:Core.Dim - CX - Revenue Sales Credit Type.Detail", "logicalLevel:Core.Dim - CX - Opportunity Revenue Line.Detail", "logicalLevel:Core.Dim - CX - Revenue Split Type.Detail", "logicalLevel:Core.Dim - CX - Opportunity Strategic.Detail", "logicalLevel:Core.Dim - CX - Opportunity Close Reason.Detail", "logicalLevel:Core.Dim - CX - Opportunity Channel Type.Detail", "logicalLevel:Core.Dim - CX - Primary Contact.Detail", "logicalLevel:Core.Dim - CX - Revenue Product Unit of Measure.Detail" ],
+      "combineWithOtherFragments" : false,
+      "enableFragmentSelection" : false,
+      "distinctValues" : false
+    } ],
+    "dataFilters" : [ {
+      "accessor" : "role:OA4F_CX_SALES_ACCNT_DATA",
+      "status" : "ENABLED",
+      "filter" : {
+        "expressionTemplate" : "%1 = 'Y'",
+        "expressionObjects" : [ "logicalColumn:Core.Dim - CX - Security - Account.Security Enabled Flag" ]
+      }
+    }, {
+      "accessor" : "role:OA4F_CX_SALES_OPTY_CUSTOM_DATA",
+      "status" : "ENABLED",
+      "filter" : {
+        "expressionTemplate" : "%1 = 'Y'",
+        "expressionObjects" : [ "logicalColumn:Core.Dim - CX - Security - Custom.Security Enabled Flag" ]
+      }
+    }, {
+      "accessor" : "role:OA4F_CX_SALES_OPTY_DATA",
+      "status" : "ENABLED",
+      "filter" : {
+        "expressionTemplate" : "%1 = 'Y'",
+        "expressionObjects" : [ "logicalColumn:Core.Dim - CX - Security - Opportunity.Security Enabled Flag" ]
+      }
+    } ],
+    "joins" : [ {
+      "rightTable" : "logicalTable:Core.Dim - Business Unit",
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ZERO_OR_ONE"
+    }, {
+      "rightTable" : "logicalTable:Core.Dim - CX - Date - Opportunity Revenue Line Actual Close Date Enterprise Calendar",
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ZERO_OR_ONE"
+    }, {
+      "rightTable" : "logicalTable:Core.Dim - CX - Date - Opportunity Revenue Line Actual Close Date Gregorian Calendar",
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ZERO_OR_ONE"
+    }, {
+      "rightTable" : "logicalTable:Core.Dim - CX - Date - Opportunity Revenue Line Expected Close Date Enterprise Calendar",
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ZERO_OR_ONE"
+    }, {
+      "rightTable" : "logicalTable:Core.Dim - CX - Date - Opportunity Revenue Line Expected Close Date Gregorian Calendar",
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ZERO_OR_ONE"
+    }, {
+      "rightTable" : "logicalTable:Core.Dim - CX - Opportunity Channel Type",
+      "joinType" : "LEFT_OUTER",
+      "cardinality" : "MANY_TO_ZERO_OR_ONE"
+    }, {
+      "rightTable" : "logicalTable:Core.Dim - CX - Opportunity Close Reason",
+      "joinType" : "LEFT_OUTER",
+      "cardinality" : "MANY_TO_ZERO_OR_ONE"
+    }, {
+      "rightTable" : "logicalTable:Core.Dim - CX - Opportunity Deal Horizon",
+      "joinType" : "LEFT_OUTER",
+      "cardinality" : "MANY_TO_ZERO_OR_ONE"
+    }, {
+      "rightTable" : "logicalTable:Core.Dim - CX - Opportunity Decision",
+      "joinType" : "LEFT_OUTER",
+      "cardinality" : "MANY_TO_ZERO_OR_ONE"
+    }, {
+      "rightTable" : "logicalTable:Core.Dim - CX - Opportunity Line of Business",
+      "joinType" : "LEFT_OUTER",
+      "cardinality" : "MANY_TO_ZERO_OR_ONE"
+    }, {
+      "rightTable" : "logicalTable:Core.Dim - CX - Opportunity Revenue Line",
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ZERO_OR_ONE"
+    }, {
+      "rightTable" : "logicalTable:Core.Dim - CX - Opportunity Risk Level",
+      "joinType" : "LEFT_OUTER",
+      "cardinality" : "MANY_TO_ZERO_OR_ONE"
+    }, {
+      "rightTable" : "logicalTable:Core.Dim - CX - Opportunity Status Category",
+      "joinType" : "LEFT_OUTER",
+      "cardinality" : "MANY_TO_ZERO_OR_ONE"
+    }, {
+      "rightTable" : "logicalTable:Core.Dim - CX - Opportunity Status",
+      "joinType" : "LEFT_OUTER",
+      "cardinality" : "MANY_TO_ZERO_OR_ONE"
+    }, {
+      "rightTable" : "logicalTable:Core.Dim - CX - Opportunity Strategic",
+      "joinType" : "LEFT_OUTER",
+      "cardinality" : "MANY_TO_ZERO_OR_ONE"
+    }, {
+      "rightTable" : "logicalTable:Core.Dim - CX - Opportunity",
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ZERO_OR_ONE"
+    }, {
+      "rightTable" : "logicalTable:Core.Dim - CX - Primary Competitor",
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ZERO_OR_ONE"
+    }, {
+      "rightTable" : "logicalTable:Core.Dim - CX - Primary Contact",
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ZERO_OR_ONE"
+    }, {
+      "rightTable" : "logicalTable:Core.Dim - CX - Primary Partner",
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ZERO_OR_ONE"
+    }, {
+      "rightTable" : "logicalTable:Core.Dim - CX - Product",
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ZERO_OR_ONE"
+    }, {
+      "rightTable" : "logicalTable:Core.Dim - CX - Resource - Credit Receiver",
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ZERO_OR_ONE"
+    }, {
+      "rightTable" : "logicalTable:Core.Dim - CX - Resource - Opportunity Owner",
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ZERO_OR_ONE"
+    }, {
+      "rightTable" : "logicalTable:Core.Dim - CX - Resource - Sales Account Owner",
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ZERO_OR_ONE"
+    }, {
+      "rightTable" : "logicalTable:Core.Dim - CX - Resource - Territory Owner",
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ZERO_OR_ONE"
+    }, {
+      "rightTable" : "logicalTable:Core.Dim - CX - Revenue Category",
+      "joinType" : "LEFT_OUTER",
+      "cardinality" : "MANY_TO_ZERO_OR_ONE"
+    }, {
+      "rightTable" : "logicalTable:Core.Dim - CX - Revenue Close Reason",
+      "joinType" : "LEFT_OUTER",
+      "cardinality" : "MANY_TO_ZERO_OR_ONE"
+    }, {
+      "rightTable" : "logicalTable:Core.Dim - CX - Revenue Line Type",
+      "joinType" : "LEFT_OUTER",
+      "cardinality" : "MANY_TO_ZERO_OR_ONE"
+    }, {
+      "rightTable" : "logicalTable:Core.Dim - CX - Revenue Product Unit of Measure",
+      "joinType" : "LEFT_OUTER",
+      "cardinality" : "MANY_TO_ZERO_OR_ONE"
+    }, {
+      "rightTable" : "logicalTable:Core.Dim - CX - Revenue Recurring Frequency",
+      "joinType" : "LEFT_OUTER",
+      "cardinality" : "MANY_TO_ZERO_OR_ONE"
+    }, {
+      "rightTable" : "logicalTable:Core.Dim - CX - Revenue Recurring Type",
+      "joinType" : "LEFT_OUTER",
+      "cardinality" : "MANY_TO_ZERO_OR_ONE"
+    }, {
+      "rightTable" : "logicalTable:Core.Dim - CX - Revenue Sales Credit Type",
+      "joinType" : "LEFT_OUTER",
+      "cardinality" : "MANY_TO_ZERO_OR_ONE"
+    }, {
+      "rightTable" : "logicalTable:Core.Dim - CX - Revenue Split Type",
+      "joinType" : "LEFT_OUTER",
+      "cardinality" : "MANY_TO_ZERO_OR_ONE"
+    }, {
+      "rightTable" : "logicalTable:Core.Dim - CX - Revenue Status Category",
+      "joinType" : "LEFT_OUTER",
+      "cardinality" : "MANY_TO_ZERO_OR_ONE"
+    }, {
+      "rightTable" : "logicalTable:Core.Dim - CX - Revenue Status",
+      "joinType" : "LEFT_OUTER",
+      "cardinality" : "MANY_TO_ZERO_OR_ONE"
+    }, {
+      "rightTable" : "logicalTable:Core.Dim - CX - Revenue Type",
+      "joinType" : "LEFT_OUTER",
+      "cardinality" : "MANY_TO_ZERO_OR_ONE"
+    }, {
+      "rightTable" : "logicalTable:Core.Dim - CX - Sales Account",
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ZERO_OR_ONE"
+    }, {
+      "rightTable" : "logicalTable:Core.Dim - CX - Sales Stage",
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ZERO_OR_ONE"
+    }, {
+      "rightTable" : "logicalTable:Core.Dim - CX - Security - Account",
+      "joinType" : "LEFT_OUTER",
+      "cardinality" : "MANY_TO_ZERO_OR_ONE"
+    }, {
+      "rightTable" : "logicalTable:Core.Dim - CX - Security - Custom",
+      "joinType" : "LEFT_OUTER",
+      "cardinality" : "MANY_TO_ZERO_OR_ONE"
+    }, {
+      "rightTable" : "logicalTable:Core.Dim - CX - Security - Opportunity",
+      "joinType" : "LEFT_OUTER",
+      "cardinality" : "MANY_TO_ZERO_OR_ONE"
+    }, {
+      "rightTable" : "logicalTable:Core.Dim - CX - Territory",
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ZERO_OR_ONE"
+    }, {
+      "rightTable" : "logicalTable:Core.Dim - Currency",
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ZERO_OR_ONE"
+    }, {
+      "rightTable" : "logicalTable:Core.Dim - Customer Sold To",
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ZERO_OR_ONE"
+    } ]
+  }
+}

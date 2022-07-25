@@ -1,0 +1,23 @@
+{
+  "initBlock" : {
+    "name" : "GL Segment 1 Enabled",
+    "tags" : [ "Project:Fusion Analytics Warehouse - Accounts Payable", "Project:Fusion Analytics Warehouse - Accounts Receivable", "Project:Fusion Analytics Warehouse - Expense Management", "Project:Fusion Analytics Warehouse - GL Budgets Analysis", "Project:Fusion Analytics Warehouse - General Ledger", "Project:Fusion Analytics Warehouse - Inventory", "Project:Fusion Analytics Warehouse - Procurement Management", "Project:Fusion Analytics Warehouse - Purchase Orders", "Project:Fusion Analytics Warehouse - Purchase Receipts", "Project:Fusion Analytics Warehouse - Reconciliation", "Project:Oracle Analytics for Fusion Financials" ],
+    "type" : "SESSION",
+    "connectionPool" : "connectionPool:Oracle_Data_Warehouse.Oracle_Data_Warehouse_Repository_Initblocks_Connection_Pool",
+    "selectStatements" : [ {
+      "databaseType" : "DEFAULT",
+      "query" : "SELECT CASE WHEN 'VALUEOF(NQ_SESSION.GL_SEG_1)' <> 'GL Segment1' THEN '1' ELSE '0' END FROM DUAL"
+    } ],
+    "variables" : [ {
+      "name" : "GL_SEG_1_ENABLED",
+      "value" : "'0'",
+      "enableUsersToSetValue" : false,
+      "securitySensitive" : false
+    } ],
+    "dependencies" : [ "GL Segment Labels" ],
+    "disable" : false,
+    "queryReturnsVariableNamesAndValues" : false,
+    "allowDeferredExecution" : true,
+    "cacheQueryResult" : true
+  }
+}

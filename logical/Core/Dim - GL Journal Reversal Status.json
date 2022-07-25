@@ -1,0 +1,98 @@
+{
+  "logicalTable" : {
+    "name" : "Dim - GL Journal Reversal Status",
+    "type" : "DIMENSION",
+    "primaryKey" : [ "Reversal Status Code" ],
+    "logicalColumns" : [ {
+      "name" : "Reversal Status",
+      "dataType" : "VARCHAR",
+      "descriptorColumn" : "Reversal Status Code",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "Dim_DW_CODE_VALUES_LKP_TL_GL_Reversal_Status_PromptOnly",
+          "physicalExpression" : {
+            "expressionTemplate" : " LOOKUP( SPARSE %1, %2, %2, 'JE_REVERSAL_STATUS',  VALUEOF(NQ_SESSION.%3))",
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_CODE_VALUES_LKP_TL_Common.NAME", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_CODE_VALUES_LKP_TL_GL_Reversal_Status_PromptOnly.CODE", "variable:INIT_USER_LANGUAGE_CODE.USER_LANGUAGE_CODE" ]
+          }
+        }, {
+          "logicalTableSource" : "Dim_DW_CODE_VALUES_LKP_TL_GL_Reversal_Status",
+          "physicalExpression" : {
+            "expressionTemplate" : " LOOKUP( SPARSE %1, %2, %2, 'JE_REVERSAL_STATUS',  VALUEOF(NQ_SESSION.%3))",
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_CODE_VALUES_LKP_TL_Common.NAME", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_CODE_VALUES_LKP_TL_GL_Reversal_Status.CODE", "variable:INIT_USER_LANGUAGE_CODE.USER_LANGUAGE_CODE" ]
+          }
+        } ]
+      }
+    }, {
+      "name" : "Reversal Status Code",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "Dim_DW_CODE_VALUES_LKP_TL_GL_Reversal_Status_PromptOnly",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_CODE_VALUES_LKP_TL_GL_Reversal_Status_PromptOnly.CODE" ]
+          }
+        }, {
+          "logicalTableSource" : "Dim_DW_CODE_VALUES_LKP_TL_GL_Reversal_Status",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_CODE_VALUES_LKP_TL_GL_Reversal_Status.CODE" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Detail"
+    } ],
+    "logicalTableSources" : [ {
+      "name" : "Dim_DW_CODE_VALUES_LKP_TL_GL_Reversal_Status_PromptOnly",
+      "disable" : false,
+      "tableMapping" : {
+        "tables" : [ "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_CODE_VALUES_LKP_TL_GL_Reversal_Status_PromptOnly" ]
+      },
+      "dataGranularity" : [ "logicalLevel:Core.Dim - GL Journal Reversal Status.Detail" ],
+      "combineWithOtherFragments" : false,
+      "enableFragmentSelection" : false,
+      "dataFilter" : {
+        "expressionTemplate" : "%1 = 'JE_REVERSAL_STATUS' AND %2 =  VALUEOF(NQ_SESSION.%3)",
+        "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_CODE_VALUES_LKP_TL_GL_Reversal_Status_PromptOnly.CODE_TYPE", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_CODE_VALUES_LKP_TL_GL_Reversal_Status_PromptOnly.LANGUAGE", "variable:INIT_USER_LANGUAGE_CODE.USER_LANGUAGE_CODE" ]
+      },
+      "distinctValues" : false
+    }, {
+      "name" : "Dim_DW_CODE_VALUES_LKP_TL_GL_Reversal_Status",
+      "disable" : false,
+      "tableMapping" : {
+        "tables" : [ "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_CODE_VALUES_LKP_TL_GL_Reversal_Status" ]
+      },
+      "dataGranularity" : [ "logicalLevel:Core.Dim - GL Journal Reversal Status.Detail" ],
+      "combineWithOtherFragments" : false,
+      "enableFragmentSelection" : false,
+      "distinctValues" : false
+    } ],
+    "hierarchyType" : "LEVEL_BASED",
+    "levelBasedHierarchy" : {
+      "defaultRootLevel" : "Total",
+      "ragged" : false,
+      "skipped" : false,
+      "logicalLevels" : [ {
+        "name" : "Total",
+        "numberOfElements" : 1,
+        "grandTotalLevel" : true,
+        "disableAggregateToHigherLevel" : false
+      }, {
+        "name" : "Detail",
+        "numberOfElements" : 1,
+        "grandTotalLevel" : false,
+        "disableAggregateToHigherLevel" : false,
+        "primaryKey" : [ "Reversal Status Code" ],
+        "displayKey" : "Reversal Status Code"
+      } ],
+      "logicalHierarchies" : [ {
+        "name" : "GL Journal Reversal Status",
+        "levels" : [ "Total", "Detail" ]
+      } ]
+    }
+  }
+}

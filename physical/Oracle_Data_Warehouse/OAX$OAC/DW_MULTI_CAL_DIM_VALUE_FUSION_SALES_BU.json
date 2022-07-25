@@ -1,0 +1,25 @@
+{
+  "physicalTable" : {
+    "name" : "DW_MULTI_CAL_DIM_VALUE_FUSION_SALES_BU",
+    "sourceType" : "SELECT",
+    "selectStatements" : [ {
+      "databaseType" : "DEFAULT",
+      "query" : "SELECT\r\n    'SALES BU'        driving_dim_code,\r\n    business_unit_name   dimension_value\r\nFROM\r\n    dw_business_unit_d_tl\r\nWHERE language = 'VALUEOF(NQ_SESSION.USER_LANGUAGE_CODE)'\r\n\r\n"
+    } ],
+    "physicalColumns" : [ {
+      "name" : "DIMENSION_VALUE",
+      "dataType" : "VARCHAR",
+      "length" : 512,
+      "nullable" : false
+    }, {
+      "name" : "DRIVING_DIM_CODE",
+      "dataType" : "VARCHAR",
+      "length" : 255,
+      "nullable" : false
+    } ],
+    "caching" : {
+      "enable" : true,
+      "expiryTime" : 0
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "initBlock" : {
+    "name" : "FAW Financials - AR Business Unit Security Defined",
+    "tags" : [ "Project:Fusion Analytics Warehouse - Accounts Payable", "Project:Fusion Analytics Warehouse - Accounts Receivable", "Project:Fusion Analytics Warehouse - Expense Management", "Project:Fusion Analytics Warehouse - GL Budgets Analysis", "Project:Fusion Analytics Warehouse - General Ledger", "Project:Fusion Analytics Warehouse - Inventory", "Project:Fusion Analytics Warehouse - Reconciliation", "Project:Oracle Analytics for Fusion Financials" ],
+    "type" : "SESSION",
+    "connectionPool" : "connectionPool:Oracle_Data_Warehouse.Oracle_Data_Warehouse_Repository_Initblocks_Connection_Pool",
+    "selectStatements" : [ {
+      "databaseType" : "DEFAULT",
+      "query" : "SELECT CASE WHEN Count(*) > 0 THEN 1 ELSE 0 END AS COUNT_MEMBERS\r\nFROM sec_secure_by_obj_member_user\r\nWHERE sec_obj_code = 'OA4F_SEC_FIN_AR_BUSINESSUNIT_LIST'\r\nAND username = ':USER'\r\nAND 'VALUEOF(NQ_SESSION.ROLES)' LIKE '%FIN_AR_BUSINESS_UNIT%'"
+    } ],
+    "variables" : [ {
+      "name" : "FIN_AR_BU_SEC_DEFINED",
+      "value" : "0",
+      "enableUsersToSetValue" : false,
+      "securitySensitive" : false
+    } ],
+    "disable" : false,
+    "queryReturnsVariableNamesAndValues" : false,
+    "allowDeferredExecution" : true,
+    "cacheQueryResult" : true
+  }
+}

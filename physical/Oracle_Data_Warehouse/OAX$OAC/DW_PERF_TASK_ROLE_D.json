@@ -1,0 +1,21 @@
+{
+  "physicalTable" : {
+    "name" : "DW_PERF_TASK_ROLE_D",
+    "sourceType" : "TABLE",
+    "physicalColumns" : [ {
+      "name" : "BUSINESS_GROUP_ID",
+      "dataType" : "NUMERIC",
+      "length" : 0,
+      "nullable" : true
+    }, {
+      "name" : "PROCESS_TASK_ROLE_ID",
+      "dataType" : "NUMERIC",
+      "length" : 0,
+      "nullable" : true
+    } ],
+    "caching" : {
+      "enable" : true,
+      "expiryTime" : 0
+    }
+  }
+}

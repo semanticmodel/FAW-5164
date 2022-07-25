@@ -1,0 +1,98 @@
+{
+  "logicalTable" : {
+    "name" : "Dim - AP Payment Status",
+    "type" : "DIMENSION",
+    "primaryKey" : [ "Payment Status Code" ],
+    "logicalColumns" : [ {
+      "name" : "Payment Status Code",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "Dim_DW_CODE_VALUES_LKP_TL_AP_Payment_Status_PromptOnly",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_CODE_VALUES_LKP_TL_AP_Payment_Status_PromptOnly.CODE" ]
+          }
+        }, {
+          "logicalTableSource" : "Dim_DW_CODE_VALUES_LKP_TL_AP_Payment_Status",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_CODE_VALUES_LKP_TL_AP_Payment_Status.CODE" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Detail"
+    }, {
+      "name" : "Payment Status Name",
+      "dataType" : "VARCHAR",
+      "descriptorColumn" : "Payment Status Code",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "Dim_DW_CODE_VALUES_LKP_TL_AP_Payment_Status_PromptOnly",
+          "physicalExpression" : {
+            "expressionTemplate" : " LOOKUP( SPARSE %1, %2, %2, 'CHECK STATE',  VALUEOF(NQ_SESSION.%3))",
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_CODE_VALUES_LKP_TL_AP_Payment_Status_PromptOnly.NAME", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_CODE_VALUES_LKP_TL_AP_Payment_Status_PromptOnly.CODE", "variable:INIT_USER_LANGUAGE_CODE.USER_LANGUAGE_CODE" ]
+          }
+        }, {
+          "logicalTableSource" : "Dim_DW_CODE_VALUES_LKP_TL_AP_Payment_Status",
+          "physicalExpression" : {
+            "expressionTemplate" : " LOOKUP( SPARSE %1, %2, %2, 'CHECK STATE',  VALUEOF(NQ_SESSION.%3))",
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_CODE_VALUES_LKP_TL_AP_Payment_Status.NAME", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_CODE_VALUES_LKP_TL_AP_Payment_Status.CODE", "variable:INIT_USER_LANGUAGE_CODE.USER_LANGUAGE_CODE" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Detail"
+    } ],
+    "logicalTableSources" : [ {
+      "name" : "Dim_DW_CODE_VALUES_LKP_TL_AP_Payment_Status_PromptOnly",
+      "disable" : false,
+      "tableMapping" : {
+        "tables" : [ "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_CODE_VALUES_LKP_TL_AP_Payment_Status_PromptOnly" ]
+      },
+      "dataGranularity" : [ "logicalLevel:Core.Dim - AP Payment Status.Detail" ],
+      "combineWithOtherFragments" : false,
+      "enableFragmentSelection" : false,
+      "dataFilter" : {
+        "expressionTemplate" : "%1 = 'CHECK STATE' AND %2 =  VALUEOF(NQ_SESSION.%3)",
+        "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_CODE_VALUES_LKP_TL_AP_Payment_Status_PromptOnly.CODE_TYPE", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_CODE_VALUES_LKP_TL_AP_Payment_Status_PromptOnly.LANGUAGE", "variable:INIT_USER_LANGUAGE_CODE.USER_LANGUAGE_CODE" ]
+      },
+      "distinctValues" : false
+    }, {
+      "name" : "Dim_DW_CODE_VALUES_LKP_TL_AP_Payment_Status",
+      "disable" : false,
+      "tableMapping" : {
+        "tables" : [ "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_CODE_VALUES_LKP_TL_AP_Payment_Status" ]
+      },
+      "combineWithOtherFragments" : false,
+      "enableFragmentSelection" : false,
+      "distinctValues" : false
+    } ],
+    "hierarchyType" : "LEVEL_BASED",
+    "levelBasedHierarchy" : {
+      "defaultRootLevel" : "Total",
+      "ragged" : false,
+      "skipped" : false,
+      "logicalLevels" : [ {
+        "name" : "Total",
+        "numberOfElements" : 1,
+        "grandTotalLevel" : true,
+        "disableAggregateToHigherLevel" : false
+      }, {
+        "name" : "Detail",
+        "numberOfElements" : 1,
+        "grandTotalLevel" : false,
+        "disableAggregateToHigherLevel" : false,
+        "primaryKey" : [ "Payment Status Code" ],
+        "displayKey" : "Payment Status Code"
+      } ],
+      "logicalHierarchies" : [ {
+        "name" : "AP Payment Status",
+        "levels" : [ "Total", "Detail" ]
+      } ]
+    }
+  }
+}

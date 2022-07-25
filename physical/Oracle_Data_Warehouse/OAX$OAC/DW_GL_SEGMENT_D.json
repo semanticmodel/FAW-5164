@@ -1,0 +1,26 @@
+{
+  "physicalTable" : {
+    "name" : "DW_GL_SEGMENT_D",
+    "sourceType" : "TABLE",
+    "physicalColumns" : [ {
+      "name" : "GL_SEGMENT_CODE",
+      "dataType" : "VARCHAR",
+      "length" : 128,
+      "nullable" : false
+    }, {
+      "name" : "GL_SEGMENT_VALUESET_CODE",
+      "dataType" : "VARCHAR",
+      "length" : 128,
+      "nullable" : false
+    }, {
+      "name" : "GL_SEGMENT_ID",
+      "dataType" : "VARCHAR",
+      "length" : 1024,
+      "nullable" : true
+    } ],
+    "caching" : {
+      "enable" : true,
+      "expiryTime" : 0
+    }
+  }
+}

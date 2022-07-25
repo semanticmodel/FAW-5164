@@ -1,0 +1,26 @@
+{
+  "physicalTable" : {
+    "name" : "DW_CURRENCY_DETAILS_D_TL",
+    "sourceType" : "TABLE",
+    "physicalColumns" : [ {
+      "name" : "CURRENCY_CODE",
+      "dataType" : "VARCHAR",
+      "length" : 16,
+      "nullable" : true
+    }, {
+      "name" : "LANGUAGE",
+      "dataType" : "VARCHAR",
+      "length" : 16,
+      "nullable" : true
+    }, {
+      "name" : "CURRENCY_NAME",
+      "dataType" : "VARCHAR",
+      "length" : 512,
+      "nullable" : true
+    } ],
+    "caching" : {
+      "enable" : true,
+      "expiryTime" : 0
+    }
+  }
+}

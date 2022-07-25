@@ -1,0 +1,442 @@
+{
+  "subjectArea" : {
+    "name" : "Financials - AR Receipts and Applications",
+    "tags" : [ "Project:Fusion Analytics Warehouse - Accounts Receivable", "Project:Oracle Analytics for Fusion Financials" ],
+    "sourceBusinessModel" : "businessModel:Core",
+    "implicitFactColumn" : "logicalColumn:Core.Fact - Fins - AR Receipts and Applications.Receipt Distribution Amount",
+    "hideIfTrue" : {
+      "expressionTemplate" : " VALUEOF(NQ_SESSION.\"%1\") = 'HIDE'",
+      "expressionObjects" : [ "variable:undeclaredVariables.AM_Financials_-_AR_Receipts_and_Applications" ]
+    },
+    "tableOrder" : [ {
+      "name" : "presentationTable:Financials - AR Receipts and Applications.Time"
+    }, {
+      "name" : "presentationTable:Financials - AR Receipts and Applications.Legal Entity"
+    }, {
+      "name" : "presentationTable:Financials - AR Receipts and Applications.Ledger Set"
+    }, {
+      "name" : "presentationTable:Financials - AR Receipts and Applications.Ledger"
+    }, {
+      "name" : "presentationTable:Financials - AR Receipts and Applications.Business Unit"
+    }, {
+      "name" : "presentationTable:Financials - AR Receipts and Applications.GL Account"
+    }, {
+      "name" : "presentationTable:Financials - AR Receipts and Applications.GL Segments",
+      "children" : [ {
+        "name" : "presentationTable:Financials - AR Receipts and Applications.Cost Center"
+      }, {
+        "name" : "presentationTable:Financials - AR Receipts and Applications.Cost Center Hierarchy"
+      }, {
+        "name" : "presentationTable:Financials - AR Receipts and Applications.Balancing Segment"
+      }, {
+        "name" : "presentationTable:Financials - AR Receipts and Applications.Balancing Segment Hierarchy"
+      }, {
+        "name" : "presentationTable:Financials - AR Receipts and Applications.Natural Account"
+      }, {
+        "name" : "presentationTable:Financials - AR Receipts and Applications.Natural Account Hierarchy"
+      }, {
+        "name" : "presentationTable:Financials - AR Receipts and Applications.GL Segment1"
+      }, {
+        "name" : "presentationTable:Financials - AR Receipts and Applications.GL Segment1 Hierarchy"
+      }, {
+        "name" : "presentationTable:Financials - AR Receipts and Applications.GL Segment2"
+      }, {
+        "name" : "presentationTable:Financials - AR Receipts and Applications.GL Segment2 Hierarchy"
+      }, {
+        "name" : "presentationTable:Financials - AR Receipts and Applications.GL Segment3"
+      }, {
+        "name" : "presentationTable:Financials - AR Receipts and Applications.GL Segment3 Hierarchy"
+      }, {
+        "name" : "presentationTable:Financials - AR Receipts and Applications.GL Segment4"
+      }, {
+        "name" : "presentationTable:Financials - AR Receipts and Applications.GL Segment4 Hierarchy"
+      }, {
+        "name" : "presentationTable:Financials - AR Receipts and Applications.GL Segment5"
+      }, {
+        "name" : "presentationTable:Financials - AR Receipts and Applications.GL Segment5 Hierarchy"
+      }, {
+        "name" : "presentationTable:Financials - AR Receipts and Applications.GL Segment6"
+      }, {
+        "name" : "presentationTable:Financials - AR Receipts and Applications.GL Segment6 Hierarchy"
+      }, {
+        "name" : "presentationTable:Financials - AR Receipts and Applications.GL Segment7"
+      }, {
+        "name" : "presentationTable:Financials - AR Receipts and Applications.GL Segment7 Hierarchy"
+      }, {
+        "name" : "presentationTable:Financials - AR Receipts and Applications.GL Segment8"
+      }, {
+        "name" : "presentationTable:Financials - AR Receipts and Applications.GL Segment8 Hierarchy"
+      }, {
+        "name" : "presentationTable:Financials - AR Receipts and Applications.GL Segment9"
+      }, {
+        "name" : "presentationTable:Financials - AR Receipts and Applications.GL Segment9 Hierarchy"
+      }, {
+        "name" : "presentationTable:Financials - AR Receipts and Applications.GL Segment10"
+      }, {
+        "name" : "presentationTable:Financials - AR Receipts and Applications.GL Segment10 Hierarchy"
+      } ]
+    }, {
+      "name" : "presentationTable:Financials - AR Receipts and Applications.AR Billing Business Unit"
+    }, {
+      "name" : "presentationTable:Financials - AR Receipts and Applications.AR Receipt Business Unit"
+    }, {
+      "name" : "presentationTable:Financials - AR Receipts and Applications.Customer",
+      "children" : [ {
+        "name" : "presentationTable:Financials - AR Receipts and Applications.Bill-to Customer"
+      }, {
+        "name" : "presentationTable:Financials - AR Receipts and Applications.Sold-to Customer"
+      }, {
+        "name" : "presentationTable:Financials - AR Receipts and Applications.Paying Customer"
+      } ]
+    }, {
+      "name" : "presentationTable:Financials - AR Receipts and Applications.Customer Account",
+      "children" : [ {
+        "name" : "presentationTable:Financials - AR Receipts and Applications.Bill-to Customer Account"
+      }, {
+        "name" : "presentationTable:Financials - AR Receipts and Applications.Paying Customer Account"
+      } ]
+    }, {
+      "name" : "presentationTable:Financials - AR Receipts and Applications.Customer Site",
+      "children" : [ {
+        "name" : "presentationTable:Financials - AR Receipts and Applications.Customer Bill-to Details"
+      }, {
+        "name" : "presentationTable:Financials - AR Receipts and Applications.Customer Ship-to Details"
+      }, {
+        "name" : "presentationTable:Financials - AR Receipts and Applications.Customer Sold-to Details"
+      }, {
+        "name" : "presentationTable:Financials - AR Receipts and Applications.Paying Customer Site"
+      }, {
+        "name" : "presentationTable:Financials - AR Receipts and Applications.Reference Customer Site"
+      } ]
+    }, {
+      "name" : "presentationTable:Financials - AR Receipts and Applications.Receipt Details",
+      "children" : [ {
+        "name" : "presentationTable:Financials - AR Receipts and Applications.Document Details"
+      }, {
+        "name" : "presentationTable:Financials - AR Receipts and Applications.Reference Details"
+      }, {
+        "name" : "presentationTable:Financials - AR Receipts and Applications.Receipt Status"
+      }, {
+        "name" : "presentationTable:Financials - AR Receipts and Applications.Receipt Method"
+      }, {
+        "name" : "presentationTable:Financials - AR Receipts and Applications.Receipt Type"
+      }, {
+        "name" : "presentationTable:Financials - AR Receipts and Applications.Receipt Accounting Details"
+      }, {
+        "name" : "presentationTable:Financials - AR Receipts and Applications.Receipt Reverse Details"
+      }, {
+        "name" : "presentationTable:Financials - AR Receipts and Applications.Receipt Date"
+      }, {
+        "name" : "presentationTable:Financials - AR Receipts and Applications.Receipt Accounting Date"
+      }, {
+        "name" : "presentationTable:Financials - AR Receipts and Applications.Receipt Distribution Accounting Date"
+      }, {
+        "name" : "presentationTable:Financials - AR Receipts and Applications.Receipt Created By"
+      } ]
+    }, {
+      "name" : "presentationTable:Financials - AR Receipts and Applications.AR Receipt Application Details",
+      "children" : [ {
+        "name" : "presentationTable:Financials - AR Receipts and Applications.Receipt Application Date"
+      }, {
+        "name" : "presentationTable:Financials - AR Receipts and Applications.Receipt Application Activity"
+      }, {
+        "name" : "presentationTable:Financials - AR Receipts and Applications.Transaction Type"
+      }, {
+        "name" : "presentationTable:Financials - AR Receipts and Applications.Transaction Source"
+      }, {
+        "name" : "presentationTable:Financials - AR Receipts and Applications.Receipt Application Status"
+      }, {
+        "name" : "presentationTable:Financials - AR Receipts and Applications.Receipt Application Accounting Details"
+      }, {
+        "name" : "presentationTable:Financials - AR Receipts and Applications.Receipt Application Accounting Date"
+      }, {
+        "name" : "presentationTable:Financials - AR Receipts and Applications.Receipt Application Created By"
+      } ]
+    }, {
+      "name" : "presentationTable:Financials - AR Receipts and Applications.Created By"
+    }, {
+      "name" : "presentationTable:Financials - AR Receipts and Applications.Currency"
+    }, {
+      "name" : "presentationTable:Financials - AR Receipts and Applications.Descriptive Flexfield (DFF)",
+      "children" : [ {
+        "name" : "presentationTable:Financials - AR Receipts and Applications.DFF - Receipts"
+      }, {
+        "name" : "presentationTable:Financials - AR Receipts and Applications.DFF - Receipts Regional Information"
+      }, {
+        "name" : "presentationTable:Financials - AR Receipts and Applications.DFF - Customer"
+      }, {
+        "name" : "presentationTable:Financials - AR Receipts and Applications.DFF - Customer Account"
+      } ]
+    }, {
+      "name" : "presentationTable:Financials - AR Receipts and Applications.Facts - Analytics Currency"
+    }, {
+      "name" : "presentationTable:Financials - AR Receipts and Applications.Facts - Ledger Currency"
+    }, {
+      "name" : "presentationTable:Financials - AR Receipts and Applications.Facts - Document Currency"
+    } ],
+    "permissions" : [ {
+      "accessor" : "role:DEFAULT",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:NAW_FINANCIALS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:NAW_INVENTORY_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:NAW_MANUFACTURING_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:NAW_PAYABLES_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:NAW_PURCHASING_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:NAW_SALES_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_COMMON_DATA_ADMIN_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_CONTENT_REPORTING_CONFIG",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_CX_OPTY_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_CX_OPTY_PROG_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_CX_OPTY_SNP_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_CX_REVN_LINE_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_CX_REVN_LINE_SNP_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_CX_SALES_ACCNT_DATA",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_CX_SALES_OPTY_CUSTOM_DATA",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_CX_SALES_OPTY_DATA",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_FIN_AP_AGING_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_FIN_AP_BUSINESS_UNIT_DATA",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_FIN_AP_EXPENSES_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_FIN_AP_HOLDS_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_FIN_AP_INVOICES_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_FIN_AP_LIABILITIES_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_FIN_AP_PAYMENTS_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_FIN_AP_PAYMENT_BUSINESS_UNIT_DATA",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_FIN_AR_ADJUSTMENTS_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_FIN_AR_AGING_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_FIN_AR_APPLICATIONS_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_FIN_AR_BUSINESS_UNIT_DATA",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_FIN_AR_CREDITMEMO_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_FIN_AR_RECEIPT_BUSINESS_UNIT_DATA",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_FIN_AR_REVENUE_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_FIN_AR_TRANSACTIONS_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_FIN_EXM_EMPLOYEE_EXPENSE_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_FIN_GL_ACCESS_SET_DATA",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_FIN_GL_ACCOUNT_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_FIN_GL_BALANCE_SHEET_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_FIN_GL_BUDGETS_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_FIN_GL_DETAIL_TRANSACTIONS_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_FIN_GL_PROFITABILITY_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_FIN_RECON_AP_APPS_DATA",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_FIN_RECON_AR_APPS_DATA",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_FIN_RECON_GL_APPS_DATA",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_FIN_RECON_OTHER_JOURNALS_DATA",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_HCM_ABSENCE_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_HCM_ABSENCE_DIV_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_HCM_BUSINESS_UNIT_DATA",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_HCM_COMPENSATION_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_HCM_COMPENSATION_DIV_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_HCM_COMPENSATION_WORKSHEET_MANAGER_DATA",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_HCM_COUNTRY_DATA",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_HCM_DEPARTMENT_DATA",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_HCM_GAINS_LOSS_TRANSACTION_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_HCM_GAINS_LOSS_TRANSACTION_DIV_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_HCM_GOALS_ANALYSIS_DIV_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_HCM_GOALS_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_HCM_LEGAL_EMPLOYER_DATA",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_HCM_LINE_MANAGER_DATA",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_HCM_PERFORMANCE_ANALYSIS_DIV_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_HCM_PERFORMANCE_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_HCM_PROFILE_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_HCM_PROFILE_DIV_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_HCM_REC_ALL_APP_DATA",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_HCM_REC_ALL_REQ_DATA",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_HCM_REC_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_HCM_REC_NON_RESTRICTED_APP_DATA",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_HCM_REC_REQ_DATA",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_HCM_SALARY_BASIS_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_HCM_SALARY_BASIS_DIV_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_HCM_VIEW_ALL_DATA",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_HCM_WORKFORCE_CORE_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_HCM_WORKFORCE_CORE_DIV_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_PROC_BUSINESS_UNIT_DATA",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_PROC_PURCHASE_AGREEMENT_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_PROC_PURCHASE_ORDER_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_PROC_PURCHASE_RECEIPTS_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_PROC_REQ_BUSINESS_UNIT_DATA",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_PROC_SPEND_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_SCM_INV_BUSINESS_UNIT_DATA",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_SCM_INV_INVENTORY_BALANCES_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_SCM_INV_INVENTORY_ORG_DATA",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_SCM_INV_INVENTORY_TRANSACTIONS_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_SCM_OM_BUSINESS_UNIT_DATA",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_SCM_OM_HOLDS_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_SCM_OM_SALES_ORDER_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:ServiceAdmin",
+      "access" : "READ"
+    } ],
+    "localization" : {
+      "localizationKey" : "Financials - AR Receipts and Applications",
+      "nameVariable" : "VALUEOF(NQ_SESSION.CN_Financials_-_AR_Receipts_and_Applications)",
+      "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_Financials_-_AR_Receipts_and_Applications)"
+    }
+  }
+}

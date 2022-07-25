@@ -1,0 +1,28 @@
+{
+  "physicalTable": {
+    "name": "Dim_DW_INVENTORY_ITEM_D",
+    "sourceTable": "physicalTable:Oracle_Data_Warehouse.OAX$OAC.DW_INVENTORY_ITEM_D",
+    "caching": {
+      "enable": true
+    },
+    "joins": [      {
+        "rightTable": "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Desc_Flex_Dim_DW_INVENTORY_ITEM_D_DW_EGP_ITEM_DFF",
+        "joinConditions": [          {
+            "leftColumn": "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_INVENTORY_ITEM_D.INVENTORY_ITEM_ID",
+            "rightColumn": "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Desc_Flex_Dim_DW_INVENTORY_ITEM_D_DW_EGP_ITEM_DFF.S_K_5000"
+          },
+          {
+            "leftColumn": "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_INVENTORY_ITEM_D.ORGANIZATION_ID",
+            "rightColumn": "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Desc_Flex_Dim_DW_INVENTORY_ITEM_D_DW_EGP_ITEM_DFF.S_K_5001"
+          }
+        ]
+      }
+    ],
+    "additionalKeys": [
+      [
+        "ORGANIZATION_ID",
+        "INVENTORY_ITEM_ID"
+      ]
+    ]
+  }
+}

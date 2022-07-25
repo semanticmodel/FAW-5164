@@ -1,0 +1,21 @@
+{
+  "physicalTable" : {
+    "name" : "DW_TA_CANDIDATE_D",
+    "sourceType" : "TABLE",
+    "physicalColumns" : [ {
+      "name" : "CANDIDATE_NUMBER",
+      "dataType" : "VARCHAR",
+      "length" : 32,
+      "nullable" : true
+    }, {
+      "name" : "PERSON_ID",
+      "dataType" : "DOUBLE",
+      "length" : 38,
+      "nullable" : true
+    } ],
+    "caching" : {
+      "enable" : true,
+      "expiryTime" : 0
+    }
+  }
+}

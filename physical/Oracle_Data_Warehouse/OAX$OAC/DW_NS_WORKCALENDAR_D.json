@@ -1,0 +1,71 @@
+{
+  "physicalTable" : {
+    "name" : "DW_NS_WORKCALENDAR_D",
+    "sourceType" : "TABLE",
+    "physicalColumns" : [ {
+      "name" : "FRIDAY",
+      "dataType" : "VARCHAR",
+      "length" : 16,
+      "nullable" : true
+    }, {
+      "name" : "ID",
+      "dataType" : "DOUBLE",
+      "length" : 38,
+      "nullable" : true
+    }, {
+      "name" : "ISDEFAULT",
+      "dataType" : "VARCHAR",
+      "length" : 16,
+      "nullable" : true
+    }, {
+      "name" : "MONDAY",
+      "dataType" : "VARCHAR",
+      "length" : 16,
+      "nullable" : true
+    }, {
+      "name" : "NAME",
+      "dataType" : "VARCHAR",
+      "length" : 128,
+      "nullable" : true
+    }, {
+      "name" : "SATURDAY",
+      "dataType" : "VARCHAR",
+      "length" : 16,
+      "nullable" : true
+    }, {
+      "name" : "STARTHOUR",
+      "dataType" : "VARCHAR",
+      "length" : 16,
+      "nullable" : true
+    }, {
+      "name" : "SUNDAY",
+      "dataType" : "VARCHAR",
+      "length" : 16,
+      "nullable" : true
+    }, {
+      "name" : "THURSDAY",
+      "dataType" : "VARCHAR",
+      "length" : 16,
+      "nullable" : true
+    }, {
+      "name" : "TUESDAY",
+      "dataType" : "VARCHAR",
+      "length" : 16,
+      "nullable" : true
+    }, {
+      "name" : "WEDNESDAY",
+      "dataType" : "VARCHAR",
+      "length" : 16,
+      "nullable" : true
+    }, {
+      "name" : "WORKHOURSPERDAY",
+      "dataType" : "DOUBLE",
+      "length" : 22,
+      "nullable" : true
+    } ],
+    "caching" : {
+      "enable" : true,
+      "expiryTime" : 0
+    }
+  }
+}

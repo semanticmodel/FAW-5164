@@ -1,0 +1,20 @@
+{
+  "physicalTable" : {
+    "name" : "Dim_DW_CXS_RESOURCE_D_Account_Owner_DimOnly",
+    "sourceTable" : "physicalTable:Oracle_Data_Warehouse.OAX$OAC.DW_CXS_RESOURCE_D",
+    "additionalKeys" : [ [ "RESOURCE_ID" ] ],
+    "caching" : {
+      "enable" : true,
+      "expiryTime" : 0
+    },
+    "overrideSourceCacheSetting" : false,
+    "joins" : [ {
+      "rightTable" : "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_CXS_SALES_RESOURCE_CF_DN_DH_Account_Hierarchy_DimOnly",
+      "useJoinExpression" : false,
+      "joinConditions" : [ {
+        "leftColumn" : "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_CXS_RESOURCE_D_Account_Owner_DimOnly.RESOURCE_ID",
+        "rightColumn" : "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_CXS_SALES_RESOURCE_CF_DN_DH_Account_Hierarchy_DimOnly.BASE_RESOURCE_ID"
+      } ]
+    } ]
+  }
+}

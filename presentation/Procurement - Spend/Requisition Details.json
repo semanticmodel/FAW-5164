@@ -1,0 +1,32 @@
+{
+  "presentationTable" : {
+    "name" : "Requisition Details",
+    "tags" : [ "Project:Fusion Analytics Warehouse - Procurement Management" ],
+    "presentationColumns" : [ {
+      "name" : "Item Source",
+      "description" : "This attribute Indicates whether item in Requisition is created based on  catalog, noncatalog, quick create, punchout, requisition import or service.",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Procurement Management" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Dim - PRC - Requisition Item Source.Item Source",
+      "localization" : {
+        "localizationKey" : "Item Source",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_Procurement_-_Spend_Requisition_Details_Item_Source)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_Procurement_-_Spend_Requisition_Details_Item_Source)"
+      }
+    }, {
+      "name" : "Import Source",
+      "description" : "This attribute refers to Requisition Import Source.",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Procurement Management" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Dim - PRC - Requisition Details.Import Source",
+      "localization" : {
+        "localizationKey" : "Import Source",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_Procurement_-_Spend_Requisition_Details_Import_Source)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_Procurement_-_Spend_Requisition_Details_Import_Source)"
+      }
+    } ],
+    "localization" : {
+      "localizationKey" : "Requisition Details",
+      "nameVariable" : "VALUEOF(NQ_SESSION.CN_Procurement_-_Spend_Requisition_Details)",
+      "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_Procurement_-_Spend_Requisition_Details)"
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "initBlock" : {
+    "name" : "System - Enable First Last Shipping",
+    "description" : "Enable aggregate shipping to improve performance.",
+    "tags" : [ "Project:Fusion Analytics Warehouse - General Ledger", "Project:Oracle Analytics for Fusion Common" ],
+    "type" : "SESSION",
+    "connectionPool" : "connectionPool:Oracle_Data_Warehouse.Oracle_Data_Warehouse_Repository_Initblocks_Connection_Pool",
+    "selectStatements" : [ {
+      "databaseType" : "DEFAULT",
+      "query" : "SELECT 1 FROM dual"
+    } ],
+    "variables" : [ {
+      "name" : "OBIS_ENABLE_FIRSTLAST_SHIPPING_WITH_OTHER_AGGR",
+      "description" : "Enable aggregate shipping to improve performance.",
+      "value" : "1",
+      "enableUsersToSetValue" : false,
+      "securitySensitive" : false
+    } ],
+    "disable" : false,
+    "queryReturnsVariableNamesAndValues" : false,
+    "allowDeferredExecution" : true,
+    "cacheQueryResult" : true
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "logicalTable" : {
+    "name" : "Dim - AP Invoice Accounting Status",
+    "type" : "DIMENSION",
+    "primaryKey" : [ "Invoice Accounting Status Code" ],
+    "logicalColumns" : [ {
+      "name" : "Invoice Accounting Status Code",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "Dim_DW_CODE_VALUES_LKP_TL_AP_Invoice_Accounting_Status",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_CODE_VALUES_LKP_TL_AP_Invoice_Accounting_Status.CODE" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Detail"
+    }, {
+      "name" : "Invoice Accounting Status",
+      "dataType" : "VARCHAR",
+      "descriptorColumn" : "Invoice Accounting Status Code",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "Dim_DW_CODE_VALUES_LKP_TL_AP_Invoice_Accounting_Status",
+          "physicalExpression" : {
+            "expressionTemplate" : " LOOKUP( SPARSE %1, %2, %2, 'AP_ACCOUNTING_STATUS',  VALUEOF(NQ_SESSION.%3))",
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_CODE_VALUES_LKP_TL_AP_Invoice_Accounting_Status.NAME", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_CODE_VALUES_LKP_TL_AP_Invoice_Accounting_Status.CODE", "variable:INIT_USER_LANGUAGE_CODE.USER_LANGUAGE_CODE" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Detail"
+    } ],
+    "logicalTableSources" : [ {
+      "name" : "Dim_DW_CODE_VALUES_LKP_TL_AP_Invoice_Accounting_Status",
+      "disable" : false,
+      "tableMapping" : {
+        "tables" : [ "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_CODE_VALUES_LKP_TL_AP_Invoice_Accounting_Status" ]
+      },
+      "dataGranularity" : [ "logicalLevel:Core.Dim - AP Invoice Accounting Status.Detail" ],
+      "combineWithOtherFragments" : false,
+      "enableFragmentSelection" : false,
+      "dataFilter" : {
+        "expressionTemplate" : "%1 = 'AP_ACCOUNTING_STATUS' AND %2 =  VALUEOF(NQ_SESSION.%3)",
+        "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_CODE_VALUES_LKP_TL_AP_Invoice_Accounting_Status.CODE_TYPE", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_CODE_VALUES_LKP_TL_AP_Invoice_Accounting_Status.LANGUAGE", "variable:INIT_USER_LANGUAGE_CODE.USER_LANGUAGE_CODE" ]
+      },
+      "distinctValues" : false
+    } ],
+    "hierarchyType" : "LEVEL_BASED",
+    "levelBasedHierarchy" : {
+      "defaultRootLevel" : "Total",
+      "ragged" : false,
+      "skipped" : false,
+      "logicalLevels" : [ {
+        "name" : "Total",
+        "numberOfElements" : 1,
+        "grandTotalLevel" : true,
+        "disableAggregateToHigherLevel" : false
+      }, {
+        "name" : "Detail",
+        "numberOfElements" : 1,
+        "grandTotalLevel" : false,
+        "disableAggregateToHigherLevel" : false,
+        "primaryKey" : [ "Invoice Accounting Status Code" ],
+        "displayKey" : "Invoice Accounting Status Code"
+      } ],
+      "logicalHierarchies" : [ {
+        "name" : "AP Invoice Accounting Status",
+        "levels" : [ "Total", "Detail" ]
+      } ]
+    }
+  }
+}

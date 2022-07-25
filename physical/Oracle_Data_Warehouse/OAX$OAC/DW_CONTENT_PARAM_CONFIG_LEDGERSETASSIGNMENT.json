@@ -1,0 +1,32 @@
+{
+  "physicalTable" : {
+    "name" : "DW_CONTENT_PARAM_CONFIG_LEDGERSETASSIGNMENT",
+    "sourceType" : "SELECT",
+    "selectStatements" : [ {
+      "databaseType" : "DEFAULT",
+      "query" : "SELECT ledgerSets.ledger_set_id, ledgerSetAssignments.ledger_id, 'LEDGER_SET_ID' parameter_code\r\nFROM dw_ledger_set_d ledgerSets, DW_LEDGER_SET_ASSIGNMENTS_D ledgerSetAssignments\r\nWHERE ledgerSets.ledger_set_id = ledgerSetAssignments.ledger_set_id\r\nAND EXISTS \r\n(SELECT 'x' FROM dw_content_param_config paramLedgerSet\r\n WHERE paramLedgerSet.parameter_code = 'PARAM_ERP_FINANCIALS_LEDGER_SET_ID_LIST_REPORT'\r\n AND (paramLedgerSet.parameter_value = 'ALL' OR TO_CHAR(ledgerSets.ledger_set_id) = paramLedgerSet.parameter_value)) \r\nAND EXISTS \r\n(SELECT 'x' FROM dw_content_param_config paramCOA\r\n WHERE paramCOA.parameter_code = 'PARAM_ERP_FINANCIALS_CHART_OF_ACCOUNT_ID'\r\n AND (paramCOA.parameter_value = 'ALL' OR TO_CHAR(ledgerSets.ledger_set_chart_of_accounts_id) = paramCOA.parameter_value))\r\n"
+    } ],
+    "physicalColumns" : [ {
+      "name" : "LEDGER_ID",
+      "dataType" : "DOUBLE",
+      "length" : 0,
+      "nullable" : false
+    }, {
+      "name" : "LEDGER_SET_ID",
+      "dataType" : "DOUBLE",
+      "length" : 0,
+      "nullable" : false
+    }, {
+      "name" : "PARAMETER_CODE",
+      "dataType" : "VARCHAR",
+      "length" : 128,
+      "nullable" : false
+    } ],
+    "caching" : {
+      "enable" : true,
+      "expiryTime" : 1,
+      "expiryUnit" : "DAYS"
+    },
+    "additionalKeys" : [ [ "LEDGER_SET_ID", "LEDGER_ID" ] ]
+  }
+}

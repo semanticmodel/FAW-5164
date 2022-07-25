@@ -1,0 +1,89 @@
+{
+  "logicalTable" : {
+    "name" : "Dim - Usage Tracking Statistics - Physical Details",
+    "type" : "DIMENSION",
+    "primaryKey" : [ "Logical Query Identifier" ],
+    "logicalColumns" : [ {
+      "name" : "Physical SQL",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "Dim_DW_USAGE_PHYSICAL",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX_INFRA.Dim_DW_USAGE_PHYSICAL.QUERY_TEXT" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Detail"
+    }, {
+      "name" : "Full Physical SQL",
+      "dataType" : "LONGVARCHAR",
+      "sortBy" : "Logical Query Identifier",
+      "descriptorColumn" : "Logical Query Identifier",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "Dim_DW_USAGE_PHYSICAL",
+          "physicalExpression" : {
+            "expressionTemplate" : " LOOKUP( SPARSE %1, %2, %2)",
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX_INFRA.Lookup_DW_USAGE_PHYSICAL.QUERY_BLOB", "physicalColumn:Oracle_Data_Warehouse.OAX_INFRA.Dim_DW_USAGE_PHYSICAL.LOGICAL_QUERY_ID" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Detail"
+    }, {
+      "name" : "Logical Query Identifier",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "Dim_DW_USAGE_PHYSICAL",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX_INFRA.Dim_DW_USAGE_PHYSICAL.LOGICAL_QUERY_ID" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Detail"
+    } ],
+    "logicalTableSources" : [ {
+      "name" : "Dim_DW_USAGE_PHYSICAL",
+      "disable" : false,
+      "tableMapping" : {
+        "tables" : [ "physicalTable:Oracle_Data_Warehouse.OAX_INFRA.Dim_DW_USAGE_PHYSICAL" ]
+      },
+      "dataGranularity" : [ "logicalLevel:Core.Dim - Usage Tracking Statistics - Physical Details.Detail" ],
+      "combineWithOtherFragments" : false,
+      "enableFragmentSelection" : false,
+      "distinctValues" : false
+    } ],
+    "hierarchyType" : "LEVEL_BASED",
+    "levelBasedHierarchy" : {
+      "defaultRootLevel" : "Total",
+      "ragged" : false,
+      "skipped" : false,
+      "logicalLevels" : [ {
+        "name" : "Total",
+        "numberOfElements" : 1,
+        "grandTotalLevel" : true,
+        "disableAggregateToHigherLevel" : false
+      }, {
+        "name" : "Detail",
+        "numberOfElements" : 10,
+        "grandTotalLevel" : false,
+        "disableAggregateToHigherLevel" : false,
+        "primaryKey" : [ "Logical Query Identifier" ],
+        "displayKey" : "Logical Query Identifier"
+      } ],
+      "logicalHierarchies" : [ {
+        "name" : "Usage Tracking Statistics - Physical Details",
+        "levels" : [ "Total", "Detail" ]
+      } ]
+    }
+  }
+}

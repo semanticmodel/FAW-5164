@@ -1,0 +1,23 @@
+{
+  "initBlock" : {
+    "name" : "Check Business Unit Context Defined",
+    "description" : "This Int block returns 0 if no Business Unit Data Role is defined. returns 1 if Role  is defined",
+    "tags" : [ "Project:Fusion Analytics Warehouse - Absence Management", "Project:Fusion Analytics Warehouse - Expense Management", "Project:Fusion Analytics Warehouse - Goals and Career Development", "Project:Fusion Analytics Warehouse - Inventory", "Project:Fusion Analytics Warehouse - Performance Management and Check-ins", "Project:Fusion Analytics Warehouse - Salary Basis", "Project:Fusion Analytics Warehouse - Talent Acquisition", "Project:Fusion Analytics Warehouse - Talent Profile Management", "Project:Fusion Analytics Warehouse - Workforce Compensation", "Project:Fusion Analytics Warehouse - Workforce Management", "Project:Oracle Analytics for Fusion Human Capital Management" ],
+    "type" : "SESSION",
+    "connectionPool" : "connectionPool:Oracle_Data_Warehouse.Oracle_Data_Warehouse_Repository_Initblocks_Connection_Pool",
+    "selectStatements" : [ {
+      "databaseType" : "DEFAULT",
+      "query" : "SELECT CASE \r\n         WHEN (Instr('VALUEOF(NQ_SESSION.ROLES)', 'OA4F_HCM_BUSINESS_UNIT_DATA') > 0)  THEN 1 \r\n         ELSE 0 \r\n       END AS HCM_BU_SEC_DEFINED \r\nFROM    dual"
+    } ],
+    "variables" : [ {
+      "name" : "HCM_BU_SEC_DEFINED",
+      "value" : "0",
+      "enableUsersToSetValue" : false,
+      "securitySensitive" : false
+    } ],
+    "disable" : false,
+    "queryReturnsVariableNamesAndValues" : false,
+    "allowDeferredExecution" : true,
+    "cacheQueryResult" : true
+  }
+}

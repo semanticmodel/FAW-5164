@@ -1,0 +1,24 @@
+{
+  "initBlock" : {
+    "name" : "Fiscal Calendar - Prior Fiscal Year",
+    "description" : "Defaults to the prior fiscal year of the calendar chosen in the configuration",
+    "tags" : [ "Project:Fusion Analytics Warehouse - Absence Management", "Project:Fusion Analytics Warehouse - Accounts Payable", "Project:Fusion Analytics Warehouse - Accounts Receivable", "Project:Fusion Analytics Warehouse - Expense Management", "Project:Fusion Analytics Warehouse - GL Budgets Analysis", "Project:Fusion Analytics Warehouse - General Ledger", "Project:Fusion Analytics Warehouse - Goals and Career Development", "Project:Fusion Analytics Warehouse - Inventory", "Project:Fusion Analytics Warehouse - Performance Management and Check-ins", "Project:Fusion Analytics Warehouse - Procurement Management", "Project:Fusion Analytics Warehouse - Purchase Agreements", "Project:Fusion Analytics Warehouse - Purchase Orders", "Project:Fusion Analytics Warehouse - Purchase Receipts", "Project:Fusion Analytics Warehouse - Reconciliation", "Project:Fusion Analytics Warehouse - Salary Basis", "Project:Fusion Analytics Warehouse - Talent Acquisition", "Project:Fusion Analytics Warehouse - Talent Profile Management", "Project:Fusion Analytics Warehouse - Workforce Compensation", "Project:Fusion Analytics Warehouse - Workforce Management", "Project:Oracle Analytics for Fusion Common", "Project:Oracle Analytics for Fusion Financials", "Project:Oracle Analytics for Fusion Human Capital Management" ],
+    "type" : "SESSION",
+    "connectionPool" : "connectionPool:Oracle_Data_Warehouse.Oracle_Data_Warehouse_Repository_Initblocks_Connection_Pool",
+    "selectStatements" : [ {
+      "databaseType" : "DEFAULT",
+      "query" : "SELECT DISTINCT FISCAL_YEAR_NUMBER-1 FROM DW_FISCAL_YEAR_D\r\nWHERE FISCAL_PERIOD_SET_NAME='VALUEOF(NQ_SESSION.FISCAL_CALENDAR)' AND CURRENT_FISCAL_YEAR_CODE='Current'"
+    } ],
+    "variables" : [ {
+      "name" : "PRIOR_FISCAL_YEAR",
+      "value" : "'2000'",
+      "enableUsersToSetValue" : false,
+      "securitySensitive" : false
+    } ],
+    "dependencies" : [ "Fiscal Calendar - Fiscal Reporting Calendar" ],
+    "disable" : false,
+    "queryReturnsVariableNamesAndValues" : false,
+    "allowDeferredExecution" : true,
+    "cacheQueryResult" : true
+  }
+}

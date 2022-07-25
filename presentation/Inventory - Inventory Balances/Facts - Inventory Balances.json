@@ -1,0 +1,30 @@
+{
+  "presentationTable" : {
+    "name" : "Facts - Inventory Balances",
+    "tags" : [ "Project:Fusion Analytics Warehouse - Inventory" ],
+    "presentationColumns" : [ {
+      "name" : "Onhand Quantity",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Inventory" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Fact - INV - Inventory Balances.Onhand Quantity",
+      "localization" : {
+        "localizationKey" : "Onhand Quantity",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_Inventory_-_Inventory_Balances_Facts_-_Inventory_Balances_Onhand_Quantity)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_Inventory_-_Inventory_Balances_Facts_-_Inventory_Balances_Onhand_Quantity)"
+      }
+    }, {
+      "name" : "Secondary Onhand Quantity",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Inventory" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Fact - INV - Inventory Balances.Secondary Onhand Quantity",
+      "localization" : {
+        "localizationKey" : "Secondary Onhand Quantity",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_Inventory_-_Inventory_Balances_Facts_-_Inventory_Balances_Secondary_Onhand_Quantity)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_Inventory_-_Inventory_Balances_Facts_-_Inventory_Balances_Secondary_Onhand_Quantity)"
+      }
+    } ],
+    "localization" : {
+      "localizationKey" : "Facts - Inventory Balances",
+      "nameVariable" : "VALUEOF(NQ_SESSION.CN_Inventory_-_Inventory_Balances_Facts_-_Inventory_Balances)",
+      "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_Inventory_-_Inventory_Balances_Facts_-_Inventory_Balances)"
+    }
+  }
+}

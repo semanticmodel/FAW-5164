@@ -1,0 +1,29 @@
+{
+  "physicalTable": {
+    "name": "Dim_DW_FISCAL_DAY_D_PaymentClearedDate_Fiscal_Calendar_PromptOnly",
+    "sourceTable": "physicalTable:Oracle_Data_Warehouse.OAX$OAC.DW_FISCAL_DAY_D",
+    "caching": {
+      "enable": true
+    },
+    "joins": [      {
+        "rightTable": "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Security_DW_CONTENT_PARAM_CONFIG_FISCALCALENDAR_PaymentClearedDateFiscalCalendar",
+        "joinConditions": [          {
+            "leftColumn": "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_FISCAL_DAY_D_PaymentClearedDate_Fiscal_Calendar_PromptOnly.FISCAL_PERIOD_SET_NAME",
+            "rightColumn": "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Security_DW_CONTENT_PARAM_CONFIG_FISCALCALENDAR_PaymentClearedDateFiscalCalendar.FISCAL_PERIOD_SET_NAME"
+          }
+        ]
+      }
+    ],
+    "additionalKeys": [
+      [
+        "FISCAL_DAY_DATE",
+        "FISCAL_PERIOD_SET_NAME"
+      ],
+      [
+        "FISCAL_PERIOD_SET_NAME",
+        "FISCAL_DAY_DATE",
+        "ADJUSTMENT_PERIOD_FLAG"
+      ]
+    ]
+  }
+}

@@ -1,0 +1,164 @@
+{
+  "logicalTable" : {
+    "name" : "Dim - PRC - Requisition Header Details",
+    "type" : "DIMENSION",
+    "primaryKey" : [ "Requisition Header Identifier" ],
+    "logicalColumns" : [ {
+      "name" : "Requisition Header Identifier",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "Fact_DW_PURCHASE_ORDER_CF",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_PURCHASE_ORDER_CF.REQUISITION_HEADER_ID" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Requisition Header"
+    }, {
+      "name" : "Requisition Number",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "Fact_DW_PURCHASE_ORDER_CF",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_PURCHASE_ORDER_CF.REQUISITION_NUMBER" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Requisition Header"
+    }, {
+      "name" : "Import Source",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "Fact_DW_PURCHASE_ORDER_CF",
+          "physicalExpression" : {
+            "expressionTemplate" : " CASE  WHEN %1 = '~NOVALUE~' THEN  NULL  ELSE %1 END ",
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_PURCHASE_ORDER_CF.REQUISITION_IMPORT_SOURCE" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Requisition Header"
+    }, {
+      "name" : "Emergency Purchase Order Required Code",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "Fact_DW_PURCHASE_ORDER_CF",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_PURCHASE_ORDER_CF.REQUISITION_EMERGENCY_REQ_FLAG" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Requisition Header"
+    }, {
+      "name" : "Emergency Purchase Order Required Indicator",
+      "dataType" : "VARCHAR",
+      "descriptorColumn" : "Emergency Purchase Order Required Code",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "Fact_DW_PURCHASE_ORDER_CF",
+          "physicalExpression" : {
+            "expressionTemplate" : " LOOKUP( SPARSE %1, %2, %2,  VALUEOF(NQ_SESSION.%3))",
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Lookup_DW_Y_N_D_TL.NAME", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_PURCHASE_ORDER_CF.REQUISITION_EMERGENCY_REQ_FLAG", "variable:INIT_USER_LANGUAGE_CODE.USER_LANGUAGE_CODE" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Requisition Header"
+    }, {
+      "name" : "Justification",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "Fact_DW_PURCHASE_ORDER_CF",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_PURCHASE_ORDER_CF.REQUISITION_JUSTIFICATION" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Requisition Header"
+    }, {
+      "name" : "Requisition Creation Date",
+      "dataType" : "DATE",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "Fact_DW_PURCHASE_ORDER_CF",
+          "physicalExpression" : {
+            "expressionTemplate" : " CASE  WHEN  EXTRACT( YEAR  FROM  CAST (%1 AS DATE )) = '1901' AND  EXTRACT( MONTH  FROM  CAST (%1 AS DATE )) = '01' AND  DAYOFMONTH( CAST (%1 AS DATE )) = '01' THEN  NULL  ELSE %1 END ",
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_PURCHASE_ORDER_CF.REQUISITION_CREATION_DATE" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Requisition Header"
+    }, {
+      "name" : "Requisition Approved Date",
+      "dataType" : "DATE",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "Fact_DW_PURCHASE_ORDER_CF",
+          "physicalExpression" : {
+            "expressionTemplate" : " CASE  WHEN  EXTRACT( YEAR  FROM  CAST (%1 AS DATE )) = '4712' AND  EXTRACT( MONTH  FROM  CAST (%1 AS DATE )) = '12' AND  DAYOFMONTH( CAST (%1 AS DATE )) = '31' THEN  NULL  ELSE %1 END ",
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_PURCHASE_ORDER_CF.REQUISITION_APPROVED_DATE" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Requisition Header"
+    } ],
+    "logicalTableSources" : [ {
+      "name" : "Fact_DW_PURCHASE_ORDER_CF",
+      "disable" : false,
+      "tableMapping" : {
+        "tables" : [ "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_PURCHASE_ORDER_CF" ]
+      },
+      "combineWithOtherFragments" : false,
+      "enableFragmentSelection" : false,
+      "distinctValues" : false
+    } ],
+    "hierarchyType" : "LEVEL_BASED",
+    "levelBasedHierarchy" : {
+      "defaultRootLevel" : "Total",
+      "ragged" : false,
+      "skipped" : false,
+      "logicalLevels" : [ {
+        "name" : "Total",
+        "numberOfElements" : 1,
+        "grandTotalLevel" : true,
+        "disableAggregateToHigherLevel" : false
+      }, {
+        "name" : "Requisition Header",
+        "numberOfElements" : 1,
+        "grandTotalLevel" : false,
+        "disableAggregateToHigherLevel" : false,
+        "primaryKey" : [ "Requisition Header Identifier" ],
+        "displayKey" : "Requisition Number",
+        "additionalKeys" : [ [ "Requisition Number" ] ],
+        "preferredDrillPath" : [ "logicalLevel:Core.Dim - PRC - Requisition Line Details.Requisition Line" ]
+      } ],
+      "logicalHierarchies" : [ {
+        "name" : "PRC - Requisition Header Details",
+        "levels" : [ "Total", "Requisition Header" ]
+      } ]
+    }
+  }
+}

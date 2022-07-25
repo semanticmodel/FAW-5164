@@ -1,0 +1,32 @@
+{
+  "physicalTable": {
+    "name": "Dim_DW_MONTH_D_GregorianCalendar",
+    "sourceTable": "physicalTable:Oracle_Data_Warehouse.OAX$OAC.DW_MONTH_D",
+    "caching": {
+      "enable": true
+    },
+    "joins": [      {
+        "useJoinExpression": true,
+        "rightTable": "physicalTable:Oracle_Data_Warehouse.OAX_INFRA.Fact_DW_USAGE_LOGICAL",
+        "joinExpression": {
+          "expressionTemplate": "%1 >= %2 AND %1 <= %3",
+          "expressionObjects": [
+            "physicalColumn:Oracle_Data_Warehouse.OAX_INFRA.Fact_DW_USAGE_LOGICAL.START_DT",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_MONTH_D_GregorianCalendar.CAL_MONTH_START_DATE",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_MONTH_D_GregorianCalendar.CAL_MONTH_END_DATE"
+          ]
+        },
+        "cardinality": "MANY_TO_ONE",
+        "joinType": "INNER"
+      }
+    ],
+    "additionalKeys": [
+      [
+        "CAL_MONTH_ID"
+      ],
+      [
+        "MONTH_END_OR_PRV_CRNT_DATE"
+      ]
+    ]
+  }
+}

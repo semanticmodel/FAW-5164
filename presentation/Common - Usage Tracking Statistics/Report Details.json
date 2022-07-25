@@ -1,0 +1,84 @@
+{
+  "presentationTable" : {
+    "name" : "Report Details",
+    "tags" : [ "Project:Oracle Analytics for Fusion Common" ],
+    "presentationColumns" : [ {
+      "name" : "Report Identifier",
+      "tags" : [ "Project:Oracle Analytics for Fusion Common" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Dim - Usage Tracking Statistics - Logical Details.Report Identifier",
+      "localization" : {
+        "localizationKey" : "Report Identifier",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_Common_-_Usage_Tracking_Statistics_Report_Details_Report_Identifier)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_Common_-_Usage_Tracking_Statistics_Report_Details_Report_Identifier)"
+      }
+    }, {
+      "name" : "Object Type",
+      "tags" : [ "Project:Oracle Analytics for Fusion Common" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Dim - Usage Tracking Statistics - Logical Details.Object Type",
+      "localization" : {
+        "localizationKey" : "Object Type",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_Common_-_Usage_Tracking_Statistics_Report_Details_Object_Type)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_Common_-_Usage_Tracking_Statistics_Report_Details_Object_Type)"
+      }
+    }, {
+      "name" : "Custom Indicator",
+      "tags" : [ "Project:Oracle Analytics for Fusion Common" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Dim - Usage Tracking Statistics - Logical Details.Custom Indicator",
+      "localization" : {
+        "localizationKey" : "Custom Indicator",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_Common_-_Usage_Tracking_Statistics_Report_Details_Custom_Indicator)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_Common_-_Usage_Tracking_Statistics_Report_Details_Custom_Indicator)"
+      }
+    }, {
+      "name" : "Adhoc Indicator",
+      "tags" : [ "Project:Oracle Analytics for Fusion Common" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Dim - Usage Tracking Statistics - Logical Details.Adhoc Indicator",
+      "localization" : {
+        "localizationKey" : "Adhoc Indicator",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_Common_-_Usage_Tracking_Statistics_Report_Details_Adhoc_Indicator)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_Common_-_Usage_Tracking_Statistics_Report_Details_Adhoc_Indicator)"
+      }
+    }, {
+      "name" : "Report Path",
+      "tags" : [ "Project:Oracle Analytics for Fusion Common" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Dim - Usage Tracking Statistics - Logical Details.Report Path",
+      "localization" : {
+        "localizationKey" : "Report Path",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_Common_-_Usage_Tracking_Statistics_Report_Details_Report_Path)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_Common_-_Usage_Tracking_Statistics_Report_Details_Report_Path)"
+      }
+    }, {
+      "name" : "Logical SQL",
+      "tags" : [ "Project:Oracle Analytics for Fusion Common" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Dim - Usage Tracking Statistics - Logical Details.Logical SQL",
+      "localization" : {
+        "localizationKey" : "Logical SQL",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_Common_-_Usage_Tracking_Statistics_Report_Details_Logical_SQL)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_Common_-_Usage_Tracking_Statistics_Report_Details_Logical_SQL)"
+      }
+    }, {
+      "name" : "Full Logical SQL",
+      "tags" : [ "Project:Oracle Analytics for Fusion Common" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Dim - Usage Tracking Statistics - Logical Details.Full Logical SQL",
+      "localization" : {
+        "localizationKey" : "Full Logical SQL",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_Common_-_Usage_Tracking_Statistics_Report_Details_Full_Logical_SQL)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_Common_-_Usage_Tracking_Statistics_Report_Details_Full_Logical_SQL)"
+      }
+    }, {
+      "name" : "Subject Area Name",
+      "tags" : [ "Project:Oracle Analytics for Fusion Common" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Dim - Usage Tracking Statistics - Logical Details.Subject Area Name",
+      "localization" : {
+        "localizationKey" : "Subject Area Name",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_Common_-_Usage_Tracking_Statistics_Report_Details_Subject_Area_Name)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_Common_-_Usage_Tracking_Statistics_Report_Details_Subject_Area_Name)"
+      }
+    } ],
+    "localization" : {
+      "localizationKey" : "Report Details",
+      "nameVariable" : "VALUEOF(NQ_SESSION.CN_Common_-_Usage_Tracking_Statistics_Report_Details)",
+      "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_Common_-_Usage_Tracking_Statistics_Report_Details)"
+    }
+  }
+}

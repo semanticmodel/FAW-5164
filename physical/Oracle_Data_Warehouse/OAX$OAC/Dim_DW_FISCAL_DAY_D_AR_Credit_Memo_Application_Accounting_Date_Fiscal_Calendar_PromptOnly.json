@@ -1,0 +1,29 @@
+{
+  "physicalTable": {
+    "name": "Dim_DW_FISCAL_DAY_D_AR_Credit_Memo_Application_Accounting_Date_Fiscal_Calendar_PromptOnly",
+    "sourceTable": "physicalTable:Oracle_Data_Warehouse.OAX$OAC.DW_FISCAL_DAY_D",
+    "caching": {
+      "enable": true
+    },
+    "joins": [      {
+        "rightTable": "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Security_DW_CONTENT_PARAM_CONFIG_FISCALCALENDAR_AR_Credit_Memo_Application_Accounting_Date_Fiscal_Calendar",
+        "joinConditions": [          {
+            "leftColumn": "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_FISCAL_DAY_D_AR_Credit_Memo_Application_Accounting_Date_Fiscal_Calendar_PromptOnly.FISCAL_PERIOD_SET_NAME",
+            "rightColumn": "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Security_DW_CONTENT_PARAM_CONFIG_FISCALCALENDAR_AR_Credit_Memo_Application_Accounting_Date_Fiscal_Calendar.FISCAL_PERIOD_SET_NAME"
+          }
+        ]
+      }
+    ],
+    "additionalKeys": [
+      [
+        "ADJUSTMENT_PERIOD_FLAG",
+        "FISCAL_DAY_DATE",
+        "FISCAL_PERIOD_SET_NAME"
+      ],
+      [
+        "FISCAL_DAY_DATE",
+        "FISCAL_PERIOD_SET_NAME"
+      ]
+    ]
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "initBlock" : {
+    "name" : "Chart of Accounts ID",
+    "tags" : [ "Project:Fusion Analytics Warehouse - Accounts Payable", "Project:Fusion Analytics Warehouse - Accounts Receivable", "Project:Fusion Analytics Warehouse - Expense Management", "Project:Fusion Analytics Warehouse - GL Budgets Analysis", "Project:Fusion Analytics Warehouse - General Ledger", "Project:Fusion Analytics Warehouse - Inventory", "Project:Fusion Analytics Warehouse - Procurement Management", "Project:Fusion Analytics Warehouse - Purchase Orders", "Project:Fusion Analytics Warehouse - Purchase Receipts", "Project:Fusion Analytics Warehouse - Reconciliation", "Project:Oracle Analytics for Fusion Financials" ],
+    "type" : "SESSION",
+    "connectionPool" : "connectionPool:Oracle_Data_Warehouse.Oracle_Data_Warehouse_Repository_Initblocks_Connection_Pool",
+    "selectStatements" : [ {
+      "databaseType" : "DEFAULT",
+      "query" : "SELECT\r\n    'CHART_OF_ACCOUNTS_ID',\r\n    to_number(parameter_value)\r\nFROM\r\n    dw_content_param_config\r\nWHERE\r\n    parameter_code = 'PARAM_ERP_FINANCIALS_CHART_OF_ACCOUNT_ID'\r\n    AND parameter_value <> 'ALL'\r\nUNION ALL\r\nSELECT DISTINCT\r\n    'CHART_OF_ACCOUNTS_ID',\r\n    ledger_chart_of_accounts_id\r\nFROM\r\n    dw_ledger_d\r\nWHERE\r\n    EXISTS (\r\n        SELECT\r\n            parameter_value\r\n        FROM\r\n            dw_content_param_config\r\n        WHERE\r\n            parameter_code = 'PARAM_ERP_FINANCIALS_CHART_OF_ACCOUNT_ID'\r\n            AND parameter_value = 'ALL'\r\n    )"
+    } ],
+    "variables" : [ {
+      "name" : "CHART_OF_ACCOUNTS_ID",
+      "value" : "-(99999)",
+      "enableUsersToSetValue" : false,
+      "securitySensitive" : false
+    } ],
+    "disable" : false,
+    "queryReturnsVariableNamesAndValues" : true,
+    "allowDeferredExecution" : true,
+    "cacheQueryResult" : false
+  }
+}

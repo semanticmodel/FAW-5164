@@ -1,0 +1,36 @@
+{
+  "physicalTable": {
+    "name": "Dim_DW_NATURAL_ACCOUNT_D_PromptOnly",
+    "sourceTable": "physicalTable:Oracle_Data_Warehouse.OAX$OAC.DW_NATURAL_ACCOUNT_D",
+    "caching": {
+      "enable": true
+    },
+    "joins": [      {
+        "rightTable": "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NATURAL_ACCOUNT_DH_PromptOnly",
+        "joinConditions": [          {
+            "leftColumn": "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NATURAL_ACCOUNT_D_PromptOnly.NATURAL_ACCOUNT_SEGMENT",
+            "rightColumn": "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NATURAL_ACCOUNT_DH_PromptOnly.NATURAL_ACCOUNT_SEGMENT"
+          },
+          {
+            "leftColumn": "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NATURAL_ACCOUNT_D_PromptOnly.NTRL_ACNT_SGMNT_VALUESET_CODE",
+            "rightColumn": "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NATURAL_ACCOUNT_DH_PromptOnly.HIERARCHY_VALUESET_CODE"
+          }
+        ]
+      },
+      {
+        "useJoinExpression": true,
+        "rightTable": "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Security_DW_CONTENT_PARAM_CONFIG_COA_VALUESET_NATURAL_ACCOUNT_DH",
+        "joinExpression": {
+          "expressionTemplate": "%1 = %2 AND %3 IN ('Dim - Natural Account Segment', '~NOVALUE~')",
+          "expressionObjects": [
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NATURAL_ACCOUNT_D_PromptOnly.NTRL_ACNT_SGMNT_VALUESET_CODE",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Security_DW_CONTENT_PARAM_CONFIG_COA_VALUESET_NATURAL_ACCOUNT_DH.VALUESET_CODE",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Security_DW_CONTENT_PARAM_CONFIG_COA_VALUESET_NATURAL_ACCOUNT_DH.BI_OBJECT_NAME"
+          ]
+        },
+        "cardinality": "MANY_TO_ONE",
+        "joinType": "INNER"
+      }
+    ]
+  }
+}

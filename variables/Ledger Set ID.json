@@ -1,0 +1,22 @@
+{
+  "initBlock" : {
+    "name" : "Ledger Set ID",
+    "tags" : [ "Project:Fusion Analytics Warehouse - Accounts Payable", "Project:Fusion Analytics Warehouse - Accounts Receivable", "Project:Fusion Analytics Warehouse - Expense Management", "Project:Fusion Analytics Warehouse - GL Budgets Analysis", "Project:Fusion Analytics Warehouse - General Ledger", "Project:Fusion Analytics Warehouse - Inventory", "Project:Fusion Analytics Warehouse - Procurement Management", "Project:Fusion Analytics Warehouse - Purchase Agreements", "Project:Fusion Analytics Warehouse - Purchase Orders", "Project:Fusion Analytics Warehouse - Purchase Receipts", "Project:Fusion Analytics Warehouse - Reconciliation", "Project:Oracle Analytics for Fusion Financials" ],
+    "type" : "SESSION",
+    "connectionPool" : "connectionPool:Oracle_Data_Warehouse.Oracle_Data_Warehouse_Repository_Initblocks_Connection_Pool",
+    "selectStatements" : [ {
+      "databaseType" : "DEFAULT",
+      "query" : "SELECT\r\n    'LEDGER_SET_ID',\r\n    ledgerset.ledger_set_id\r\nFROM\r\n    dw_ledger_set_d         ledgerset,\r\n    dw_content_param_config p\r\nWHERE\r\n     p.parameter_code = 'PARAM_ERP_FINANCIALS_LEDGER_SET_ID_LIST_REPORT'\r\n    AND p.parameter_value = 'ALL'\r\n    AND TO_CHAR(ledgerset.ledger_set_chart_of_accounts_id) IN (\r\n        SELECT\r\n            p.parameter_value\r\n        FROM\r\n            dw_content_param_config p\r\n        WHERE\r\n            p.parameter_code = 'PARAM_ERP_FINANCIALS_CHART_OF_ACCOUNT_ID'\r\n    )\r\n    AND TO_CHAR(ledgerset.ledger_set_calender_name) IN (\r\n        SELECT\r\n            p.parameter_value\r\n        FROM\r\n            dw_content_param_config p\r\n        WHERE\r\n            p.parameter_code = 'PARAM_ERP_FINANCIALS_CALENDAR_ID'\r\n    )    \r\n    AND ledgerset.ledger_set_id <> - 99999\r\n\r\nUNION\r\n  \r\nSELECT\r\n    'LEDGER_SET_ID',\r\n    ledgerset.ledger_set_id\r\nFROM\r\n    dw_ledger_set_d               ledgerset,\r\n    dw_content_param_config p\r\nWHERE\r\n    TO_CHAR(ledgerset.ledger_set_id) = p.parameter_value\r\n    AND p.parameter_code = 'PARAM_ERP_FINANCIALS_LEDGER_SET_ID_LIST_REPORT'\r\n    AND p.parameter_value <> 'ALL'\r\n    AND TO_CHAR(ledgerset.ledger_set_chart_of_accounts_id) IN (\r\n        SELECT\r\n            p.parameter_value\r\n        FROM\r\n            dw_content_param_config p\r\n        WHERE\r\n            p.parameter_code = 'PARAM_ERP_FINANCIALS_CHART_OF_ACCOUNT_ID'\r\n    )\r\n    AND TO_CHAR(ledgerset.ledger_set_calender_name) IN (\r\n        SELECT\r\n            p.parameter_value\r\n        FROM\r\n            dw_content_param_config p\r\n        WHERE\r\n            p.parameter_code = 'PARAM_ERP_FINANCIALS_CALENDAR_ID'\r\n    )        \r\n    AND ledgerset.ledger_set_id <> - 99999"
+    } ],
+    "variables" : [ {
+      "name" : "LEDGER_SET_ID",
+      "value" : "-(99999)",
+      "enableUsersToSetValue" : false,
+      "securitySensitive" : false
+    } ],
+    "disable" : false,
+    "queryReturnsVariableNamesAndValues" : true,
+    "allowDeferredExecution" : true,
+    "cacheQueryResult" : false
+  }
+}

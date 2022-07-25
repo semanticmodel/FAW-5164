@@ -1,0 +1,1066 @@
+{
+  "physicalTable": {
+    "name": "Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G",
+    "sourceTable": "physicalTable:Oracle_Data_Warehouse.OAX$OAC.DW_NS_CONSOLIDATEDEXCHANGERATE_G",
+    "caching": {
+      "enable": true
+    },
+    "joins": [      {
+        "useJoinExpression": true,
+        "rightTable": "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_CASH_REFUND_F",
+        "joinExpression": {
+          "expressionTemplate": "%1 = %2 AND %3 = %4 AND %5 =  VALUEOF(NQ_SESSION.%6) AND %7 =  VALUEOF(NQ_SESSION.%8)",
+          "expressionObjects": [
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.FROMSUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_CASH_REFUND_F.SUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.POSTINGPERIOD",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_CASH_REFUND_F.POSTINGPERIOD",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.TOSUBSIDIARY",
+            "variable:NetSuite - Reporting Subsidiary.NETSUITE_REPORTING_SUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.ACCOUNTINGBOOK",
+            "variable:NetSuite - Primary Accounting Book.NETSUITE_PRIMARY_ACCOUNTING_BOOK"
+          ]
+        },
+        "cardinality": "ONE_TO_ONE",
+        "joinType": "INNER"
+      },
+      {
+        "useJoinExpression": true,
+        "rightTable": "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_CASH_REFUND_LINES_F",
+        "joinExpression": {
+          "expressionTemplate": "%1 = %2 AND %3 = %4 AND %5 =  VALUEOF(NQ_SESSION.%6) AND %7 = %8",
+          "expressionObjects": [
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.FROMSUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_CASH_REFUND_LINES_F.SUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.POSTINGPERIOD",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_CASH_REFUND_LINES_F.POSTINGPERIOD",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.TOSUBSIDIARY",
+            "variable:NetSuite - Reporting Subsidiary.NETSUITE_REPORTING_SUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.ACCOUNTINGBOOK",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_CASH_REFUND_LINES_F.ACCOUNTINGBOOK"
+          ]
+        },
+        "cardinality": "ONE_TO_ONE",
+        "joinType": "INNER"
+      },
+      {
+        "useJoinExpression": true,
+        "rightTable": "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_CASH_SALE_F",
+        "joinExpression": {
+          "expressionTemplate": "%1 = %2 AND %3 = %4 AND %5 =  VALUEOF(NQ_SESSION.%6) AND %7 =  VALUEOF(NQ_SESSION.%8)",
+          "expressionObjects": [
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.FROMSUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_CASH_SALE_F.SUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.POSTINGPERIOD",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_CASH_SALE_F.POSTINGPERIOD",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.TOSUBSIDIARY",
+            "variable:NetSuite - Reporting Subsidiary.NETSUITE_REPORTING_SUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.ACCOUNTINGBOOK",
+            "variable:NetSuite - Primary Accounting Book.NETSUITE_PRIMARY_ACCOUNTING_BOOK"
+          ]
+        },
+        "cardinality": "ONE_TO_ONE",
+        "joinType": "INNER"
+      },
+      {
+        "useJoinExpression": true,
+        "rightTable": "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_CASH_SALE_LINES_F",
+        "joinExpression": {
+          "expressionTemplate": "%1 = %2 AND %3 = %4 AND %5 =  VALUEOF(NQ_SESSION.%6) AND %7 = %8",
+          "expressionObjects": [
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.FROMSUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_CASH_SALE_LINES_F.SUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.POSTINGPERIOD",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_CASH_SALE_LINES_F.POSTINGPERIOD",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.TOSUBSIDIARY",
+            "variable:NetSuite - Reporting Subsidiary.NETSUITE_REPORTING_SUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.ACCOUNTINGBOOK",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_CASH_SALE_LINES_F.ACCOUNTINGBOOK"
+          ]
+        },
+        "cardinality": "ONE_TO_ONE",
+        "joinType": "INNER"
+      },
+      {
+        "useJoinExpression": true,
+        "rightTable": "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_CUSTOMER_CREDIT_F",
+        "joinExpression": {
+          "expressionTemplate": "%1 = %2 AND %3 = %4 AND %5 =  VALUEOF(NQ_SESSION.%6) AND %7 =  VALUEOF(NQ_SESSION.%8)",
+          "expressionObjects": [
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.FROMSUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_CUSTOMER_CREDIT_F.SUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.POSTINGPERIOD",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_CUSTOMER_CREDIT_F.POSTINGPERIOD",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.TOSUBSIDIARY",
+            "variable:NetSuite - Reporting Subsidiary.NETSUITE_REPORTING_SUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.ACCOUNTINGBOOK",
+            "variable:NetSuite - Primary Accounting Book.NETSUITE_PRIMARY_ACCOUNTING_BOOK"
+          ]
+        },
+        "cardinality": "ONE_TO_ONE",
+        "joinType": "INNER"
+      },
+      {
+        "useJoinExpression": true,
+        "rightTable": "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_CUSTOMER_CREDIT_LINES_F",
+        "joinExpression": {
+          "expressionTemplate": "%1 = %2 AND %3 = %4 AND %5 =  VALUEOF(NQ_SESSION.%6) AND %7 = %8",
+          "expressionObjects": [
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.FROMSUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_CUSTOMER_CREDIT_LINES_F.SUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.POSTINGPERIOD",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_CUSTOMER_CREDIT_LINES_F.POSTINGPERIOD",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.TOSUBSIDIARY",
+            "variable:NetSuite - Reporting Subsidiary.NETSUITE_REPORTING_SUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.ACCOUNTINGBOOK",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_CUSTOMER_CREDIT_LINES_F.ACCOUNTINGBOOK"
+          ]
+        },
+        "cardinality": "ONE_TO_ONE",
+        "joinType": "INNER"
+      },
+      {
+        "useJoinExpression": true,
+        "rightTable": "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_CUSTOMER_DEPOSIT_F",
+        "joinExpression": {
+          "expressionTemplate": "%1 = %2 AND %3 = %4 AND %5 =  VALUEOF(NQ_SESSION.%6) AND %7 =  VALUEOF(NQ_SESSION.%8)",
+          "expressionObjects": [
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.FROMSUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_CUSTOMER_DEPOSIT_F.SUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.POSTINGPERIOD",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_CUSTOMER_DEPOSIT_F.POSTINGPERIOD",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.TOSUBSIDIARY",
+            "variable:NetSuite - Reporting Subsidiary.NETSUITE_REPORTING_SUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.ACCOUNTINGBOOK",
+            "variable:NetSuite - Primary Accounting Book.NETSUITE_PRIMARY_ACCOUNTING_BOOK"
+          ]
+        },
+        "cardinality": "ONE_TO_ONE",
+        "joinType": "INNER"
+      },
+      {
+        "useJoinExpression": true,
+        "rightTable": "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_CUSTOMER_DEPOSIT_LINES_F",
+        "joinExpression": {
+          "expressionTemplate": "%1 = %2 AND %3 = %4 AND %5 =  VALUEOF(NQ_SESSION.%6) AND %7 = %8",
+          "expressionObjects": [
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.FROMSUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_CUSTOMER_DEPOSIT_LINES_F.SUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.POSTINGPERIOD",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_CUSTOMER_DEPOSIT_LINES_F.POSTINGPERIOD",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.TOSUBSIDIARY",
+            "variable:NetSuite - Reporting Subsidiary.NETSUITE_REPORTING_SUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.ACCOUNTINGBOOK",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_CUSTOMER_DEPOSIT_LINES_F.ACCOUNTINGBOOK"
+          ]
+        },
+        "cardinality": "ONE_TO_ONE",
+        "joinType": "INNER"
+      },
+      {
+        "useJoinExpression": true,
+        "rightTable": "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_CUSTOMER_INVC_SNAPSHOT_F",
+        "joinExpression": {
+          "expressionTemplate": "%1 = %2 AND %3 = %4 AND %5 =  VALUEOF(NQ_SESSION.%6) AND %7 =  VALUEOF(NQ_SESSION.%8)",
+          "expressionObjects": [
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.POSTINGPERIOD",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_CUSTOMER_INVC_SNAPSHOT_F.POSTINGPERIOD",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.FROMSUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_CUSTOMER_INVC_SNAPSHOT_F.SUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.TOSUBSIDIARY",
+            "variable:NetSuite - Reporting Subsidiary.NETSUITE_REPORTING_SUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.ACCOUNTINGBOOK",
+            "variable:NetSuite - Primary Accounting Book.NETSUITE_PRIMARY_ACCOUNTING_BOOK"
+          ]
+        },
+        "cardinality": "ONE_TO_ONE",
+        "joinType": "INNER"
+      },
+      {
+        "useJoinExpression": true,
+        "rightTable": "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_CUSTOMER_INVOICE_F",
+        "joinExpression": {
+          "expressionTemplate": "%1 = %2 AND %3 = %4 AND %5 =  VALUEOF(NQ_SESSION.%6) AND %7 =  VALUEOF(NQ_SESSION.%8)",
+          "expressionObjects": [
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.POSTINGPERIOD",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_CUSTOMER_INVOICE_F.POSTINGPERIOD",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.FROMSUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_CUSTOMER_INVOICE_F.SUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.TOSUBSIDIARY",
+            "variable:NetSuite - Reporting Subsidiary.NETSUITE_REPORTING_SUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.ACCOUNTINGBOOK",
+            "variable:NetSuite - Primary Accounting Book.NETSUITE_PRIMARY_ACCOUNTING_BOOK"
+          ]
+        },
+        "cardinality": "ONE_TO_ONE",
+        "joinType": "INNER"
+      },
+      {
+        "useJoinExpression": true,
+        "rightTable": "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_CUSTOMER_INVOICE_LINES_F",
+        "joinExpression": {
+          "expressionTemplate": "%1 = %2 AND %3 = %4 AND %5 =  VALUEOF(NQ_SESSION.%6) AND %7 = %8",
+          "expressionObjects": [
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.FROMSUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_CUSTOMER_INVOICE_LINES_F.SUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.POSTINGPERIOD",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_CUSTOMER_INVOICE_LINES_F.POSTINGPERIOD",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.TOSUBSIDIARY",
+            "variable:NetSuite - Reporting Subsidiary.NETSUITE_REPORTING_SUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.ACCOUNTINGBOOK",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_CUSTOMER_INVOICE_LINES_F.ACCOUNTINGBOOK"
+          ]
+        },
+        "cardinality": "ONE_TO_ONE",
+        "joinType": "INNER"
+      },
+      {
+        "useJoinExpression": true,
+        "rightTable": "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_CUSTOMER_PAYMENT_F",
+        "joinExpression": {
+          "expressionTemplate": "%1 = %2 AND %3 = %4 AND %5 =  VALUEOF(NQ_SESSION.%6) AND %7 =  VALUEOF(NQ_SESSION.%8)",
+          "expressionObjects": [
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.FROMSUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_CUSTOMER_PAYMENT_F.SUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.POSTINGPERIOD",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_CUSTOMER_PAYMENT_F.POSTINGPERIOD",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.TOSUBSIDIARY",
+            "variable:NetSuite - Reporting Subsidiary.NETSUITE_REPORTING_SUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.ACCOUNTINGBOOK",
+            "variable:NetSuite - Primary Accounting Book.NETSUITE_PRIMARY_ACCOUNTING_BOOK"
+          ]
+        },
+        "cardinality": "ONE_TO_ONE",
+        "joinType": "INNER"
+      },
+      {
+        "useJoinExpression": true,
+        "rightTable": "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_CUSTOMER_PAYMENT_LINES_F",
+        "joinExpression": {
+          "expressionTemplate": "%1 = %2 AND %3 = %4 AND %5 =  VALUEOF(NQ_SESSION.%6) AND %7 = %8",
+          "expressionObjects": [
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.FROMSUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_CUSTOMER_PAYMENT_LINES_F.SUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.POSTINGPERIOD",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_CUSTOMER_PAYMENT_LINES_F.POSTINGPERIOD",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.TOSUBSIDIARY",
+            "variable:NetSuite - Reporting Subsidiary.NETSUITE_REPORTING_SUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.ACCOUNTINGBOOK",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_CUSTOMER_PAYMENT_LINES_F.ACCOUNTINGBOOK"
+          ]
+        },
+        "cardinality": "ONE_TO_ONE",
+        "joinType": "INNER"
+      },
+      {
+        "useJoinExpression": true,
+        "rightTable": "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_DEPOSIT_APPL_F",
+        "joinExpression": {
+          "expressionTemplate": "%1 = %2 AND %3 = %4 AND %5 =  VALUEOF(NQ_SESSION.%6) AND %7 =  VALUEOF(NQ_SESSION.%8)",
+          "expressionObjects": [
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.FROMSUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_DEPOSIT_APPL_F.SUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.POSTINGPERIOD",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_DEPOSIT_APPL_F.POSTINGPERIOD",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.TOSUBSIDIARY",
+            "variable:NetSuite - Reporting Subsidiary.NETSUITE_REPORTING_SUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.ACCOUNTINGBOOK",
+            "variable:NetSuite - Primary Accounting Book.NETSUITE_PRIMARY_ACCOUNTING_BOOK"
+          ]
+        },
+        "cardinality": "ONE_TO_ONE",
+        "joinType": "INNER"
+      },
+      {
+        "useJoinExpression": true,
+        "rightTable": "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_DEPOSIT_APPL_LINES_F",
+        "joinExpression": {
+          "expressionTemplate": "%1 = %2 AND %3 = %4 AND %5 =  VALUEOF(NQ_SESSION.%6) AND %7 = %8",
+          "expressionObjects": [
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.FROMSUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_DEPOSIT_APPL_LINES_F.SUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.POSTINGPERIOD",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_DEPOSIT_APPL_LINES_F.POSTINGPERIOD",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.TOSUBSIDIARY",
+            "variable:NetSuite - Reporting Subsidiary.NETSUITE_REPORTING_SUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.ACCOUNTINGBOOK",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_DEPOSIT_APPL_LINES_F.ACCOUNTINGBOOK"
+          ]
+        },
+        "cardinality": "ONE_TO_ONE",
+        "joinType": "INNER"
+      },
+      {
+        "useJoinExpression": true,
+        "rightTable": "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_ESTIMATE_F",
+        "joinExpression": {
+          "expressionTemplate": "%1 = %2 AND %3 = %4 AND %5 =  VALUEOF(NQ_SESSION.%6) AND %7 =  VALUEOF(NQ_SESSION.%8)",
+          "expressionObjects": [
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.FROMSUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_ESTIMATE_F.SUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.POSTINGPERIOD",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_ESTIMATE_F.POSTINGPERIOD",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.TOSUBSIDIARY",
+            "variable:NetSuite - Reporting Subsidiary.NETSUITE_REPORTING_SUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.ACCOUNTINGBOOK",
+            "variable:NetSuite - Primary Accounting Book.NETSUITE_PRIMARY_ACCOUNTING_BOOK"
+          ]
+        },
+        "cardinality": "ONE_TO_ONE",
+        "joinType": "INNER"
+      },
+      {
+        "useJoinExpression": true,
+        "rightTable": "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_ESTIMATE_LINES_F",
+        "joinExpression": {
+          "expressionTemplate": "%1 = %2 AND %3 = %4 AND %5 =  VALUEOF(NQ_SESSION.%6) AND %7 = %8",
+          "expressionObjects": [
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.FROMSUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_ESTIMATE_LINES_F.SUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.POSTINGPERIOD",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_ESTIMATE_LINES_F.POSTINGPERIOD",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.TOSUBSIDIARY",
+            "variable:NetSuite - Reporting Subsidiary.NETSUITE_REPORTING_SUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.ACCOUNTINGBOOK",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_ESTIMATE_LINES_F.ACCOUNTINGBOOK"
+          ]
+        },
+        "cardinality": "ONE_TO_ONE",
+        "joinType": "INNER"
+      },
+      {
+        "useJoinExpression": true,
+        "rightTable": "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_INVENTORY_ADJUST_LINES_F",
+        "joinExpression": {
+          "expressionTemplate": "%1 = %2 AND %3 = %4 AND %5 =  VALUEOF(NQ_SESSION.%6) AND %7 = %8",
+          "expressionObjects": [
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.POSTINGPERIOD",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_INVENTORY_ADJUST_LINES_F.POSTINGPERIOD",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.FROMSUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_INVENTORY_ADJUST_LINES_F.SUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.TOSUBSIDIARY",
+            "variable:NetSuite - Reporting Subsidiary.NETSUITE_REPORTING_SUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.ACCOUNTINGBOOK",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_INVENTORY_ADJUST_LINES_F.ACCOUNTINGBOOK"
+          ]
+        },
+        "cardinality": "ONE_TO_ONE",
+        "joinType": "INNER"
+      },
+      {
+        "useJoinExpression": true,
+        "rightTable": "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_INVENTORY_COUNT_F",
+        "joinExpression": {
+          "expressionTemplate": "%1 = %2 AND %3 = %4 AND %5 =  VALUEOF(NQ_SESSION.%6) AND %7 =  VALUEOF(NQ_SESSION.%8)",
+          "expressionObjects": [
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.POSTINGPERIOD",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_INVENTORY_COUNT_F.POSTINGPERIOD",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.FROMSUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_INVENTORY_COUNT_F.SUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.TOSUBSIDIARY",
+            "variable:NetSuite - Reporting Subsidiary.NETSUITE_REPORTING_SUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.ACCOUNTINGBOOK",
+            "variable:NetSuite - Primary Accounting Book.NETSUITE_PRIMARY_ACCOUNTING_BOOK"
+          ]
+        },
+        "cardinality": "ONE_TO_ONE",
+        "joinType": "INNER"
+      },
+      {
+        "useJoinExpression": true,
+        "rightTable": "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_INVENTORY_COUNT_LINES_F",
+        "joinExpression": {
+          "expressionTemplate": "%1 = %2 AND %3 = %4 AND %5 =  VALUEOF(NQ_SESSION.%6) AND %7 = %8",
+          "expressionObjects": [
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.POSTINGPERIOD",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_INVENTORY_COUNT_LINES_F.POSTINGPERIOD",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.FROMSUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_INVENTORY_COUNT_LINES_F.SUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.TOSUBSIDIARY",
+            "variable:NetSuite - Reporting Subsidiary.NETSUITE_REPORTING_SUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.ACCOUNTINGBOOK",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_INVENTORY_COUNT_LINES_F.ACCOUNTINGBOOK"
+          ]
+        },
+        "cardinality": "ONE_TO_ONE",
+        "joinType": "INNER"
+      },
+      {
+        "useJoinExpression": true,
+        "rightTable": "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_INVENTORY_TRANSFER_LINES_F",
+        "joinExpression": {
+          "expressionTemplate": "%1 = %2 AND %3 = %4 AND %5 =  VALUEOF(NQ_SESSION.%6) AND %7 = %8",
+          "expressionObjects": [
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.POSTINGPERIOD",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_INVENTORY_TRANSFER_LINES_F.POSTINGPERIOD",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.FROMSUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_INVENTORY_TRANSFER_LINES_F.SUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.TOSUBSIDIARY",
+            "variable:NetSuite - Reporting Subsidiary.NETSUITE_REPORTING_SUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.ACCOUNTINGBOOK",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_INVENTORY_TRANSFER_LINES_F.ACCOUNTINGBOOK"
+          ]
+        },
+        "cardinality": "ONE_TO_ONE",
+        "joinType": "INNER"
+      },
+      {
+        "useJoinExpression": true,
+        "rightTable": "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_ITEM_RECEIPT_F",
+        "joinExpression": {
+          "expressionTemplate": "%1 = %2 AND %3 = %4 AND %5 =  VALUEOF(NQ_SESSION.%6) AND %7 =  VALUEOF(NQ_SESSION.%8)",
+          "expressionObjects": [
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.POSTINGPERIOD",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_ITEM_RECEIPT_F.POSTINGPERIOD",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.FROMSUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_ITEM_RECEIPT_F.SUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.TOSUBSIDIARY",
+            "variable:NetSuite - Reporting Subsidiary.NETSUITE_REPORTING_SUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.ACCOUNTINGBOOK",
+            "variable:NetSuite - Primary Accounting Book.NETSUITE_PRIMARY_ACCOUNTING_BOOK"
+          ]
+        },
+        "cardinality": "ONE_TO_ONE",
+        "joinType": "INNER"
+      },
+      {
+        "useJoinExpression": true,
+        "rightTable": "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_ITEM_RECEIPT_LINES_F",
+        "joinExpression": {
+          "expressionTemplate": "%1 = %2 AND %3 = %4 AND %5 =  VALUEOF(NQ_SESSION.%6) AND %7 = %8",
+          "expressionObjects": [
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.POSTINGPERIOD",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_ITEM_RECEIPT_LINES_F.POSTINGPERIOD",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.FROMSUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_ITEM_RECEIPT_LINES_F.SUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.TOSUBSIDIARY",
+            "variable:NetSuite - Reporting Subsidiary.NETSUITE_REPORTING_SUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.ACCOUNTINGBOOK",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_ITEM_RECEIPT_LINES_F.ACCOUNTINGBOOK"
+          ]
+        },
+        "cardinality": "ONE_TO_ONE",
+        "joinType": "INNER"
+      },
+      {
+        "useJoinExpression": true,
+        "rightTable": "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_ITEM_SHIPMENT_F",
+        "joinExpression": {
+          "expressionTemplate": "%1 = %2 AND %3 = %4 AND %5 =  VALUEOF(NQ_SESSION.%6) AND %7 =  VALUEOF(NQ_SESSION.%8)",
+          "expressionObjects": [
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.FROMSUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_ITEM_SHIPMENT_F.SUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.POSTINGPERIOD",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_ITEM_SHIPMENT_F.POSTINGPERIOD",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.TOSUBSIDIARY",
+            "variable:NetSuite - Reporting Subsidiary.NETSUITE_REPORTING_SUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.ACCOUNTINGBOOK",
+            "variable:NetSuite - Primary Accounting Book.NETSUITE_PRIMARY_ACCOUNTING_BOOK"
+          ]
+        },
+        "cardinality": "ONE_TO_ONE",
+        "joinType": "INNER"
+      },
+      {
+        "useJoinExpression": true,
+        "rightTable": "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_ITEM_SHIPMENT_LINES_F",
+        "joinExpression": {
+          "expressionTemplate": "%1 = %2 AND %3 = %4 AND %5 =  VALUEOF(NQ_SESSION.%6) AND %7 = %8",
+          "expressionObjects": [
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.FROMSUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_ITEM_SHIPMENT_LINES_F.SUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.POSTINGPERIOD",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_ITEM_SHIPMENT_LINES_F.POSTINGPERIOD",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.TOSUBSIDIARY",
+            "variable:NetSuite - Reporting Subsidiary.NETSUITE_REPORTING_SUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.ACCOUNTINGBOOK",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_ITEM_SHIPMENT_LINES_F.ACCOUNTINGBOOK"
+          ]
+        },
+        "cardinality": "ONE_TO_ONE",
+        "joinType": "INNER"
+      },
+      {
+        "useJoinExpression": true,
+        "rightTable": "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_JOURNAL_LINES_F",
+        "joinExpression": {
+          "expressionTemplate": "%1 = %2 AND %3 = %4 AND %5 =  VALUEOF(NQ_SESSION.%6) AND %7 = %8",
+          "expressionObjects": [
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.POSTINGPERIOD",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_JOURNAL_LINES_F.POSTINGPERIOD",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.FROMSUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_JOURNAL_LINES_F.SUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.TOSUBSIDIARY",
+            "variable:NetSuite - Reporting Subsidiary.NETSUITE_REPORTING_SUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.ACCOUNTINGBOOK",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_JOURNAL_LINES_F.ACCOUNTINGBOOK"
+          ]
+        },
+        "cardinality": "ONE_TO_ONE",
+        "joinType": "INNER"
+      },
+      {
+        "useJoinExpression": true,
+        "rightTable": "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_OPPORTUNITY_F",
+        "joinExpression": {
+          "expressionTemplate": "%1 = %2 AND %3 = %4 AND %5 =  VALUEOF(NQ_SESSION.%6) AND %7 =  VALUEOF(NQ_SESSION.%8)",
+          "expressionObjects": [
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.FROMSUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_OPPORTUNITY_F.SUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.POSTINGPERIOD",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_OPPORTUNITY_F.POSTINGPERIOD",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.TOSUBSIDIARY",
+            "variable:NetSuite - Reporting Subsidiary.NETSUITE_REPORTING_SUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.ACCOUNTINGBOOK",
+            "variable:NetSuite - Primary Accounting Book.NETSUITE_PRIMARY_ACCOUNTING_BOOK"
+          ]
+        },
+        "cardinality": "ONE_TO_ONE",
+        "joinType": "INNER"
+      },
+      {
+        "useJoinExpression": true,
+        "rightTable": "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_OPPORTUNITY_LINES_F",
+        "joinExpression": {
+          "expressionTemplate": "%1 = %2 AND %3 = %4 AND %5 =  VALUEOF(NQ_SESSION.%6) AND %7 = %8",
+          "expressionObjects": [
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.FROMSUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_OPPORTUNITY_LINES_F.SUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.POSTINGPERIOD",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_OPPORTUNITY_LINES_F.POSTINGPERIOD",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.TOSUBSIDIARY",
+            "variable:NetSuite - Reporting Subsidiary.NETSUITE_REPORTING_SUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.ACCOUNTINGBOOK",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_OPPORTUNITY_LINES_F.ACCOUNTINGBOOK"
+          ]
+        },
+        "cardinality": "ONE_TO_ONE",
+        "joinType": "INNER"
+      },
+      {
+        "useJoinExpression": true,
+        "rightTable": "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_PURCHASE_CONTRACT_F",
+        "joinExpression": {
+          "expressionTemplate": "%1 = %2 AND %3 = %4 AND %5 =  VALUEOF(NQ_SESSION.%6) AND %7 =  VALUEOF(NQ_SESSION.%8)",
+          "expressionObjects": [
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.FROMSUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_PURCHASE_CONTRACT_F.SUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.POSTINGPERIOD",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_PURCHASE_CONTRACT_F.POSTINGPERIOD",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.TOSUBSIDIARY",
+            "variable:NetSuite - Reporting Subsidiary.NETSUITE_REPORTING_SUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.ACCOUNTINGBOOK",
+            "variable:NetSuite - Primary Accounting Book.NETSUITE_PRIMARY_ACCOUNTING_BOOK"
+          ]
+        },
+        "cardinality": "ONE_TO_ONE",
+        "joinType": "INNER"
+      },
+      {
+        "useJoinExpression": true,
+        "rightTable": "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_PURCHASE_CONTRACT_LINES_F",
+        "joinExpression": {
+          "expressionTemplate": "%1 = %2 AND %3 = %4 AND %5 =  VALUEOF(NQ_SESSION.%6) AND %7 = %8",
+          "expressionObjects": [
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.FROMSUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_PURCHASE_CONTRACT_LINES_F.SUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.POSTINGPERIOD",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_PURCHASE_CONTRACT_LINES_F.POSTINGPERIOD",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.TOSUBSIDIARY",
+            "variable:NetSuite - Reporting Subsidiary.NETSUITE_REPORTING_SUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.ACCOUNTINGBOOK",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_PURCHASE_CONTRACT_LINES_F.ACCOUNTINGBOOK"
+          ]
+        },
+        "cardinality": "ONE_TO_ONE",
+        "joinType": "INNER"
+      },
+      {
+        "useJoinExpression": true,
+        "rightTable": "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_PURCHASE_ORDER_F",
+        "joinExpression": {
+          "expressionTemplate": "%1 = %2 AND %3 = %4 AND %5 =  VALUEOF(NQ_SESSION.%6) AND %7 =  VALUEOF(NQ_SESSION.%8)",
+          "expressionObjects": [
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.FROMSUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_PURCHASE_ORDER_F.SUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.POSTINGPERIOD",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_PURCHASE_ORDER_F.POSTINGPERIOD",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.TOSUBSIDIARY",
+            "variable:NetSuite - Reporting Subsidiary.NETSUITE_REPORTING_SUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.ACCOUNTINGBOOK",
+            "variable:NetSuite - Primary Accounting Book.NETSUITE_PRIMARY_ACCOUNTING_BOOK"
+          ]
+        },
+        "cardinality": "ONE_TO_ONE",
+        "joinType": "INNER"
+      },
+      {
+        "useJoinExpression": true,
+        "rightTable": "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_PURCHASE_ORDER_LINES_F",
+        "joinExpression": {
+          "expressionTemplate": "%1 = %2 AND %3 = %4 AND %5 =  VALUEOF(NQ_SESSION.%6) AND %7 = %8",
+          "expressionObjects": [
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.FROMSUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_PURCHASE_ORDER_LINES_F.SUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.POSTINGPERIOD",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_PURCHASE_ORDER_LINES_F.POSTINGPERIOD",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.TOSUBSIDIARY",
+            "variable:NetSuite - Reporting Subsidiary.NETSUITE_REPORTING_SUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.ACCOUNTINGBOOK",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_PURCHASE_ORDER_LINES_F.ACCOUNTINGBOOK"
+          ]
+        },
+        "cardinality": "ONE_TO_ONE",
+        "joinType": "INNER"
+      },
+      {
+        "useJoinExpression": true,
+        "rightTable": "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_PURCHASE_ORDER_SNAPSHOT_F",
+        "joinExpression": {
+          "expressionTemplate": "%1 = %2 AND %3 = %4 AND %5 =  VALUEOF(NQ_SESSION.%6) AND %7 =  VALUEOF(NQ_SESSION.%8)",
+          "expressionObjects": [
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.FROMSUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_PURCHASE_ORDER_SNAPSHOT_F.SUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.POSTINGPERIOD",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_PURCHASE_ORDER_SNAPSHOT_F.POSTINGPERIOD",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.TOSUBSIDIARY",
+            "variable:NetSuite - Reporting Subsidiary.NETSUITE_REPORTING_SUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.ACCOUNTINGBOOK",
+            "variable:NetSuite - Primary Accounting Book.NETSUITE_PRIMARY_ACCOUNTING_BOOK"
+          ]
+        },
+        "cardinality": "ONE_TO_ONE",
+        "joinType": "INNER"
+      },
+      {
+        "useJoinExpression": true,
+        "rightTable": "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_PURCHASE_REQUISITION_F",
+        "joinExpression": {
+          "expressionTemplate": "%1 = %2 AND %3 = %4 AND %5 =  VALUEOF(NQ_SESSION.%6) AND %7 =  VALUEOF(NQ_SESSION.%8)",
+          "expressionObjects": [
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.FROMSUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_PURCHASE_REQUISITION_F.SUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.POSTINGPERIOD",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_PURCHASE_REQUISITION_F.POSTINGPERIOD",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.TOSUBSIDIARY",
+            "variable:NetSuite - Reporting Subsidiary.NETSUITE_REPORTING_SUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.ACCOUNTINGBOOK",
+            "variable:NetSuite - Primary Accounting Book.NETSUITE_PRIMARY_ACCOUNTING_BOOK"
+          ]
+        },
+        "cardinality": "ONE_TO_ONE",
+        "joinType": "INNER"
+      },
+      {
+        "useJoinExpression": true,
+        "rightTable": "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_PURCHASE_REQUISITION_LINES_F",
+        "joinExpression": {
+          "expressionTemplate": "%1 = %2 AND %3 = %4 AND %5 =  VALUEOF(NQ_SESSION.%6) AND %7 = %8",
+          "expressionObjects": [
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.FROMSUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_PURCHASE_REQUISITION_LINES_F.SUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.POSTINGPERIOD",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_PURCHASE_REQUISITION_LINES_F.POSTINGPERIOD",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.TOSUBSIDIARY",
+            "variable:NetSuite - Reporting Subsidiary.NETSUITE_REPORTING_SUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.ACCOUNTINGBOOK",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_PURCHASE_REQUISITION_LINES_F.ACCOUNTINGBOOK"
+          ]
+        },
+        "cardinality": "ONE_TO_ONE",
+        "joinType": "INNER"
+      },
+      {
+        "useJoinExpression": true,
+        "rightTable": "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_RETURNAUTH_F",
+        "joinExpression": {
+          "expressionTemplate": "%1 = %2 AND %3 = %4 AND %5 =  VALUEOF(NQ_SESSION.%6) AND %7 =  VALUEOF(NQ_SESSION.%8)",
+          "expressionObjects": [
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.FROMSUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_RETURNAUTH_F.SUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.POSTINGPERIOD",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_RETURNAUTH_F.POSTINGPERIOD",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.TOSUBSIDIARY",
+            "variable:NetSuite - Reporting Subsidiary.NETSUITE_REPORTING_SUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.ACCOUNTINGBOOK",
+            "variable:NetSuite - Primary Accounting Book.NETSUITE_PRIMARY_ACCOUNTING_BOOK"
+          ]
+        },
+        "cardinality": "ONE_TO_ONE",
+        "joinType": "INNER"
+      },
+      {
+        "useJoinExpression": true,
+        "rightTable": "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_RETURN_AUTH_LINES_F",
+        "joinExpression": {
+          "expressionTemplate": "%1 = %2 AND %3 = %4 AND %5 =  VALUEOF(NQ_SESSION.%6) AND %7 = %8",
+          "expressionObjects": [
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.FROMSUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_RETURN_AUTH_LINES_F.SUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.POSTINGPERIOD",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_RETURN_AUTH_LINES_F.POSTINGPERIOD",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.TOSUBSIDIARY",
+            "variable:NetSuite - Reporting Subsidiary.NETSUITE_REPORTING_SUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.ACCOUNTINGBOOK",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_RETURN_AUTH_LINES_F.ACCOUNTINGBOOK"
+          ]
+        },
+        "cardinality": "ONE_TO_ONE",
+        "joinType": "INNER"
+      },
+      {
+        "useJoinExpression": true,
+        "rightTable": "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_SALES_ORDER_F",
+        "joinExpression": {
+          "expressionTemplate": "%1 = %2 AND %3 = %4 AND %5 =  VALUEOF(NQ_SESSION.%6) AND %7 =  VALUEOF(NQ_SESSION.%8)",
+          "expressionObjects": [
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.FROMSUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_SALES_ORDER_F.SUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.POSTINGPERIOD",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_SALES_ORDER_F.POSTINGPERIOD",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.TOSUBSIDIARY",
+            "variable:NetSuite - Reporting Subsidiary.NETSUITE_REPORTING_SUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.ACCOUNTINGBOOK",
+            "variable:NetSuite - Primary Accounting Book.NETSUITE_PRIMARY_ACCOUNTING_BOOK"
+          ]
+        },
+        "cardinality": "ONE_TO_ONE",
+        "joinType": "INNER"
+      },
+      {
+        "useJoinExpression": true,
+        "rightTable": "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_SALES_ORDER_LINES_F",
+        "joinExpression": {
+          "expressionTemplate": "%1 = %2 AND %3 = %4 AND %5 =  VALUEOF(NQ_SESSION.%6) AND %7 = %8",
+          "expressionObjects": [
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.FROMSUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_SALES_ORDER_LINES_F.SUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.POSTINGPERIOD",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_SALES_ORDER_LINES_F.POSTINGPERIOD",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.TOSUBSIDIARY",
+            "variable:NetSuite - Reporting Subsidiary.NETSUITE_REPORTING_SUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.ACCOUNTINGBOOK",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_SALES_ORDER_LINES_F.ACCOUNTINGBOOK"
+          ]
+        },
+        "cardinality": "ONE_TO_ONE",
+        "joinType": "INNER"
+      },
+      {
+        "useJoinExpression": true,
+        "rightTable": "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_SALES_ORDER_SNAPSHOT_F",
+        "joinExpression": {
+          "expressionTemplate": "%1 = %2 AND %3 = %4 AND %5 =  VALUEOF(NQ_SESSION.%6) AND %7 =  VALUEOF(NQ_SESSION.%8)",
+          "expressionObjects": [
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.FROMSUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_SALES_ORDER_SNAPSHOT_F.SUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.POSTINGPERIOD",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_SALES_ORDER_SNAPSHOT_F.POSTINGPERIOD",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.TOSUBSIDIARY",
+            "variable:NetSuite - Reporting Subsidiary.NETSUITE_REPORTING_SUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.ACCOUNTINGBOOK",
+            "variable:NetSuite - Primary Accounting Book.NETSUITE_PRIMARY_ACCOUNTING_BOOK"
+          ]
+        },
+        "cardinality": "ONE_TO_ONE",
+        "joinType": "INNER"
+      },
+      {
+        "useJoinExpression": true,
+        "rightTable": "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_TRANSFER_ORDER_LINES_F",
+        "joinExpression": {
+          "expressionTemplate": "%1 = %2 AND %3 = %4 AND %5 =  VALUEOF(NQ_SESSION.%6) AND %7 = %8",
+          "expressionObjects": [
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.POSTINGPERIOD",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_TRANSFER_ORDER_LINES_F.POSTINGPERIOD",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.FROMSUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_TRANSFER_ORDER_LINES_F.SUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.TOSUBSIDIARY",
+            "variable:NetSuite - Reporting Subsidiary.NETSUITE_REPORTING_SUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.ACCOUNTINGBOOK",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_TRANSFER_ORDER_LINES_F.ACCOUNTINGBOOK"
+          ]
+        },
+        "cardinality": "ONE_TO_ONE",
+        "joinType": "INNER"
+      },
+      {
+        "useJoinExpression": true,
+        "rightTable": "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_VENDOR_AUTH_F",
+        "joinExpression": {
+          "expressionTemplate": "%1 = %2 AND %3 = %4 AND %5 =  VALUEOF(NQ_SESSION.%6) AND %7 =  VALUEOF(NQ_SESSION.%8)",
+          "expressionObjects": [
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.POSTINGPERIOD",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_VENDOR_AUTH_F.POSTINGPERIOD",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.FROMSUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_VENDOR_AUTH_F.SUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.TOSUBSIDIARY",
+            "variable:NetSuite - Reporting Subsidiary.NETSUITE_REPORTING_SUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.ACCOUNTINGBOOK",
+            "variable:NetSuite - Primary Accounting Book.NETSUITE_PRIMARY_ACCOUNTING_BOOK"
+          ]
+        },
+        "cardinality": "ONE_TO_ONE",
+        "joinType": "INNER"
+      },
+      {
+        "useJoinExpression": true,
+        "rightTable": "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_VENDOR_AUTH_LINES_F",
+        "joinExpression": {
+          "expressionTemplate": "%1 = %2 AND %3 = %4 AND %5 =  VALUEOF(NQ_SESSION.%6) AND %7 = %8",
+          "expressionObjects": [
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.POSTINGPERIOD",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_VENDOR_AUTH_LINES_F.POSTINGPERIOD",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.FROMSUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_VENDOR_AUTH_LINES_F.SUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.TOSUBSIDIARY",
+            "variable:NetSuite - Reporting Subsidiary.NETSUITE_REPORTING_SUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.ACCOUNTINGBOOK",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_VENDOR_AUTH_LINES_F.ACCOUNTINGBOOK"
+          ]
+        },
+        "cardinality": "ONE_TO_ONE",
+        "joinType": "INNER"
+      },
+      {
+        "useJoinExpression": true,
+        "rightTable": "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_VENDOR_BILL_CREDIT_F",
+        "joinExpression": {
+          "expressionTemplate": "%1 = %2 AND %3 = %4 AND %5 =  VALUEOF(NQ_SESSION.%6) AND %7 =  VALUEOF(NQ_SESSION.%8)",
+          "expressionObjects": [
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.POSTINGPERIOD",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_VENDOR_BILL_CREDIT_F.POSTINGPERIOD",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.FROMSUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_VENDOR_BILL_CREDIT_F.SUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.TOSUBSIDIARY",
+            "variable:NetSuite - Reporting Subsidiary.NETSUITE_REPORTING_SUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.ACCOUNTINGBOOK",
+            "variable:NetSuite - Primary Accounting Book.NETSUITE_PRIMARY_ACCOUNTING_BOOK"
+          ]
+        },
+        "cardinality": "ONE_TO_ONE",
+        "joinType": "INNER"
+      },
+      {
+        "useJoinExpression": true,
+        "rightTable": "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_VENDOR_BILL_CREDIT_LINES_F",
+        "joinExpression": {
+          "expressionTemplate": "%1 = %2 AND %3 = %4 AND %5 =  VALUEOF(NQ_SESSION.%6) AND %7 = %8",
+          "expressionObjects": [
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.POSTINGPERIOD",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_VENDOR_BILL_CREDIT_LINES_F.POSTINGPERIOD",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.FROMSUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_VENDOR_BILL_CREDIT_LINES_F.SUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.TOSUBSIDIARY",
+            "variable:NetSuite - Reporting Subsidiary.NETSUITE_REPORTING_SUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.ACCOUNTINGBOOK",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_VENDOR_BILL_CREDIT_LINES_F.ACCOUNTINGBOOK"
+          ]
+        },
+        "cardinality": "ONE_TO_ONE",
+        "joinType": "INNER"
+      },
+      {
+        "useJoinExpression": true,
+        "rightTable": "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_VENDOR_BILL_F",
+        "joinExpression": {
+          "expressionTemplate": "%1 = %2 AND %3 = %4 AND %5 =  VALUEOF(NQ_SESSION.%6) AND %7 =  VALUEOF(NQ_SESSION.%8)",
+          "expressionObjects": [
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.FROMSUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_VENDOR_BILL_F.SUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.POSTINGPERIOD",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_VENDOR_BILL_F.POSTINGPERIOD",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.TOSUBSIDIARY",
+            "variable:NetSuite - Reporting Subsidiary.NETSUITE_REPORTING_SUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.ACCOUNTINGBOOK",
+            "variable:NetSuite - Primary Accounting Book.NETSUITE_PRIMARY_ACCOUNTING_BOOK"
+          ]
+        },
+        "cardinality": "ONE_TO_ONE",
+        "joinType": "INNER"
+      },
+      {
+        "useJoinExpression": true,
+        "rightTable": "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_VENDOR_BILL_LINES_F",
+        "joinExpression": {
+          "expressionTemplate": "%1 = %2 AND %3 = %4 AND %5 =  VALUEOF(NQ_SESSION.%6) AND %7 = %8",
+          "expressionObjects": [
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.FROMSUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_VENDOR_BILL_LINES_F.SUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.POSTINGPERIOD",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_VENDOR_BILL_LINES_F.POSTINGPERIOD",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.TOSUBSIDIARY",
+            "variable:NetSuite - Reporting Subsidiary.NETSUITE_REPORTING_SUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.ACCOUNTINGBOOK",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_VENDOR_BILL_LINES_F.ACCOUNTINGBOOK"
+          ]
+        },
+        "cardinality": "ONE_TO_ONE",
+        "joinType": "INNER"
+      },
+      {
+        "useJoinExpression": true,
+        "rightTable": "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_VENDOR_BILL_PAYMENT_F",
+        "joinExpression": {
+          "expressionTemplate": "%1 = %2 AND %3 = %4 AND %5 =  VALUEOF(NQ_SESSION.%6) AND %7 =  VALUEOF(NQ_SESSION.%8)",
+          "expressionObjects": [
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.POSTINGPERIOD",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_VENDOR_BILL_PAYMENT_F.POSTINGPERIOD",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.FROMSUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_VENDOR_BILL_PAYMENT_F.SUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.TOSUBSIDIARY",
+            "variable:NetSuite - Reporting Subsidiary.NETSUITE_REPORTING_SUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.ACCOUNTINGBOOK",
+            "variable:NetSuite - Primary Accounting Book.NETSUITE_PRIMARY_ACCOUNTING_BOOK"
+          ]
+        },
+        "cardinality": "ONE_TO_ONE",
+        "joinType": "INNER"
+      },
+      {
+        "useJoinExpression": true,
+        "rightTable": "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_VENDOR_BILL_PAYMENT_LINES_F",
+        "joinExpression": {
+          "expressionTemplate": "%1 = %2 AND %3 = %4 AND %5 =  VALUEOF(NQ_SESSION.%6) AND %7 = %8",
+          "expressionObjects": [
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.POSTINGPERIOD",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_VENDOR_BILL_PAYMENT_LINES_F.POSTINGPERIOD",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.FROMSUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_VENDOR_BILL_PAYMENT_LINES_F.SUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.TOSUBSIDIARY",
+            "variable:NetSuite - Reporting Subsidiary.NETSUITE_REPORTING_SUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.ACCOUNTINGBOOK",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_VENDOR_BILL_PAYMENT_LINES_F.ACCOUNTINGBOOK"
+          ]
+        },
+        "cardinality": "ONE_TO_ONE",
+        "joinType": "INNER"
+      },
+      {
+        "useJoinExpression": true,
+        "rightTable": "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_WORK_ORDER_COMPLETION_F",
+        "joinExpression": {
+          "expressionTemplate": "%1 = %2 AND %3 = %4 AND %5 =  VALUEOF(NQ_SESSION.%6) AND %7 =  VALUEOF(NQ_SESSION.%8)",
+          "expressionObjects": [
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.POSTINGPERIOD",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_WORK_ORDER_COMPLETION_F.POSTINGPERIOD",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.FROMSUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_WORK_ORDER_COMPLETION_F.SUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.TOSUBSIDIARY",
+            "variable:NetSuite - Reporting Subsidiary.NETSUITE_REPORTING_SUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.ACCOUNTINGBOOK",
+            "variable:NetSuite - Primary Accounting Book.NETSUITE_PRIMARY_ACCOUNTING_BOOK"
+          ]
+        },
+        "cardinality": "ONE_TO_ONE",
+        "joinType": "INNER"
+      },
+      {
+        "useJoinExpression": true,
+        "rightTable": "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_WORK_ORDER_COMPLETION_LINES_F",
+        "joinExpression": {
+          "expressionTemplate": "%1 = %2 AND %3 = %4 AND %5 =  VALUEOF(NQ_SESSION.%6) AND %7 = %8",
+          "expressionObjects": [
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.POSTINGPERIOD",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_WORK_ORDER_COMPLETION_LINES_F.POSTINGPERIOD",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.FROMSUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_WORK_ORDER_COMPLETION_LINES_F.SUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.TOSUBSIDIARY",
+            "variable:NetSuite - Reporting Subsidiary.NETSUITE_REPORTING_SUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.ACCOUNTINGBOOK",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_WORK_ORDER_COMPLETION_LINES_F.ACCOUNTINGBOOK"
+          ]
+        },
+        "cardinality": "ONE_TO_ONE",
+        "joinType": "INNER"
+      },
+      {
+        "useJoinExpression": true,
+        "rightTable": "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_WORK_ORDER_F",
+        "joinExpression": {
+          "expressionTemplate": "%1 = %2 AND %3 = %4 AND %5 =  VALUEOF(NQ_SESSION.%6) AND %7 =  VALUEOF(NQ_SESSION.%8)",
+          "expressionObjects": [
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.POSTINGPERIOD",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_WORK_ORDER_F.POSTINGPERIOD",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.FROMSUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_WORK_ORDER_F.SUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.TOSUBSIDIARY",
+            "variable:NetSuite - Reporting Subsidiary.NETSUITE_REPORTING_SUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.ACCOUNTINGBOOK",
+            "variable:NetSuite - Primary Accounting Book.NETSUITE_PRIMARY_ACCOUNTING_BOOK"
+          ]
+        },
+        "cardinality": "ONE_TO_ONE",
+        "joinType": "INNER"
+      },
+      {
+        "useJoinExpression": true,
+        "rightTable": "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_WORK_ORDER_ISSUE_F",
+        "joinExpression": {
+          "expressionTemplate": "%1 = %2 AND %3 = %4 AND %5 =  VALUEOF(NQ_SESSION.%6) AND %7 =  VALUEOF(NQ_SESSION.%8)",
+          "expressionObjects": [
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.POSTINGPERIOD",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_WORK_ORDER_ISSUE_F.POSTINGPERIOD",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.FROMSUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_WORK_ORDER_ISSUE_F.SUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.TOSUBSIDIARY",
+            "variable:NetSuite - Reporting Subsidiary.NETSUITE_REPORTING_SUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.ACCOUNTINGBOOK",
+            "variable:NetSuite - Primary Accounting Book.NETSUITE_PRIMARY_ACCOUNTING_BOOK"
+          ]
+        },
+        "cardinality": "ONE_TO_ONE",
+        "joinType": "INNER"
+      },
+      {
+        "useJoinExpression": true,
+        "rightTable": "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_WORK_ORDER_ISSUE_LINES_F",
+        "joinExpression": {
+          "expressionTemplate": "%1 = %2 AND %3 = %4 AND %5 =  VALUEOF(NQ_SESSION.%6) AND %7 = %8",
+          "expressionObjects": [
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.POSTINGPERIOD",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_WORK_ORDER_ISSUE_LINES_F.POSTINGPERIOD",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.FROMSUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_WORK_ORDER_ISSUE_LINES_F.SUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.TOSUBSIDIARY",
+            "variable:NetSuite - Reporting Subsidiary.NETSUITE_REPORTING_SUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.ACCOUNTINGBOOK",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_WORK_ORDER_ISSUE_LINES_F.ACCOUNTINGBOOK"
+          ]
+        },
+        "cardinality": "ONE_TO_ONE",
+        "joinType": "INNER"
+      },
+      {
+        "useJoinExpression": true,
+        "rightTable": "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_WORK_ORDER_LINES_F",
+        "joinExpression": {
+          "expressionTemplate": "%1 = %2 AND %3 = %4 AND %5 =  VALUEOF(NQ_SESSION.%6) AND %7 = %8",
+          "expressionObjects": [
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.POSTINGPERIOD",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_WORK_ORDER_LINES_F.POSTINGPERIOD",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.FROMSUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_WORK_ORDER_LINES_F.SUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.TOSUBSIDIARY",
+            "variable:NetSuite - Reporting Subsidiary.NETSUITE_REPORTING_SUBSIDIARY",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_NS_CONSOLIDATEDEXCHANGERATE_G.ACCOUNTINGBOOK",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_NS_WORK_ORDER_LINES_F.ACCOUNTINGBOOK"
+          ]
+        },
+        "cardinality": "ONE_TO_ONE",
+        "joinType": "INNER"
+      }
+    ],
+    "additionalKeys": [
+      [
+        "FROMSUBSIDIARY",
+        "POSTINGPERIOD",
+        "TOSUBSIDIARY"
+      ],
+      [
+        "POSTINGPERIOD",
+        "FROMSUBSIDIARY"
+      ]
+    ]
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "physicalTable" : {
+    "name" : "DW_BALANCING_SEGMENT_D",
+    "sourceType" : "TABLE",
+    "physicalColumns" : [ {
+      "name" : "GL_BALANCING_SEGMENT",
+      "dataType" : "VARCHAR",
+      "length" : 128,
+      "nullable" : false
+    }, {
+      "name" : "GL_BLNC_SGMNT_VALUESET_CODE",
+      "dataType" : "VARCHAR",
+      "length" : 128,
+      "nullable" : false
+    }, {
+      "name" : "GL_BALANCING_SEGMENT_ID",
+      "dataType" : "VARCHAR",
+      "length" : 512,
+      "nullable" : true
+    } ],
+    "caching" : {
+      "enable" : true,
+      "expiryTime" : 0
+    }
+  }
+}

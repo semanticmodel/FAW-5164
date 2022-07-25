@@ -1,0 +1,39 @@
+{
+  "physicalTable": {
+    "name": "Fact_DW_USAGE_LOGICAL",
+    "sourceTable": "physicalTable:Oracle_Data_Warehouse.OAX_INFRA.DW_USAGE_LOGICAL",
+    "caching": {
+      "enable": true
+    },
+    "joins": [      {
+        "rightTable": "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_DAY_D_GregorianCalendar",
+        "joinConditions": [          {
+            "leftColumn": "physicalColumn:Oracle_Data_Warehouse.OAX_INFRA.Fact_DW_USAGE_LOGICAL.START_DT",
+            "rightColumn": "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_DAY_D_GregorianCalendar.CALENDAR_DATE"
+          }
+        ]
+      },
+      {
+        "rightTable": "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_USER_D",
+        "joinConditions": [          {
+            "leftColumn": "physicalColumn:Oracle_Data_Warehouse.OAX_INFRA.Fact_DW_USAGE_LOGICAL.USER_NAME",
+            "rightColumn": "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_USER_D.USERNAME"
+          }
+        ]
+      },
+      {
+        "rightTable": "physicalTable:Oracle_Data_Warehouse.OAX_INFRA.Dim_DW_USAGE_PHYSICAL",
+        "joinConditions": [          {
+            "leftColumn": "physicalColumn:Oracle_Data_Warehouse.OAX_INFRA.Fact_DW_USAGE_LOGICAL.ID",
+            "rightColumn": "physicalColumn:Oracle_Data_Warehouse.OAX_INFRA.Dim_DW_USAGE_PHYSICAL.LOGICAL_QUERY_ID"
+          }
+        ]
+      }
+    ],
+    "additionalKeys": [
+      [
+        "ID"
+      ]
+    ]
+  }
+}

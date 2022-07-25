@@ -1,0 +1,23 @@
+{
+  "physicalTable": {
+    "name": "Dim_DW_GL_CODE_COMBINATION_D_LiabilityAccount_PromptOnly",
+    "sourceTable": "physicalTable:Oracle_Data_Warehouse.OAX$OAC.DW_GL_CODE_COMBINATION_D",
+    "caching": {
+      "enable": true
+    },
+    "joins": [      {
+        "rightTable": "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Security_DW_CONTENT_PARAM_CONFIG_COA_LiabilityAccount",
+        "joinConditions": [          {
+            "leftColumn": "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_GL_CODE_COMBINATION_D_LiabilityAccount_PromptOnly.CHART_OF_ACCOUNTS_ID",
+            "rightColumn": "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Security_DW_CONTENT_PARAM_CONFIG_COA_LiabilityAccount.CHART_OF_ACCOUNTS_ID"
+          }
+        ]
+      }
+    ],
+    "additionalKeys": [
+      [
+        "CODE_COMBINATION_ID"
+      ]
+    ]
+  }
+}

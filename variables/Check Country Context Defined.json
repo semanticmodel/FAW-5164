@@ -1,0 +1,23 @@
+{
+  "initBlock" : {
+    "name" : "Check Country Context Defined",
+    "description" : "This Int block returns 0 if no Country context is defined. returns 1 if context is defined",
+    "tags" : [ "Project:Fusion Analytics Warehouse - Absence Management", "Project:Fusion Analytics Warehouse - Expense Management", "Project:Fusion Analytics Warehouse - Inventory", "Project:Fusion Analytics Warehouse - Salary Basis", "Project:Fusion Analytics Warehouse - Talent Acquisition", "Project:Fusion Analytics Warehouse - Talent Profile Management", "Project:Fusion Analytics Warehouse - Workforce Compensation" ],
+    "type" : "SESSION",
+    "connectionPool" : "connectionPool:Oracle_Data_Warehouse.Oracle_Data_Warehouse_Repository_Initblocks_Connection_Pool",
+    "selectStatements" : [ {
+      "databaseType" : "DEFAULT",
+      "query" : "SELECT CASE \r\n         WHEN (Instr('VALUEOF(NQ_SESSION.ROLES)', 'OA4F_HCM_COUNTRY_DATA') > 0)  THEN 1 \r\n         ELSE 0 \r\n       END AS HCM_CONT_SEC_DEFINED\r\nFROM    dual"
+    } ],
+    "variables" : [ {
+      "name" : "HCM_CONT_SEC_DEFINED",
+      "value" : "0",
+      "enableUsersToSetValue" : false,
+      "securitySensitive" : false
+    } ],
+    "disable" : false,
+    "queryReturnsVariableNamesAndValues" : false,
+    "allowDeferredExecution" : false,
+    "cacheQueryResult" : true
+  }
+}

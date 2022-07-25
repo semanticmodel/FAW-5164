@@ -1,0 +1,23 @@
+{
+  "initBlock" : {
+    "name" : "Check If Line Manager",
+    "description" : "This Int block returns 0 if the logged in user is a Line Manager. returns 1 if the user is a Line Manager",
+    "tags" : [ "Project:Fusion Analytics Warehouse - Absence Management", "Project:Fusion Analytics Warehouse - Expense Management", "Project:Fusion Analytics Warehouse - Inventory", "Project:Fusion Analytics Warehouse - Salary Basis", "Project:Fusion Analytics Warehouse - Talent Profile Management", "Project:Fusion Analytics Warehouse - Workforce Compensation" ],
+    "type" : "SESSION",
+    "connectionPool" : "connectionPool:Oracle_Data_Warehouse.Oracle_Data_Warehouse_Repository_Initblocks_Connection_Pool",
+    "selectStatements" : [ {
+      "databaseType" : "DEFAULT",
+      "query" : "SELECT CASE \r\n         WHEN (Instr('VALUEOF(NQ_SESSION.ROLES)', 'OA4F_HCM_LINE_MANAGER_DATA') > 0)  THEN 1 \r\n         ELSE 0 \r\n       END AS IS_LINE_MANAGER \r\nFROM    dual"
+    } ],
+    "variables" : [ {
+      "name" : "IS_LINE_MANAGER",
+      "value" : "0",
+      "enableUsersToSetValue" : false,
+      "securitySensitive" : false
+    } ],
+    "disable" : false,
+    "queryReturnsVariableNamesAndValues" : false,
+    "allowDeferredExecution" : false,
+    "cacheQueryResult" : true
+  }
+}

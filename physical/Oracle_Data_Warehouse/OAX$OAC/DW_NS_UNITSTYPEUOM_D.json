@@ -1,0 +1,21 @@
+{
+  "physicalTable" : {
+    "name" : "DW_NS_UNITSTYPEUOM_D",
+    "sourceType" : "TABLE",
+    "physicalColumns" : [ {
+      "name" : "INTERNALID",
+      "dataType" : "DOUBLE",
+      "length" : 38,
+      "nullable" : true
+    }, {
+      "name" : "UNITNAME",
+      "dataType" : "VARCHAR",
+      "length" : 128,
+      "nullable" : true
+    } ],
+    "caching" : {
+      "enable" : true,
+      "expiryTime" : 0
+    }
+  }
+}

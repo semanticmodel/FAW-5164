@@ -1,0 +1,459 @@
+{
+  "presentationTable" : {
+    "name" : "Time",
+    "description" : "A folder containing time dimensional attributes, e.g. Year, Quarter, Month, Week, Day, and a Time hierarchy.",
+    "tags" : [ "Project:Fusion Analytics Warehouse - Performance Management and Check-ins" ],
+    "presentationColumns" : [ {
+      "name" : "Year",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Performance Management and Check-ins" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Dim - Date Gregorian Calendar.Year",
+      "localization" : {
+        "localizationKey" : "Year",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_HCM_-_Check-Ins_Time_Year)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_HCM_-_Check-Ins_Time_Year)"
+      }
+    }, {
+      "name" : "Quarter",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Performance Management and Check-ins" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Dim - Date Gregorian Calendar.Quarter",
+      "localization" : {
+        "localizationKey" : "Quarter",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_HCM_-_Check-Ins_Time_Quarter)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_HCM_-_Check-Ins_Time_Quarter)"
+      }
+    }, {
+      "name" : "Quarter Number",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Performance Management and Check-ins" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Dim - Date Gregorian Calendar.Quarter Number",
+      "localization" : {
+        "localizationKey" : "Quarter Number",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_HCM_-_Check-Ins_Time_Quarter_Number)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_HCM_-_Check-Ins_Time_Quarter_Number)"
+      }
+    }, {
+      "name" : "Month Name",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Performance Management and Check-ins" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Dim - Date Gregorian Calendar.Month Name",
+      "localization" : {
+        "localizationKey" : "Month Name",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_HCM_-_Check-Ins_Time_Month_Name)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_HCM_-_Check-Ins_Time_Month_Name)"
+      }
+    }, {
+      "name" : "Month",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Performance Management and Check-ins" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Dim - Date Gregorian Calendar.Month",
+      "localization" : {
+        "localizationKey" : "Month",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_HCM_-_Check-Ins_Time_Month)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_HCM_-_Check-Ins_Time_Month)"
+      }
+    }, {
+      "name" : "Month Number",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Performance Management and Check-ins" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Dim - Date Gregorian Calendar.Month Number",
+      "localization" : {
+        "localizationKey" : "Month Number",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_HCM_-_Check-Ins_Time_Month_Number)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_HCM_-_Check-Ins_Time_Month_Number)"
+      }
+    }, {
+      "name" : "Week",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Performance Management and Check-ins" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Dim - Date Gregorian Calendar.Week",
+      "localization" : {
+        "localizationKey" : "Week",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_HCM_-_Check-Ins_Time_Week)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_HCM_-_Check-Ins_Time_Week)"
+      }
+    }, {
+      "name" : "Date",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Performance Management and Check-ins" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Dim - Date Gregorian Calendar.Date",
+      "localization" : {
+        "localizationKey" : "Date",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_HCM_-_Check-Ins_Time_Date)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_HCM_-_Check-Ins_Time_Date)"
+      }
+    }, {
+      "name" : "Day Code",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Performance Management and Check-ins" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Dim - Date Gregorian Calendar.Day Code",
+      "localization" : {
+        "localizationKey" : "Day Code",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_HCM_-_Check-Ins_Time_Day_Code)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_HCM_-_Check-Ins_Time_Day_Code)"
+      }
+    }, {
+      "name" : "Day Name",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Performance Management and Check-ins" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Dim - Date Gregorian Calendar.Day Name",
+      "localization" : {
+        "localizationKey" : "Day Name",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_HCM_-_Check-Ins_Time_Day_Name)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_HCM_-_Check-Ins_Time_Day_Name)"
+      }
+    }, {
+      "name" : "Fiscal Year",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Performance Management and Check-ins" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Dim - Date Fiscal Calendar.Fiscal Year",
+      "hideIfTrue" : {
+        "expressionTemplate" : "1"
+      },
+      "localization" : {
+        "localizationKey" : "Fiscal Year",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_HCM_-_Check-Ins_Time_Fiscal_Year)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_HCM_-_Check-Ins_Time_Fiscal_Year)"
+      }
+    }, {
+      "name" : "Fiscal Quarter",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Performance Management and Check-ins" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Dim - Date Fiscal Calendar.Fiscal Quarter",
+      "hideIfTrue" : {
+        "expressionTemplate" : "1"
+      },
+      "localization" : {
+        "localizationKey" : "Fiscal Quarter",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_HCM_-_Check-Ins_Time_Fiscal_Quarter)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_HCM_-_Check-Ins_Time_Fiscal_Quarter)"
+      }
+    }, {
+      "name" : "Fiscal Quarter Number",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Performance Management and Check-ins" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Dim - Date Fiscal Calendar.Fiscal Quarter Number",
+      "hideIfTrue" : {
+        "expressionTemplate" : "1"
+      },
+      "localization" : {
+        "localizationKey" : "Fiscal Quarter Number",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_HCM_-_Check-Ins_Time_Fiscal_Quarter_Number)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_HCM_-_Check-Ins_Time_Fiscal_Quarter_Number)"
+      }
+    }, {
+      "name" : "Fiscal Period",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Performance Management and Check-ins" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Dim - Date Fiscal Calendar.Fiscal Period",
+      "hideIfTrue" : {
+        "expressionTemplate" : "1"
+      },
+      "localization" : {
+        "localizationKey" : "Fiscal Period",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_HCM_-_Check-Ins_Time_Fiscal_Period)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_HCM_-_Check-Ins_Time_Fiscal_Period)"
+      }
+    }, {
+      "name" : "Fiscal Period Number",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Performance Management and Check-ins" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Dim - Date Fiscal Calendar.Fiscal Period Number",
+      "hideIfTrue" : {
+        "expressionTemplate" : "1"
+      },
+      "localization" : {
+        "localizationKey" : "Fiscal Period Number",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_HCM_-_Check-Ins_Time_Fiscal_Period_Number)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_HCM_-_Check-Ins_Time_Fiscal_Period_Number)"
+      }
+    }, {
+      "name" : "Fiscal Date",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Performance Management and Check-ins" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Dim - Date Fiscal Calendar.Fiscal Date",
+      "hideIfTrue" : {
+        "expressionTemplate" : "1"
+      },
+      "localization" : {
+        "localizationKey" : "Fiscal Date",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_HCM_-_Check-Ins_Time_Fiscal_Date)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_HCM_-_Check-Ins_Time_Fiscal_Date)"
+      }
+    }, {
+      "name" : "Fiscal Calendar Name",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Performance Management and Check-ins" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Dim - Date Fiscal Calendar.Fiscal Calendar Name",
+      "hideIfTrue" : {
+        "expressionTemplate" : "1"
+      },
+      "localization" : {
+        "localizationKey" : "Fiscal Calendar Name",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_HCM_-_Check-Ins_Time_Fiscal_Calendar_Name)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_HCM_-_Check-Ins_Time_Fiscal_Calendar_Name)"
+      }
+    }, {
+      "name" : "Enterprise Year",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Performance Management and Check-ins" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Dim - Date Enterprise Calendar.Enterprise Year",
+      "localization" : {
+        "localizationKey" : "Enterprise Year",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_HCM_-_Check-Ins_Time_Enterprise_Year)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_HCM_-_Check-Ins_Time_Enterprise_Year)"
+      }
+    }, {
+      "name" : "Enterprise Quarter",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Performance Management and Check-ins" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Dim - Date Enterprise Calendar.Enterprise Quarter",
+      "localization" : {
+        "localizationKey" : "Enterprise Quarter",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_HCM_-_Check-Ins_Time_Enterprise_Quarter)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_HCM_-_Check-Ins_Time_Enterprise_Quarter)"
+      }
+    }, {
+      "name" : "Enterprise Quarter Number",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Performance Management and Check-ins" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Dim - Date Enterprise Calendar.Enterprise Quarter Number",
+      "localization" : {
+        "localizationKey" : "Enterprise Quarter Number",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_HCM_-_Check-Ins_Time_Enterprise_Quarter_Number)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_HCM_-_Check-Ins_Time_Enterprise_Quarter_Number)"
+      }
+    }, {
+      "name" : "Enterprise Period",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Performance Management and Check-ins" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Dim - Date Enterprise Calendar.Enterprise Period",
+      "localization" : {
+        "localizationKey" : "Enterprise Period",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_HCM_-_Check-Ins_Time_Enterprise_Period)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_HCM_-_Check-Ins_Time_Enterprise_Period)"
+      }
+    }, {
+      "name" : "Enterprise Period Number",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Performance Management and Check-ins" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Dim - Date Enterprise Calendar.Enterprise Period Number",
+      "localization" : {
+        "localizationKey" : "Enterprise Period Number",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_HCM_-_Check-Ins_Time_Enterprise_Period_Number)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_HCM_-_Check-Ins_Time_Enterprise_Period_Number)"
+      }
+    }, {
+      "name" : "Enterprise Week",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Performance Management and Check-ins" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Dim - Date Enterprise Calendar.Enterprise Week",
+      "localization" : {
+        "localizationKey" : "Enterprise Week",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_HCM_-_Check-Ins_Time_Enterprise_Week)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_HCM_-_Check-Ins_Time_Enterprise_Week)"
+      }
+    }, {
+      "name" : "Enterprise Date",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Performance Management and Check-ins" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Dim - Date Enterprise Calendar.Enterprise Date",
+      "localization" : {
+        "localizationKey" : "Enterprise Date",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_HCM_-_Check-Ins_Time_Enterprise_Date)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_HCM_-_Check-Ins_Time_Enterprise_Date)"
+      }
+    }, {
+      "name" : "Enterprise Day Code",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Performance Management and Check-ins" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Dim - Date Enterprise Calendar.Enterprise Day Code",
+      "localization" : {
+        "localizationKey" : "Enterprise Day Code",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_HCM_-_Check-Ins_Time_Enterprise_Day_Code)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_HCM_-_Check-Ins_Time_Enterprise_Day_Code)"
+      }
+    }, {
+      "name" : "Enterprise Day Name",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Performance Management and Check-ins" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Dim - Date Enterprise Calendar.Enterprise Day Name",
+      "localization" : {
+        "localizationKey" : "Enterprise Day Name",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_HCM_-_Check-Ins_Time_Enterprise_Day_Name)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_HCM_-_Check-Ins_Time_Enterprise_Day_Name)"
+      }
+    } ],
+    "hierarchies" : [ {
+      "name" : "Gregorian Calendar",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Performance Management and Check-ins" ],
+      "sourceLogicalTable" : "logicalTable:Core.Dim - Date Gregorian Calendar",
+      "localization" : {
+        "localizationKey" : "Gregorian Calendar",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_HCM_-_Check-Ins_Time_Gregorian_Calendar)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_HCM_-_Check-Ins_Time_Gregorian_Calendar)"
+      },
+      "levels" : [ {
+        "name" : "Total",
+        "tags" : [ "Project:Fusion Analytics Warehouse - Performance Management and Check-ins" ],
+        "sourceLogicalLevel" : "logicalLevel:Core.Dim - Date Gregorian Calendar.Total",
+        "localization" : {
+          "localizationKey" : "Total",
+          "nameVariable" : "VALUEOF(NQ_SESSION.CN_HCM_-_Check-Ins_Time_Gregorian_Calendar_Total)",
+          "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_HCM_-_Check-Ins_Time_Gregorian_Calendar_Total)"
+        }
+      }, {
+        "name" : "Year",
+        "tags" : [ "Project:Fusion Analytics Warehouse - Performance Management and Check-ins" ],
+        "sourceLogicalLevel" : "logicalLevel:Core.Dim - Date Gregorian Calendar.Year",
+        "displayColumn" : "presentationColumn:HCM - Check-Ins.Time.Year",
+        "localization" : {
+          "localizationKey" : "Year",
+          "nameVariable" : "VALUEOF(NQ_SESSION.CN_HCM_-_Check-Ins_Time_Gregorian_Calendar_Year)",
+          "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_HCM_-_Check-Ins_Time_Gregorian_Calendar_Year)"
+        }
+      }, {
+        "name" : "Quarter",
+        "tags" : [ "Project:Fusion Analytics Warehouse - Performance Management and Check-ins" ],
+        "sourceLogicalLevel" : "logicalLevel:Core.Dim - Date Gregorian Calendar.Quarter",
+        "displayColumn" : "presentationColumn:HCM - Check-Ins.Time.Quarter",
+        "localization" : {
+          "localizationKey" : "Quarter",
+          "nameVariable" : "VALUEOF(NQ_SESSION.CN_HCM_-_Check-Ins_Time_Gregorian_Calendar_Quarter)",
+          "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_HCM_-_Check-Ins_Time_Gregorian_Calendar_Quarter)"
+        }
+      }, {
+        "name" : "Month",
+        "tags" : [ "Project:Fusion Analytics Warehouse - Performance Management and Check-ins" ],
+        "sourceLogicalLevel" : "logicalLevel:Core.Dim - Date Gregorian Calendar.Month",
+        "displayColumn" : "presentationColumn:HCM - Check-Ins.Time.Month",
+        "localization" : {
+          "localizationKey" : "Month",
+          "nameVariable" : "VALUEOF(NQ_SESSION.CN_HCM_-_Check-Ins_Time_Gregorian_Calendar_Month)",
+          "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_HCM_-_Check-Ins_Time_Gregorian_Calendar_Month)"
+        }
+      }, {
+        "name" : "Day",
+        "tags" : [ "Project:Fusion Analytics Warehouse - Performance Management and Check-ins" ],
+        "sourceLogicalLevel" : "logicalLevel:Core.Dim - Date Gregorian Calendar.Day",
+        "displayColumn" : "presentationColumn:HCM - Check-Ins.Time.Date",
+        "localization" : {
+          "localizationKey" : "Day",
+          "nameVariable" : "VALUEOF(NQ_SESSION.CN_HCM_-_Check-Ins_Time_Gregorian_Calendar_Day)",
+          "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_HCM_-_Check-Ins_Time_Gregorian_Calendar_Day)"
+        }
+      } ]
+    }, {
+      "name" : "Fiscal Calendar",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Performance Management and Check-ins" ],
+      "sourceLogicalTable" : "logicalTable:Core.Dim - Date Fiscal Calendar",
+      "hideIfTrue" : {
+        "expressionTemplate" : "1"
+      },
+      "localization" : {
+        "localizationKey" : "Fiscal Calendar",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_HCM_-_Check-Ins_Time_Fiscal_Calendar)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_HCM_-_Check-Ins_Time_Fiscal_Calendar)"
+      },
+      "levels" : [ {
+        "name" : "Total",
+        "tags" : [ "Project:Fusion Analytics Warehouse - Performance Management and Check-ins" ],
+        "sourceLogicalLevel" : "logicalLevel:Core.Dim - Date Fiscal Calendar.Total",
+        "localization" : {
+          "localizationKey" : "Total",
+          "nameVariable" : "VALUEOF(NQ_SESSION.CN_HCM_-_Check-Ins_Time_Fiscal_Calendar_Total)",
+          "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_HCM_-_Check-Ins_Time_Fiscal_Calendar_Total)"
+        }
+      }, {
+        "name" : "Fiscal Calendar",
+        "tags" : [ "Project:Fusion Analytics Warehouse - Performance Management and Check-ins" ],
+        "sourceLogicalLevel" : "logicalLevel:Core.Dim - Date Fiscal Calendar.Fiscal Calendar",
+        "displayColumn" : "presentationColumn:HCM - Check-Ins.Time.Fiscal Calendar Name",
+        "localization" : {
+          "localizationKey" : "Fiscal Calendar",
+          "nameVariable" : "VALUEOF(NQ_SESSION.CN_HCM_-_Check-Ins_Time_Fiscal_Calendar_Fiscal_Calendar)",
+          "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_HCM_-_Check-Ins_Time_Fiscal_Calendar_Fiscal_Calendar)"
+        }
+      }, {
+        "name" : "Fiscal Year",
+        "tags" : [ "Project:Fusion Analytics Warehouse - Performance Management and Check-ins" ],
+        "sourceLogicalLevel" : "logicalLevel:Core.Dim - Date Fiscal Calendar.Fiscal Year",
+        "displayColumn" : "presentationColumn:HCM - Check-Ins.Time.Fiscal Year",
+        "localization" : {
+          "localizationKey" : "Fiscal Year",
+          "nameVariable" : "VALUEOF(NQ_SESSION.CN_HCM_-_Check-Ins_Time_Fiscal_Calendar_Fiscal_Year)",
+          "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_HCM_-_Check-Ins_Time_Fiscal_Calendar_Fiscal_Year)"
+        }
+      }, {
+        "name" : "Fiscal Quarter",
+        "tags" : [ "Project:Fusion Analytics Warehouse - Performance Management and Check-ins" ],
+        "sourceLogicalLevel" : "logicalLevel:Core.Dim - Date Fiscal Calendar.Fiscal Quarter",
+        "displayColumn" : "presentationColumn:HCM - Check-Ins.Time.Fiscal Quarter",
+        "localization" : {
+          "localizationKey" : "Fiscal Quarter",
+          "nameVariable" : "VALUEOF(NQ_SESSION.CN_HCM_-_Check-Ins_Time_Fiscal_Calendar_Fiscal_Quarter)",
+          "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_HCM_-_Check-Ins_Time_Fiscal_Calendar_Fiscal_Quarter)"
+        }
+      }, {
+        "name" : "Fiscal Period",
+        "tags" : [ "Project:Fusion Analytics Warehouse - Performance Management and Check-ins" ],
+        "sourceLogicalLevel" : "logicalLevel:Core.Dim - Date Fiscal Calendar.Fiscal Period",
+        "displayColumn" : "presentationColumn:HCM - Check-Ins.Time.Fiscal Period",
+        "localization" : {
+          "localizationKey" : "Fiscal Period",
+          "nameVariable" : "VALUEOF(NQ_SESSION.CN_HCM_-_Check-Ins_Time_Fiscal_Calendar_Fiscal_Period)",
+          "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_HCM_-_Check-Ins_Time_Fiscal_Calendar_Fiscal_Period)"
+        }
+      }, {
+        "name" : "Detail",
+        "tags" : [ "Project:Fusion Analytics Warehouse - Performance Management and Check-ins" ],
+        "sourceLogicalLevel" : "logicalLevel:Core.Dim - Date Fiscal Calendar.Detail",
+        "displayColumn" : "presentationColumn:HCM - Check-Ins.Time.Fiscal Date",
+        "localization" : {
+          "localizationKey" : "Detail",
+          "nameVariable" : "VALUEOF(NQ_SESSION.CN_HCM_-_Check-Ins_Time_Fiscal_Calendar_Detail)",
+          "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_HCM_-_Check-Ins_Time_Fiscal_Calendar_Detail)"
+        }
+      } ]
+    }, {
+      "name" : "Enterprise Calendar",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Performance Management and Check-ins" ],
+      "sourceLogicalTable" : "logicalTable:Core.Dim - Date Enterprise Calendar",
+      "localization" : {
+        "localizationKey" : "Enterprise Calendar",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_HCM_-_Check-Ins_Time_Enterprise_Calendar)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_HCM_-_Check-Ins_Time_Enterprise_Calendar)"
+      },
+      "levels" : [ {
+        "name" : "Total",
+        "tags" : [ "Project:Fusion Analytics Warehouse - Performance Management and Check-ins" ],
+        "sourceLogicalLevel" : "logicalLevel:Core.Dim - Date Enterprise Calendar.Total",
+        "localization" : {
+          "localizationKey" : "Total",
+          "nameVariable" : "VALUEOF(NQ_SESSION.CN_HCM_-_Check-Ins_Time_Enterprise_Calendar_Total)",
+          "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_HCM_-_Check-Ins_Time_Enterprise_Calendar_Total)"
+        }
+      }, {
+        "name" : "Enterprise Year",
+        "tags" : [ "Project:Fusion Analytics Warehouse - Performance Management and Check-ins" ],
+        "sourceLogicalLevel" : "logicalLevel:Core.Dim - Date Enterprise Calendar.Enterprise Year",
+        "displayColumn" : "presentationColumn:HCM - Check-Ins.Time.Enterprise Year",
+        "localization" : {
+          "localizationKey" : "Enterprise Year",
+          "nameVariable" : "VALUEOF(NQ_SESSION.CN_HCM_-_Check-Ins_Time_Enterprise_Calendar_Enterprise_Year)",
+          "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_HCM_-_Check-Ins_Time_Enterprise_Calendar_Enterprise_Year)"
+        }
+      }, {
+        "name" : "Enterprise Quarter",
+        "tags" : [ "Project:Fusion Analytics Warehouse - Performance Management and Check-ins" ],
+        "sourceLogicalLevel" : "logicalLevel:Core.Dim - Date Enterprise Calendar.Enterprise Quarter",
+        "displayColumn" : "presentationColumn:HCM - Check-Ins.Time.Enterprise Quarter",
+        "localization" : {
+          "localizationKey" : "Enterprise Quarter",
+          "nameVariable" : "VALUEOF(NQ_SESSION.CN_HCM_-_Check-Ins_Time_Enterprise_Calendar_Enterprise_Quarter)",
+          "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_HCM_-_Check-Ins_Time_Enterprise_Calendar_Enterprise_Quarter)"
+        }
+      }, {
+        "name" : "Enterprise Period",
+        "tags" : [ "Project:Fusion Analytics Warehouse - Performance Management and Check-ins" ],
+        "sourceLogicalLevel" : "logicalLevel:Core.Dim - Date Enterprise Calendar.Enterprise Period",
+        "displayColumn" : "presentationColumn:HCM - Check-Ins.Time.Enterprise Period",
+        "localization" : {
+          "localizationKey" : "Enterprise Period",
+          "nameVariable" : "VALUEOF(NQ_SESSION.CN_HCM_-_Check-Ins_Time_Enterprise_Calendar_Enterprise_Period)",
+          "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_HCM_-_Check-Ins_Time_Enterprise_Calendar_Enterprise_Period)"
+        }
+      }, {
+        "name" : "Detail",
+        "tags" : [ "Project:Fusion Analytics Warehouse - Performance Management and Check-ins" ],
+        "sourceLogicalLevel" : "logicalLevel:Core.Dim - Date Enterprise Calendar.Detail",
+        "displayColumn" : "presentationColumn:HCM - Check-Ins.Time.Enterprise Date",
+        "localization" : {
+          "localizationKey" : "Detail",
+          "nameVariable" : "VALUEOF(NQ_SESSION.CN_HCM_-_Check-Ins_Time_Enterprise_Calendar_Detail)",
+          "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_HCM_-_Check-Ins_Time_Enterprise_Calendar_Detail)"
+        }
+      } ]
+    } ],
+    "localization" : {
+      "localizationKey" : "Time",
+      "nameVariable" : "VALUEOF(NQ_SESSION.CN_HCM_-_Check-Ins_Time)",
+      "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_HCM_-_Check-Ins_Time)"
+    }
+  }
+}

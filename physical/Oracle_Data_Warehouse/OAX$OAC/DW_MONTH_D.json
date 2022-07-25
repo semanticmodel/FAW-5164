@@ -1,0 +1,71 @@
+{
+  "physicalTable" : {
+    "name" : "DW_MONTH_D",
+    "sourceType" : "TABLE",
+    "physicalColumns" : [ {
+      "name" : "CAL_MONTH_NUMBER",
+      "dataType" : "INT",
+      "length" : 0,
+      "nullable" : true
+    }, {
+      "name" : "CAL_QUARTER_NUMBER",
+      "dataType" : "INT",
+      "length" : 0,
+      "nullable" : true
+    }, {
+      "name" : "CAL_MONTH_CODE",
+      "dataType" : "VARCHAR",
+      "length" : 32,
+      "nullable" : true
+    }, {
+      "name" : "CAL_MONTH_END_DATE",
+      "dataType" : "DATETIME",
+      "length" : 32,
+      "nullable" : true
+    }, {
+      "name" : "CAL_MONTH_ID",
+      "dataType" : "DOUBLE",
+      "length" : 38,
+      "nullable" : false
+    }, {
+      "name" : "CAL_MONTH_START_DATE",
+      "dataType" : "DATETIME",
+      "length" : 38,
+      "nullable" : true
+    }, {
+      "name" : "CAL_QUARTER_CODE",
+      "dataType" : "VARCHAR",
+      "length" : 32,
+      "nullable" : true
+    }, {
+      "name" : "CAL_YEAR_ID",
+      "dataType" : "INT",
+      "length" : 0,
+      "nullable" : false
+    }, {
+      "name" : "MONTH_END_OR_PRV_CRNT_DATE",
+      "dataType" : "DATETIME",
+      "length" : 32,
+      "nullable" : true
+    }, {
+      "name" : "TRAILING_MONTH_NUMBER",
+      "dataType" : "INT",
+      "length" : 0,
+      "nullable" : false
+    }, {
+      "name" : "TRAILING_QUARTER_NUMBER",
+      "dataType" : "INT",
+      "length" : 0,
+      "nullable" : false
+    }, {
+      "name" : "TRAILING_YEAR_NUMBER",
+      "dataType" : "INT",
+      "length" : 0,
+      "nullable" : false
+    } ],
+    "caching" : {
+      "enable" : true,
+      "expiryTime" : 0
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "logicalTable" : {
+    "name" : "Fact - Multiple Calendar Driving Dimension Metadata for Appshell",
+    "tags" : [ "Project:Fusion Analytics Warehouse - Accounts Payable", "Project:Fusion Analytics Warehouse - Accounts Receivable", "Project:Fusion Analytics Warehouse - Expense Management", "Project:Fusion Analytics Warehouse - GL Budgets Analysis", "Project:Fusion Analytics Warehouse - General Ledger", "Project:Fusion Analytics Warehouse - Inventory", "Project:Fusion Analytics Warehouse - Order Management", "Project:Fusion Analytics Warehouse - Procurement Management", "Project:Fusion Analytics Warehouse - Purchase Agreements", "Project:Fusion Analytics Warehouse - Purchase Orders", "Project:Fusion Analytics Warehouse - Purchase Receipts", "Project:Fusion Analytics Warehouse - Reconciliation", "Project:Oracle Analytics for Fusion Common", "Project:Oracle Analytics for Fusion Financials" ],
+    "type" : "FACT",
+    "logicalColumns" : [ {
+      "name" : "Record Count",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "Fact_CONTENT_APPSHELL_DRIVING_DIM_SA_MAPPING",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_CONTENT_APPSHELL_DRIVING_DIM_SA_MAPPING.PRESENTATION_COLUMN" ]
+          }
+        } ]
+      },
+      "aggregation" : {
+        "rule" : "COUNT",
+        "dataIsDense" : false
+      }
+    } ],
+    "logicalTableSources" : [ {
+      "name" : "Fact_CONTENT_APPSHELL_DRIVING_DIM_SA_MAPPING",
+      "disable" : false,
+      "tableMapping" : {
+        "tables" : [ "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Fact_CONTENT_APPSHELL_DRIVING_DIM_SA_MAPPING" ]
+      },
+      "dataGranularity" : [ "logicalLevel:Core.Dim - Multiple Calendar Driving Dimension Metadata for Appshell.Detail", "logicalLevel:Core.Dim - Multiple Calendar Driving Dimension Type for Appshell.Detail" ],
+      "combineWithOtherFragments" : false,
+      "enableFragmentSelection" : false,
+      "distinctValues" : false
+    } ],
+    "joins" : [ {
+      "rightTable" : "logicalTable:Core.Dim - Multiple Calendar Driving Dimension Metadata for Appshell",
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ZERO_OR_ONE"
+    }, {
+      "rightTable" : "logicalTable:Core.Dim - Multiple Calendar Driving Dimension Type for Appshell",
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ZERO_OR_ONE"
+    } ]
+  }
+}

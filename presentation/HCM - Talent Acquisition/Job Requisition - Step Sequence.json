@@ -1,0 +1,33 @@
+{
+  "presentationTable" : {
+    "name" : "Job Requisition - Step Sequence",
+    "tags" : [ "Project:Fusion Analytics Warehouse - Talent Acquisition", "Project:Oracle Analytics for Fusion Human Capital Management" ],
+    "hideIfTrue" : {
+      "expressionTemplate" : "1 = 1"
+    },
+    "presentationColumns" : [ {
+      "name" : "Phase Sequence",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Talent Acquisition", "Project:Oracle Analytics for Fusion Human Capital Management" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Dim - Job Requisition Phase State Sequence.Phase Sequence",
+      "localization" : {
+        "localizationKey" : "Phase Sequence",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_HCM_-_Talent_Acquisition_Job_Requisition_-_Step_Sequence_Phase_Sequence)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_HCM_-_Talent_Acquisition_Job_Requisition_-_Step_Sequence_Phase_Sequence)"
+      }
+    }, {
+      "name" : "State Sequence",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Talent Acquisition", "Project:Oracle Analytics for Fusion Human Capital Management" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Dim - Job Requisition Phase State Sequence.State Sequence",
+      "localization" : {
+        "localizationKey" : "State Sequence",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_HCM_-_Talent_Acquisition_Job_Requisition_-_Step_Sequence_State_Sequence)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_HCM_-_Talent_Acquisition_Job_Requisition_-_Step_Sequence_State_Sequence)"
+      }
+    } ],
+    "localization" : {
+      "localizationKey" : "Job Requisition - Step Sequence",
+      "nameVariable" : "VALUEOF(NQ_SESSION.CN_HCM_-_Talent_Acquisition_Job_Requisition_-_Step_Sequence)",
+      "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_HCM_-_Talent_Acquisition_Job_Requisition_-_Step_Sequence)"
+    }
+  }
+}

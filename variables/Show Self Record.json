@@ -1,0 +1,23 @@
+{
+  "initBlock" : {
+    "name" : "Show Self Record",
+    "description" : "This Init Block check of Self record is enabled YES - returns 1 and NO retunrs 0. By default 1",
+    "tags" : [ "Project:Fusion Analytics Warehouse - Absence Management", "Project:Fusion Analytics Warehouse - Expense Management", "Project:Fusion Analytics Warehouse - General Ledger", "Project:Fusion Analytics Warehouse - Goals and Career Development", "Project:Fusion Analytics Warehouse - Inventory", "Project:Fusion Analytics Warehouse - Performance Management and Check-ins", "Project:Fusion Analytics Warehouse - Salary Basis", "Project:Fusion Analytics Warehouse - Talent Acquisition", "Project:Fusion Analytics Warehouse - Talent Profile Management", "Project:Fusion Analytics Warehouse - Workforce Compensation", "Project:Fusion Analytics Warehouse - Workforce Management", "Project:Oracle Analytics for Fusion Human Capital Management" ],
+    "type" : "SESSION",
+    "connectionPool" : "connectionPool:Oracle_Data_Warehouse.Oracle_Data_Warehouse_Repository_Initblocks_Connection_Pool",
+    "selectStatements" : [ {
+      "databaseType" : "DEFAULT",
+      "query" : "SELECT\r\n  CASE\r\n    WHEN  SEC_OBJ_MEMBER_VAL = 'YES'\r\n    THEN 1\r\n    ELSE 0\r\n  END AS SEE_SELF_RCD\r\nFROM   OAX$SECURITY.SEC_SECURE_BY_OBJ_MEMBER_USER\r\nWHERE SEC_OBJ_CODE = 'OA4F_SEC_HCM_SEE_SELF_RECORD'\r\nAND USERNAME     = 'VALUEOF(NQ_SESSION.USER)'"
+    } ],
+    "variables" : [ {
+      "name" : "SEE_SELF_RCD",
+      "value" : "1",
+      "enableUsersToSetValue" : false,
+      "securitySensitive" : false
+    } ],
+    "disable" : false,
+    "queryReturnsVariableNamesAndValues" : false,
+    "allowDeferredExecution" : true,
+    "cacheQueryResult" : true
+  }
+}

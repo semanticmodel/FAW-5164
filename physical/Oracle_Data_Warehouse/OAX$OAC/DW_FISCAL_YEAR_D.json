@@ -1,0 +1,27 @@
+{
+  "physicalTable" : {
+    "name" : "DW_FISCAL_YEAR_D",
+    "sourceType" : "TABLE",
+    "physicalColumns" : [ {
+      "name" : "FISCAL_PERIOD_SET_NAME",
+      "dataType" : "VARCHAR",
+      "length" : 16,
+      "nullable" : true
+    }, {
+      "name" : "FISCAL_TRAILING_YEAR_NUMBER",
+      "dataType" : "DOUBLE",
+      "length" : 38,
+      "nullable" : true
+    }, {
+      "name" : "FISCAL_YEAR_NUMBER",
+      "dataType" : "DOUBLE",
+      "length" : 38,
+      "nullable" : true
+    } ],
+    "additionalKeys" : [ [ "FISCAL_PERIOD_SET_NAME", "FISCAL_YEAR_NUMBER" ] ],
+    "caching" : {
+      "enable" : true,
+      "expiryTime" : 0
+    }
+  }
+}

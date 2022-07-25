@@ -1,0 +1,24 @@
+{
+  "initBlock" : {
+    "name" : "Fiscal Calendar - Trailing 3 Periods",
+    "description" : "Defaults to the last 3 periods + current period of the calendar chosen in the configuration",
+    "tags" : [ "Project:Fusion Analytics Warehouse - Inventory", "Project:Fusion Analytics Warehouse - Procurement Management", "Project:Fusion Analytics Warehouse - Purchase Agreements", "Project:Fusion Analytics Warehouse - Purchase Orders", "Project:Fusion Analytics Warehouse - Purchase Receipts", "Project:Oracle Analytics for Fusion Common" ],
+    "type" : "SESSION",
+    "connectionPool" : "connectionPool:Oracle_Data_Warehouse.Oracle_Data_Warehouse_Repository_Initblocks_Connection_Pool",
+    "selectStatements" : [ {
+      "databaseType" : "DEFAULT",
+      "query" : "SELECT DISTINCT 'TRAILING_3_FISCAL_PERIODS',B.FISCAL_PERIOD FROM \r\n(SELECT FISCAL_PERIOD_SET_NAME,FISCAL_PERIOD_TYPE,CURRENT_FISCAL_PERIOD_CODE,FISCAL_PERIOD_NAME AS FISCAL_PERIOD,(COUNT(1) OVER (PARTITION BY FISCAL_PERIOD_SET_NAME,FISCAL_PERIOD_TYPE\r\nORDER BY FISCAL_PERIOD_SET_NAME,FISCAL_PERIOD_TYPE,FISCAL_YEAR_NUMBER,FISCAL_PERIOD_NUMBER)) AS RUN_COUNT FROM DW_FISCAL_PERIOD_D WHERE ADJUSTMENT_PERIOD_FLAG='N') A,\r\n(SELECT FISCAL_PERIOD_SET_NAME,FISCAL_PERIOD_TYPE,CURRENT_FISCAL_PERIOD_CODE,FISCAL_PERIOD_NAME AS FISCAL_PERIOD,(COUNT(1) OVER (PARTITION BY FISCAL_PERIOD_SET_NAME,FISCAL_PERIOD_TYPE\r\nORDER BY FISCAL_PERIOD_SET_NAME,FISCAL_PERIOD_TYPE,FISCAL_YEAR_NUMBER,FISCAL_PERIOD_NUMBER)) AS RUN_COUNT FROM DW_FISCAL_PERIOD_D WHERE ADJUSTMENT_PERIOD_FLAG='N') B\r\nWHERE A.FISCAL_PERIOD_SET_NAME=B.FISCAL_PERIOD_SET_NAME\r\nAND A.FISCAL_PERIOD_TYPE=B.FISCAL_PERIOD_TYPE\r\nAND A.CURRENT_FISCAL_PERIOD_CODE='Current'\r\nAND A.FISCAL_PERIOD_SET_NAME='VALUEOF(NQ_SESSION.FISCAL_CALENDAR)'\r\nAND B.RUN_COUNT BETWEEN A.RUN_COUNT-3 AND A.RUN_COUNT"
+    } ],
+    "variables" : [ {
+      "name" : "TRAILING_3_FISCAL_PERIODS",
+      "value" : "'Dec-00'",
+      "enableUsersToSetValue" : false,
+      "securitySensitive" : false
+    } ],
+    "dependencies" : [ "Fiscal Calendar - Fiscal Reporting Calendar" ],
+    "disable" : false,
+    "queryReturnsVariableNamesAndValues" : true,
+    "allowDeferredExecution" : true,
+    "cacheQueryResult" : false
+  }
+}

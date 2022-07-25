@@ -1,0 +1,32 @@
+{
+  "physicalTable": {
+    "name": "Dim_DW_QUARTER_D_GregorianCalendar",
+    "sourceTable": "physicalTable:Oracle_Data_Warehouse.OAX$OAC.DW_QUARTER_D",
+    "caching": {
+      "enable": true
+    },
+    "joins": [      {
+        "useJoinExpression": true,
+        "rightTable": "physicalTable:Oracle_Data_Warehouse.OAX_INFRA.Fact_DW_USAGE_LOGICAL",
+        "joinExpression": {
+          "expressionTemplate": "%1 >= %2 AND %1 <= %3",
+          "expressionObjects": [
+            "physicalColumn:Oracle_Data_Warehouse.OAX_INFRA.Fact_DW_USAGE_LOGICAL.START_DT",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_QUARTER_D_GregorianCalendar.CAL_QUARTER_START_DATE",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_QUARTER_D_GregorianCalendar.CAL_QUARTER_END_DATE"
+          ]
+        },
+        "cardinality": "MANY_TO_ONE",
+        "joinType": "INNER"
+      }
+    ],
+    "additionalKeys": [
+      [
+        "CAL_QUARTER_ID"
+      ],
+      [
+        "QUARTER_END_OR_PRV_CRNT_DATE"
+      ]
+    ]
+  }
+}

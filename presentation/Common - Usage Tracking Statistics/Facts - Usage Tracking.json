@@ -1,0 +1,11 @@
+{
+  "presentationTable" : {
+    "name" : "Facts - Usage Tracking",
+    "tags" : [ "Project:Oracle Analytics for Fusion Common" ],
+    "localization" : {
+      "localizationKey" : "Facts - Usage Tracking",
+      "nameVariable" : "VALUEOF(NQ_SESSION.CN_Common_-_Usage_Tracking_Statistics_Facts_-_Usage_Tracking)",
+      "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_Common_-_Usage_Tracking_Statistics_Facts_-_Usage_Tracking)"
+    }
+  }
+}

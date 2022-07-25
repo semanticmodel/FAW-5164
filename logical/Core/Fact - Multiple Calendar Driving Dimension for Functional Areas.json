@@ -1,0 +1,46 @@
+{
+  "logicalTable" : {
+    "name" : "Fact - Multiple Calendar Driving Dimension for Functional Areas",
+    "tags" : [ "Project:Oracle Analytics for Fusion Common", "Project:Oracle Analytics for Fusion Financials" ],
+    "type" : "FACT",
+    "logicalColumns" : [ {
+      "name" : "Record Count",
+      "dataType" : "INT",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "Fact_DW_MULTI_CAL_DRIVING_DIM_FOR_FUNC_AREAS",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_MULTI_CAL_DRIVING_DIM_FOR_FUNC_AREAS.ACTIVATED_INDICATOR" ]
+          }
+        } ]
+      },
+      "aggregation" : {
+        "rule" : "COUNT",
+        "dataIsDense" : false
+      }
+    } ],
+    "logicalTableSources" : [ {
+      "name" : "Fact_DW_MULTI_CAL_DRIVING_DIM_FOR_FUNC_AREAS",
+      "disable" : false,
+      "tableMapping" : {
+        "tables" : [ "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_MULTI_CAL_DRIVING_DIM_FOR_FUNC_AREAS" ]
+      },
+      "dataGranularity" : [ "logicalLevel:Core.Dim - Multiple Calendar Driving Dimension for Functional Areas.Detail", "logicalLevel:Core.Dim - Multiple Calendar Driving Dimension Type for Appshell.Detail" ],
+      "combineWithOtherFragments" : false,
+      "enableFragmentSelection" : false,
+      "distinctValues" : false
+    } ],
+    "joins" : [ {
+      "rightTable" : "logicalTable:Core.Dim - Multiple Calendar Driving Dimension Type for Appshell",
+      "joinType" : "LEFT_OUTER",
+      "cardinality" : "MANY_TO_ZERO_OR_ONE"
+    }, {
+      "rightTable" : "logicalTable:Core.Dim - Multiple Calendar Driving Dimension for Functional Areas",
+      "joinType" : "LEFT_OUTER",
+      "cardinality" : "MANY_TO_ZERO_OR_ONE"
+    } ]
+  }
+}

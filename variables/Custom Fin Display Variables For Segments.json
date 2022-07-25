@@ -1,0 +1,97 @@
+{
+  "initBlock" : {
+    "name" : "Custom Fin Display Variables For Segments",
+    "tags" : [ "Project:Fusion Analytics Warehouse - Accounts Payable", "Project:Fusion Analytics Warehouse - Accounts Receivable", "Project:Fusion Analytics Warehouse - Expense Management", "Project:Fusion Analytics Warehouse - GL Budgets Analysis", "Project:Fusion Analytics Warehouse - General Ledger", "Project:Fusion Analytics Warehouse - Inventory", "Project:Fusion Analytics Warehouse - Reconciliation", "Project:Oracle Analytics for Fusion Financials" ],
+    "type" : "SESSION",
+    "connectionPool" : "connectionPool:Oracle_Data_Warehouse.Oracle_Data_Warehouse_Repository_Initblocks_Connection_Pool",
+    "selectStatements" : [ {
+      "databaseType" : "DEFAULT",
+      "query" : "SELECT 'Tree Filter','Code','Name','Description','Level 31','Level 30','Level 29','Level 28','Level 27','Level 26','Level 25','Level 24','Level 23','Level 22','Base Level','Hierarchy' FROM DUAL"
+    } ],
+    "variables" : [ {
+      "name" : "FIN_TREE_FILTER",
+      "value" : "'Tree Filter'",
+      "enableUsersToSetValue" : false,
+      "securitySensitive" : false
+    }, {
+      "name" : "FIN_CODE",
+      "value" : "'Code'",
+      "enableUsersToSetValue" : false,
+      "securitySensitive" : false
+    }, {
+      "name" : "FIN_NAME",
+      "value" : "'Name'",
+      "enableUsersToSetValue" : false,
+      "securitySensitive" : false
+    }, {
+      "name" : "FIN_DESCRIPTION",
+      "value" : "'Description'",
+      "enableUsersToSetValue" : false,
+      "securitySensitive" : false
+    }, {
+      "name" : "FIN_LEVEL31",
+      "value" : "'Level 31'",
+      "enableUsersToSetValue" : false,
+      "securitySensitive" : false
+    }, {
+      "name" : "FIN_LEVEL30",
+      "value" : "'Level 30'",
+      "enableUsersToSetValue" : false,
+      "securitySensitive" : false
+    }, {
+      "name" : "FIN_LEVEL29",
+      "value" : "'Level 29'",
+      "enableUsersToSetValue" : false,
+      "securitySensitive" : false
+    }, {
+      "name" : "FIN_LEVEL28",
+      "value" : "'Level 28'",
+      "enableUsersToSetValue" : false,
+      "securitySensitive" : false
+    }, {
+      "name" : "FIN_LEVEL27",
+      "value" : "'Level 27'",
+      "enableUsersToSetValue" : false,
+      "securitySensitive" : false
+    }, {
+      "name" : "FIN_LEVEL26",
+      "value" : "'Level 26'",
+      "enableUsersToSetValue" : false,
+      "securitySensitive" : false
+    }, {
+      "name" : "FIN_LEVEL25",
+      "value" : "'Level 25'",
+      "enableUsersToSetValue" : false,
+      "securitySensitive" : false
+    }, {
+      "name" : "FIN_LEVEL24",
+      "value" : "'Level 24'",
+      "enableUsersToSetValue" : false,
+      "securitySensitive" : false
+    }, {
+      "name" : "FIN_LEVEL23",
+      "value" : "'Level 23'",
+      "enableUsersToSetValue" : false,
+      "securitySensitive" : false
+    }, {
+      "name" : "FIN_LEVEL22",
+      "value" : "'Level 22'",
+      "enableUsersToSetValue" : false,
+      "securitySensitive" : false
+    }, {
+      "name" : "FIN_BASE_LEVEL",
+      "value" : "'Base Level'",
+      "enableUsersToSetValue" : false,
+      "securitySensitive" : false
+    }, {
+      "name" : "FIN_HIERARCHY",
+      "value" : "'Hierarchy'",
+      "enableUsersToSetValue" : false,
+      "securitySensitive" : false
+    } ],
+    "disable" : false,
+    "queryReturnsVariableNamesAndValues" : false,
+    "allowDeferredExecution" : true,
+    "cacheQueryResult" : true
+  }
+}

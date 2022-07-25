@@ -1,0 +1,27 @@
+{
+  "physicalTable" : {
+    "name" : "DW_CONTENT_PARAM_CONFIG_LEDGER",
+    "sourceType" : "SELECT",
+    "selectStatements" : [ {
+      "databaseType" : "DEFAULT",
+      "query" : "SELECT ledgers.ledger_id, 'LEDGER_ID' parameter_code\r\nFROM dw_ledger_d ledgers \r\nWHERE \r\n(  EXISTS \r\n (SELECT 'x' FROM dw_content_param_config paramLedger\r\n  WHERE paramLedger.parameter_code = 'PARAM_ERP_FINANCIALS_LEDGER_ID_LIST_REPORT'\r\n  AND (paramLedger.parameter_value = 'ALL' OR TO_CHAR(ledgers.ledger_id) = paramLedger.parameter_value))\r\nOR EXISTS \r\n (SELECT 'x' FROM dw_content_param_config paramLedgerSet, dw_ledger_set_assignments_d assignments\r\n  WHERE paramLedgerSet.parameter_code = 'PARAM_ERP_FINANCIALS_LEDGER_SET_ID_LIST_REPORT'\r\n  AND (paramLedgerSet.parameter_value = 'ALL' OR TO_CHAR(assignments.ledger_set_id) = paramLedgerSet.parameter_value)\r\n  AND ledgers.ledger_id = assignments.ledger_id)\r\n) \r\nAND EXISTS \r\n(SELECT 'x' FROM dw_content_param_config paramCOA\r\n WHERE paramCOA.parameter_code = 'PARAM_ERP_FINANCIALS_CHART_OF_ACCOUNT_ID'\r\n AND (paramCOA.parameter_value = 'ALL' OR TO_CHAR(ledgers.ledger_chart_of_accounts_id) = paramCOA.parameter_value))\r\n"
+    } ],
+    "physicalColumns" : [ {
+      "name" : "LEDGER_ID",
+      "dataType" : "DOUBLE",
+      "length" : 0,
+      "nullable" : false
+    }, {
+      "name" : "PARAMETER_CODE",
+      "dataType" : "VARCHAR",
+      "length" : 128,
+      "nullable" : false
+    } ],
+    "caching" : {
+      "enable" : true,
+      "expiryTime" : 1,
+      "expiryUnit" : "DAYS"
+    },
+    "additionalKeys" : [ [ "LEDGER_ID" ] ]
+  }
+}

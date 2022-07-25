@@ -1,0 +1,18 @@
+{
+  "physicalTable": {
+    "name": "Dim_DW_W_FISCAL_DAY_D_TransactionDate_PromptOnly",
+    "sourceTable": "physicalTable:Oracle_Data_Warehouse.OAX$OAC.DW_FISCAL_DAY_D",
+    "caching": {
+      "enable": true
+    },
+    "joins": [      {
+        "rightTable": "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Security_DW_CONTENT_PARAM_CONFIG_FISCALCALENDAR_TransactionDate",
+        "joinConditions": [          {
+            "leftColumn": "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_W_FISCAL_DAY_D_TransactionDate_PromptOnly.FISCAL_PERIOD_SET_NAME",
+            "rightColumn": "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Security_DW_CONTENT_PARAM_CONFIG_FISCALCALENDAR_TransactionDate.FISCAL_PERIOD_SET_NAME"
+          }
+        ]
+      }
+    ]
+  }
+}

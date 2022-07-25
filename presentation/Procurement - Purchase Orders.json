@@ -1,0 +1,448 @@
+{
+  "subjectArea" : {
+    "name" : "Procurement - Purchase Orders",
+    "description" : "This is a detailed subject area that combines the information from Purchase Orders, Purchase Order Costs and Purchase Schedules with the ability to report on committed amounts, contract spend and Purchase orders of the suppliers of an organization across suppliers, company, products, item categories and associated hierarchies at purchase order line level.",
+    "tags" : [ "Project:Fusion Analytics Warehouse - Purchase Orders" ],
+    "sourceBusinessModel" : "businessModel:Core",
+    "implicitFactColumn" : "logicalColumn:Core.Fact - PRC - Purchase Orders.Purchase Order Count",
+    "alternateNames" : [ "Procurement - Purchase Order" ],
+    "hideIfTrue" : {
+      "expressionTemplate" : " VALUEOF(NQ_SESSION.\"%1\") = 'HIDE'",
+      "expressionObjects" : [ "variable:undeclaredVariables.AM_Procurement_-_Purchase_Orders" ]
+    },
+    "tableOrder" : [ {
+      "name" : "presentationTable:Procurement - Purchase Orders.Time"
+    }, {
+      "name" : "presentationTable:Procurement - Purchase Orders.Sold To Legal Entity"
+    }, {
+      "name" : "presentationTable:Procurement - Purchase Orders.GL Account"
+    }, {
+      "name" : "presentationTable:Procurement - Purchase Orders.GL Segments",
+      "children" : [ {
+        "name" : "presentationTable:Procurement - Purchase Orders.Cost Center"
+      }, {
+        "name" : "presentationTable:Procurement - Purchase Orders.Cost Center Hierarchy"
+      }, {
+        "name" : "presentationTable:Procurement - Purchase Orders.Balancing Segment"
+      }, {
+        "name" : "presentationTable:Procurement - Purchase Orders.Balancing Segment Hierarchy"
+      }, {
+        "name" : "presentationTable:Procurement - Purchase Orders.Natural Account"
+      }, {
+        "name" : "presentationTable:Procurement - Purchase Orders.Natural Account Hierarchy"
+      }, {
+        "name" : "presentationTable:Procurement - Purchase Orders.GL Segment1"
+      }, {
+        "name" : "presentationTable:Procurement - Purchase Orders.GL Segment1 Hierarchy"
+      }, {
+        "name" : "presentationTable:Procurement - Purchase Orders.GL Segment2"
+      }, {
+        "name" : "presentationTable:Procurement - Purchase Orders.GL Segment2 Hierarchy"
+      }, {
+        "name" : "presentationTable:Procurement - Purchase Orders.GL Segment3"
+      }, {
+        "name" : "presentationTable:Procurement - Purchase Orders.GL Segment3 Hierarchy"
+      }, {
+        "name" : "presentationTable:Procurement - Purchase Orders.GL Segment4"
+      }, {
+        "name" : "presentationTable:Procurement - Purchase Orders.GL Segment4 Hierarchy"
+      }, {
+        "name" : "presentationTable:Procurement - Purchase Orders.GL Segment5"
+      }, {
+        "name" : "presentationTable:Procurement - Purchase Orders.GL Segment5 Hierarchy"
+      }, {
+        "name" : "presentationTable:Procurement - Purchase Orders.GL Segment6"
+      }, {
+        "name" : "presentationTable:Procurement - Purchase Orders.GL Segment6 Hierarchy"
+      }, {
+        "name" : "presentationTable:Procurement - Purchase Orders.GL Segment7"
+      }, {
+        "name" : "presentationTable:Procurement - Purchase Orders.GL Segment7 Hierarchy"
+      }, {
+        "name" : "presentationTable:Procurement - Purchase Orders.GL Segment8"
+      }, {
+        "name" : "presentationTable:Procurement - Purchase Orders.GL Segment8 Hierarchy"
+      }, {
+        "name" : "presentationTable:Procurement - Purchase Orders.GL Segment9"
+      }, {
+        "name" : "presentationTable:Procurement - Purchase Orders.GL Segment9 Hierarchy"
+      }, {
+        "name" : "presentationTable:Procurement - Purchase Orders.GL Segment10"
+      }, {
+        "name" : "presentationTable:Procurement - Purchase Orders.GL Segment10 Hierarchy"
+      } ]
+    }, {
+      "name" : "presentationTable:Procurement - Purchase Orders.Payables Invoicing Business Unit"
+    }, {
+      "name" : "presentationTable:Procurement - Purchase Orders.Procurement Business Unit"
+    }, {
+      "name" : "presentationTable:Procurement - Purchase Orders.Requisition Business Unit"
+    }, {
+      "name" : "presentationTable:Procurement - Purchase Orders.Agreement Procurement Business Unit"
+    }, {
+      "name" : "presentationTable:Procurement - Purchase Orders.Business Unit"
+    }, {
+      "name" : "presentationTable:Procurement - Purchase Orders.Supplier"
+    }, {
+      "name" : "presentationTable:Procurement - Purchase Orders.Supplier Site"
+    }, {
+      "name" : "presentationTable:Procurement - Purchase Orders.Inventory Organization"
+    }, {
+      "name" : "presentationTable:Procurement - Purchase Orders.Ship To Location"
+    }, {
+      "name" : "presentationTable:Procurement - Purchase Orders.Bill To Location"
+    }, {
+      "name" : "presentationTable:Procurement - Purchase Orders.Deliver To Location"
+    }, {
+      "name" : "presentationTable:Procurement - Purchase Orders.Buyer"
+    }, {
+      "name" : "presentationTable:Procurement - Purchase Orders.Purchase Item"
+    }, {
+      "name" : "presentationTable:Procurement - Purchase Orders.Purchasing Category"
+    }, {
+      "name" : "presentationTable:Procurement - Purchase Orders.Inventory Item"
+    }, {
+      "name" : "presentationTable:Procurement - Purchase Orders.Unit of Measure"
+    }, {
+      "name" : "presentationTable:Procurement - Purchase Orders.Procurement Category Hierarchy"
+    }, {
+      "name" : "presentationTable:Procurement - Purchase Orders.Supplier Category Hierarchy"
+    }, {
+      "name" : "presentationTable:Procurement - Purchase Orders.Purchase Order References"
+    }, {
+      "name" : "presentationTable:Procurement - Purchase Orders.Purchase Order Details",
+      "children" : [ {
+        "name" : "presentationTable:Procurement - Purchase Orders.Document Details"
+      }, {
+        "name" : "presentationTable:Procurement - Purchase Orders.Terms"
+      }, {
+        "name" : "presentationTable:Procurement - Purchase Orders.Approved Date"
+      }, {
+        "name" : "presentationTable:Procurement - Purchase Orders.Close Date"
+      }, {
+        "name" : "presentationTable:Procurement - Purchase Orders.Open Date"
+      }, {
+        "name" : "presentationTable:Procurement - Purchase Orders.Submit Date"
+      }, {
+        "name" : "presentationTable:Procurement - Purchase Orders.Creation Date"
+      } ]
+    }, {
+      "name" : "presentationTable:Procurement - Purchase Orders.Purchase Order Lines Details"
+    }, {
+      "name" : "presentationTable:Procurement - Purchase Orders.Source Agreement"
+    }, {
+      "name" : "presentationTable:Procurement - Purchase Orders.Purchase Order Schedule Details",
+      "children" : [ {
+        "name" : "presentationTable:Procurement - Purchase Orders.Requested Delivery Date"
+      }, {
+        "name" : "presentationTable:Procurement - Purchase Orders.Promised Delivery Date"
+      }, {
+        "name" : "presentationTable:Procurement - Purchase Orders.Requested Ship Date"
+      }, {
+        "name" : "presentationTable:Procurement - Purchase Orders.Promised Ship Date"
+      }, {
+        "name" : "presentationTable:Procurement - Purchase Orders.Closed for Invoicing Date"
+      }, {
+        "name" : "presentationTable:Procurement - Purchase Orders.Closed for Receiving Date"
+      }, {
+        "name" : "presentationTable:Procurement - Purchase Orders.Shipment Cancelled Date"
+      }, {
+        "name" : "presentationTable:Procurement - Purchase Orders.Shipment Closed Date"
+      } ]
+    }, {
+      "name" : "presentationTable:Procurement - Purchase Orders.Purchase Order Distribution Details",
+      "children" : [ {
+        "name" : "presentationTable:Procurement - Purchase Orders.Distribution Details"
+      }, {
+        "name" : "presentationTable:Procurement - Purchase Orders.Distribution Created By"
+      } ]
+    }, {
+      "name" : "presentationTable:Procurement - Purchase Orders.Requisition Headers"
+    }, {
+      "name" : "presentationTable:Procurement - Purchase Orders.Requisition Lines"
+    }, {
+      "name" : "presentationTable:Procurement - Purchase Orders.PO Document History"
+    }, {
+      "name" : "presentationTable:Procurement - Purchase Orders.Created By"
+    }, {
+      "name" : "presentationTable:Procurement - Purchase Orders.Descriptive Flexfield (DFF)",
+      "children" : [ {
+        "name" : "presentationTable:Procurement - Purchase Orders.DFF - Suppliers"
+      }, {
+        "name" : "presentationTable:Procurement - Purchase Orders.DFF - Supplier Sites"
+      } ]
+    }, {
+      "name" : "presentationTable:Procurement - Purchase Orders.Currency"
+    }, {
+      "name" : "presentationTable:Procurement - Purchase Orders.Facts - Purchase Orders"
+    }, {
+      "name" : "presentationTable:Procurement - Purchase Orders.Facts - Analytics Currency"
+    }, {
+      "name" : "presentationTable:Procurement - Purchase Orders.Facts - Document Currency"
+    } ],
+    "permissions" : [ {
+      "accessor" : "role:DEFAULT",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:NAW_FINANCIALS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:NAW_INVENTORY_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:NAW_MANUFACTURING_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:NAW_PAYABLES_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:NAW_PURCHASING_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:NAW_SALES_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_COMMON_DATA_ADMIN_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_CONTENT_REPORTING_CONFIG",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_CX_OPTY_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_CX_OPTY_PROG_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_CX_OPTY_SNP_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_CX_REVN_LINE_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_CX_REVN_LINE_SNP_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_CX_SALES_ACCNT_DATA",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_CX_SALES_OPTY_CUSTOM_DATA",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_CX_SALES_OPTY_DATA",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_FIN_AP_AGING_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_FIN_AP_BUSINESS_UNIT_DATA",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_FIN_AP_EXPENSES_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_FIN_AP_HOLDS_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_FIN_AP_INVOICES_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_FIN_AP_LIABILITIES_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_FIN_AP_PAYMENTS_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_FIN_AP_PAYMENT_BUSINESS_UNIT_DATA",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_FIN_AR_ADJUSTMENTS_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_FIN_AR_AGING_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_FIN_AR_APPLICATIONS_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_FIN_AR_BUSINESS_UNIT_DATA",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_FIN_AR_CREDITMEMO_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_FIN_AR_RECEIPT_BUSINESS_UNIT_DATA",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_FIN_AR_REVENUE_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_FIN_AR_TRANSACTIONS_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_FIN_EXM_EMPLOYEE_EXPENSE_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_FIN_GL_ACCESS_SET_DATA",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_FIN_GL_ACCOUNT_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_FIN_GL_BALANCE_SHEET_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_FIN_GL_BUDGETS_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_FIN_GL_DETAIL_TRANSACTIONS_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_FIN_GL_PROFITABILITY_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_FIN_RECON_AP_APPS_DATA",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_FIN_RECON_AR_APPS_DATA",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_FIN_RECON_GL_APPS_DATA",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_FIN_RECON_OTHER_JOURNALS_DATA",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_HCM_ABSENCE_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_HCM_ABSENCE_DIV_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_HCM_BUSINESS_UNIT_DATA",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_HCM_COMPENSATION_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_HCM_COMPENSATION_DIV_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_HCM_COMPENSATION_WORKSHEET_MANAGER_DATA",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_HCM_COUNTRY_DATA",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_HCM_DEPARTMENT_DATA",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_HCM_GAINS_LOSS_TRANSACTION_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_HCM_GAINS_LOSS_TRANSACTION_DIV_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_HCM_GOALS_ANALYSIS_DIV_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_HCM_GOALS_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_HCM_LEGAL_EMPLOYER_DATA",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_HCM_LINE_MANAGER_DATA",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_HCM_PERFORMANCE_ANALYSIS_DIV_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_HCM_PERFORMANCE_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_HCM_PROFILE_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_HCM_PROFILE_DIV_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_HCM_REC_ALL_APP_DATA",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_HCM_REC_ALL_REQ_DATA",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_HCM_REC_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_HCM_REC_NON_RESTRICTED_APP_DATA",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_HCM_REC_REQ_DATA",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_HCM_SALARY_BASIS_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_HCM_SALARY_BASIS_DIV_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_HCM_VIEW_ALL_DATA",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_HCM_WORKFORCE_CORE_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_HCM_WORKFORCE_CORE_DIV_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_PROC_BUSINESS_UNIT_DATA",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_PROC_PURCHASE_AGREEMENT_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_PROC_PURCHASE_ORDER_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_PROC_PURCHASE_RECEIPTS_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_PROC_REQ_BUSINESS_UNIT_DATA",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_PROC_SPEND_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_SCM_INV_BUSINESS_UNIT_DATA",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_SCM_INV_INVENTORY_BALANCES_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_SCM_INV_INVENTORY_ORG_DATA",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_SCM_INV_INVENTORY_TRANSACTIONS_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_SCM_OM_BUSINESS_UNIT_DATA",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_SCM_OM_HOLDS_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_SCM_OM_SALES_ORDER_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:ServiceAdmin",
+      "access" : "NO_ACCESS"
+    } ],
+    "localization" : {
+      "localizationKey" : "Procurement - Purchase Orders",
+      "nameVariable" : "VALUEOF(NQ_SESSION.CN_Procurement_-_Purchase_Orders)",
+      "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_Procurement_-_Purchase_Orders)"
+    }
+  }
+}

@@ -1,0 +1,348 @@
+{
+  "subjectArea" : {
+    "name" : "NetSuite - Customer Deposit",
+    "tags" : [ "Project:NetSuite Analytics Warehouse - NetSuite Sales" ],
+    "sourceBusinessModel" : "businessModel:Core",
+    "implicitFactColumn" : "logicalColumn:Core.Fact - NetSuite Customer Deposit.Total Number of Customer Deposit Lines",
+    "hideIfTrue" : {
+      "expressionTemplate" : " VALUEOF(NQ_SESSION.\"%1\") = 'HIDE'",
+      "expressionObjects" : [ "variable:undeclaredVariables.AM_NetSuite_-_Customer_Deposit" ]
+    },
+    "tableOrder" : [ {
+      "name" : "presentationTable:NetSuite - Customer Deposit.Time",
+      "children" : [ {
+        "name" : "presentationTable:NetSuite - Customer Deposit.Fiscal Calendar"
+      }, {
+        "name" : "presentationTable:NetSuite - Customer Deposit.Gregorian Calendar"
+      } ]
+    }, {
+      "name" : "presentationTable:NetSuite - Customer Deposit.Customer"
+    }, {
+      "name" : "presentationTable:NetSuite - Customer Deposit.Subsidiary"
+    }, {
+      "name" : "presentationTable:NetSuite - Customer Deposit.Department"
+    }, {
+      "name" : "presentationTable:NetSuite - Customer Deposit.Classification"
+    }, {
+      "name" : "presentationTable:NetSuite - Customer Deposit.Location"
+    }, {
+      "name" : "presentationTable:NetSuite - Customer Deposit.Expense Account"
+    }, {
+      "name" : "presentationTable:NetSuite - Customer Deposit.Account"
+    }, {
+      "name" : "presentationTable:NetSuite - Customer Deposit.Accounting Period"
+    }, {
+      "name" : "presentationTable:NetSuite - Customer Deposit.Accounting Book"
+    }, {
+      "name" : "presentationTable:NetSuite - Customer Deposit.Status"
+    }, {
+      "name" : "presentationTable:NetSuite - Customer Deposit.Payment Method"
+    }, {
+      "name" : "presentationTable:NetSuite - Customer Deposit.Payment Type"
+    }, {
+      "name" : "presentationTable:NetSuite - Customer Deposit.Entity"
+    }, {
+      "name" : "presentationTable:NetSuite - Customer Deposit.Created By User"
+    }, {
+      "name" : "presentationTable:NetSuite - Customer Deposit.Modified By User"
+    }, {
+      "name" : "presentationTable:NetSuite - Customer Deposit.Exchange Rate Type"
+    }, {
+      "name" : "presentationTable:NetSuite - Customer Deposit.Currency"
+    }, {
+      "name" : "presentationTable:NetSuite - Customer Deposit.Customer Deposit Details",
+      "children" : [ {
+        "name" : "presentationTable:NetSuite - Customer Deposit.Transaction Attributes"
+      }, {
+        "name" : "presentationTable:NetSuite - Customer Deposit.Transaction Line Attributes"
+      } ]
+    }, {
+      "name" : "presentationTable:NetSuite - Customer Deposit.Fact - Customer Deposit",
+      "children" : [ {
+        "name" : "presentationTable:NetSuite - Customer Deposit.Transaction",
+        "children" : [ {
+          "name" : "presentationTable:NetSuite - Customer Deposit.Transaction - Transaction Currency Amounts"
+        }, {
+          "name" : "presentationTable:NetSuite - Customer Deposit.Transaction - Base Currency Amounts"
+        }, {
+          "name" : "presentationTable:NetSuite - Customer Deposit.Transaction - Analytics Currency Amounts"
+        } ]
+      }, {
+        "name" : "presentationTable:NetSuite - Customer Deposit.Transaction Lines",
+        "children" : [ {
+          "name" : "presentationTable:NetSuite - Customer Deposit.Transaction Lines - Transaction Currency Amounts"
+        }, {
+          "name" : "presentationTable:NetSuite - Customer Deposit.Transaction Lines - Base Currency Amounts"
+        }, {
+          "name" : "presentationTable:NetSuite - Customer Deposit.Transaction Lines - Analytics Currency Amounts"
+        }, {
+          "name" : "presentationTable:NetSuite - Customer Deposit.Transaction Lines - Accounting Book Currency Amounts"
+        } ]
+      } ]
+    } ],
+    "permissions" : [ {
+      "accessor" : "role:DEFAULT",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:NAW_FINANCIALS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:NAW_INVENTORY_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:NAW_MANUFACTURING_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:NAW_PAYABLES_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:NAW_PURCHASING_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:NAW_SALES_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_COMMON_DATA_ADMIN_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_CONTENT_REPORTING_CONFIG",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_CX_OPTY_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_CX_OPTY_PROG_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_CX_OPTY_SNP_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_CX_REVN_LINE_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_CX_REVN_LINE_SNP_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_CX_SALES_ACCNT_DATA",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_CX_SALES_OPTY_CUSTOM_DATA",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_CX_SALES_OPTY_DATA",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_FIN_AP_AGING_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_FIN_AP_BUSINESS_UNIT_DATA",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_FIN_AP_EXPENSES_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_FIN_AP_HOLDS_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_FIN_AP_INVOICES_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_FIN_AP_LIABILITIES_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_FIN_AP_PAYMENTS_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_FIN_AP_PAYMENT_BUSINESS_UNIT_DATA",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_FIN_AR_ADJUSTMENTS_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_FIN_AR_AGING_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_FIN_AR_APPLICATIONS_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_FIN_AR_BUSINESS_UNIT_DATA",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_FIN_AR_CREDITMEMO_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_FIN_AR_RECEIPT_BUSINESS_UNIT_DATA",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_FIN_AR_REVENUE_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_FIN_AR_TRANSACTIONS_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_FIN_EXM_EMPLOYEE_EXPENSE_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_FIN_GL_ACCESS_SET_DATA",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_FIN_GL_ACCOUNT_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_FIN_GL_BALANCE_SHEET_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_FIN_GL_BUDGETS_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_FIN_GL_DETAIL_TRANSACTIONS_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_FIN_GL_PROFITABILITY_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_FIN_RECON_AP_APPS_DATA",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_FIN_RECON_AR_APPS_DATA",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_FIN_RECON_GL_APPS_DATA",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_FIN_RECON_OTHER_JOURNALS_DATA",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_HCM_ABSENCE_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_HCM_ABSENCE_DIV_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_HCM_BUSINESS_UNIT_DATA",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_HCM_COMPENSATION_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_HCM_COMPENSATION_DIV_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_HCM_COMPENSATION_WORKSHEET_MANAGER_DATA",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_HCM_COUNTRY_DATA",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_HCM_DEPARTMENT_DATA",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_HCM_GAINS_LOSS_TRANSACTION_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_HCM_GAINS_LOSS_TRANSACTION_DIV_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_HCM_GOALS_ANALYSIS_DIV_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_HCM_GOALS_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_HCM_LEGAL_EMPLOYER_DATA",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_HCM_LINE_MANAGER_DATA",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_HCM_PERFORMANCE_ANALYSIS_DIV_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_HCM_PERFORMANCE_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_HCM_PROFILE_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_HCM_PROFILE_DIV_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_HCM_REC_ALL_APP_DATA",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_HCM_REC_ALL_REQ_DATA",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_HCM_REC_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_HCM_REC_NON_RESTRICTED_APP_DATA",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_HCM_REC_REQ_DATA",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_HCM_SALARY_BASIS_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_HCM_SALARY_BASIS_DIV_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_HCM_VIEW_ALL_DATA",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_HCM_WORKFORCE_CORE_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_HCM_WORKFORCE_CORE_DIV_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_PROC_BUSINESS_UNIT_DATA",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_PROC_PURCHASE_AGREEMENT_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_PROC_PURCHASE_ORDER_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_PROC_PURCHASE_RECEIPTS_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_PROC_REQ_BUSINESS_UNIT_DATA",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_PROC_SPEND_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_SCM_INV_BUSINESS_UNIT_DATA",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_SCM_INV_INVENTORY_BALANCES_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_SCM_INV_INVENTORY_ORG_DATA",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_SCM_INV_INVENTORY_TRANSACTIONS_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_SCM_OM_BUSINESS_UNIT_DATA",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_SCM_OM_HOLDS_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_SCM_OM_SALES_ORDER_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:ServiceAdmin",
+      "access" : "READ"
+    } ],
+    "localization" : {
+      "localizationKey" : "NetSuite - Customer Deposit",
+      "nameVariable" : "VALUEOF(NQ_SESSION.CN_NetSuite_-_Customer_Deposit)",
+      "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_NetSuite_-_Customer_Deposit)"
+    }
+  }
+}

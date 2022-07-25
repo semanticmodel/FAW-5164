@@ -1,0 +1,50 @@
+{
+  "physicalTable": {
+    "name": "Dim_DW_FISCAL_DAY_D_OM_PromisedShipDate_PromptOnly",
+    "sourceTable": "physicalTable:Oracle_Data_Warehouse.OAX$OAC.DW_FISCAL_DAY_D",
+    "caching": {
+      "enable": true
+    },
+    "joins": [      {
+        "rightTable": "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Security_DW_CONTENT_PARAM_CONFIG_FISCALCALENDAR_OM_PromisedShip_Calendar",
+        "joinConditions": [          {
+            "leftColumn": "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_FISCAL_DAY_D_OM_PromisedShipDate_PromptOnly.FISCAL_PERIOD_SET_NAME",
+            "rightColumn": "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Security_DW_CONTENT_PARAM_CONFIG_FISCALCALENDAR_OM_PromisedShip_Calendar.FISCAL_PERIOD_SET_NAME"
+          }
+        ]
+      }
+    ],
+    "additionalKeys": [
+      [
+        "FISCAL_PERIOD_SET_NAME",
+        "FISCAL_DAY_DATE"
+      ],
+      [
+        "FISCAL_PERIOD_SET_NAME",
+        "FISCAL_PERIOD_NAME",
+        "FISCAL_DAY_DATE"
+      ],
+      [
+        "FISCAL_PERIOD_SET_NAME",
+        "FISCAL_DAY_DATE_ID"
+      ],
+      [
+        "FISCAL_PERIOD_SET_NAME",
+        "FISCAL_DAY_DATE",
+        "ADJUSTMENT_PERIOD_FLAG"
+      ],
+      [
+        "FISCAL_PERIOD_SET_NAME",
+        "FISCAL_PERIOD_TYPE",
+        "FISCAL_DAY_DATE",
+        "ADJUSTMENT_PERIOD_FLAG"
+      ],
+      [
+        "FISCAL_PERIOD_SET_NAME"
+      ],
+      [
+        "FISCAL_DAY_DATE"
+      ]
+    ]
+  }
+}

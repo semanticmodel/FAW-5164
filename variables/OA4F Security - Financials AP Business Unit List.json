@@ -1,0 +1,22 @@
+{
+  "initBlock" : {
+    "name" : "OA4F Security - Financials AP Business Unit List",
+    "tags" : [ "Project:Fusion Analytics Warehouse - Accounts Payable", "Project:Fusion Analytics Warehouse - Expense Management", "Project:Fusion Analytics Warehouse - GL Budgets Analysis", "Project:Fusion Analytics Warehouse - General Ledger", "Project:Fusion Analytics Warehouse - Inventory", "Project:Fusion Analytics Warehouse - Procurement Management", "Project:Fusion Analytics Warehouse - Reconciliation", "Project:Oracle Analytics for Fusion Financials" ],
+    "type" : "SESSION",
+    "connectionPool" : "connectionPool:Oracle_Data_Warehouse.Oracle_Data_Warehouse_Repository_Initblocks_Connection_Pool",
+    "selectStatements" : [ {
+      "databaseType" : "DEFAULT",
+      "query" : "SELECT \r\nDISTINCT 'OA4F_SEC_FIN_AP_BUSINESSUNIT_LIST',\r\nTO_NUMBER(SECU. SEC_OBJ_MEMBER_VAL) \r\nFROM   \r\nSEC_SECURE_BY_OBJ_MEMBER_USER SECU\r\nWHERE   SECU.SEC_OBJ_CODE='OA4F_SEC_FIN_AP_BUSINESSUNIT_LIST'\r\nAND SECU.USERNAME  = ':USER'"
+    } ],
+    "variables" : [ {
+      "name" : "OA4F_SEC_FIN_AP_BUSINESSUNIT_LIST",
+      "value" : "-(1)",
+      "enableUsersToSetValue" : false,
+      "securitySensitive" : false
+    } ],
+    "disable" : false,
+    "queryReturnsVariableNamesAndValues" : true,
+    "allowDeferredExecution" : true,
+    "cacheQueryResult" : false
+  }
+}

@@ -1,0 +1,375 @@
+{
+  "logicalTable" : {
+    "name" : "Dim - Date Fiscal Calendar OM Requested Arrival Date",
+    "type" : "DIMENSION",
+    "primaryKey" : [ "Requested Arrival Fiscal Calendar Name", "Requested Arrival Fiscal Date", "Requested Arrival Adjustment Period Flag" ],
+    "logicalColumns" : [ {
+      "name" : "Requested Arrival Fiscal Calendar Name",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "Dim_DW_FISCAL_DAY_D_OM_RequestedArrivalDate_PromptOnly",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_FISCAL_DAY_D_OM_RequestedArrivalDate_PromptOnly.FISCAL_PERIOD_SET_NAME" ]
+          }
+        }, {
+          "logicalTableSource" : "Dim_DW_FISCAL_DAY_D_OM_RequestedArrivalDate",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_FISCAL_DAY_D_OM_RequestedArrivalDate.FISCAL_PERIOD_SET_NAME" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Fiscal Calendar"
+    }, {
+      "name" : "Requested Arrival Fiscal Date",
+      "dataType" : "DATE",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "Dim_DW_FISCAL_DAY_D_OM_RequestedArrivalDate_PromptOnly",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_FISCAL_DAY_D_OM_RequestedArrivalDate_PromptOnly.FISCAL_DAY_DATE" ]
+          }
+        }, {
+          "logicalTableSource" : "Dim_DW_FISCAL_DAY_D_OM_RequestedArrivalDate",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_FISCAL_DAY_D_OM_RequestedArrivalDate.FISCAL_DAY_DATE" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Detail"
+    }, {
+      "name" : "Requested Arrival Adjustment Period Flag",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "Dim_DW_FISCAL_DAY_D_OM_RequestedArrivalDate_PromptOnly",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_FISCAL_DAY_D_OM_RequestedArrivalDate_PromptOnly.ADJUSTMENT_PERIOD_FLAG" ]
+          }
+        }, {
+          "logicalTableSource" : "Dim_DW_FISCAL_DAY_D_OM_RequestedArrivalDate",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_FISCAL_DAY_D_OM_RequestedArrivalDate.ADJUSTMENT_PERIOD_FLAG" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Fiscal Period"
+    }, {
+      "name" : "Requested Arrival Fiscal Year",
+      "dataType" : "INT",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "Dim_DW_FISCAL_DAY_D_OM_RequestedArrivalDate_PromptOnly",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_FISCAL_DAY_D_OM_RequestedArrivalDate_PromptOnly.FISCAL_YEAR_NUMBER" ]
+          }
+        }, {
+          "logicalTableSource" : "Dim_DW_FISCAL_DAY_D_OM_RequestedArrivalDate",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_FISCAL_DAY_D_OM_RequestedArrivalDate.FISCAL_YEAR_NUMBER" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Fiscal Year"
+    }, {
+      "name" : "Requested Arrival Fiscal Quarter",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "Dim_DW_FISCAL_DAY_D_OM_RequestedArrivalDate_PromptOnly",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_FISCAL_DAY_D_OM_RequestedArrivalDate_PromptOnly.FISCAL_QUARTER_CODE" ]
+          }
+        }, {
+          "logicalTableSource" : "Dim_DW_FISCAL_DAY_D_OM_RequestedArrivalDate",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_FISCAL_DAY_D_OM_RequestedArrivalDate.FISCAL_QUARTER_CODE" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Fiscal Quarter"
+    }, {
+      "name" : "Requested Arrival Fiscal Quarter Number",
+      "dataType" : "INT",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "Dim_DW_FISCAL_DAY_D_OM_RequestedArrivalDate_PromptOnly",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_FISCAL_DAY_D_OM_RequestedArrivalDate_PromptOnly.FISCAL_QUARTER_NUMBER" ]
+          }
+        }, {
+          "logicalTableSource" : "Dim_DW_FISCAL_DAY_D_OM_RequestedArrivalDate",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_FISCAL_DAY_D_OM_RequestedArrivalDate.FISCAL_QUARTER_NUMBER" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Fiscal Quarter"
+    }, {
+      "name" : "Requested Arrival Fiscal Period",
+      "dataType" : "VARCHAR",
+      "sortBy" : "Requested Arrival Fiscal Period Sort Key",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "Dim_DW_FISCAL_DAY_D_OM_RequestedArrivalDate_PromptOnly",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_FISCAL_DAY_D_OM_RequestedArrivalDate_PromptOnly.FISCAL_PERIOD_NAME" ]
+          }
+        }, {
+          "logicalTableSource" : "Dim_DW_FISCAL_DAY_D_OM_RequestedArrivalDate",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_FISCAL_DAY_D_OM_RequestedArrivalDate.FISCAL_PERIOD_NAME" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Fiscal Period"
+    }, {
+      "name" : "Requested Arrival Fiscal Period Number",
+      "dataType" : "INT",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "Dim_DW_FISCAL_DAY_D_OM_RequestedArrivalDate_PromptOnly",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_FISCAL_DAY_D_OM_RequestedArrivalDate_PromptOnly.FISCAL_PERIOD_NUMBER" ]
+          }
+        }, {
+          "logicalTableSource" : "Dim_DW_FISCAL_DAY_D_OM_RequestedArrivalDate",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_FISCAL_DAY_D_OM_RequestedArrivalDate.FISCAL_PERIOD_NUMBER" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Fiscal Period"
+    }, {
+      "name" : "Requested Arrival Fiscal Period Sort Key",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "Dim_DW_FISCAL_DAY_D_OM_RequestedArrivalDate_PromptOnly",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_FISCAL_DAY_D_OM_RequestedArrivalDate_PromptOnly.FISCAL_PERIOD_SORT_KEY" ]
+          }
+        }, {
+          "logicalTableSource" : "Dim_DW_FISCAL_DAY_D_OM_RequestedArrivalDate",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_FISCAL_DAY_D_OM_RequestedArrivalDate.FISCAL_PERIOD_SORT_KEY" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Fiscal Period"
+    }, {
+      "name" : "Requested Arrival Fiscal Trailing Period Number",
+      "dataType" : "INT",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "Dim_DW_FISCAL_DAY_D_OM_RequestedArrivalDate_PromptOnly",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_FISCAL_DAY_D_OM_RequestedArrivalDate_PromptOnly.FISCAL_TRAILING_PERIOD_NUMBER" ]
+          }
+        }, {
+          "logicalTableSource" : "Dim_DW_FISCAL_DAY_D_OM_RequestedArrivalDate",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_FISCAL_DAY_D_OM_RequestedArrivalDate.FISCAL_TRAILING_PERIOD_NUMBER" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Fiscal Period"
+    }, {
+      "name" : "Requested Arrival Fiscal Trailing Quarter Number",
+      "dataType" : "INT",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "Dim_DW_FISCAL_DAY_D_OM_RequestedArrivalDate_PromptOnly",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_FISCAL_DAY_D_OM_RequestedArrivalDate_PromptOnly.FISCAL_TRAILING_QUARTER_NUMBER" ]
+          }
+        }, {
+          "logicalTableSource" : "Dim_DW_FISCAL_DAY_D_OM_RequestedArrivalDate",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_FISCAL_DAY_D_OM_RequestedArrivalDate.FISCAL_TRAILING_QUARTER_NUMBER" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Fiscal Quarter"
+    }, {
+      "name" : "Requested Arrival Fiscal Trailing Year Number",
+      "dataType" : "INT",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "Dim_DW_FISCAL_DAY_D_OM_RequestedArrivalDate_PromptOnly",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_FISCAL_DAY_D_OM_RequestedArrivalDate_PromptOnly.FISCAL_TRAILING_YEAR_NUMBER" ]
+          }
+        }, {
+          "logicalTableSource" : "Dim_DW_FISCAL_DAY_D_OM_RequestedArrivalDate",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_FISCAL_DAY_D_OM_RequestedArrivalDate.FISCAL_TRAILING_YEAR_NUMBER" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Fiscal Year"
+    }, {
+      "name" : "Security Config Code - OMRequestedArrival",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "Dim_DW_FISCAL_DAY_D_OM_RequestedArrivalDate_PromptOnly",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Security_DW_CONTENT_PARAM_CONFIG_FISCALCALENDAR_OM_RequestedArrival_Calendar.PARAMETER_CODE" ]
+          }
+        }, {
+          "logicalTableSource" : "Dim_DW_FISCAL_DAY_D_OM_RequestedArrivalDate",
+          "physicalExpression" : {
+            "expressionTemplate" : "'FISCAL_CALENDAR'"
+          }
+        } ]
+      },
+      "logicalLevel" : "Fiscal Period"
+    } ],
+    "logicalTableSources" : [ {
+      "name" : "Dim_DW_FISCAL_DAY_D_OM_RequestedArrivalDate_PromptOnly",
+      "disable" : false,
+      "tableMapping" : {
+        "tables" : [ "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Security_DW_CONTENT_PARAM_CONFIG_FISCALCALENDAR_OM_RequestedArrival_Calendar", "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_FISCAL_DAY_D_OM_RequestedArrivalDate_PromptOnly" ],
+        "logicalTableSourceJoins" : [ {
+          "leftTable" : "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Security_DW_CONTENT_PARAM_CONFIG_FISCALCALENDAR_OM_RequestedArrival_Calendar",
+          "rightTable" : "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_FISCAL_DAY_D_OM_RequestedArrivalDate_PromptOnly",
+          "joinType" : "INNER",
+          "disable" : false
+        } ]
+      },
+      "dataGranularity" : [ "logicalLevel:Core.Dim - Date Fiscal Calendar OM Requested Arrival Date.Detail" ],
+      "combineWithOtherFragments" : false,
+      "enableFragmentSelection" : false,
+      "distinctValues" : false
+    }, {
+      "name" : "Dim_DW_FISCAL_DAY_D_OM_RequestedArrivalDate",
+      "disable" : false,
+      "tableMapping" : {
+        "tables" : [ "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_FISCAL_DAY_D_OM_RequestedArrivalDate" ]
+      },
+      "dataGranularity" : [ "logicalLevel:Core.Dim - Date Fiscal Calendar OM Requested Arrival Date.Detail" ],
+      "combineWithOtherFragments" : false,
+      "enableFragmentSelection" : false,
+      "distinctValues" : false
+    } ],
+    "hierarchyType" : "TIME",
+    "levelBasedHierarchy" : {
+      "defaultRootLevel" : "Total",
+      "logicalLevels" : [ {
+        "name" : "Total",
+        "numberOfElements" : 1,
+        "grandTotalLevel" : true,
+        "disableAggregateToHigherLevel" : false
+      }, {
+        "name" : "Fiscal Calendar",
+        "numberOfElements" : 1,
+        "grandTotalLevel" : false,
+        "disableAggregateToHigherLevel" : false,
+        "primaryKey" : [ "Requested Arrival Fiscal Calendar Name" ],
+        "displayKey" : "Requested Arrival Fiscal Calendar Name",
+        "chronologicalKey" : [ "Requested Arrival Fiscal Calendar Name" ]
+      }, {
+        "name" : "Fiscal Year",
+        "numberOfElements" : 1,
+        "grandTotalLevel" : false,
+        "disableAggregateToHigherLevel" : false,
+        "primaryKey" : [ "Requested Arrival Fiscal Calendar Name", "Requested Arrival Fiscal Year" ],
+        "displayKey" : "Requested Arrival Fiscal Year",
+        "additionalKeys" : [ [ "Requested Arrival Fiscal Year" ] ],
+        "chronologicalKey" : [ "Requested Arrival Fiscal Calendar Name", "Requested Arrival Fiscal Year" ]
+      }, {
+        "name" : "Fiscal Quarter",
+        "numberOfElements" : 1,
+        "grandTotalLevel" : false,
+        "disableAggregateToHigherLevel" : false,
+        "primaryKey" : [ "Requested Arrival Fiscal Calendar Name", "Requested Arrival Fiscal Quarter" ],
+        "displayKey" : "Requested Arrival Fiscal Quarter",
+        "additionalKeys" : [ [ "Requested Arrival Fiscal Quarter" ] ],
+        "chronologicalKey" : [ "Requested Arrival Fiscal Calendar Name", "Requested Arrival Fiscal Quarter" ]
+      }, {
+        "name" : "Fiscal Period",
+        "numberOfElements" : 1,
+        "grandTotalLevel" : false,
+        "disableAggregateToHigherLevel" : false,
+        "primaryKey" : [ "Requested Arrival Fiscal Calendar Name", "Requested Arrival Fiscal Period Sort Key" ],
+        "displayKey" : "Requested Arrival Fiscal Period",
+        "additionalKeys" : [ [ "Requested Arrival Fiscal Period" ] ],
+        "chronologicalKey" : [ "Requested Arrival Fiscal Calendar Name", "Requested Arrival Fiscal Period Sort Key" ]
+      }, {
+        "name" : "Detail",
+        "numberOfElements" : 1,
+        "grandTotalLevel" : false,
+        "disableAggregateToHigherLevel" : false,
+        "primaryKey" : [ "Requested Arrival Fiscal Calendar Name", "Requested Arrival Fiscal Date" ],
+        "displayKey" : "Requested Arrival Fiscal Date",
+        "additionalKeys" : [ [ "Requested Arrival Fiscal Date" ] ],
+        "chronologicalKey" : [ "Requested Arrival Fiscal Calendar Name", "Requested Arrival Fiscal Date" ]
+      } ],
+      "logicalHierarchies" : [ {
+        "name" : "Fiscal Calendar OM Requested Arrival Date",
+        "levels" : [ "Total", "Fiscal Calendar", "Fiscal Year", "Fiscal Quarter", "Fiscal Period", "Detail" ]
+      } ]
+    },
+    "dataFilters" : [ {
+      "accessor" : "role:OA4F_CONTENT_REPORTING_CONFIG",
+      "functionalGroup" : "REPORT_CONFIG",
+      "status" : "ENABLED",
+      "filter" : {
+        "expressionTemplate" : "%1 = 'FISCAL_CALENDAR'",
+        "expressionObjects" : [ "logicalColumn:Core.Dim - Date Fiscal Calendar OM Requested Arrival Date.Security Config Code - OMRequestedArrival" ]
+      }
+    } ]
+  }
+}

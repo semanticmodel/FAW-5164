@@ -1,0 +1,16 @@
+{
+  "physicalTable": {
+    "name": "Dim_DW_SCM_CODE_VALUES_LKP_TL_PRC_PO_Match_Option_PromptOnly",
+    "sourceTable": "physicalTable:Oracle_Data_Warehouse.OAX$OAC.DW_SCM_CODE_VALUES_LKP_TL",
+    "caching": {
+      "enable": true
+    },
+    "additionalKeys": [
+      [
+        "CODE",
+        "CODE_TYPE",
+        "LANGUAGE"
+      ]
+    ]
+  }
+}

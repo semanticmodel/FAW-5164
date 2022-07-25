@@ -1,0 +1,17 @@
+{
+  "physicalTable": {
+    "name": "Security_DW_CONTENT_PARAM_CONFIG_COA_VALUESET_BalancingSegment",
+    "sourceTable": "physicalTable:Oracle_Data_Warehouse.OAX$OAC.DW_CONTENT_PARAM_CONFIG_COA_VALUESET",
+    "caching": {
+      "enable": true,
+      "expiryTime": 1,
+      "expiryUnit": "DAYS"
+    },
+    "additionalKeys": [
+      [
+        "BI_OBJECT_NAME",
+        "VALUESET_CODE"
+      ]
+    ]
+  }
+}

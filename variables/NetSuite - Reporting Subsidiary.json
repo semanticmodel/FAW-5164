@@ -1,0 +1,22 @@
+{
+  "initBlock" : {
+    "name" : "NetSuite - Reporting Subsidiary",
+    "tags" : [ "Project:Fusion Analytics Warehouse - Accounts Payable", "Project:Fusion Analytics Warehouse - Expense Management", "Project:Fusion Analytics Warehouse - GL Budgets Analysis", "Project:Fusion Analytics Warehouse - Inventory", "Project:Fusion Analytics Warehouse - Salary Basis", "Project:NetSuite Analytics Warehouse - NetSuite Inventory", "Project:NetSuite Analytics Warehouse - NetSuite Manufacturing", "Project:NetSuite Analytics Warehouse - NetSuite Purchases", "Project:NetSuite Analytics Warehouse - NetSuite Sales" ],
+    "type" : "SESSION",
+    "connectionPool" : "connectionPool:Oracle_Data_Warehouse.Oracle_Data_Warehouse_Repository_Initblocks_Connection_Pool",
+    "selectStatements" : [ {
+      "databaseType" : "DEFAULT",
+      "query" : "SELECT PARAMETER_VALUE FROM DW_CONTENT_PARAM_CONFIG WHERE PARAMETER_CODE='PARAM_NS_SUBSIDIARY_ID'"
+    } ],
+    "variables" : [ {
+      "name" : "NETSUITE_REPORTING_SUBSIDIARY",
+      "value" : "-(1)",
+      "enableUsersToSetValue" : false,
+      "securitySensitive" : false
+    } ],
+    "disable" : false,
+    "queryReturnsVariableNamesAndValues" : false,
+    "allowDeferredExecution" : true,
+    "cacheQueryResult" : true
+  }
+}

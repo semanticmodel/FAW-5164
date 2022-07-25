@@ -1,0 +1,174 @@
+{
+  "presentationTable" : {
+    "name" : "Submit Date",
+    "tags" : [ "Project:Fusion Analytics Warehouse - Purchase Orders" ],
+    "presentationColumns" : [ {
+      "name" : "PO Submitted Fiscal Date",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Purchase Orders" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Dim - PRC - PO Submitted Date.PO Submitted Fiscal Date",
+      "localization" : {
+        "localizationKey" : "PO Submitted Fiscal Date",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_Procurement_-_Purchase_Orders_Submit_Date_PO_Submitted_Fiscal_Date)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_Procurement_-_Purchase_Orders_Submit_Date_PO_Submitted_Fiscal_Date)"
+      }
+    }, {
+      "name" : "PO Submitted Fiscal Day Code",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Purchase Orders" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Dim - PRC - PO Submitted Date.PO Submitted Fiscal Day Code",
+      "localization" : {
+        "localizationKey" : "PO Submitted Fiscal Day Code",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_Procurement_-_Purchase_Orders_Submit_Date_PO_Submitted_Fiscal_Day_Code)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_Procurement_-_Purchase_Orders_Submit_Date_PO_Submitted_Fiscal_Day_Code)"
+      }
+    }, {
+      "name" : "PO Submitted Fiscal Day",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Purchase Orders" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Dim - PRC - PO Submitted Date.PO Submitted Fiscal Day",
+      "localization" : {
+        "localizationKey" : "PO Submitted Fiscal Day",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_Procurement_-_Purchase_Orders_Submit_Date_PO_Submitted_Fiscal_Day)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_Procurement_-_Purchase_Orders_Submit_Date_PO_Submitted_Fiscal_Day)"
+      }
+    }, {
+      "name" : "PO Submitted Fiscal Period",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Purchase Orders" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Dim - PRC - PO Submitted Date.PO Submitted Fiscal Period",
+      "localization" : {
+        "localizationKey" : "PO Submitted Fiscal Period",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_Procurement_-_Purchase_Orders_Submit_Date_PO_Submitted_Fiscal_Period)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_Procurement_-_Purchase_Orders_Submit_Date_PO_Submitted_Fiscal_Period)"
+      }
+    }, {
+      "name" : "PO Submitted Fiscal Quarter",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Purchase Orders" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Dim - PRC - PO Submitted Date.PO Submitted Fiscal Quarter",
+      "localization" : {
+        "localizationKey" : "PO Submitted Fiscal Quarter",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_Procurement_-_Purchase_Orders_Submit_Date_PO_Submitted_Fiscal_Quarter)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_Procurement_-_Purchase_Orders_Submit_Date_PO_Submitted_Fiscal_Quarter)"
+      }
+    }, {
+      "name" : "PO Submitted Fiscal Year",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Purchase Orders" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Dim - PRC - PO Submitted Date.PO Submitted Fiscal Year",
+      "localization" : {
+        "localizationKey" : "PO Submitted Fiscal Year",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_Procurement_-_Purchase_Orders_Submit_Date_PO_Submitted_Fiscal_Year)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_Procurement_-_Purchase_Orders_Submit_Date_PO_Submitted_Fiscal_Year)"
+      }
+    }, {
+      "name" : "PO Submitted Fiscal Day Trailing Period Number",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Purchase Orders" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Dim - PRC - PO Submitted Date.PO Submitted Fiscal Day Trailing Period Number",
+      "localization" : {
+        "localizationKey" : "PO Submitted Fiscal Day Trailing Period Number",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_Procurement_-_Purchase_Orders_Submit_Date_PO_Submitted_Fiscal_Day_Trailing_Period_Number)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_Procurement_-_Purchase_Orders_Submit_Date_PO_Submitted_Fiscal_Day_Trailing_Period_Number)"
+      }
+    }, {
+      "name" : "PO Submitted Fiscal Day Trailing Quarter Number",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Purchase Orders" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Dim - PRC - PO Submitted Date.PO Submitted Fiscal Day Trailing Quarter Number",
+      "localization" : {
+        "localizationKey" : "PO Submitted Fiscal Day Trailing Quarter Number",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_Procurement_-_Purchase_Orders_Submit_Date_PO_Submitted_Fiscal_Day_Trailing_Quarter_Number)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_Procurement_-_Purchase_Orders_Submit_Date_PO_Submitted_Fiscal_Day_Trailing_Quarter_Number)"
+      }
+    }, {
+      "name" : "PO Submitted Fiscal Day Trailing Year Number",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Purchase Orders" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Dim - PRC - PO Submitted Date.PO Submitted Fiscal Day Trailing Year Number",
+      "localization" : {
+        "localizationKey" : "PO Submitted Fiscal Day Trailing Year Number",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_Procurement_-_Purchase_Orders_Submit_Date_PO_Submitted_Fiscal_Day_Trailing_Year_Number)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_Procurement_-_Purchase_Orders_Submit_Date_PO_Submitted_Fiscal_Day_Trailing_Year_Number)"
+      }
+    }, {
+      "name" : "PO Submitted Year",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Purchase Orders" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Dim - PRC - PO Submitted Date Gregorian Calendar.PO Submitted Year",
+      "localization" : {
+        "localizationKey" : "PO Submitted Year",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_Procurement_-_Purchase_Orders_Submit_Date_PO_Submitted_Year)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_Procurement_-_Purchase_Orders_Submit_Date_PO_Submitted_Year)"
+      }
+    }, {
+      "name" : "PO Submitted Quarter",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Purchase Orders" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Dim - PRC - PO Submitted Date Gregorian Calendar.PO Submitted Quarter",
+      "localization" : {
+        "localizationKey" : "PO Submitted Quarter",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_Procurement_-_Purchase_Orders_Submit_Date_PO_Submitted_Quarter)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_Procurement_-_Purchase_Orders_Submit_Date_PO_Submitted_Quarter)"
+      }
+    }, {
+      "name" : "PO Submitted Quarter Number",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Purchase Orders" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Dim - PRC - PO Submitted Date Gregorian Calendar.PO Submitted Quarter Number",
+      "localization" : {
+        "localizationKey" : "PO Submitted Quarter Number",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_Procurement_-_Purchase_Orders_Submit_Date_PO_Submitted_Quarter_Number)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_Procurement_-_Purchase_Orders_Submit_Date_PO_Submitted_Quarter_Number)"
+      }
+    }, {
+      "name" : "PO Submitted Month",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Purchase Orders" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Dim - PRC - PO Submitted Date Gregorian Calendar.PO Submitted Month",
+      "localization" : {
+        "localizationKey" : "PO Submitted Month",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_Procurement_-_Purchase_Orders_Submit_Date_PO_Submitted_Month)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_Procurement_-_Purchase_Orders_Submit_Date_PO_Submitted_Month)"
+      }
+    }, {
+      "name" : "PO Submitted Month Number",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Purchase Orders" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Dim - PRC - PO Submitted Date Gregorian Calendar.PO Submitted Month Number",
+      "localization" : {
+        "localizationKey" : "PO Submitted Month Number",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_Procurement_-_Purchase_Orders_Submit_Date_PO_Submitted_Month_Number)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_Procurement_-_Purchase_Orders_Submit_Date_PO_Submitted_Month_Number)"
+      }
+    }, {
+      "name" : "PO Submitted Date",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Purchase Orders" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Dim - PRC - PO Submitted Date Gregorian Calendar.PO Submitted Date",
+      "localization" : {
+        "localizationKey" : "PO Submitted Date",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_Procurement_-_Purchase_Orders_Submit_Date_PO_Submitted_Date)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_Procurement_-_Purchase_Orders_Submit_Date_PO_Submitted_Date)"
+      }
+    }, {
+      "name" : "PO Submitted Gregorian Trailing Month Number",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Purchase Orders" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Dim - PRC - PO Submitted Date Gregorian Calendar.PO Submitted Gregorian Trailing Month Number",
+      "localization" : {
+        "localizationKey" : "PO Submitted Gregorian Trailing Month Number",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_Procurement_-_Purchase_Orders_Submit_Date_PO_Submitted_Gregorian_Trailing_Month_Number)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_Procurement_-_Purchase_Orders_Submit_Date_PO_Submitted_Gregorian_Trailing_Month_Number)"
+      }
+    }, {
+      "name" : "PO Submitted Gregorian Trailing Quarter Number",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Purchase Orders" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Dim - PRC - PO Submitted Date Gregorian Calendar.PO Submitted Gregorian Trailing Quarter Number",
+      "localization" : {
+        "localizationKey" : "PO Submitted Gregorian Trailing Quarter Number",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_Procurement_-_Purchase_Orders_Submit_Date_PO_Submitted_Gregorian_Trailing_Quarter_Number)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_Procurement_-_Purchase_Orders_Submit_Date_PO_Submitted_Gregorian_Trailing_Quarter_Number)"
+      }
+    }, {
+      "name" : "PO Submitted Gregorian Trailing Year Number",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Purchase Orders" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Dim - PRC - PO Submitted Date Gregorian Calendar.PO Submitted Gregorian Trailing Year Number",
+      "localization" : {
+        "localizationKey" : "PO Submitted Gregorian Trailing Year Number",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_Procurement_-_Purchase_Orders_Submit_Date_PO_Submitted_Gregorian_Trailing_Year_Number)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_Procurement_-_Purchase_Orders_Submit_Date_PO_Submitted_Gregorian_Trailing_Year_Number)"
+      }
+    } ],
+    "localization" : {
+      "localizationKey" : "Submit Date",
+      "nameVariable" : "VALUEOF(NQ_SESSION.CN_Procurement_-_Purchase_Orders_Submit_Date)",
+      "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_Procurement_-_Purchase_Orders_Submit_Date)"
+    }
+  }
+}

@@ -1,0 +1,165 @@
+{
+  "presentationTable" : {
+    "name" : "User",
+    "tags" : [ "Project:Oracle Analytics for Fusion Common" ],
+    "presentationColumns" : [ {
+      "name" : "Login Name",
+      "tags" : [ "Project:Oracle Analytics for Fusion Common" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Dim - User.Login Name",
+      "localization" : {
+        "localizationKey" : "Login Name",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_Common_-_Usage_Tracking_Statistics_User_Login_Name)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_Common_-_Usage_Tracking_Statistics_User_Login_Name)"
+      }
+    }, {
+      "name" : "User Full Name",
+      "tags" : [ "Project:Oracle Analytics for Fusion Common" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Dim - User.User Full Name",
+      "localization" : {
+        "localizationKey" : "User Full Name",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_Common_-_Usage_Tracking_Statistics_User_User_Full_Name)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_Common_-_Usage_Tracking_Statistics_User_User_Full_Name)"
+      }
+    }, {
+      "name" : "User First Name",
+      "tags" : [ "Project:Oracle Analytics for Fusion Common" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Dim - User.User First Name",
+      "localization" : {
+        "localizationKey" : "User First Name",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_Common_-_Usage_Tracking_Statistics_User_User_First_Name)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_Common_-_Usage_Tracking_Statistics_User_User_First_Name)"
+      }
+    }, {
+      "name" : "User Last Name",
+      "tags" : [ "Project:Oracle Analytics for Fusion Common" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Dim - User.User Last Name",
+      "localization" : {
+        "localizationKey" : "User Last Name",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_Common_-_Usage_Tracking_Statistics_User_User_Last_Name)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_Common_-_Usage_Tracking_Statistics_User_User_Last_Name)"
+      }
+    }, {
+      "name" : "User Middle Name",
+      "tags" : [ "Project:Oracle Analytics for Fusion Common" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Dim - User.User Middle Name",
+      "localization" : {
+        "localizationKey" : "User Middle Name",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_Common_-_Usage_Tracking_Statistics_User_User_Middle_Name)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_Common_-_Usage_Tracking_Statistics_User_User_Middle_Name)"
+      }
+    }, {
+      "name" : "Supervisor Name",
+      "tags" : [ "Project:Oracle Analytics for Fusion Common" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Dim - User.Supervisor Name",
+      "localization" : {
+        "localizationKey" : "Supervisor Name",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_Common_-_Usage_Tracking_Statistics_User_Supervisor_Name)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_Common_-_Usage_Tracking_Statistics_User_Supervisor_Name)"
+      }
+    }, {
+      "name" : "Primary Email Address",
+      "tags" : [ "Project:Oracle Analytics for Fusion Common" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Dim - User.Primary Email Address",
+      "localization" : {
+        "localizationKey" : "Primary Email Address",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_Common_-_Usage_Tracking_Statistics_User_Primary_Email_Address)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_Common_-_Usage_Tracking_Statistics_User_Primary_Email_Address)"
+      }
+    }, {
+      "name" : "Work Phone Number",
+      "tags" : [ "Project:Oracle Analytics for Fusion Common" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Dim - User.Work Phone Number",
+      "localization" : {
+        "localizationKey" : "Work Phone Number",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_Common_-_Usage_Tracking_Statistics_User_Work_Phone_Number)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_Common_-_Usage_Tracking_Statistics_User_Work_Phone_Number)"
+      }
+    }, {
+      "name" : "Mobile Phone Number",
+      "tags" : [ "Project:Oracle Analytics for Fusion Common" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Dim - User.Mobile Phone Number",
+      "localization" : {
+        "localizationKey" : "Mobile Phone Number",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_Common_-_Usage_Tracking_Statistics_User_Mobile_Phone_Number)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_Common_-_Usage_Tracking_Statistics_User_Mobile_Phone_Number)"
+      }
+    }, {
+      "name" : "Pager Number",
+      "tags" : [ "Project:Oracle Analytics for Fusion Common" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Dim - User.Pager Number",
+      "localization" : {
+        "localizationKey" : "Pager Number",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_Common_-_Usage_Tracking_Statistics_User_Pager_Number)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_Common_-_Usage_Tracking_Statistics_User_Pager_Number)"
+      }
+    }, {
+      "name" : "FAX Number",
+      "tags" : [ "Project:Oracle Analytics for Fusion Common" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Dim - User.FAX Number",
+      "localization" : {
+        "localizationKey" : "FAX Number",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_Common_-_Usage_Tracking_Statistics_User_FAX_Number)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_Common_-_Usage_Tracking_Statistics_User_FAX_Number)"
+      }
+    }, {
+      "name" : "Name Prefix",
+      "tags" : [ "Project:Oracle Analytics for Fusion Common" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Dim - User.Name Prefix",
+      "localization" : {
+        "localizationKey" : "Name Prefix",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_Common_-_Usage_Tracking_Statistics_User_Name_Prefix)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_Common_-_Usage_Tracking_Statistics_User_Name_Prefix)"
+      }
+    }, {
+      "name" : "Name Suffix",
+      "tags" : [ "Project:Oracle Analytics for Fusion Common" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Dim - User.Name Suffix",
+      "localization" : {
+        "localizationKey" : "Name Suffix",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_Common_-_Usage_Tracking_Statistics_User_Name_Suffix)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_Common_-_Usage_Tracking_Statistics_User_Name_Suffix)"
+      }
+    }, {
+      "name" : "User Formed Date",
+      "tags" : [ "Project:Oracle Analytics for Fusion Common" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Dim - User.User Formed Date",
+      "localization" : {
+        "localizationKey" : "User Formed Date",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_Common_-_Usage_Tracking_Statistics_User_User_Formed_Date)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_Common_-_Usage_Tracking_Statistics_User_User_Formed_Date)"
+      }
+    }, {
+      "name" : "Login Identifier",
+      "tags" : [ "Project:Oracle Analytics for Fusion Common" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Dim - User.Login Identifier",
+      "localization" : {
+        "localizationKey" : "Login Identifier",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_Common_-_Usage_Tracking_Statistics_User_Login_Identifier)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_Common_-_Usage_Tracking_Statistics_User_Login_Identifier)"
+      }
+    }, {
+      "name" : "Department Identifier",
+      "tags" : [ "Project:Oracle Analytics for Fusion Common" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Dim - User.Department Identifier",
+      "localization" : {
+        "localizationKey" : "Department Identifier",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_Common_-_Usage_Tracking_Statistics_User_Department_Identifier)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_Common_-_Usage_Tracking_Statistics_User_Department_Identifier)"
+      }
+    }, {
+      "name" : "Name Effective Start Date",
+      "tags" : [ "Project:Oracle Analytics for Fusion Common" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Dim - User.Name Effective Start Date",
+      "localization" : {
+        "localizationKey" : "Name Effective Start Date",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_Common_-_Usage_Tracking_Statistics_User_Name_Effective_Start_Date)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_Common_-_Usage_Tracking_Statistics_User_Name_Effective_Start_Date)"
+      }
+    } ],
+    "localization" : {
+      "localizationKey" : "User",
+      "nameVariable" : "VALUEOF(NQ_SESSION.CN_Common_-_Usage_Tracking_Statistics_User)",
+      "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_Common_-_Usage_Tracking_Statistics_User)"
+    }
+  }
+}

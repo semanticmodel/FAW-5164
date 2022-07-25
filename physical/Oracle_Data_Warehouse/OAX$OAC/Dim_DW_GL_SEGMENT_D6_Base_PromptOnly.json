@@ -1,0 +1,24 @@
+{
+  "physicalTable": {
+    "name": "Dim_DW_GL_SEGMENT_D6_Base_PromptOnly",
+    "sourceTable": "physicalTable:Oracle_Data_Warehouse.OAX$OAC.DW_GL_SEGMENT_D",
+    "caching": {
+      "enable": true
+    },
+    "joins": [      {
+        "useJoinExpression": true,
+        "rightTable": "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Security_DW_CONTENT_PARAM_CONFIG_COA_VALUESET_GL_SEGMENT_D6",
+        "joinExpression": {
+          "expressionTemplate": "%1 = %2 AND %3 IN ('Dim - GL Segment6', '~NOVALUE~')",
+          "expressionObjects": [
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_GL_SEGMENT_D6_Base_PromptOnly.GL_SEGMENT_VALUESET_CODE",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Security_DW_CONTENT_PARAM_CONFIG_COA_VALUESET_GL_SEGMENT_D6.VALUESET_CODE",
+            "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Security_DW_CONTENT_PARAM_CONFIG_COA_VALUESET_GL_SEGMENT_D6.BI_OBJECT_NAME"
+          ]
+        },
+        "cardinality": "MANY_TO_ONE",
+        "joinType": "INNER"
+      }
+    ]
+  }
+}

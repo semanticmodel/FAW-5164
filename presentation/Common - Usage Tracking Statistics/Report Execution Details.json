@@ -1,0 +1,147 @@
+{
+  "presentationTable" : {
+    "name" : "Report Execution Details",
+    "tags" : [ "Project:Oracle Analytics for Fusion Common" ],
+    "presentationColumns" : [ {
+      "name" : "Report Execution Identifier",
+      "tags" : [ "Project:Oracle Analytics for Fusion Common" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Dim - Usage Tracking Statistics - Logical Details.Report Execution Identifier",
+      "localization" : {
+        "localizationKey" : "Report Execution Identifier",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_Common_-_Usage_Tracking_Statistics_Report_Execution_Details_Report_Execution_Identifier)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_Common_-_Usage_Tracking_Statistics_Report_Execution_Details_Report_Execution_Identifier)"
+      }
+    }, {
+      "name" : "Report Executed By User Name",
+      "tags" : [ "Project:Oracle Analytics for Fusion Common" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Dim - Usage Tracking Statistics - Logical Details.Report Executed By User Name",
+      "localization" : {
+        "localizationKey" : "Report Executed By User Name",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_Common_-_Usage_Tracking_Statistics_Report_Execution_Details_Report_Executed_By_User_Name)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_Common_-_Usage_Tracking_Statistics_Report_Execution_Details_Report_Executed_By_User_Name)"
+      }
+    }, {
+      "name" : "Report Executed By Session Identifier",
+      "tags" : [ "Project:Oracle Analytics for Fusion Common" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Dim - Usage Tracking Statistics - Logical Details.Report Executed By Session Identifier",
+      "localization" : {
+        "localizationKey" : "Report Executed By Session Identifier",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_Common_-_Usage_Tracking_Statistics_Report_Execution_Details_Report_Executed_By_Session_Identifier)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_Common_-_Usage_Tracking_Statistics_Report_Execution_Details_Report_Executed_By_Session_Identifier)"
+      }
+    }, {
+      "name" : "Success Indicator",
+      "tags" : [ "Project:Oracle Analytics for Fusion Common" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Dim - Usage Tracking Statistics - Logical Details.Success Indicator",
+      "localization" : {
+        "localizationKey" : "Success Indicator",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_Common_-_Usage_Tracking_Statistics_Report_Execution_Details_Success_Indicator)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_Common_-_Usage_Tracking_Statistics_Report_Execution_Details_Success_Indicator)"
+      }
+    }, {
+      "name" : "Success Indicator Description",
+      "tags" : [ "Project:Oracle Analytics for Fusion Common" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Dim - Usage Tracking Statistics - Logical Details.Success Indicator Description",
+      "localization" : {
+        "localizationKey" : "Success Indicator Description",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_Common_-_Usage_Tracking_Statistics_Report_Execution_Details_Success_Indicator_Description)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_Common_-_Usage_Tracking_Statistics_Report_Execution_Details_Success_Indicator_Description)"
+      }
+    }, {
+      "name" : "Report Error Text",
+      "tags" : [ "Project:Oracle Analytics for Fusion Common" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Dim - Usage Tracking Statistics - Logical Details.Report Error Text",
+      "localization" : {
+        "localizationKey" : "Report Error Text",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_Common_-_Usage_Tracking_Statistics_Report_Execution_Details_Report_Error_Text)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_Common_-_Usage_Tracking_Statistics_Report_Execution_Details_Report_Error_Text)"
+      }
+    }, {
+      "name" : "Report Start Timestamp",
+      "tags" : [ "Project:Oracle Analytics for Fusion Common" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Dim - Usage Tracking Statistics - Logical Details.Report Start Timestamp",
+      "localization" : {
+        "localizationKey" : "Report Start Timestamp",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_Common_-_Usage_Tracking_Statistics_Report_Execution_Details_Report_Start_Timestamp)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_Common_-_Usage_Tracking_Statistics_Report_Execution_Details_Report_Start_Timestamp)"
+      }
+    }, {
+      "name" : "Report Start Date",
+      "tags" : [ "Project:Oracle Analytics for Fusion Common" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Dim - Usage Tracking Statistics - Logical Details.Report Start Date",
+      "localization" : {
+        "localizationKey" : "Report Start Date",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_Common_-_Usage_Tracking_Statistics_Report_Execution_Details_Report_Start_Date)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_Common_-_Usage_Tracking_Statistics_Report_Execution_Details_Report_Start_Date)"
+      }
+    }, {
+      "name" : "Report Start Hour Minute",
+      "tags" : [ "Project:Oracle Analytics for Fusion Common" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Dim - Usage Tracking Statistics - Logical Details.Report Start Hour Minute",
+      "localization" : {
+        "localizationKey" : "Report Start Hour Minute",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_Common_-_Usage_Tracking_Statistics_Report_Execution_Details_Report_Start_Hour_Minute)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_Common_-_Usage_Tracking_Statistics_Report_Execution_Details_Report_Start_Hour_Minute)"
+      }
+    }, {
+      "name" : "Cache Indicator",
+      "tags" : [ "Project:Oracle Analytics for Fusion Common" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Dim - Usage Tracking Statistics - Logical Details.Cache Indicator",
+      "localization" : {
+        "localizationKey" : "Cache Indicator",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_Common_-_Usage_Tracking_Statistics_Report_Execution_Details_Cache_Indicator)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_Common_-_Usage_Tracking_Statistics_Report_Execution_Details_Cache_Indicator)"
+      }
+    }, {
+      "name" : "Past Month Execution Indicator",
+      "tags" : [ "Project:Oracle Analytics for Fusion Common" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Dim - Usage Tracking Statistics - Logical Details.Past Month Execution Indicator",
+      "localization" : {
+        "localizationKey" : "Past Month Execution Indicator",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_Common_-_Usage_Tracking_Statistics_Report_Execution_Details_Past_Month_Execution_Indicator)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_Common_-_Usage_Tracking_Statistics_Report_Execution_Details_Past_Month_Execution_Indicator)"
+      }
+    }, {
+      "name" : "Past Quarter Execution Indicator",
+      "tags" : [ "Project:Oracle Analytics for Fusion Common" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Dim - Usage Tracking Statistics - Logical Details.Past Quarter Execution Indicator",
+      "localization" : {
+        "localizationKey" : "Past Quarter Execution Indicator",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_Common_-_Usage_Tracking_Statistics_Report_Execution_Details_Past_Quarter_Execution_Indicator)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_Common_-_Usage_Tracking_Statistics_Report_Execution_Details_Past_Quarter_Execution_Indicator)"
+      }
+    }, {
+      "name" : "Past Year Execution Indicator",
+      "tags" : [ "Project:Oracle Analytics for Fusion Common" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Dim - Usage Tracking Statistics - Logical Details.Past Year Execution Indicator",
+      "localization" : {
+        "localizationKey" : "Past Year Execution Indicator",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_Common_-_Usage_Tracking_Statistics_Report_Execution_Details_Past_Year_Execution_Indicator)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_Common_-_Usage_Tracking_Statistics_Report_Execution_Details_Past_Year_Execution_Indicator)"
+      }
+    }, {
+      "name" : "Physical SQL",
+      "tags" : [ "Project:Oracle Analytics for Fusion Common" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Dim - Usage Tracking Statistics - Physical Details.Physical SQL",
+      "localization" : {
+        "localizationKey" : "Physical SQL",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_Common_-_Usage_Tracking_Statistics_Report_Execution_Details_Physical_SQL)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_Common_-_Usage_Tracking_Statistics_Report_Execution_Details_Physical_SQL)"
+      }
+    }, {
+      "name" : "Full Physical SQL",
+      "tags" : [ "Project:Oracle Analytics for Fusion Common" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Dim - Usage Tracking Statistics - Physical Details.Full Physical SQL",
+      "localization" : {
+        "localizationKey" : "Full Physical SQL",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_Common_-_Usage_Tracking_Statistics_Report_Execution_Details_Full_Physical_SQL)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_Common_-_Usage_Tracking_Statistics_Report_Execution_Details_Full_Physical_SQL)"
+      }
+    } ],
+    "localization" : {
+      "localizationKey" : "Report Execution Details",
+      "nameVariable" : "VALUEOF(NQ_SESSION.CN_Common_-_Usage_Tracking_Statistics_Report_Execution_Details)",
+      "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_Common_-_Usage_Tracking_Statistics_Report_Execution_Details)"
+    }
+  }
+}

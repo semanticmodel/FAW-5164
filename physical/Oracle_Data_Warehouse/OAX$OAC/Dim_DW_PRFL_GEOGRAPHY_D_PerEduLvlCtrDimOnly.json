@@ -1,0 +1,9 @@
+{
+  "physicalTable": {
+    "name": "Dim_DW_PRFL_GEOGRAPHY_D_PerEduLvlCtrDimOnly",
+    "sourceTable": "physicalTable:Oracle_Data_Warehouse.OAX$OAC.DW_PRFL_GEOGRAPHY_D",
+    "caching": {
+      "enable": true
+    }
+  }
+}

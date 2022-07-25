@@ -1,0 +1,152 @@
+{
+  "presentationTable" : {
+    "name" : "Facts - Analytics Currency",
+    "tags" : [ "Project:Fusion Analytics Warehouse - Order Management" ],
+    "presentationColumns" : [ {
+      "name" : "Total Amount Without Tax",
+      "description" : "This metric is calculated as total amount for line category as order and return without tax details.",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Order Management" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Fact - OM Sales Orders.Total Amount Without Tax",
+      "localization" : {
+        "localizationKey" : "Total Amount Without Tax",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_SCM_-_OM_Sales_Orders_Facts_-_Analytics_Currency_Total_Amount_Without_Tax)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_SCM_-_OM_Sales_Orders_Facts_-_Analytics_Currency_Total_Amount_Without_Tax)"
+      }
+    }, {
+      "name" : "Order Amount",
+      "description" : "This metric is calculated as total amount for line category as order ",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Order Management" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Fact - OM Sales Orders.Order Amount",
+      "localization" : {
+        "localizationKey" : "Order Amount",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_SCM_-_OM_Sales_Orders_Facts_-_Analytics_Currency_Order_Amount)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_SCM_-_OM_Sales_Orders_Facts_-_Analytics_Currency_Order_Amount)"
+      }
+    }, {
+      "name" : "Open Order Amount",
+      "description" : "This metric is calculated as amount for line category as order for open sales orders",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Order Management" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Fact - OM Sales Orders.Open Order Amount",
+      "localization" : {
+        "localizationKey" : "Open Order Amount",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_SCM_-_OM_Sales_Orders_Facts_-_Analytics_Currency_Open_Order_Amount)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_SCM_-_OM_Sales_Orders_Facts_-_Analytics_Currency_Open_Order_Amount)"
+      }
+    }, {
+      "name" : "Past Due Order Amount",
+      "description" : "This metric is calculated as amount for lines where scheduled ship date is less than system date and line are not shipped and for line category as order",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Order Management" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Fact - OM Sales Orders.Past Due Order Amount",
+      "localization" : {
+        "localizationKey" : "Past Due Order Amount",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_SCM_-_OM_Sales_Orders_Facts_-_Analytics_Currency_Past_Due_Order_Amount)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_SCM_-_OM_Sales_Orders_Facts_-_Analytics_Currency_Past_Due_Order_Amount)"
+      }
+    }, {
+      "name" : "Shipped Amount",
+      "description" : "This metric is calculated as amount for lines which are shipped",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Order Management" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Fact - OM Sales Orders.Shipped Amount",
+      "localization" : {
+        "localizationKey" : "Shipped Amount",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_SCM_-_OM_Sales_Orders_Facts_-_Analytics_Currency_Shipped_Amount)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_SCM_-_OM_Sales_Orders_Facts_-_Analytics_Currency_Shipped_Amount)"
+      }
+    }, {
+      "name" : "On Time Shipment Amount",
+      "description" : "This metric is calculated as amount for lines which are shipped on time",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Order Management" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Fact - OM Sales Orders.On Time Shipment Amount",
+      "localization" : {
+        "localizationKey" : "On Time Shipment Amount",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_SCM_-_OM_Sales_Orders_Facts_-_Analytics_Currency_On_Time_Shipment_Amount)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_SCM_-_OM_Sales_Orders_Facts_-_Analytics_Currency_On_Time_Shipment_Amount)"
+      }
+    }, {
+      "name" : "Shipped Late Amount",
+      "description" : "This metric is calculated as amount for lines which are not shipped on time",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Order Management" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Fact - OM Sales Orders.Shipped Late Amount",
+      "localization" : {
+        "localizationKey" : "Shipped Late Amount",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_SCM_-_OM_Sales_Orders_Facts_-_Analytics_Currency_Shipped_Late_Amount)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_SCM_-_OM_Sales_Orders_Facts_-_Analytics_Currency_Shipped_Late_Amount)"
+      }
+    }, {
+      "name" : "Perfect Order Line Amount",
+      "description" : "This metric is calculated as amount for lines which are perfect order lines",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Order Management" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Fact - OM Sales Orders.Perfect Order Line Amount",
+      "localization" : {
+        "localizationKey" : "Perfect Order Line Amount",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_SCM_-_OM_Sales_Orders_Facts_-_Analytics_Currency_Perfect_Order_Line_Amount)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_SCM_-_OM_Sales_Orders_Facts_-_Analytics_Currency_Perfect_Order_Line_Amount)"
+      }
+    }, {
+      "name" : "Lines Shipped in Full Amount",
+      "description" : "This metric is calculated as amount for lines which are shipped in full",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Order Management" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Fact - OM Sales Orders.Lines Shipped in Full Amount",
+      "localization" : {
+        "localizationKey" : "Lines Shipped in Full Amount",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_SCM_-_OM_Sales_Orders_Facts_-_Analytics_Currency_Lines_Shipped_in_Full_Amount)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_SCM_-_OM_Sales_Orders_Facts_-_Analytics_Currency_Lines_Shipped_in_Full_Amount)"
+      }
+    }, {
+      "name" : "Billed Order Amount",
+      "description" : "This metric is calculated as the total billing amount for line category as Order",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Order Management" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Fact - OM Sales Orders.Billed Order Amount",
+      "localization" : {
+        "localizationKey" : "Billed Order Amount",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_SCM_-_OM_Sales_Orders_Facts_-_Analytics_Currency_Billed_Order_Amount)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_SCM_-_OM_Sales_Orders_Facts_-_Analytics_Currency_Billed_Order_Amount)"
+      }
+    }, {
+      "name" : "Open Return Amount",
+      "description" : "This metric is calculated as amount for lines with line category of return for open sales orders",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Order Management" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Fact - OM Sales Orders.Open Return Amount",
+      "localization" : {
+        "localizationKey" : "Open Return Amount",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_SCM_-_OM_Sales_Orders_Facts_-_Analytics_Currency_Open_Return_Amount)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_SCM_-_OM_Sales_Orders_Facts_-_Analytics_Currency_Open_Return_Amount)"
+      }
+    }, {
+      "name" : "Returned Amount",
+      "description" : "This metric is calculated as amount for lines with line category of return and for closed sales orders",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Order Management" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Fact - OM Sales Orders.Returned Amount",
+      "localization" : {
+        "localizationKey" : "Returned Amount",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_SCM_-_OM_Sales_Orders_Facts_-_Analytics_Currency_Returned_Amount)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_SCM_-_OM_Sales_Orders_Facts_-_Analytics_Currency_Returned_Amount)"
+      }
+    }, {
+      "name" : "Unit List Price",
+      "description" : "This metric is calculated as average of unit list price.",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Order Management" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Fact - OM Sales Orders.Unit List Price",
+      "localization" : {
+        "localizationKey" : "Unit List Price",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_SCM_-_OM_Sales_Orders_Facts_-_Analytics_Currency_Unit_List_Price)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_SCM_-_OM_Sales_Orders_Facts_-_Analytics_Currency_Unit_List_Price)"
+      }
+    }, {
+      "name" : "Unit Selling Price",
+      "description" : "This metric is calculated as average of unit selling price.",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Order Management" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Fact - OM Sales Orders.Unit Selling Price",
+      "localization" : {
+        "localizationKey" : "Unit Selling Price",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_SCM_-_OM_Sales_Orders_Facts_-_Analytics_Currency_Unit_Selling_Price)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_SCM_-_OM_Sales_Orders_Facts_-_Analytics_Currency_Unit_Selling_Price)"
+      }
+    } ],
+    "localization" : {
+      "localizationKey" : "Facts - Analytics Currency",
+      "nameVariable" : "VALUEOF(NQ_SESSION.CN_SCM_-_OM_Sales_Orders_Facts_-_Analytics_Currency)",
+      "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_SCM_-_OM_Sales_Orders_Facts_-_Analytics_Currency)"
+    }
+  }
+}

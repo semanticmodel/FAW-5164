@@ -1,0 +1,16 @@
+{
+  "physicalTable": {
+    "name": "Security_DW_CONTENT_PARAM_CONFIG_FISCALCALENDAR_PRC_Agreement_EndDate_Fiscal_Calendar",
+    "sourceTable": "physicalTable:Oracle_Data_Warehouse.OAX$OAC.DW_CONTENT_PARAM_CONFIG_FISCALCALENDAR",
+    "caching": {
+      "enable": true,
+      "expiryTime": 1,
+      "expiryUnit": "DAYS"
+    },
+    "additionalKeys": [
+      [
+        "FISCAL_PERIOD_SET_NAME"
+      ]
+    ]
+  }
+}

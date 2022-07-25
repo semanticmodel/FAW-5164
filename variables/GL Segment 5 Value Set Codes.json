@@ -1,0 +1,22 @@
+{
+  "initBlock" : {
+    "name" : "GL Segment 5 Value Set Codes",
+    "tags" : [ "Project:Fusion Analytics Warehouse - Accounts Payable", "Project:Fusion Analytics Warehouse - Accounts Receivable", "Project:Fusion Analytics Warehouse - Expense Management", "Project:Fusion Analytics Warehouse - GL Budgets Analysis", "Project:Fusion Analytics Warehouse - General Ledger", "Project:Fusion Analytics Warehouse - Inventory", "Project:Fusion Analytics Warehouse - Procurement Management", "Project:Fusion Analytics Warehouse - Purchase Orders", "Project:Fusion Analytics Warehouse - Purchase Receipts", "Project:Fusion Analytics Warehouse - Reconciliation", "Project:Oracle Analytics for Fusion Financials" ],
+    "type" : "SESSION",
+    "connectionPool" : "connectionPool:Oracle_Data_Warehouse.Oracle_Data_Warehouse_Repository_Initblocks_Connection_Pool",
+    "selectStatements" : [ {
+      "databaseType" : "DEFAULT",
+      "query" : "SELECT DISTINCT\r\n    'GL_SEG_5_VS_CODE',\r\n    valueset_code\r\nFROM\r\n    dw_content_param_config,\r\n    dw_flex_bi_object_val_set_h n\r\nWHERE\r\n    parameter_code = 'PARAM_ERP_FINANCIALS_CHART_OF_ACCOUNT_ID'\r\n    AND parameter_value = to_char(n.chart_of_accounts_id)\r\n    AND parameter_value <> 'ALL'\r\n    AND n.bi_object_name = 'Dim - GL Segment5'\r\n    AND valueset_code <> '~NOVALUE~'\r\nUNION ALL\r\nSELECT DISTINCT\r\n    'GL_SEG_5_VS_CODE',\r\n    valueset_code\r\nFROM\r\n    dw_content_param_config,\r\n    dw_flex_bi_object_val_set_h n\r\nWHERE\r\n    parameter_code = 'PARAM_ERP_FINANCIALS_CHART_OF_ACCOUNT_ID'\r\n    and parameter_value ='ALL'\r\n    AND n.bi_object_name = 'Dim - GL Segment5'\r\n    and valueset_code <> '~NOVALUE~'\r\nUNION ALL\r\nSELECT 'GL_SEG_5_VS_CODE','~NOVALUE~'\r\nFROM DUAL"
+    } ],
+    "variables" : [ {
+      "name" : "GL_SEG_5_VS_CODE",
+      "value" : "'~NOVALUE~'",
+      "enableUsersToSetValue" : false,
+      "securitySensitive" : false
+    } ],
+    "disable" : false,
+    "queryReturnsVariableNamesAndValues" : true,
+    "allowDeferredExecution" : true,
+    "cacheQueryResult" : false
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "physicalTable": {
+    "name": "Dim_DW_FISCAL_PERIOD_D_OM_HoldReleaseDate_PromptOnly",
+    "sourceTable": "physicalTable:Oracle_Data_Warehouse.OAX$OAC.DW_FISCAL_PERIOD_D",
+    "caching": {
+      "enable": true
+    },
+    "joins": [      {
+        "rightTable": "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Security_DW_CONTENT_PARAM_CONFIG_FISCALCALENDAR_HoldReleaseDate_Calendar",
+        "joinConditions": [          {
+            "leftColumn": "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_FISCAL_PERIOD_D_OM_HoldReleaseDate_PromptOnly.FISCAL_PERIOD_SET_NAME",
+            "rightColumn": "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Security_DW_CONTENT_PARAM_CONFIG_FISCALCALENDAR_HoldReleaseDate_Calendar.FISCAL_PERIOD_SET_NAME"
+          }
+        ]
+      }
+    ],
+    "additionalKeys": [
+      [
+        "FISCAL_PERIOD_NAME",
+        "FISCAL_PERIOD_SET_NAME"
+      ]
+    ]
+  }
+}

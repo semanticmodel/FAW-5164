@@ -1,0 +1,14 @@
+{
+  "physicalTable": {
+    "name": "Dim_CONTENT_APPSHELL_DRIVING_DIMS",
+    "sourceTable": "physicalTable:Oracle_Data_Warehouse.OAX$OAC.CONTENT_APPSHELL_DRIVING_DIMS",
+    "caching": {
+      "enable": true
+    },
+    "additionalKeys": [
+      [
+        "DRIVING_DIM_CODE"
+      ]
+    ]
+  }
+}

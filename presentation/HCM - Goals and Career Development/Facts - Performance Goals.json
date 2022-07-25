@@ -1,0 +1,155 @@
+{
+  "presentationTable" : {
+    "name" : "Facts - Performance Goals",
+    "description" : "A folder containing measures related to worker goals",
+    "tags" : [ "Project:Fusion Analytics Warehouse - Goals and Career Development" ],
+    "presentationColumns" : [ {
+      "name" : "Number of Performance Goals",
+      "description" : "Number of performance goals",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Goals and Career Development" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Fact - HCM - Performance Goals.Number of Performance Goals",
+      "localization" : {
+        "localizationKey" : "Number of Performance Goals",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_HCM_-_Goals_and_Career_Development_Facts_-_Performance_Goals_Number_of_Performance_Goals)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_HCM_-_Goals_and_Career_Development_Facts_-_Performance_Goals_Number_of_Performance_Goals)"
+      }
+    }, {
+      "name" : "Workers with Performance Goals",
+      "description" : "Distinct count of workers with performance goals",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Goals and Career Development" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Fact - HCM - Performance Goals.Workers with Performance Goals",
+      "localization" : {
+        "localizationKey" : "Workers with Performance Goals",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_HCM_-_Goals_and_Career_Development_Facts_-_Performance_Goals_Workers_with_Performance_Goals)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_HCM_-_Goals_and_Career_Development_Facts_-_Performance_Goals_Workers_with_Performance_Goals)"
+      }
+    }, {
+      "name" : "Percentage of Workers with Performance Goals",
+      "description" : "Percentage of workers with performance goals",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Goals and Career Development" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Fact - HCM - Performance Goals.Percentage of Workers with Performance Goals",
+      "hideIfTrue" : {
+        "expressionTemplate" : "1"
+      },
+      "localization" : {
+        "localizationKey" : "Percentage of Workers with Performance Goals",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_HCM_-_Goals_and_Career_Development_Facts_-_Performance_Goals_Percentage_of_Workers_with_Performance_Goals)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_HCM_-_Goals_and_Career_Development_Facts_-_Performance_Goals_Percentage_of_Workers_with_Performance_Goals)"
+      }
+    }, {
+      "name" : "Workers with Goals Completed",
+      "description" : "Distinct count of workers that have all their goals in completed status",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Goals and Career Development" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Fact - HCM - Performance Goals.Workers with Goals Completed",
+      "localization" : {
+        "localizationKey" : "Workers with Goals Completed",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_HCM_-_Goals_and_Career_Development_Facts_-_Performance_Goals_Workers_with_Goals_Completed)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_HCM_-_Goals_and_Career_Development_Facts_-_Performance_Goals_Workers_with_Goals_Completed)"
+      }
+    }, {
+      "name" : "Percentage of Workers with Complete Goals",
+      "description" : "Percentage of workers that have all their performance goals in completed status",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Goals and Career Development" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Fact - HCM - Performance Goals.Percentage of Workers with Complete Goals",
+      "localization" : {
+        "localizationKey" : "Percentage of Workers with Complete Goals",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_HCM_-_Goals_and_Career_Development_Facts_-_Performance_Goals_Percentage_of_Workers_with_Complete_Goals)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_HCM_-_Goals_and_Career_Development_Facts_-_Performance_Goals_Percentage_of_Workers_with_Complete_Goals)"
+      }
+    }, {
+      "name" : "Workers with Incomplete Goals",
+      "description" : "Distinct count of employees that have atleast one incomplete performance goal",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Goals and Career Development" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Fact - HCM - Performance Goals.Workers with Incomplete Goals",
+      "localization" : {
+        "localizationKey" : "Workers with Incomplete Goals",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_HCM_-_Goals_and_Career_Development_Facts_-_Performance_Goals_Workers_with_Incomplete_Goals)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_HCM_-_Goals_and_Career_Development_Facts_-_Performance_Goals_Workers_with_Incomplete_Goals)"
+      }
+    }, {
+      "name" : "Percentage of Workers with Incomplete Goals",
+      "description" : "Percentage of employees that have atleast one incomplete performance goal",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Goals and Career Development" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Fact - HCM - Performance Goals.Percentage of Workers with Incomplete Goals",
+      "localization" : {
+        "localizationKey" : "Percentage of Workers with Incomplete Goals",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_HCM_-_Goals_and_Career_Development_Facts_-_Performance_Goals_Percentage_of_Workers_with_Incomplete_Goals)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_HCM_-_Goals_and_Career_Development_Facts_-_Performance_Goals_Percentage_of_Workers_with_Incomplete_Goals)"
+      }
+    }, {
+      "name" : "Workers with No Goals",
+      "description" : "Count of workers that have not created goals",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Goals and Career Development" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Fact - HCM - Performance Goals.Workers with No Goals",
+      "hideIfTrue" : {
+        "expressionTemplate" : "1"
+      },
+      "localization" : {
+        "localizationKey" : "Workers with No Goals",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_HCM_-_Goals_and_Career_Development_Facts_-_Performance_Goals_Workers_with_No_Goals)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_HCM_-_Goals_and_Career_Development_Facts_-_Performance_Goals_Workers_with_No_Goals)"
+      }
+    }, {
+      "name" : "Percentage of Workers with No Goals",
+      "description" : "Percentage of workers that have not created goals",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Goals and Career Development" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Fact - HCM - Performance Goals.Percentage of Workers with No Goals",
+      "hideIfTrue" : {
+        "expressionTemplate" : "1"
+      },
+      "localization" : {
+        "localizationKey" : "Percentage of Workers with No Goals",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_HCM_-_Goals_and_Career_Development_Facts_-_Performance_Goals_Percentage_of_Workers_with_No_Goals)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_HCM_-_Goals_and_Career_Development_Facts_-_Performance_Goals_Percentage_of_Workers_with_No_Goals)"
+      }
+    }, {
+      "name" : "Managers with No Goals",
+      "description" : "Distinct count of line managers that have not created the performance goals",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Goals and Career Development" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Fact - HCM - Performance Goals.Managers with No Goals",
+      "hideIfTrue" : {
+        "expressionTemplate" : "1"
+      },
+      "localization" : {
+        "localizationKey" : "Managers with No Goals",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_HCM_-_Goals_and_Career_Development_Facts_-_Performance_Goals_Managers_with_No_Goals)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_HCM_-_Goals_and_Career_Development_Facts_-_Performance_Goals_Managers_with_No_Goals)"
+      }
+    }, {
+      "name" : "Managers with Incomplete Goals",
+      "description" : "Distinct count of line managers that have not completed the performance goals",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Goals and Career Development" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Fact - HCM - Performance Goals.Managers with Incomplete Goals",
+      "localization" : {
+        "localizationKey" : "Managers with Incomplete Goals",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_HCM_-_Goals_and_Career_Development_Facts_-_Performance_Goals_Managers_with_Incomplete_Goals)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_HCM_-_Goals_and_Career_Development_Facts_-_Performance_Goals_Managers_with_Incomplete_Goals)"
+      }
+    }, {
+      "name" : "Workers with Incomplete Goals beyond Target Completion Date",
+      "description" : "Distinct Count of workers that have not completed the performance goals beyond the target completion date",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Goals and Career Development" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Fact - HCM - Performance Goals.Workers with Incomplete Goals beyond Target Completion Date",
+      "localization" : {
+        "localizationKey" : "Workers with Incomplete Goals beyond Target Completion Date",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_HCM_-_Goals_and_Career_Development_Facts_-_Performance_Goals_Workers_with_Incomplete_Goals_beyond_Target_Completion_Date)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_HCM_-_Goals_and_Career_Development_Facts_-_Performance_Goals_Workers_with_Incomplete_Goals_beyond_Target_Completion_Date)"
+      }
+    }, {
+      "name" : "Workers with Goals Not Started beyond Target Completion Date",
+      "description" : "Distinct Count of workers that have not started the performance goals beyond the target completion date",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Goals and Career Development" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Fact - HCM - Performance Goals.Workers with Goals Not Started beyond Target Completion Date",
+      "localization" : {
+        "localizationKey" : "Workers with Goals Not Started beyond Target Completion Date",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_HCM_-_Goals_and_Career_Development_Facts_-_Performance_Goals_Workers_with_Goals_Not_Started_beyond_Target_Completion_Date)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_HCM_-_Goals_and_Career_Development_Facts_-_Performance_Goals_Workers_with_Goals_Not_Started_beyond_Target_Completion_Date)"
+      }
+    } ],
+    "localization" : {
+      "localizationKey" : "Facts - Performance Goals",
+      "nameVariable" : "VALUEOF(NQ_SESSION.CN_HCM_-_Goals_and_Career_Development_Facts_-_Performance_Goals)",
+      "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_HCM_-_Goals_and_Career_Development_Facts_-_Performance_Goals)"
+    }
+  }
+}

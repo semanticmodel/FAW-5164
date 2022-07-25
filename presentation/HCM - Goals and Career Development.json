@@ -1,0 +1,371 @@
+{
+  "subjectArea" : {
+    "name" : "HCM - Goals and Career Development",
+    "description" : "This subject area provides insight into the employee goals. The goals created by employees, shared by the managers and peers and the completion status of those. It also provides details into the alignment of goals to the organization goals. The top level line managers and analysts could have a deep dive into how their teams and organizations are faring with respect to the alignment of performance goals with the organization goals and so on.",
+    "tags" : [ "Project:Fusion Analytics Warehouse - Goals and Career Development" ],
+    "sourceBusinessModel" : "businessModel:Core",
+    "implicitFactColumn" : "logicalColumn:Core.Fact - HCM - Performance Goals.Number of Performance Goals",
+    "hideIfTrue" : {
+      "expressionTemplate" : " VALUEOF(NQ_SESSION.\"%1\") = 'HIDE'",
+      "expressionObjects" : [ "variable:undeclaredVariables.AM_HCM_-_Goals_and_Career_Development" ]
+    },
+    "tableOrder" : [ {
+      "name" : "presentationTable:HCM - Goals and Career Development.Time"
+    }, {
+      "name" : "presentationTable:HCM - Goals and Career Development.Hierarchies",
+      "children" : [ {
+        "name" : "presentationTable:HCM - Goals and Career Development.Manager Hierarchy",
+        "children" : [ {
+          "name" : "presentationTable:HCM - Goals and Career Development.Manager Hierarchy - Identifiers"
+        } ]
+      }, {
+        "name" : "presentationTable:HCM - Goals and Career Development.Department Hierarchy",
+        "children" : [ {
+          "name" : "presentationTable:HCM - Goals and Career Development.Department Hierarchy - Identifiers"
+        } ]
+      }, {
+        "name" : "presentationTable:HCM - Goals and Career Development.Organization Hierarchy",
+        "children" : [ {
+          "name" : "presentationTable:HCM - Goals and Career Development.Organization Hierarchy - Identifiers"
+        } ]
+      }, {
+        "name" : "presentationTable:HCM - Goals and Career Development.Assignment Manager List"
+      } ]
+    }, {
+      "name" : "presentationTable:HCM - Goals and Career Development.Worker",
+      "children" : [ {
+        "name" : "presentationTable:HCM - Goals and Career Development.Basic Information"
+      }, {
+        "name" : "presentationTable:HCM - Goals and Career Development.Assignment Information"
+      }, {
+        "name" : "presentationTable:HCM - Goals and Career Development.Manager Information"
+      }, {
+        "name" : "presentationTable:HCM - Goals and Career Development.Personal Information"
+      }, {
+        "name" : "presentationTable:HCM - Goals and Career Development.Employment Information"
+      }, {
+        "name" : "presentationTable:HCM - Goals and Career Development.Diversity",
+        "children" : [ {
+          "name" : "presentationTable:HCM - Goals and Career Development.Ethnicity"
+        }, {
+          "name" : "presentationTable:HCM - Goals and Career Development.Disability"
+        } ]
+      }, {
+        "name" : "presentationTable:HCM - Goals and Career Development.Citizenship"
+      }, {
+        "name" : "presentationTable:HCM - Goals and Career Development.Education"
+      } ]
+    }, {
+      "name" : "presentationTable:HCM - Goals and Career Development.Common",
+      "children" : [ {
+        "name" : "presentationTable:HCM - Goals and Career Development.Department"
+      }, {
+        "name" : "presentationTable:HCM - Goals and Career Development.Business Unit"
+      }, {
+        "name" : "presentationTable:HCM - Goals and Career Development.Legal Employer"
+      }, {
+        "name" : "presentationTable:HCM - Goals and Career Development.Grade"
+      }, {
+        "name" : "presentationTable:HCM - Goals and Career Development.Location"
+      }, {
+        "name" : "presentationTable:HCM - Goals and Career Development.Job"
+      }, {
+        "name" : "presentationTable:HCM - Goals and Career Development.Position"
+      }, {
+        "name" : "presentationTable:HCM - Goals and Career Development.Bargaining Unit"
+      }, {
+        "name" : "presentationTable:HCM - Goals and Career Development.Country"
+      } ]
+    }, {
+      "name" : "presentationTable:HCM - Goals and Career Development.Performance Goals",
+      "children" : [ {
+        "name" : "presentationTable:HCM - Goals and Career Development.Review Period"
+      }, {
+        "name" : "presentationTable:HCM - Goals and Career Development.Performance Goal Plan"
+      }, {
+        "name" : "presentationTable:HCM - Goals and Career Development.Performance Goal Measurements"
+      }, {
+        "name" : "presentationTable:HCM - Goals and Career Development.Performance Goal Tasks"
+      }, {
+        "name" : "presentationTable:HCM - Goals and Career Development.Goal Alignment Details"
+      }, {
+        "name" : "presentationTable:HCM - Goals and Career Development.Performance Goal Details"
+      }, {
+        "name" : "presentationTable:HCM - Goals and Career Development.Facts - Performance Goals"
+      } ]
+    }, {
+      "name" : "presentationTable:HCM - Goals and Career Development.Development Goals",
+      "children" : [ {
+        "name" : "presentationTable:HCM - Goals and Career Development.Development Goal Measurements"
+      }, {
+        "name" : "presentationTable:HCM - Goals and Career Development.Development Goal Details"
+      }, {
+        "name" : "presentationTable:HCM - Goals and Career Development.Facts - Development Goals"
+      } ]
+    } ],
+    "permissions" : [ {
+      "accessor" : "role:DEFAULT",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:NAW_FINANCIALS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:NAW_INVENTORY_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:NAW_MANUFACTURING_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:NAW_PAYABLES_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:NAW_PURCHASING_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:NAW_SALES_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_COMMON_DATA_ADMIN_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_CONTENT_REPORTING_CONFIG",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_CX_OPTY_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_CX_OPTY_PROG_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_CX_OPTY_SNP_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_CX_REVN_LINE_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_CX_REVN_LINE_SNP_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_CX_SALES_ACCNT_DATA",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_CX_SALES_OPTY_CUSTOM_DATA",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_CX_SALES_OPTY_DATA",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_FIN_AP_AGING_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_FIN_AP_BUSINESS_UNIT_DATA",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_FIN_AP_EXPENSES_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_FIN_AP_HOLDS_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_FIN_AP_INVOICES_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_FIN_AP_LIABILITIES_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_FIN_AP_PAYMENTS_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_FIN_AP_PAYMENT_BUSINESS_UNIT_DATA",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_FIN_AR_ADJUSTMENTS_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_FIN_AR_AGING_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_FIN_AR_APPLICATIONS_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_FIN_AR_BUSINESS_UNIT_DATA",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_FIN_AR_CREDITMEMO_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_FIN_AR_RECEIPT_BUSINESS_UNIT_DATA",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_FIN_AR_REVENUE_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_FIN_AR_TRANSACTIONS_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_FIN_EXM_EMPLOYEE_EXPENSE_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_FIN_GL_ACCESS_SET_DATA",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_FIN_GL_ACCOUNT_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_FIN_GL_BALANCE_SHEET_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_FIN_GL_BUDGETS_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_FIN_GL_DETAIL_TRANSACTIONS_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_FIN_GL_PROFITABILITY_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_FIN_RECON_AP_APPS_DATA",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_FIN_RECON_AR_APPS_DATA",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_FIN_RECON_GL_APPS_DATA",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_FIN_RECON_OTHER_JOURNALS_DATA",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_HCM_ABSENCE_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_HCM_ABSENCE_DIV_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_HCM_BUSINESS_UNIT_DATA",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_HCM_COMPENSATION_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_HCM_COMPENSATION_DIV_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_HCM_COMPENSATION_WORKSHEET_MANAGER_DATA",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_HCM_COUNTRY_DATA",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_HCM_DEPARTMENT_DATA",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_HCM_GAINS_LOSS_TRANSACTION_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_HCM_GAINS_LOSS_TRANSACTION_DIV_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_HCM_GOALS_ANALYSIS_DIV_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_HCM_GOALS_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_HCM_LEGAL_EMPLOYER_DATA",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_HCM_LINE_MANAGER_DATA",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_HCM_PERFORMANCE_ANALYSIS_DIV_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_HCM_PERFORMANCE_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_HCM_PROFILE_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_HCM_PROFILE_DIV_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_HCM_REC_ALL_APP_DATA",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_HCM_REC_ALL_REQ_DATA",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_HCM_REC_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_HCM_REC_NON_RESTRICTED_APP_DATA",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_HCM_REC_REQ_DATA",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_HCM_SALARY_BASIS_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_HCM_SALARY_BASIS_DIV_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_HCM_VIEW_ALL_DATA",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_HCM_WORKFORCE_CORE_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_HCM_WORKFORCE_CORE_DIV_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_PROC_BUSINESS_UNIT_DATA",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_PROC_PURCHASE_AGREEMENT_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_PROC_PURCHASE_ORDER_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_PROC_PURCHASE_RECEIPTS_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_PROC_REQ_BUSINESS_UNIT_DATA",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_PROC_SPEND_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_SCM_INV_BUSINESS_UNIT_DATA",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_SCM_INV_INVENTORY_BALANCES_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_SCM_INV_INVENTORY_ORG_DATA",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_SCM_INV_INVENTORY_TRANSACTIONS_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_SCM_OM_BUSINESS_UNIT_DATA",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_SCM_OM_HOLDS_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_SCM_OM_SALES_ORDER_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:ServiceAdmin",
+      "access" : "READ"
+    } ],
+    "localization" : {
+      "localizationKey" : "HCM - Goals and Career Development",
+      "nameVariable" : "VALUEOF(NQ_SESSION.CN_HCM_-_Goals_and_Career_Development)",
+      "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_HCM_-_Goals_and_Career_Development)"
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "physicalTable": {
+    "name": "Dim_DW_DAY_D_JobAppDate_Fiscal",
+    "sourceTable": "physicalTable:Oracle_Data_Warehouse.OAX$OAC.DW_FISCAL_DAY_D",
+    "caching": {
+      "enable": true
+    },
+    "additionalKeys": [
+      [
+        "FISCAL_DAY_DATE"
+      ]
+    ]
+  }
+}

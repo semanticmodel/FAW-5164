@@ -1,0 +1,30 @@
+{
+  "presentationTable" : {
+    "name" : "Goal Alignment Details",
+    "tags" : [ "Project:Fusion Analytics Warehouse - Goals and Career Development" ],
+    "presentationColumns" : [ {
+      "name" : "Goal Alignment Identifier",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Goals and Career Development" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Dim - HCM - Goal Alignment Details.Goal Alignment Identifier",
+      "localization" : {
+        "localizationKey" : "Goal Alignment Identifier",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_HCM_-_Goals_and_Career_Development_Goal_Alignment_Details_Goal_Alignment_Identifier)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_HCM_-_Goals_and_Career_Development_Goal_Alignment_Details_Goal_Alignment_Identifier)"
+      }
+    }, {
+      "name" : "Aligned Goal Identifier",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Goals and Career Development" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Dim - HCM - Goal Alignment Details.Aligned Goal Identifier",
+      "localization" : {
+        "localizationKey" : "Aligned Goal Identifier",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_HCM_-_Goals_and_Career_Development_Goal_Alignment_Details_Aligned_Goal_Identifier)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_HCM_-_Goals_and_Career_Development_Goal_Alignment_Details_Aligned_Goal_Identifier)"
+      }
+    } ],
+    "localization" : {
+      "localizationKey" : "Goal Alignment Details",
+      "nameVariable" : "VALUEOF(NQ_SESSION.CN_HCM_-_Goals_and_Career_Development_Goal_Alignment_Details)",
+      "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_HCM_-_Goals_and_Career_Development_Goal_Alignment_Details)"
+    }
+  }
+}

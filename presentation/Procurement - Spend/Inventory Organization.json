@@ -1,0 +1,31 @@
+{
+  "presentationTable" : {
+    "name" : "Inventory Organization",
+    "description" : "Inventory Organization is mapped to the 'Ship To Organization' from Purchase Order Schedules for invoices which has a backing Purchase Order.",
+    "tags" : [ "Project:Fusion Analytics Warehouse - Procurement Management" ],
+    "presentationColumns" : [ {
+      "name" : "Inventory Organization Name",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Procurement Management" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Dim - Inventory Organization.Inventory Organization Name",
+      "localization" : {
+        "localizationKey" : "Inventory Organization Name",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_Procurement_-_Spend_Inventory_Organization_Inventory_Organization_Name)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_Procurement_-_Spend_Inventory_Organization_Inventory_Organization_Name)"
+      }
+    }, {
+      "name" : "Inventory Organization",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Procurement Management" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Dim - Inventory Organization.Inventory Organization",
+      "localization" : {
+        "localizationKey" : "Inventory Organization",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_Procurement_-_Spend_Inventory_Organization_Inventory_Organization)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_Procurement_-_Spend_Inventory_Organization_Inventory_Organization)"
+      }
+    } ],
+    "localization" : {
+      "localizationKey" : "Inventory Organization",
+      "nameVariable" : "VALUEOF(NQ_SESSION.CN_Procurement_-_Spend_Inventory_Organization)",
+      "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_Procurement_-_Spend_Inventory_Organization)"
+    }
+  }
+}

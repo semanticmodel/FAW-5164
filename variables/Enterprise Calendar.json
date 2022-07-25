@@ -1,0 +1,23 @@
+{
+  "initBlock" : {
+    "name" : "Enterprise Calendar",
+    "description" : "Defaults to the enterprise calendar selected in the configuration.",
+    "tags" : [ "Project:Oracle Analytics for Fusion Common" ],
+    "type" : "SESSION",
+    "connectionPool" : "connectionPool:Oracle_Data_Warehouse.Oracle_Data_Warehouse_Repository_Initblocks_Connection_Pool",
+    "selectStatements" : [ {
+      "databaseType" : "DEFAULT",
+      "query" : "SELECT PARAMETER_VALUE FROM DW_CONTENT_PARAM_CONFIG WHERE PARAMETER_CODE='PARAM_GLOBAL_ENTERPRISE_CALENDAR'"
+    } ],
+    "variables" : [ {
+      "name" : "ENTERPRISE_CALENDAR",
+      "value" : "'ABCTest123ABC'",
+      "enableUsersToSetValue" : false,
+      "securitySensitive" : false
+    } ],
+    "disable" : false,
+    "queryReturnsVariableNamesAndValues" : false,
+    "allowDeferredExecution" : true,
+    "cacheQueryResult" : true
+  }
+}

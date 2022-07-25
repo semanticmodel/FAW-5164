@@ -1,0 +1,19 @@
+{
+  "subjectArea" : {
+    "name" : "Internal - Multiple Calendar Driving Dimension Values",
+    "tags" : [ "Project:Fusion Analytics Warehouse - Accounts Payable", "Project:Fusion Analytics Warehouse - Expense Management", "Project:Fusion Analytics Warehouse - GL Budgets Analysis", "Project:Fusion Analytics Warehouse - General Ledger", "Project:Fusion Analytics Warehouse - Inventory", "Project:Fusion Analytics Warehouse - Order Management", "Project:Fusion Analytics Warehouse - Procurement Management", "Project:Fusion Analytics Warehouse - Purchase Agreements", "Project:Fusion Analytics Warehouse - Purchase Orders", "Project:Fusion Analytics Warehouse - Purchase Receipts", "Project:Fusion Analytics Warehouse - Reconciliation", "Project:Oracle Analytics for Fusion Common", "Project:Oracle Analytics for Fusion Financials" ],
+    "sourceBusinessModel" : "businessModel:Core",
+    "implicitFactColumn" : "logicalColumn:Core.Fact - Multiple Calendar Driving Dimension Values for Appshell.Record Count",
+    "hideIfTrue" : {
+      "expressionTemplate" : "1 = 1"
+    },
+    "tableOrder" : [ {
+      "name" : "presentationTable:Internal - Multiple Calendar Driving Dimension Values.Value"
+    } ],
+    "localization" : {
+      "localizationKey" : "Internal - Multiple Calendar Driving Dimension Values",
+      "nameVariable" : "VALUEOF(NQ_SESSION.CN_Internal_-_Multiple_Calendar_Driving_Dimension_Values)",
+      "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_Internal_-_Multiple_Calendar_Driving_Dimension_Values)"
+    }
+  }
+}

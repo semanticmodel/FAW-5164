@@ -1,0 +1,35 @@
+{
+  "physicalTable": {
+    "name": "Dim_DW_LEDGER_SET_ASSIGNMENTS_D",
+    "sourceTable": "physicalTable:Oracle_Data_Warehouse.OAX$OAC.DW_LEDGER_SET_ASSIGNMENTS_D",
+    "caching": {
+      "enable": true
+    },
+    "joins": [      {
+        "rightTable": "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_LEDGER_SET_D",
+        "joinConditions": [          {
+            "leftColumn": "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_LEDGER_SET_ASSIGNMENTS_D.LEDGER_SET_ID",
+            "rightColumn": "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_LEDGER_SET_D.LEDGER_SET_ID"
+          }
+        ]
+      },
+      {
+        "rightTable": "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Security_DW_CONTENT_PARAM_CONFIG_LEDGERSET_LedgerSet",
+        "joinConditions": [          {
+            "leftColumn": "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_LEDGER_SET_ASSIGNMENTS_D.LEDGER_SET_ID",
+            "rightColumn": "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Security_DW_CONTENT_PARAM_CONFIG_LEDGERSET_LedgerSet.LEDGER_SET_ID"
+          }
+        ]
+      }
+    ],
+    "additionalKeys": [
+      [
+        "LEDGER_ID"
+      ],
+      [
+        "LEDGER_ID",
+        "LEDGER_SET_ID"
+      ]
+    ]
+  }
+}

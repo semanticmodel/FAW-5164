@@ -1,0 +1,39 @@
+{
+  "presentationTable" : {
+    "name" : "User Activity",
+    "tags" : [ "Project:Oracle Analytics for Fusion Common" ],
+    "presentationColumns" : [ {
+      "name" : "Number of Users",
+      "tags" : [ "Project:Oracle Analytics for Fusion Common" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Fact - Usage Tracking Statistics.Number of Users",
+      "localization" : {
+        "localizationKey" : "Number of Users",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_Common_-_Usage_Tracking_Statistics_User_Activity_Number_of_Users)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_Common_-_Usage_Tracking_Statistics_User_Activity_Number_of_Users)"
+      }
+    }, {
+      "name" : "Number of User Sessions",
+      "tags" : [ "Project:Oracle Analytics for Fusion Common" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Fact - Usage Tracking Statistics.Number of User Sessions",
+      "localization" : {
+        "localizationKey" : "Number of User Sessions",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_Common_-_Usage_Tracking_Statistics_User_Activity_Number_of_User_Sessions)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_Common_-_Usage_Tracking_Statistics_User_Activity_Number_of_User_Sessions)"
+      }
+    }, {
+      "name" : "Number of Unique User Sessions",
+      "tags" : [ "Project:Oracle Analytics for Fusion Common" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Fact - Usage Tracking Statistics.Number of Unique User Sessions",
+      "localization" : {
+        "localizationKey" : "Number of Unique User Sessions",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_Common_-_Usage_Tracking_Statistics_User_Activity_Number_of_Unique_User_Sessions)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_Common_-_Usage_Tracking_Statistics_User_Activity_Number_of_Unique_User_Sessions)"
+      }
+    } ],
+    "localization" : {
+      "localizationKey" : "User Activity",
+      "nameVariable" : "VALUEOF(NQ_SESSION.CN_Common_-_Usage_Tracking_Statistics_User_Activity)",
+      "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_Common_-_Usage_Tracking_Statistics_User_Activity)"
+    }
+  }
+}

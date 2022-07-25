@@ -1,0 +1,22 @@
+{
+  "initBlock" : {
+    "name" : "Self Record Id",
+    "tags" : [ "Project:Fusion Analytics Warehouse - Absence Management", "Project:Fusion Analytics Warehouse - Expense Management", "Project:Fusion Analytics Warehouse - Inventory", "Project:Fusion Analytics Warehouse - Salary Basis", "Project:Fusion Analytics Warehouse - Talent Profile Management", "Project:Fusion Analytics Warehouse - Workforce Compensation" ],
+    "type" : "SESSION",
+    "connectionPool" : "connectionPool:Oracle_Data_Warehouse.Oracle_Data_Warehouse_Repository_Initblocks_Connection_Pool",
+    "selectStatements" : [ {
+      "databaseType" : "DEFAULT",
+      "query" : "SELECT CASE WHEN B.SEC_OBJ_MEMBER_VAL='YES' OR b.sec_obj_member_val is null THEN A.PERSON_ID ELSE -1 END FROM DW_USER_PERSON_D A, SEC_SECURE_BY_OBJ_MEMBER_USER B WHERE A.USERNAME=B.USERNAME(+) \r\nAND A.USERNAME='VALUEOF(NQ_SESSION.USER)'\r\nAND B.SEC_OBJ_CODE(+)='OA4F_SEC_HCM_SEE_SELF_RECORD'"
+    } ],
+    "variables" : [ {
+      "name" : "SELF_RCD_ID",
+      "value" : "-(1)",
+      "enableUsersToSetValue" : false,
+      "securitySensitive" : false
+    } ],
+    "disable" : false,
+    "queryReturnsVariableNamesAndValues" : false,
+    "allowDeferredExecution" : true,
+    "cacheQueryResult" : true
+  }
+}

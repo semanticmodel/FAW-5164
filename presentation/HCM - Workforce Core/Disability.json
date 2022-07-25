@@ -1,0 +1,424 @@
+{
+  "presentationTable" : {
+    "name" : "Disability",
+    "tags" : [ "Project:Fusion Analytics Warehouse - Workforce Management", "Project:Oracle Analytics for Fusion Human Capital Management" ],
+    "presentationColumns" : [ {
+      "name" : "Disability Description",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Workforce Management", "Project:Oracle Analytics for Fusion Human Capital Management" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Dim - Worker.Disability Description",
+      "localization" : {
+        "localizationKey" : "Disability Description",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_HCM_-_Workforce_Core_Disability_Disability_Description)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_HCM_-_Workforce_Core_Disability_Disability_Description)"
+      }
+    }, {
+      "name" : "Disability Organization",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Workforce Management", "Project:Oracle Analytics for Fusion Human Capital Management" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Dim - Worker.Disability Organization",
+      "localization" : {
+        "localizationKey" : "Disability Organization",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_HCM_-_Workforce_Core_Disability_Disability_Organization)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_HCM_-_Workforce_Core_Disability_Disability_Organization)"
+      }
+    }, {
+      "name" : "Status",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Workforce Management", "Project:Oracle Analytics for Fusion Human Capital Management" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Dim - Worker.Status",
+      "localization" : {
+        "localizationKey" : "Status",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_HCM_-_Workforce_Core_Disability_Status)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_HCM_-_Workforce_Core_Disability_Status)"
+      }
+    }, {
+      "name" : "Valid From Date",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Workforce Management", "Project:Oracle Analytics for Fusion Human Capital Management" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Dim - Worker.Valid From Date",
+      "localization" : {
+        "localizationKey" : "Valid From Date",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_HCM_-_Workforce_Core_Disability_Valid_From_Date)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_HCM_-_Workforce_Core_Disability_Valid_From_Date)"
+      }
+    }, {
+      "name" : "Valid To Date",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Workforce Management", "Project:Oracle Analytics for Fusion Human Capital Management" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Dim - Worker.Valid To Date",
+      "localization" : {
+        "localizationKey" : "Valid To Date",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_HCM_-_Workforce_Core_Disability_Valid_To_Date)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_HCM_-_Workforce_Core_Disability_Valid_To_Date)"
+      }
+    }, {
+      "name" : "Category",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Workforce Management", "Project:Oracle Analytics for Fusion Human Capital Management" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Dim - Worker.Category",
+      "localization" : {
+        "localizationKey" : "Category",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_HCM_-_Workforce_Core_Disability_Category)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_HCM_-_Workforce_Core_Disability_Category)"
+      }
+    }, {
+      "name" : "Reason",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Workforce Management", "Project:Oracle Analytics for Fusion Human Capital Management" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Dim - Worker.Reason",
+      "localization" : {
+        "localizationKey" : "Reason",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_HCM_-_Workforce_Core_Disability_Reason)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_HCM_-_Workforce_Core_Disability_Reason)"
+      }
+    }, {
+      "name" : "Disclosure Date",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Workforce Management", "Project:Oracle Analytics for Fusion Human Capital Management" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Dim - Worker.Disclosure Date",
+      "localization" : {
+        "localizationKey" : "Disclosure Date",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_HCM_-_Workforce_Core_Disability_Disclosure_Date)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_HCM_-_Workforce_Core_Disability_Disclosure_Date)"
+      }
+    }, {
+      "name" : "Registration Date",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Workforce Management", "Project:Oracle Analytics for Fusion Human Capital Management" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Dim - Worker.Registration Date",
+      "localization" : {
+        "localizationKey" : "Registration Date",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_HCM_-_Workforce_Core_Disability_Registration_Date)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_HCM_-_Workforce_Core_Disability_Registration_Date)"
+      }
+    }, {
+      "name" : "Expiration Date",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Workforce Management", "Project:Oracle Analytics for Fusion Human Capital Management" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Dim - Worker.Expiration Date",
+      "localization" : {
+        "localizationKey" : "Expiration Date",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_HCM_-_Workforce_Core_Disability_Expiration_Date)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_HCM_-_Workforce_Core_Disability_Expiration_Date)"
+      }
+    }, {
+      "name" : "Self Disclosed Type",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Workforce Management", "Project:Oracle Analytics for Fusion Human Capital Management" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Dim - Worker.Self Disclosed Type",
+      "localization" : {
+        "localizationKey" : "Self Disclosed Type",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_HCM_-_Workforce_Core_Disability_Self_Disclosed_Type)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_HCM_-_Workforce_Core_Disability_Self_Disclosed_Type)"
+      }
+    }, {
+      "name" : "Work Restrictions",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Workforce Management", "Project:Oracle Analytics for Fusion Human Capital Management" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Dim - Worker.Work Restrictions",
+      "localization" : {
+        "localizationKey" : "Work Restrictions",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_HCM_-_Workforce_Core_Disability_Work_Restrictions)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_HCM_-_Workforce_Core_Disability_Work_Restrictions)"
+      }
+    }, {
+      "name" : "Disability Organization Identifier",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Workforce Management", "Project:Oracle Analytics for Fusion Human Capital Management" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Dim - Worker.Disability Organization Identifier",
+      "localization" : {
+        "localizationKey" : "Disability Organization Identifier",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_HCM_-_Workforce_Core_Disability_Disability_Organization_Identifier)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_HCM_-_Workforce_Core_Disability_Disability_Organization_Identifier)"
+      }
+    }, {
+      "name" : "Status Code",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Workforce Management", "Project:Oracle Analytics for Fusion Human Capital Management" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Dim - Worker.Status Code",
+      "localization" : {
+        "localizationKey" : "Status Code",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_HCM_-_Workforce_Core_Disability_Status_Code)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_HCM_-_Workforce_Core_Disability_Status_Code)"
+      }
+    }, {
+      "name" : "Category Code",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Workforce Management", "Project:Oracle Analytics for Fusion Human Capital Management" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Dim - Worker.Category Code",
+      "localization" : {
+        "localizationKey" : "Category Code",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_HCM_-_Workforce_Core_Disability_Category_Code)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_HCM_-_Workforce_Core_Disability_Category_Code)"
+      }
+    }, {
+      "name" : "Reason Code",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Workforce Management", "Project:Oracle Analytics for Fusion Human Capital Management" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Dim - Worker.Reason Code",
+      "localization" : {
+        "localizationKey" : "Reason Code",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_HCM_-_Workforce_Core_Disability_Reason_Code)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_HCM_-_Workforce_Core_Disability_Reason_Code)"
+      }
+    }, {
+      "name" : "Self Disclosed Type Code",
+      "tags" : [ "Project:Fusion Analytics Warehouse - Workforce Management", "Project:Oracle Analytics for Fusion Human Capital Management" ],
+      "sourceLogicalColumn" : "logicalColumn:Core.Dim - Worker.Self Disclosed Type Code",
+      "localization" : {
+        "localizationKey" : "Self Disclosed Type Code",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_HCM_-_Workforce_Core_Disability_Self_Disclosed_Type_Code)",
+        "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_HCM_-_Workforce_Core_Disability_Self_Disclosed_Type_Code)"
+      }
+    } ],
+    "permissions" : [ {
+      "accessor" : "role:DEFAULT",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:NAW_FINANCIALS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:NAW_INVENTORY_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:NAW_MANUFACTURING_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:NAW_PAYABLES_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:NAW_PURCHASING_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:NAW_SALES_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_COMMON_DATA_ADMIN_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_CONTENT_REPORTING_CONFIG",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_CX_OPTY_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_CX_OPTY_PROG_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_CX_OPTY_SNP_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_CX_REVN_LINE_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_CX_REVN_LINE_SNP_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_CX_SALES_ACCNT_DATA",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_CX_SALES_OPTY_CUSTOM_DATA",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_CX_SALES_OPTY_DATA",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_FIN_AP_AGING_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_FIN_AP_BUSINESS_UNIT_DATA",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_FIN_AP_EXPENSES_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_FIN_AP_HOLDS_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_FIN_AP_INVOICES_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_FIN_AP_LIABILITIES_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_FIN_AP_PAYMENTS_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_FIN_AP_PAYMENT_BUSINESS_UNIT_DATA",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_FIN_AR_ADJUSTMENTS_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_FIN_AR_AGING_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_FIN_AR_APPLICATIONS_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_FIN_AR_BUSINESS_UNIT_DATA",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_FIN_AR_CREDITMEMO_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_FIN_AR_RECEIPT_BUSINESS_UNIT_DATA",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_FIN_AR_REVENUE_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_FIN_AR_TRANSACTIONS_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_FIN_EXM_EMPLOYEE_EXPENSE_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_FIN_GL_ACCESS_SET_DATA",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_FIN_GL_ACCOUNT_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_FIN_GL_BALANCE_SHEET_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_FIN_GL_BUDGETS_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_FIN_GL_DETAIL_TRANSACTIONS_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_FIN_GL_PROFITABILITY_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_FIN_RECON_AP_APPS_DATA",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_FIN_RECON_AR_APPS_DATA",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_FIN_RECON_GL_APPS_DATA",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_FIN_RECON_OTHER_JOURNALS_DATA",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_HCM_ABSENCE_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_HCM_ABSENCE_DIV_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_HCM_BUSINESS_UNIT_DATA",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_HCM_COMPENSATION_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_HCM_COMPENSATION_DIV_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_HCM_COMPENSATION_WORKSHEET_MANAGER_DATA",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_HCM_COUNTRY_DATA",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_HCM_DEPARTMENT_DATA",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_HCM_GAINS_LOSS_TRANSACTION_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_HCM_GAINS_LOSS_TRANSACTION_DIV_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_HCM_GOALS_ANALYSIS_DIV_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_HCM_GOALS_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_HCM_LEGAL_EMPLOYER_DATA",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_HCM_LINE_MANAGER_DATA",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_HCM_PERFORMANCE_ANALYSIS_DIV_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_HCM_PERFORMANCE_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_HCM_PROFILE_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_HCM_PROFILE_DIV_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_HCM_REC_ALL_APP_DATA",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_HCM_REC_ALL_REQ_DATA",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_HCM_REC_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_HCM_REC_NON_RESTRICTED_APP_DATA",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_HCM_REC_REQ_DATA",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_HCM_SALARY_BASIS_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_HCM_SALARY_BASIS_DIV_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_HCM_VIEW_ALL_DATA",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_HCM_WORKFORCE_CORE_ANALYSIS_DUTY",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_HCM_WORKFORCE_CORE_DIV_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_PROC_BUSINESS_UNIT_DATA",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:OA4F_PROC_PURCHASE_AGREEMENT_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_PROC_PURCHASE_ORDER_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_PROC_PURCHASE_RECEIPTS_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_PROC_REQ_BUSINESS_UNIT_DATA",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_PROC_SPEND_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_SCM_INV_BUSINESS_UNIT_DATA",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_SCM_INV_INVENTORY_BALANCES_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_SCM_INV_INVENTORY_ORG_DATA",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_SCM_INV_INVENTORY_TRANSACTIONS_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_SCM_OM_BUSINESS_UNIT_DATA",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_SCM_OM_HOLDS_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:OA4F_SCM_OM_SALES_ORDER_ANALYSIS_DUTY",
+      "access" : "NO_ACCESS"
+    }, {
+      "accessor" : "role:ServiceAdmin",
+      "access" : "NO_ACCESS"
+    } ],
+    "localization" : {
+      "localizationKey" : "Disability",
+      "nameVariable" : "VALUEOF(NQ_SESSION.CN_HCM_-_Workforce_Core_Disability)",
+      "descriptionVariable" : "VALUEOF(NQ_SESSION.CD_HCM_-_Workforce_Core_Disability)"
+    }
+  }
+}

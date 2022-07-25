@@ -1,0 +1,14 @@
+{
+  "physicalTable": {
+    "name": "Dim_DW_PERSON_TYPE_USAGE_D_JobApplicationCandidate",
+    "sourceTable": "physicalTable:Oracle_Data_Warehouse.OAX$OAC.DW_PERSON_TYPE_USAGE_D",
+    "caching": {
+      "enable": true
+    },
+    "additionalKeys": [
+      [
+        "PERSON_ID"
+      ]
+    ]
+  }
+}

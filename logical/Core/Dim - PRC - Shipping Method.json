@@ -1,0 +1,237 @@
+{
+  "logicalTable" : {
+    "name" : "Dim - PRC - Shipping Method",
+    "type" : "DIMENSION",
+    "primaryKey" : [ "Shipping Method Code" ],
+    "logicalColumns" : [ {
+      "name" : "Shipping Method",
+      "dataType" : "VARCHAR",
+      "descriptorColumn" : "Shipping Method Code",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "Dim_PRC_LKP_DW_PO_MODE_OF_TRANSPORT_D_TL_PromptOnly",
+          "physicalExpression" : {
+            "expressionTemplate" : " LOOKUP( SPARSE %1, %2, %2,  VALUEOF(NQ_SESSION.%3))",
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_PRC_LKP_DW_PO_MODE_OF_TRANSPORT_D_TL_PromptOnly.NAME", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_PRC_LKP_DW_PO_MODE_OF_TRANSPORT_D_TL_PromptOnly.CODE", "variable:INIT_USER_LANGUAGE_CODE.USER_LANGUAGE_CODE" ]
+          }
+        }, {
+          "logicalTableSource" : "Dim_PRC_LKP_DW_PO_MODE_OF_TRANSPORT_D_TL",
+          "physicalExpression" : {
+            "expressionTemplate" : " LOOKUP( SPARSE %1, %2, %2,  VALUEOF(NQ_SESSION.%3))",
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_PRC_LKP_DW_PO_MODE_OF_TRANSPORT_D_TL.NAME", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_PRC_LKP_DW_PO_MODE_OF_TRANSPORT_D_TL.CODE", "variable:INIT_USER_LANGUAGE_CODE.USER_LANGUAGE_CODE" ]
+          }
+        }, {
+          "logicalTableSource" : "Fact_DW_PURCHASE_ORDER_CF",
+          "physicalExpression" : {
+            "expressionTemplate" : " CASE  WHEN %1 <> '-99999' THEN %2 END  ||  CASE  WHEN %3 <> '~NOVALUE~' THEN '-' ||  LOOKUP( SPARSE %4, %3, %3,  VALUEOF(NQ_SESSION.%5)) END  ||  CASE  WHEN %6 <> '~NOVALUE~' THEN '-' ||  LOOKUP( SPARSE %7, %8, %8,  VALUEOF(NQ_SESSION.%5)) END ",
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_PURCHASE_ORDER_CF.PO_LINE_LOC_CARRIER_ID", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_PARTY_D_PRC_Freight_Carrier.PARTY_NAME", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_PURCHASE_ORDER_CF.PO_LINE_LOC_MODE_OF_TRANSPORT", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_PRC_LKP_DW_PO_MODE_OF_TRANSPORT_D_TL.NAME", "variable:INIT_USER_LANGUAGE_CODE.USER_LANGUAGE_CODE", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_PURCHASE_ORDER_CF.PO_LINE_LOC_SERVICE_LEVEL", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_PRC_LKP_DW_PO_SERVICE_LEVELS_D_TL.NAME", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_PRC_LKP_DW_PO_SERVICE_LEVELS_D_TL.CODE" ]
+          }
+        }, {
+          "logicalTableSource" : "Fact_DW_AGREEMENT_CF",
+          "physicalExpression" : {
+            "expressionTemplate" : " CASE  WHEN %1 <> '-99999' THEN %2 END  ||  CASE  WHEN %3 <> '~NOVALUE~' THEN '-' ||  LOOKUP( SPARSE %4, %3, %3,  VALUEOF(NQ_SESSION.%5)) END  ||  CASE  WHEN %6 <> '~NOVALUE~' THEN '-' ||  LOOKUP( SPARSE %7, %8, %8,  VALUEOF(NQ_SESSION.%5)) END ",
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_AGREEMENT_CF_Line.CARRIER_ID", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_PARTY_D_PRC_Freight_Carrier.PARTY_NAME", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_AGREEMENT_CF_Line.MODE_OF_TRANSPORT", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_PRC_LKP_DW_PO_MODE_OF_TRANSPORT_D_TL.NAME", "variable:INIT_USER_LANGUAGE_CODE.USER_LANGUAGE_CODE", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_AGREEMENT_CF_Line.SERVICE_LEVEL", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_PRC_LKP_DW_PO_SERVICE_LEVELS_D_TL.NAME", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_PRC_LKP_DW_PO_SERVICE_LEVELS_D_TL.CODE" ]
+          }
+        }, {
+          "logicalTableSource" : "Dim_DW_PURCHASE_ORDER_CF_LineLocation",
+          "physicalExpression" : {
+            "expressionTemplate" : " CASE  WHEN %1 <> '-99999' THEN %2 END  ||  CASE  WHEN %3 <> '~NOVALUE~' THEN '-' ||  LOOKUP( SPARSE %4, %3, %3,  VALUEOF(NQ_SESSION.%5)) END  ||  CASE  WHEN %6 <> '~NOVALUE~' THEN '-' ||  LOOKUP( SPARSE %7, %8, %8,  VALUEOF(NQ_SESSION.%5)) END ",
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_PURCHASE_ORDER_CF_LineLocation.PO_LINE_LOC_CARRIER_ID", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_PARTY_D_PRC_Freight_Carrier.PARTY_NAME", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_PURCHASE_ORDER_CF_LineLocation.PO_LINE_LOC_MODE_OF_TRANSPORT", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_PRC_LKP_DW_PO_MODE_OF_TRANSPORT_D_TL.NAME", "variable:INIT_USER_LANGUAGE_CODE.USER_LANGUAGE_CODE", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_PURCHASE_ORDER_CF_LineLocation.PO_LINE_LOC_SERVICE_LEVEL", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_PRC_LKP_DW_PO_SERVICE_LEVELS_D_TL.NAME", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_PRC_LKP_DW_PO_SERVICE_LEVELS_D_TL.CODE" ]
+          }
+        }, {
+          "logicalTableSource" : "Dim_DW_SCM_CODE_VALUES_LKP_TL_PRC_Shipping_Method_PromptOnly",
+          "physicalExpression" : {
+            "expressionTemplate" : " LOOKUP( SPARSE %1, %2, %2, 'WSH_MODE_OF_TRANSPORT',  VALUEOF(NQ_SESSION.%3))",
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Lookup_DW_SCM_CODE_VALUES_LKP_TL.NAME", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_SCM_CODE_VALUES_LKP_TL_PRC_Shipping_Method_PromptOnly.CODE", "variable:INIT_USER_LANGUAGE_CODE.USER_LANGUAGE_CODE" ]
+          }
+        }, {
+          "logicalTableSource" : "Dim_DW_SCM_CODE_VALUES_LKP_TL_PRC_Shipping_Method",
+          "physicalExpression" : {
+            "expressionTemplate" : " LOOKUP( SPARSE %1, %2, %2, 'WSH_MODE_OF_TRANSPORT',  VALUEOF(NQ_SESSION.%3))",
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Lookup_DW_SCM_CODE_VALUES_LKP_TL.NAME", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_SCM_CODE_VALUES_LKP_TL_PRC_Shipping_Method.CODE", "variable:INIT_USER_LANGUAGE_CODE.USER_LANGUAGE_CODE" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Detail"
+    }, {
+      "name" : "Shipping Method Code",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "Dim_PRC_LKP_DW_PO_MODE_OF_TRANSPORT_D_TL_PromptOnly",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_PRC_LKP_DW_PO_MODE_OF_TRANSPORT_D_TL_PromptOnly.CODE" ]
+          }
+        }, {
+          "logicalTableSource" : "Dim_PRC_LKP_DW_PO_MODE_OF_TRANSPORT_D_TL",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_PRC_LKP_DW_PO_MODE_OF_TRANSPORT_D_TL.CODE" ]
+          }
+        }, {
+          "logicalTableSource" : "Fact_DW_PURCHASE_ORDER_CF",
+          "physicalExpression" : {
+            "expressionTemplate" : " CAST (%1 AS CHARACTER ( 30 )) || '-' || %2 || '-' || %3",
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_PARTY_D_PRC_Freight_Carrier.PARTY_ID", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_PURCHASE_ORDER_CF.PO_LINE_LOC_MODE_OF_TRANSPORT", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_PRC_LKP_DW_PO_SERVICE_LEVELS_D_TL.CODE" ]
+          }
+        }, {
+          "logicalTableSource" : "Fact_DW_AGREEMENT_CF",
+          "physicalExpression" : {
+            "expressionTemplate" : " CAST (%1 AS CHARACTER ( 30 )) || '-' || %2 || '-' || %3",
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_PARTY_D_PRC_Freight_Carrier.PARTY_ID", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_AGREEMENT_CF_Line.MODE_OF_TRANSPORT", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_PRC_LKP_DW_PO_SERVICE_LEVELS_D_TL.CODE" ]
+          }
+        }, {
+          "logicalTableSource" : "Dim_DW_PURCHASE_ORDER_CF_LineLocation",
+          "physicalExpression" : {
+            "expressionTemplate" : " CAST (%1 AS CHARACTER ( 30 )) || '-' || %2 || '-' || %3",
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_PARTY_D_PRC_Freight_Carrier.PARTY_ID", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_PURCHASE_ORDER_CF_LineLocation.PO_LINE_LOC_MODE_OF_TRANSPORT", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_PRC_LKP_DW_PO_SERVICE_LEVELS_D_TL.CODE" ]
+          }
+        }, {
+          "logicalTableSource" : "Dim_DW_SCM_CODE_VALUES_LKP_TL_PRC_Shipping_Method_PromptOnly",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_SCM_CODE_VALUES_LKP_TL_PRC_Shipping_Method_PromptOnly.CODE" ]
+          }
+        }, {
+          "logicalTableSource" : "Dim_DW_SCM_CODE_VALUES_LKP_TL_PRC_Shipping_Method",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_SCM_CODE_VALUES_LKP_TL_PRC_Shipping_Method.CODE" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Detail"
+    } ],
+    "logicalTableSources" : [ {
+      "name" : "Dim_PRC_LKP_DW_PO_MODE_OF_TRANSPORT_D_TL_PromptOnly",
+      "disable" : false,
+      "tableMapping" : {
+        "tables" : [ "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Dim_PRC_LKP_DW_PO_MODE_OF_TRANSPORT_D_TL_PromptOnly" ]
+      },
+      "combineWithOtherFragments" : false,
+      "enableFragmentSelection" : false,
+      "distinctValues" : false
+    }, {
+      "name" : "Dim_PRC_LKP_DW_PO_MODE_OF_TRANSPORT_D_TL",
+      "disable" : false,
+      "tableMapping" : {
+        "tables" : [ "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Dim_PRC_LKP_DW_PO_MODE_OF_TRANSPORT_D_TL" ]
+      },
+      "combineWithOtherFragments" : false,
+      "enableFragmentSelection" : false,
+      "distinctValues" : false
+    }, {
+      "name" : "Fact_DW_PURCHASE_ORDER_CF",
+      "disable" : false,
+      "tableMapping" : {
+        "tables" : [ "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_PURCHASE_ORDER_CF", "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Dim_PRC_LKP_DW_PO_SERVICE_LEVELS_D_TL", "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_PARTY_D_PRC_Freight_Carrier" ],
+        "logicalTableSourceJoins" : [ {
+          "leftTable" : "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_PURCHASE_ORDER_CF",
+          "rightTable" : "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Dim_PRC_LKP_DW_PO_SERVICE_LEVELS_D_TL",
+          "joinType" : "INNER",
+          "disable" : false
+        }, {
+          "leftTable" : "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_PURCHASE_ORDER_CF",
+          "rightTable" : "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_PARTY_D_PRC_Freight_Carrier",
+          "joinType" : "INNER",
+          "disable" : false
+        } ]
+      },
+      "combineWithOtherFragments" : false,
+      "enableFragmentSelection" : false,
+      "distinctValues" : false
+    }, {
+      "name" : "Fact_DW_AGREEMENT_CF",
+      "disable" : false,
+      "tableMapping" : {
+        "tables" : [ "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_AGREEMENT_CF_Line", "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Dim_PRC_LKP_DW_PO_SERVICE_LEVELS_D_TL", "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_PARTY_D_PRC_Freight_Carrier" ],
+        "logicalTableSourceJoins" : [ {
+          "leftTable" : "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_AGREEMENT_CF_Line",
+          "rightTable" : "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Dim_PRC_LKP_DW_PO_SERVICE_LEVELS_D_TL",
+          "joinType" : "INNER",
+          "disable" : false
+        }, {
+          "leftTable" : "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Fact_DW_AGREEMENT_CF_Line",
+          "rightTable" : "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_PARTY_D_PRC_Freight_Carrier",
+          "joinType" : "INNER",
+          "disable" : false
+        } ]
+      },
+      "dataGranularity" : [ "logicalLevel:Core.Dim - PRC - Shipping Method.Detail" ],
+      "combineWithOtherFragments" : false,
+      "enableFragmentSelection" : false,
+      "distinctValues" : false
+    }, {
+      "name" : "Dim_DW_PURCHASE_ORDER_CF_LineLocation",
+      "disable" : false,
+      "tableMapping" : {
+        "tables" : [ "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Dim_PRC_LKP_DW_PO_SERVICE_LEVELS_D_TL", "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_PARTY_D_PRC_Freight_Carrier", "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_PURCHASE_ORDER_CF_LineLocation" ],
+        "logicalTableSourceJoins" : [ {
+          "leftTable" : "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Dim_PRC_LKP_DW_PO_SERVICE_LEVELS_D_TL",
+          "rightTable" : "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_PURCHASE_ORDER_CF_LineLocation",
+          "joinType" : "INNER",
+          "disable" : false
+        }, {
+          "leftTable" : "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_PARTY_D_PRC_Freight_Carrier",
+          "rightTable" : "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_PURCHASE_ORDER_CF_LineLocation",
+          "joinType" : "INNER",
+          "disable" : false
+        } ]
+      },
+      "combineWithOtherFragments" : false,
+      "enableFragmentSelection" : false,
+      "distinctValues" : false
+    }, {
+      "name" : "Dim_DW_SCM_CODE_VALUES_LKP_TL_PRC_Shipping_Method_PromptOnly",
+      "disable" : false,
+      "tableMapping" : {
+        "tables" : [ "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_SCM_CODE_VALUES_LKP_TL_PRC_Shipping_Method_PromptOnly" ]
+      },
+      "combineWithOtherFragments" : false,
+      "enableFragmentSelection" : false,
+      "dataFilter" : {
+        "expressionTemplate" : "%1 = 'WSH_MODE_OF_TRANSPORT' AND %2 =  VALUEOF(NQ_SESSION.%3)",
+        "expressionObjects" : [ "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_SCM_CODE_VALUES_LKP_TL_PRC_Shipping_Method_PromptOnly.CODE_TYPE", "physicalColumn:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_SCM_CODE_VALUES_LKP_TL_PRC_Shipping_Method_PromptOnly.LANGUAGE", "variable:INIT_USER_LANGUAGE_CODE.USER_LANGUAGE_CODE" ]
+      },
+      "distinctValues" : false
+    }, {
+      "name" : "Dim_DW_SCM_CODE_VALUES_LKP_TL_PRC_Shipping_Method",
+      "disable" : false,
+      "tableMapping" : {
+        "tables" : [ "physicalTable:Oracle_Data_Warehouse.OAX$OAC.Dim_DW_SCM_CODE_VALUES_LKP_TL_PRC_Shipping_Method" ]
+      },
+      "combineWithOtherFragments" : false,
+      "enableFragmentSelection" : false,
+      "distinctValues" : false
+    } ],
+    "hierarchyType" : "LEVEL_BASED",
+    "levelBasedHierarchy" : {
+      "defaultRootLevel" : "Total",
+      "ragged" : false,
+      "skipped" : false,
+      "logicalLevels" : [ {
+        "name" : "Total",
+        "numberOfElements" : 1,
+        "grandTotalLevel" : true,
+        "disableAggregateToHigherLevel" : false
+      }, {
+        "name" : "Detail",
+        "numberOfElements" : 1,
+        "grandTotalLevel" : false,
+        "disableAggregateToHigherLevel" : false,
+        "primaryKey" : [ "Shipping Method Code" ],
+        "displayKey" : "Shipping Method",
+        "additionalKeys" : [ [ "Shipping Method" ] ]
+      } ],
+      "logicalHierarchies" : [ {
+        "name" : "PRC - Shipping Method",
+        "levels" : [ "Total", "Detail" ]
+      } ]
+    }
+  }
+}
